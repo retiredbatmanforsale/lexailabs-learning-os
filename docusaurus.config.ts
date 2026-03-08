@@ -75,56 +75,18 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'docsSidebar',
           position: 'left',
-          label: 'Resources',
+          label: 'Docs',
         },
         {
-          type: 'dropdown',
-          label: 'Topics',
-          position: 'left',
-          items: [
-            {
-              label: 'AI for Leaders',
-              to: '/docs/ai-for-leaders/intro',
-            },
-            {
-              label: 'Machine Learning',
-              to: '/docs/machine-learning/intro',
-            },
-            {
-              label: 'Deep Learning',
-              to: '/docs/deep-learning/intro',
-            },
-            {
-              label: 'Language Models',
-              to: '/docs/language-models/intro',
-            },
-            {
-              label: 'Resources',
-              to: '/docs/resources/intro',
-            },
-          ],
-        },
-        {to: '/fellowship', label: 'AI Fellowship', position: 'left'},
-        {
-          type: 'dropdown',
-          label: 'Tutorials',
-          position: 'left',
-          items: [
-            {
-              label: 'Interactive Logistic Regression',
-              to: '/docs/tutorials/logistic-regression',
-            },
-          ],
-        },
-        {
-          href: 'https://github.com/ai-ml-community/ai-ml-docs',
-          label: 'GitHub',
+          to: '/login',
+          label: 'Login',
           position: 'right',
         },
         {
-          to: '/contribute',
-          label: 'Contribute',
+          to: '/signup',
+          label: 'Get Started',
           position: 'right',
+          className: 'navbar-get-started-button',
         },
       ],
     },
@@ -132,15 +94,15 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Platform',
           items: [
+            {
+              label: 'All Courses',
+              to: '/docs/machine-learning/intro',
+            },
             {
               label: 'AI for Leaders',
               to: '/docs/ai-for-leaders/intro',
-            },
-            {
-              label: 'Machine Learning',
-              to: '/docs/machine-learning/intro',
             },
             {
               label: 'Deep Learning',
@@ -153,24 +115,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'GitHub Discussions',
-              href: 'https://github.com/ai-ml-community/ai-ml-docs/discussions',
-            },
-            {
-              label: 'Join our Discord community here',
-              href: 'https://discord.gg/QtzYHmfw',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://x.com/labs_ai80315',
-            },
-          ],
-        },
-        {
-          title: 'More',
+          title: 'Resources',
           items: [
             {
               label: 'Blog',
@@ -181,13 +126,26 @@ const config: Config = {
               href: 'https://github.com/ai-ml-community/ai-ml-docs',
             },
             {
-              label: 'Contribute',
-              to: '/contribute',
+              label: 'Discord',
+              href: 'https://discord.gg/QtzYHmfw',
+            },
+          ],
+        },
+        {
+          title: 'Legal',
+          items: [
+            {
+              label: 'Terms of Service',
+              to: '/terms',
+            },
+            {
+              label: 'Privacy Policy',
+              to: '/privacy',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Lex AI Technologies Pvt Ltd. 🌏❤️ Proudly built in India 🇮🇳`,
+      copyright: `Copyright \u00A9 ${new Date().getFullYear()} Lex AI Technologies Pvt Ltd. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
