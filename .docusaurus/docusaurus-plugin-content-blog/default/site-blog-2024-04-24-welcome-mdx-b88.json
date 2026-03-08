@@ -1,0 +1,36 @@
+{
+  "permalink": "/blog/2024/04/24/welcome",
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/blog/2024-04-24-welcome.mdx",
+  "source": "@site/blog/2024-04-24-welcome.mdx",
+  "title": "Welcome to AI Seekhega India Blog",
+  "description": "Welcome to the official blog of AI Seekhega India! This is where we'll share updates, tutorials, and insights about artificial intelligence and machine learning.",
+  "date": "2024-04-24T00:00:00.000Z",
+  "formattedDate": "April 24, 2024",
+  "tags": [
+    {
+      "label": "announcement",
+      "permalink": "/blog/tags/announcement"
+    },
+    {
+      "label": "welcome",
+      "permalink": "/blog/tags/welcome"
+    }
+  ],
+  "readingTime": 0.405,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "AI Seekhega India Team"
+    }
+  ],
+  "frontMatter": {
+    "title": "Welcome to AI Seekhega India Blog",
+    "author": "AI Seekhega India Team",
+    "tags": [
+      "announcement",
+      "welcome"
+    ],
+    "date": "2024-04-24"
+  },
+  "unlisted": false
+}

@@ -1,0 +1,62 @@
+---
+sidebar_position: 4
+---
+
+# Understanding Inference in Neural Network-Based Language Models
+
+##### **Introduction**
+
+Inference in neural network-based language models refers to the process of generating predictions based on learned patterns. Once a model is trained, it uses its fixed parameters to generate outputs in response to input tokens. This chapter explores how inference works, why it is stochastic, and how it differs from training.
+
+##### **2\. The Basics of Model Inference**
+
+Inference is the stage where the model, instead of learning new information, applies its pre-trained knowledge to generate predictions. For a language model, inference means predicting the next token in a sequence based on a given context.  
+2.1 How Inference Works
+
+1. Input Tokenization:  
+    The input text is tokenized into smaller units (words, subwords, or characters).  
+2. Feeding the Model:  
+    The token sequence is passed into the trained model.  
+3. Probability Distribution Generation:  
+    The model outputs a probability distribution over all possible next tokens.  
+4. Sampling a Token:  
+    A token is selected based on the probability distribution (higher probability tokens are more likely to be chosen).  
+5. Iteration:  
+    The process repeats with the new token appended to the sequence until the desired output length is reached.
+
+##### **3\. Stochastic Nature of Inference**
+
+Since inference involves sampling from a probability distribution, the output is not deterministic. Even with the same input, different tokens might be selected, leading to variations in generated sequences.  
+3.1 Example of Token Sampling  
+Consider a scenario where we want to generate text starting with the token 91:
+
+* Input: 91  
+* Model predicts probabilities for the next token:  
+  * 860 (50%)  
+  * 732 (30%)  
+  * 104 (20%)  
+* A token is randomly selected based on these probabilities (e.g., 860).  
+* The process continues with 91, 860 as the new input, predicting the next token.
+
+##### **4\. Relationship Between Training and Inference**
+
+1. Training Phase:   
+   The model learns from vast amounts of data, adjusting its internal weights to minimize prediction errors.  
+2. Inference Phase:  
+    The model applies learned knowledge to generate outputs without modifying its weights.  
+3. Differences:  
+   * Training involves updating parameters; inference does not.  
+   * Training requires large-scale computation; inference is much lighter.
+
+##### **5\. Example of Inference in ChatGPT**
+
+When users interact with ChatGPT, they provide a sequence of tokens (input text). The model uses inference to predict and return the most likely continuation of the sequence. The weights of the model remain unchanged during this process.  
+For example:
+
+* User Input:   
+  "The capital of France is"  
+* Model Prediction:  
+   "Paris"  
+* The model predicts “Paris”  
+   because, based on its training, it has learned that "capital of France" is strongly associated with "Paris".
+

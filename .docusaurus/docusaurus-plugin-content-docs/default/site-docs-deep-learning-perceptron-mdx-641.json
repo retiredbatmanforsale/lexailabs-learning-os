@@ -1,0 +1,27 @@
+{
+  "id": "deep-learning/perceptron",
+  "title": "Understanding the Perceptron: A Dive into the Basics and the Perceptron Trick",
+  "description": "Perceptron Visualization",
+  "source": "@site/docs/deep-learning/perceptron.mdx",
+  "sourceDirName": "deep-learning",
+  "slug": "/deep-learning/perceptron",
+  "permalink": "/docs/deep-learning/perceptron",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/deep-learning/perceptron.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Introduction to Deep Learning",
+    "permalink": "/docs/deep-learning/intro"
+  },
+  "next": {
+    "title": "Deep Learning for Computer Vision and Convolutional Neural Networks (CNNs)",
+    "permalink": "/docs/deep-learning/CNNS"
+  }
+}

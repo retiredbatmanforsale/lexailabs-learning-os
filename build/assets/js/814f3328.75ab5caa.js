@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkai_ml_docs=self.webpackChunkai_ml_docs||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Welcome to AI Seekhega India Blog","permalink":"/blog/2024/04/24/welcome","unlisted":false}]}')}}]);

@@ -1,0 +1,27 @@
+{
+  "id": "language-models/ReinforcementLearning",
+  "title": "Beyond Human Limits: Reinforcement Learning and the Future of LLM Thinking",
+  "description": "Introduction:",
+  "source": "@site/docs/language-models/ReinforcementLearning.mdx",
+  "sourceDirName": "language-models",
+  "slug": "/language-models/ReinforcementLearning",
+  "permalink": "/docs/language-models/ReinforcementLearning",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/ReinforcementLearning.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "sidebar_position": 12
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "LLM Thinking: Reinforcement Learning and the Emergence of Reasoning",
+    "permalink": "/docs/language-models/ThinkingRL"
+  },
+  "next": {
+    "title": "LLM Judgment: Reinforcement Learning in Unverifiable Domains",
+    "permalink": "/docs/language-models/LLMJudgement"
+  }
+}

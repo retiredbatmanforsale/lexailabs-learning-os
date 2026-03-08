@@ -1,0 +1,128 @@
+---
+sidebar_position: 8
+---
+# Thinking in Tokens: Understanding LLM Computational Limitations
+
+##### **Introduction:**
+
+We've explored how LLMs process language and generate text. Now, let's delve into their computational abilities and limitations. Understanding these limitations is crucial for effectively using LLMs to solve problems.
+
+##### **1\. The Token-by-Token Processing Model**
+
+* Sequential Processing:   
+  LLMs process information and generate text token by token, from left to right.  
+* Neural Network Computation:  
+   For each token, the LLM's neural network performs a series of computations to determine the probability of the next token.  
+* Finite Computation per Token:  
+  * The amount of computation performed for each token is limited.  
+  * This means LLMs cannot perform complex calculations within a single token.  
+  * Think of it as each token having a small, fixed "thinking budget."  
+* Analogy:  
+   Imagine trying to solve a complex math problem in a single step versus breaking it down into smaller, manageable steps. LLMs operate similarly.
+
+##### **2\. The Pitfalls of Single-Token Computation**
+
+* The Math Problem Example:  
+  * Poor Prompt: "Emily buys three apples and two oranges. Each orange costs $2. The total cost is $13. What is the cost of the apples? Answer: $3."  
+  * Why it's bad: This prompt forces the LLM to perform all calculations and produce the final answer ("$3") in a single token.  
+  * The Problem: LLMs cannot handle this level of computation in one token.  
+  * Good Prompt: "Emily buys three apples and two oranges. Each orange costs $2. The total cost is $13. First, the total cost of oranges is $4. Then, $13 \- $4 \= $9. Finally $9 / 3 \= $3. The answer is $3."  
+  * Why it's good: This prompt breaks down the problem into smaller, sequential steps, allowing the LLM to distribute the computation across multiple tokens.  
+* Key takeaway:  
+   LLMs are better at breaking down complex problems into smaller, sequential steps.
+
+##### **3\. Distributing Computation Across Tokens**
+
+* Intermediate Results:  
+   Encourage LLMs to generate intermediate results, breaking down complex tasks into simpler ones.  
+* Step-by-Step Reasoning:  
+   Guide LLMs to perform step-by-step reasoning, allowing them to build upon previous calculations.  
+* Working Memory:  
+   The context window acts as the LLM's working memory, storing intermediate results for later use.
+
+##### **4\. Leveraging Tools for Computation**
+
+* Code Interpreter:  
+  * LLMs can use code interpreters (e.g., Python) to perform complex calculations.  
+  * This offloads the computational burden from the LLM's neural network to a dedicated tool.  
+  * This is far more reliable than the LLM trying to do mental math.  
+* Counting Example:  
+  * LLMs struggle with counting because it requires processing a large amount of information within a single token.  
+  * Using a code interpreter allows the LLM to delegate the counting task to a more efficient tool.  
+* General Tool Use:  
+  * LLMs can utilize various tools to enhance their capabilities, including web search, code execution, and data retrieval.  
+  * Tool use is crucial for tasks that require external knowledge or complex computations.  
+* Why code is trusted: Code, when executed, has a fixed set of rules, and a deterministic output. This is far more reliable than the probabalistic output of an LLM.
+
+##### **5\. Cognitive Deficits and Sharp Edges**
+
+* Spelling Tasks: LLMs can struggle with certain spelling-related tasks due to the way they process and generate tokens.  
+* Counting: As we have seen, counting is another area where LLMs are weak.  
+* Understanding Tokenization: The way words and characters are broken down into tokens can affect how LLMs process information.  
+* The Importance of Awareness: Recognizing these limitations is crucial for effectively using LLMs.
+
+---
+# The Token Barrier: LLMs and Character-Level Challenges
+
+##### **Introduction:**
+
+We've explored LLM computation and the importance of token distribution. Now, let's examine a specific area where LLMs often struggle: character-level tasks. Understanding why LLMs have difficulties with these tasks is crucial for effective LLM usage.
+
+##### **1\. The Token-Centric World of LLMs**
+
+* Tokens, Not Characters:  
+   LLMs don't "see" individual characters like humans do. Their world is built on tokens, which are chunks of text.  
+* Tokenization:  
+  * Words and characters are broken down into tokens, which can vary in size.  
+  * This process can lead to situations where individual letters are grouped within a single token.  
+  * For example, the word "ubiquitous" might be broken into three tokens, making it difficult for the LLM to access individual letters.  
+* Efficiency vs. Character-Level Access:  
+  * Tokens are used primarily for efficiency, as they reduce the length of sequences that LLMs need to process.  
+  * However, this comes at the cost of character-level access, making tasks like manipulating individual letters challenging.  
+* Visual Analogy:   
+  Imagine trying to read a sentence where the letters are grouped into random chunks. It would be difficult to isolate and manipulate individual letters.
+
+##### **2\. LLM Challenges with Character-Level Tasks**
+
+* Spelling Tasks:  
+  * LLMs struggle with tasks that require manipulating individual characters, such as extracting every third letter from a word.  
+  * Example: Extracting every third letter from "ubiquitous."  
+  * The LLM might fail because it sees the word as a sequence of tokens, not individual letters.  
+* Counting Characters:  
+  * LLMs are not inherently good at counting, and this is compounded when they need to count individual characters within tokens.  
+  * Example: Counting the number of "r"s in "strawberry."  
+  * The LLM might initially give an incorrect answer because it struggles to access and count individual "r"s within the tokens.  
+* Mental Arithmetic Revisited: Similar to computation, character manipulation can be thought of as a kind of mental arithmetic, which the LLM struggles with.
+
+##### **3\. The Power of Tool Usage for Character-Level Tasks**
+
+* Code Interpreter to the Rescue:  
+  * Using a code interpreter (e.g., Python) allows LLMs to delegate character-level tasks to a more suitable tool.  
+  * Example: Using Python to extract every third letter from "ubiquitous" or count the "r"s in "strawberry."  
+  * The LLM can copy the input string into the code interpreter, which can then manipulate the characters directly.  
+* Offloading the Burden:  
+  * This approach offloads the character-level manipulation from the LLM's neural network to the code interpreter.  
+  * The LLM can then use the output from the code interpreter to provide the correct answer.  
+* Copy/Paste Ability:  
+   LLMs are very strong at copying and pasting information. This is how they can reliably send information to the code interpreter.
+
+##### **4\. The "Strawberry" Phenomenon: A Case Study**
+
+* Viral Example:  
+   The "how many 'r's in strawberry" question highlighted LLM limitations in character-level tasks.  
+* The Explanation:  
+  * The LLM's difficulty stemmed from its token-based processing and its inherent challenges with counting.  
+  * By now, it is likely that Open AI has hardcoded a correct answer for this very popular query.  
+* The Importance of Awareness:  
+   This example underscores the importance of understanding LLM limitations and using tools to overcome them.
+
+##### **5\. Jagged Edges and Unpredictable Behavior**
+
+* Inconsistencies:  
+   LLMs can exhibit unpredictable behavior in certain situations, even when their underlying mechanisms are well understood.  
+* Scratching Your Head Moments:  
+   Sometimes, LLM limitations may seem counterintuitive, even to those with in-depth knowledge of their workings.  
+* The Importance of Experimentation:  
+   It is important to remember that LLMs are a new technology, and sometimes experimentation is the best way to determine their limitations.
+
+---

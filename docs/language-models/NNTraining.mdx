@@ -1,0 +1,69 @@
+---
+sidebar_position: 3
+---
+# Understanding Neural Network Training for Tokenized Sequences
+
+##### **1\. Introduction**
+
+In this chapter, we will explore how neural networks are trained on tokenized sequences. We will break down the process step by step, starting from tokenization, moving to the structure of input data, and finally understanding how the neural network updates itself to improve predictions.
+
+##### **2\. Tokenization and Data Representation**
+
+Before training, raw text data is transformed into a sequence of tokens using a tokenizer. These tokens are unique numerical IDs that represent small chunks of text.  
+For example, consider a dataset with 15 trillion tokens. Each token is a discrete unit that the neural network will learn to process and predict.  
+Key points:
+
+* The dataset is represented as a long sequence of tokens.  
+* Each token is assigned a unique numerical ID.  
+* The numbers themselves do not have inherent meaning but serve as identifiers.
+
+##### **3\. Neural Network Training Process**
+
+Neural network training involves modeling the statistical relationships between tokens in a sequence.
+
+3.1. Windowing and Context Creation  
+To learn these relationships, we divide the dataset into smaller parts known as token windows. A window consists of a fixed number of consecutive tokens taken from the dataset.
+
+* The window size can vary (e.g., 4,000, 8,000, or 16,000 tokens), but is usually limited due to computational constraints.  
+* For simplicity, let's consider a window size of 4 tokens.  
+* These 4 tokens serve as the context for predicting the next token.
+
+3.2. Predicting the Next Token  
+Given a sequence of tokens, the neural network aims to predict the next token in the sequence.  
+For example, consider the following sequence of token IDs:
+
+* Input (context): 3962, 2847, 1209, 531  
+* Expected next token: 8743
+
+The neural network's job is to assign probabilities to all possible next tokens from the vocabulary (e.g., 100,277 possible tokens). Initially, these probabilities are random.
+
+##### **4\. Updating the Neural Network**
+
+The model improves by adjusting its predictions based on the correct token. This process follows these steps:
+
+1. Compute Initial Probabilities: The model assigns probabilities to all possible next tokens.  
+2. Compare with Ground Truth: The actual next token is known from the dataset.  
+3. Adjust Model Weights: The model updates itself to increase the probability of the correct token while decreasing the probabilities of incorrect tokens.  
+4. Iterate Over Large Batches: This process is repeated across large batches of token sequences to refine the model.
+
+.For example:
+
+* Initial prediction:  
+  * Token A: 4%  
+  * Token B: 2%  
+  * Token C (Correct Answer): 3%
+
+* After training update:  
+  * Token A: 2%  
+  * Token B: 1%
+
+  * ##### Token C: 4% (more likely to be predicted next time) 
+
+##### **5\. Parallel Processing for Efficiency**
+
+Since datasets are extremely large, training happens in parallel:
+
+* Many windows are processed simultaneously.  
+* Each token in a window contributes to updating the model.  
+* The neural network learns statistical patterns by adjusting probabilities for each token in every batch.
+

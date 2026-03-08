@@ -1,0 +1,27 @@
+{
+  "id": "language-models/Multimodality",
+  "title": "The Evolving LLM: Multimodality, Agents, and the Future of AI",
+  "description": "Introduction:",
+  "source": "@site/docs/language-models/Multimodality.mdx",
+  "sourceDirName": "language-models",
+  "slug": "/language-models/Multimodality",
+  "permalink": "/docs/language-models/Multimodality",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/Multimodality.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "sidebar_position": 14
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "LLM Judgment: Reinforcement Learning in Unverifiable Domains",
+    "permalink": "/docs/language-models/LLMJudgement"
+  },
+  "next": {
+    "title": "Navigating the LLM Landscape: Evaluation, News, and Access",
+    "permalink": "/docs/language-models/Evaluation"
+  }
+}

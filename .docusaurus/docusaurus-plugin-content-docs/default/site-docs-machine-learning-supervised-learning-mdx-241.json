@@ -1,0 +1,27 @@
+{
+  "id": "machine-learning/supervised-learning",
+  "title": "Supervised Learning",
+  "description": "Supervised learning is a type of machine learning where the model is trained on labeled data. In this approach, the algorithm learns from a training dataset that includes both input features and their corresponding correct outputs.",
+  "source": "@site/docs/machine-learning/supervised-learning.mdx",
+  "sourceDirName": "machine-learning",
+  "slug": "/machine-learning/supervised-learning",
+  "permalink": "/docs/machine-learning/supervised-learning",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/machine-learning/supervised-learning.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Introduction to Machine Learning",
+    "permalink": "/docs/machine-learning/intro"
+  },
+  "next": {
+    "title": "Logistic Regression: A Complete Guide",
+    "permalink": "/docs/machine-learning/logistic_regression_tutorial"
+  }
+}

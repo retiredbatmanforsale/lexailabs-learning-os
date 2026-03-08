@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom components for the tutorial */
+@layer components {
+  .tutorial-container {
+    @apply min-h-screen bg-black;
+  }
+  
+  .tutorial-header {
+    @apply bg-white/10 backdrop-blur-md border-b border-white/20 sticky top-0 z-10;
+  }
+  
+  .tutorial-card {
+    @apply bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 shadow-2xl;
+  }
+  
+  .tutorial-button {
+    @apply px-6 py-4 backdrop-blur-sm rounded-xl border border-white/20 text-white font-medium transition-all duration-300 hover:bg-white/20;
+  }
+  
+  .tutorial-button-primary {
+    @apply bg-gradient-to-r from-indian-saffron to-red-500 rounded-xl text-white font-medium transition-all duration-300 hover:from-orange-500 hover:to-red-600 shadow-lg;
+  }
+  
+  .tutorial-nav-button {
+    @apply px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap;
+  }
+  
+  .tutorial-nav-active {
+    @apply bg-gradient-to-r from-indian-saffron to-red-500 text-white shadow-lg;
+  }
+  
+  .tutorial-nav-completed {
+    @apply bg-indian-green/20 text-green-300 border border-indian-green/30;
+  }
+  
+  .tutorial-nav-inactive {
+    @apply text-white/70 hover:text-white hover:bg-white/10;
+  }
+}

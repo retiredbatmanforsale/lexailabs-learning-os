@@ -1,0 +1,15 @@
+{
+  "id": "ai-for-leaders/curriculum-visual-tree",
+  "title": "AI for Leaders: Visual Curriculum Tree",
+  "description": "Learning Progression Overview",
+  "source": "@site/docs/ai-for-leaders/curriculum-visual-tree.md",
+  "sourceDirName": "ai-for-leaders",
+  "slug": "/ai-for-leaders/curriculum-visual-tree",
+  "permalink": "/docs/ai-for-leaders/curriculum-visual-tree",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/curriculum-visual-tree.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

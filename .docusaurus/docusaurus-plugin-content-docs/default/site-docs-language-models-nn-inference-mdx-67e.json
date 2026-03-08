@@ -1,0 +1,27 @@
+{
+  "id": "language-models/NNInference",
+  "title": "Understanding Inference in Neural Network-Based Language Models",
+  "description": "Introduction",
+  "source": "@site/docs/language-models/NNInference.mdx",
+  "sourceDirName": "language-models",
+  "slug": "/language-models/NNInference",
+  "permalink": "/docs/language-models/NNInference",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/NNInference.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Understanding Neural Network Training for Tokenized Sequences",
+    "permalink": "/docs/language-models/NNTraining"
+  },
+  "next": {
+    "title": "Internals of Neural Networks",
+    "permalink": "/docs/language-models/NNInternals"
+  }
+}

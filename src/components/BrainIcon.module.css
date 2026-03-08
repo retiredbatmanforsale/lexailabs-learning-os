@@ -1,0 +1,200 @@
+.brainIconContainer {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(0, 123, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(255, 153, 51, 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(19, 136, 8, 0.04) 0%, transparent 80%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(10, 10, 30, 0.9) 50%, rgba(22, 33, 62, 0.95) 100%);
+  border-radius: 30px;
+  overflow: hidden;
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 100px rgba(0, 123, 255, 0.1);
+}
+
+.brainIconWrapper {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brainIcon {
+  color: #ffffff;
+  filter: 
+    drop-shadow(0 0 20px rgba(0, 123, 255, 0.4))
+    drop-shadow(0 0 40px rgba(255, 153, 51, 0.2))
+    drop-shadow(0 0 60px rgba(19, 136, 8, 0.1));
+  animation: iconGlow 4s ease-in-out infinite alternate;
+  z-index: 2;
+}
+
+.accentRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(45deg, 
+    rgba(0, 123, 255, 0.3), 
+    rgba(255, 153, 51, 0.3), 
+    rgba(19, 136, 8, 0.3),
+    rgba(0, 123, 255, 0.3)
+  );
+  background-clip: padding-box;
+  mask: 
+    radial-gradient(farthest-side, transparent calc(100% - 2px), white calc(100% - 2px));
+  -webkit-mask: 
+    radial-gradient(farthest-side, transparent calc(100% - 2px), white calc(100% - 2px));
+  animation: ringRotate 12s linear infinite;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.accentDots {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+}
+
+.dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #0066ff, #ff9933);
+  animation: dotPulse 3s ease-in-out infinite;
+}
+
+.dot:nth-child(1) {
+  top: 20%;
+  right: 30%;
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  bottom: 25%;
+  left: 25%;
+  animation-delay: 1s;
+}
+
+.dot:nth-child(3) {
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+@keyframes iconGlow {
+  0% {
+    filter: 
+      drop-shadow(0 0 20px rgba(0, 123, 255, 0.3))
+      drop-shadow(0 0 40px rgba(255, 153, 51, 0.1))
+      drop-shadow(0 0 60px rgba(19, 136, 8, 0.05));
+  }
+  100% {
+    filter: 
+      drop-shadow(0 0 30px rgba(0, 123, 255, 0.5))
+      drop-shadow(0 0 50px rgba(255, 153, 51, 0.3))
+      drop-shadow(0 0 80px rgba(19, 136, 8, 0.2));
+  }
+}
+
+@keyframes ringRotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .brainIconContainer {
+    height: 320px;
+    max-width: 350px;
+  }
+  
+  .brainIconWrapper {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .brainIcon {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .accentRing {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .accentDots {
+    width: 320px;
+    height: 320px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .brainIconContainer {
+    height: 280px;
+    max-width: 300px;
+  }
+  
+  .brainIconWrapper {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .brainIcon {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .accentRing {
+    width: 210px;
+    height: 210px;
+  }
+  
+  .accentDots {
+    width: 280px;
+    height: 280px;
+  }
+
+}

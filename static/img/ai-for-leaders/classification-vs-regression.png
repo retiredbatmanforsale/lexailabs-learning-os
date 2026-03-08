@@ -1,0 +1,13 @@
+# Classification vs Regression Placeholder Image
+
+This is a placeholder for the classification vs regression visualization.
+
+The image should show:
+- Classification: Categorical outputs (Spam/Not Spam, Approve/Reject, High/Medium/Low)
+- Regression: Continuous numerical outputs (Sales: $2.3M, Price: $47.99, Temperature: 72.5°F)
+
+Visual concept: 
+- Classification: Decision tree or sorting bins with discrete categories
+- Regression: Line graph or scatter plot with continuous values
+
+Replace this file with an actual PNG image (recommended size: 800x600px)

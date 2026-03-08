@@ -1,0 +1,27 @@
+{
+  "id": "ai-for-leaders/algorithms-high-level-overview",
+  "title": "High-Level Breadth of Classical Machine Learning Algorithms",
+  "description": "As a leader, you don't need to understand the mathematical complexities behind machine learning algorithms, but you do need to know which tools work best for different business challenges. This guide provides an intuitive overview of the most commonly used classical ML algorithms, helping you make informed decisions about AI initiatives in your organization.",
+  "source": "@site/docs/ai-for-leaders/algorithms-high-level-overview.mdx",
+  "sourceDirName": "ai-for-leaders",
+  "slug": "/ai-for-leaders/algorithms-high-level-overview",
+  "permalink": "/docs/ai-for-leaders/algorithms-high-level-overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/algorithms-high-level-overview.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "ML Problems: Classification, Regression, and Learning Approaches",
+    "permalink": "/docs/ai-for-leaders/classification-regression-supervised-unsupervised"
+  },
+  "next": {
+    "title": "Where Classical Machine Learning Models Are Used in the Market",
+    "permalink": "/docs/ai-for-leaders/classical-ml-in-market"
+  }
+}

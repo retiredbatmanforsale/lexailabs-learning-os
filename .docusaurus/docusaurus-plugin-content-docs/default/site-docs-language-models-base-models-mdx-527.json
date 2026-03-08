@@ -1,0 +1,27 @@
+{
+  "id": "language-models/BaseModels",
+  "title": "Understanding Base Models in Large Language Models",
+  "description": "Introduction",
+  "source": "@site/docs/language-models/BaseModels.mdx",
+  "sourceDirName": "language-models",
+  "slug": "/language-models/BaseModels",
+  "permalink": "/docs/language-models/BaseModels",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/BaseModels.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Understanding GPT-2 and the Evolution of Large Language Models",
+    "permalink": "/docs/language-models/EvolutionGpt2"
+  },
+  "next": {
+    "title": "Navigating the Hallucinations: Understanding and Improving LLM Accuracy",
+    "permalink": "/docs/language-models/Hallucinations"
+  }
+}

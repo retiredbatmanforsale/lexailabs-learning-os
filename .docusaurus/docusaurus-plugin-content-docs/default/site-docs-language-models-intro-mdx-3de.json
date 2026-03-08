@@ -1,0 +1,27 @@
+{
+  "id": "language-models/intro",
+  "title": "Introduction to Large Language Models",
+  "description": "Understanding Large Language Models (LLMs)",
+  "source": "@site/docs/language-models/intro.mdx",
+  "sourceDirName": "language-models",
+  "slug": "/language-models/intro",
+  "permalink": "/docs/language-models/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Deep Sequence Modelling and Recurrent Neural Networks (RNNs)",
+    "permalink": "/docs/deep-learning/RNNs"
+  },
+  "next": {
+    "title": "Tokenization",
+    "permalink": "/docs/language-models/Tokenization"
+  }
+}

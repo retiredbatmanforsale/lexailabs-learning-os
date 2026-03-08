@@ -1,0 +1,144 @@
+---
+sidebar_position: 1
+---
+
+# AI & ML Resources
+
+This section provides a curated collection of resources for machine learning, deep learning, and language models. Whether you're just starting your journey or looking to deepen your expertise, you'll find valuable tools, datasets, libraries, and educational materials here.
+
+## Overview
+
+The AI and ML ecosystem is vast and constantly evolving. To help you navigate this landscape, we've organized resources into these categories:
+
+- **Datasets**: Collections of data for training and evaluating ML models
+- **Libraries & Frameworks**: Software tools for building and deploying models
+- **Research Papers**: Important academic publications advancing the field
+- **Tutorials & Courses**: Educational content for learning concepts and techniques
+- **Community Resources**: Forums, conferences, and groups for knowledge sharing
+
+## Getting Started
+
+If you're new to AI and ML, here are some recommended starting points:
+
+### For Complete Beginners
+
+1. [Andrew Ng's Machine Learning Course](https://www.coursera.org/learn/machine-learning) - A comprehensive introduction to ML fundamentals
+2. [Elements of AI](https://www.elementsofai.com/) - A free course on AI basics
+3. [Python for Data Science](https://www.datacamp.com/courses/intro-to-python-for-data-science) - Learn the essential programming language for ML
+
+### For Those with Some Background
+
+1. [Deep Learning Specialization](https://www.deeplearning.ai/) - Dive deeper into neural networks
+2. [Fast.ai Practical Deep Learning](https://www.fast.ai/) - A hands-on approach to deep learning
+3. [Hugging Face Courses](https://huggingface.co/learn) - Specialized content for NLP and transformers
+
+## Essential Libraries & Frameworks
+
+These are the foundational tools used by practitioners around the world:
+
+### Machine Learning
+
+- [scikit-learn](https://scikit-learn.org/): Simple and efficient tools for data analysis and modeling
+- [XGBoost](https://xgboost.readthedocs.io/): Optimized gradient boosting library
+- [LightGBM](https://lightgbm.readthedocs.io/): High-performance gradient boosting framework
+
+### Deep Learning
+
+- [TensorFlow](https://www.tensorflow.org/): End-to-end ML platform developed by Google
+- [PyTorch](https://pytorch.org/): Deep learning framework popular in research
+- [Keras](https://keras.io/): High-level neural networks API
+
+### Language Models
+
+- [Hugging Face Transformers](https://huggingface.co/docs/transformers/): State-of-the-art NLP models
+- [spaCy](https://spacy.io/): Industrial-strength NLP library
+- [NLTK](https://www.nltk.org/): Natural Language Toolkit for text processing
+
+### Data Processing
+
+- [Pandas](https://pandas.pydata.org/): Data analysis and manipulation
+- [NumPy](https://numpy.org/): Numerical computing foundation
+- [Dask](https://dask.org/): Parallel computing with Python
+
+### Visualization
+
+- [Matplotlib](https://matplotlib.org/): Comprehensive visualization library
+- [Seaborn](https://seaborn.pydata.org/): Statistical data visualization
+- [Plotly](https://plotly.com/python/): Interactive visualization library
+
+## Example: Loading and Using a Pre-trained Language Model
+
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+
+# Load model and tokenizer
+model_name = "gpt2"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name)
+
+# Prepare input text
+input_text = "In the world of artificial intelligence,"
+input_ids = tokenizer(input_text, return_tensors="pt").input_ids
+
+# Generate text
+with torch.no_grad():
+    output = model.generate(
+        input_ids,
+        max_length=100,
+        num_return_sequences=1,
+        temperature=0.7,
+        top_k=50,
+        top_p=0.95,
+        do_sample=True
+    )
+
+# Decode and print the result
+generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
+print(generated_text)
+```
+
+## Top Datasets
+
+A selection of popular datasets across different domains:
+
+### Computer Vision
+
+- [ImageNet](https://www.image-net.org/): Millions of labeled images across thousands of categories
+- [COCO](https://cocodataset.org/): Images with object detection, segmentation, and captioning
+- [CIFAR-10/100](https://www.cs.toronto.edu/~kriz/cifar.html): 60,000 labeled images in 10/100 classes
+
+### Natural Language Processing
+
+- [WikiText](https://www.salesforce.com/products/einstein/ai-research/the-wikitext-dependency-language-modeling-dataset/): Language modeling dataset from Wikipedia articles
+- [SQuAD](https://rajpurkar.github.io/SQuAD-explorer/): Stanford Question Answering Dataset
+- [GLUE](https://gluebenchmark.com/): General Language Understanding Evaluation benchmark
+
+### Tabular Data
+
+- [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php): Collection of datasets for ML tasks
+- [Kaggle Datasets](https://www.kaggle.com/datasets): Diverse datasets often used in competitions
+- [OpenML](https://www.openml.org/): Collaborative ML platform with thousands of datasets
+
+## Research Communities & Conferences
+
+Stay updated with cutting-edge research through these channels:
+
+### Major Conferences
+
+- [NeurIPS](https://nips.cc/): Neural Information Processing Systems
+- [ICML](https://icml.cc/): International Conference on Machine Learning
+- [ICLR](https://iclr.cc/): International Conference on Learning Representations
+- [ACL](https://www.aclweb.org/portal/): Association for Computational Linguistics
+
+### Research Repositories
+
+- [arXiv](https://arxiv.org/): Open-access archive for scientific papers
+- [Papers With Code](https://paperswithcode.com/): Papers with implementation links
+- [Google Research](https://research.google/): Research publications from Google
+
+## Conclusion
+
+The resources listed here represent just a starting point for your AI and ML journey. The field is rapidly evolving, with new tools, techniques, and knowledge emerging constantly. We encourage you to explore further, join communities, and contribute your own insights to this growing body of knowledge.
+
+In the next sections, we'll dive deeper into specific resources for datasets, libraries, research papers, and tutorials.

@@ -1,0 +1,28 @@
+{
+  "id": "language-models/AttentionMechanism",
+  "title": "Attention Mechanism: The Heart of Transformers",
+  "description": "Learning Objective",
+  "source": "@site/docs/language-models/AttentionMechanism.mdx",
+  "sourceDirName": "language-models",
+  "slug": "/language-models/AttentionMechanism",
+  "permalink": "/docs/language-models/AttentionMechanism",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/AttentionMechanism.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "Attention Mechanism: The Heart of Transformers"
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Tokenization",
+    "permalink": "/docs/language-models/Tokenization"
+  },
+  "next": {
+    "title": "Understanding Neural Network Training for Tokenized Sequences",
+    "permalink": "/docs/language-models/NNTraining"
+  }
+}

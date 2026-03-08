@@ -1,0 +1,27 @@
+{
+  "id": "language-models/Evaluation",
+  "title": "Navigating the LLM Landscape: Evaluation, News, and Access",
+  "description": "Introduction:",
+  "source": "@site/docs/language-models/Evaluation.mdx",
+  "sourceDirName": "language-models",
+  "slug": "/language-models/Evaluation",
+  "permalink": "/docs/language-models/Evaluation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/Evaluation.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "sidebar_position": 15
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "The Evolving LLM: Multimodality, Agents, and the Future of AI",
+    "permalink": "/docs/language-models/Multimodality"
+  },
+  "next": {
+    "title": "Accessing and Understanding LLMs: From Cloud to Local",
+    "permalink": "/docs/language-models/AccessingLLMs"
+  }
+}

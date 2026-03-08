@@ -1,0 +1,27 @@
+{
+  "id": "ai-for-leaders/curriculum-overview",
+  "title": "AI for Leaders: Complete Curriculum Overview",
+  "description": "This document provides the hierarchical structure and learning progression for the AI for Leaders curriculum. It's designed to guide leaders from foundational concepts to advanced AI strategy and implementation.",
+  "source": "@site/docs/ai-for-leaders/curriculum-overview.mdx",
+  "sourceDirName": "ai-for-leaders",
+  "slug": "/ai-for-leaders/curriculum-overview",
+  "permalink": "/docs/ai-for-leaders/curriculum-overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/curriculum-overview.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Interactive Curriculum Tree",
+    "permalink": "/docs/ai-for-leaders/curriculum-tree"
+  },
+  "next": {
+    "title": "Understanding Machine Learning Fundamentals",
+    "permalink": "/docs/ai-for-leaders/machine-learning-fundamentals"
+  }
+}

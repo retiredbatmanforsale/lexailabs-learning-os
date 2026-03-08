@@ -1,0 +1,207 @@
+.aiVisualization {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  max-width: 500px;
+  margin: 0 auto;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(0, 123, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(255, 153, 51, 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(19, 136, 8, 0.04) 0%, transparent 80%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(10, 10, 30, 0.9) 50%, rgba(22, 33, 62, 0.95) 100%);
+  border-radius: 30px;
+  overflow: hidden;
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 100px rgba(0, 123, 255, 0.1);
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 30px;
+}
+
+.overlay {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  pointer-events: none;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aiLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 153, 51, 0.1);
+  padding: 10px 16px;
+  border-radius: 25px;
+  display: inline-block;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 153, 51, 0.2);
+  box-shadow: 
+    0 4px 16px rgba(255, 153, 51, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: labelPulse 3s ease-in-out infinite;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+.dataFlow {
+  font-size: 0.75rem;
+  color: rgba(19, 136, 8, 0.9);
+  background: rgba(19, 136, 8, 0.08);
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(19, 136, 8, 0.15);
+  box-shadow: 
+    0 2px 8px rgba(19, 136, 8, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  animation: dataFlowPulse 2s ease-in-out infinite;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+@keyframes labelPulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+    box-shadow: 
+      0 4px 16px rgba(255, 153, 51, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+    box-shadow: 
+      0 6px 24px rgba(255, 153, 51, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+}
+
+@keyframes dataFlowPulse {
+  0%, 100% {
+    opacity: 0.7;
+    box-shadow: 
+      0 2px 8px rgba(19, 136, 8, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 
+      0 4px 16px rgba(19, 136, 8, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+}
+
+.aiVisualization::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, 
+    rgba(255, 153, 51, 0.4) 0%, 
+    rgba(19, 136, 8, 0.3) 25%, 
+    rgba(0, 123, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0.1) 75%, 
+    rgba(255, 153, 51, 0.4) 100%);
+  border-radius: 26px;
+  z-index: -1;
+  animation: borderGlow 6s ease-in-out infinite;
+  filter: blur(1px);
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  33% {
+    opacity: 0.7;
+    transform: scale(1.01);
+  }
+  66% {
+    opacity: 0.5;
+    transform: scale(0.99);
+  }
+}
+
+.aiVisualization::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 153, 51, 0.02) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(19, 136, 8, 0.02) 0%, transparent 40%);
+  border-radius: 24px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .aiVisualization {
+    height: 320px;
+    max-width: 350px;
+  }
+  
+  .overlay {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    gap: 10px;
+  }
+  
+  .aiLabel {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+  
+  .dataFlow {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .aiVisualization {
+    height: 280px;
+    max-width: 300px;
+  }
+  
+  .overlay {
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    gap: 8px;
+  }
+  
+  .aiLabel {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+  
+  .dataFlow {
+    font-size: 0.65rem;
+    padding: 5px 10px;
+  }
+}

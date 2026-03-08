@@ -1,0 +1,59 @@
+---
+sidebar_position: 7
+---
+
+# The Illusion of Self: Understanding LLM Identity
+
+##### **Introduction:**
+
+We've explored how LLMs generate text and mitigate hallucinations. Now, let's tackle a question many people ask: "Who are you?" or "What model are you?" While LLMs can respond, understanding their responses requires us to delve into the fundamental nature of these models.
+
+##### **1\. The Nature of LLMs: Transient Token Tumblers**
+
+* Not a Person:   
+  It's crucial to understand that LLMs are not sentient beings. They don't have a persistent existence, consciousness, or personal experiences.  
+* Process, Generate, Forget:  
+  * An LLM's "life" is a series of processes.  
+  * It receives input, processes it, generates a response (token by token), and then essentially "shuts off."  
+  * Each new conversation is a fresh start. The context window is built, used, and then deleted.  
+* Statistical Patterns:  
+   LLMs operate based on statistical patterns learned from their training data. They predict the next token in a sequence, not based on understanding, but on probabilities.  
+* The Problem with "Who Are You?":  
+   These questions are fundamentally nonsensical to an LLM. It doesn't have a "self" to identify.
+
+##### **2\. The Randomness of Default Responses**
+
+* Lack of Inherent Identity:  
+  If an LLM isn't specifically programmed to answer identity questions, its responses will be based on statistical guesses.  
+* Example (Falcon 7B):  
+  * "Who built you?"  
+  * Response: "I was built by OpenAI based on the GPT-3 model."  
+  * This response is likely a hallucination, a statistical guess based on the prevalence of "OpenAI" and "GPT-3" in its training data.  
+* The "Helpful Assistant" Persona:  
+  * During fine-tuning, LLMs learn to adopt a "helpful assistant" persona.  
+  * This persona influences their responses, even when they lack specific information.  
+  * Because the internet has so much information about Chat-GPT, and Open AI, it is statistically more likely to create a response that includes those terms, when it is asked about its own creation.
+
+##### **3\. Programming an Identity: Hardcoding and System Messages**
+
+* Overriding Default Responses:  
+   Developers can program LLMs to provide specific answers to identity questions.  
+* Method 1: Hardcoded Data:  
+  * Creating training data with specific questions and answers about the LLM's identity.  
+  * Example (Almo): A dataset of conversations where the LLM is asked about itself and provides pre-defined answers.  
+  * This is similar to giving the LLM a script to follow.  
+* Method 2: System Messages:  
+  * Using a "system message" at the beginning of a conversation to provide the LLM with information about its identity.  
+  * This message is hidden from the user but included in the context window.  
+  * It acts as a constant reminder of the LLM's "identity."  
+* The Illusion Persists: Even with these methods, the LLM's "identity" is still a construct, a set of programmed responses, not a genuine sense of self.
+
+##### **4\. The Psychological Takeaway:**
+
+* Understanding the Underlying Mechanisms:  
+   It is important to understand that the responses given by an LLM are not the same as a human giving a response.  
+* LLMs are not people:  
+   Reinforce that LLMs are tools that process information and generate text based on learned patterns.  
+* Context is Key:  
+   The context window is the immediate working memory of the LLM, and it is here where the LLM "remembers" its programmed identity.
+

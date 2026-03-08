@@ -1,0 +1,23 @@
+{
+  "id": "ai-for-leaders/intro",
+  "title": "AI for Leaders",
+  "description": "Welcome to AI for Leaders - a comprehensive resource designed specifically for business leaders, executives, and decision-makers who need to understand artificial intelligence without diving into technical complexities.",
+  "source": "@site/docs/ai-for-leaders/intro.mdx",
+  "sourceDirName": "ai-for-leaders",
+  "slug": "/ai-for-leaders/intro",
+  "permalink": "/docs/ai-for-leaders/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "sidebar_position": 0
+  },
+  "sidebar": "docsSidebar",
+  "next": {
+    "title": "Interactive Curriculum Tree",
+    "permalink": "/docs/ai-for-leaders/curriculum-tree"
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "ai-for-leaders/intro",
+          "docs": [
+            {
+              "id": "ai-for-leaders/algorithms-high-level-overview",
+              "path": "/docs/ai-for-leaders/algorithms-high-level-overview",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "ai-for-leaders/classical-ml-in-market",
+              "path": "/docs/ai-for-leaders/classical-ml-in-market",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "ai-for-leaders/classification-regression-supervised-unsupervised",
+              "path": "/docs/ai-for-leaders/classification-regression-supervised-unsupervised",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "ai-for-leaders/curriculum-overview",
+              "path": "/docs/ai-for-leaders/curriculum-overview",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "ai-for-leaders/curriculum-tree",
+              "path": "/docs/ai-for-leaders/curriculum-tree",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "ai-for-leaders/curriculum-visual-tree",
+              "path": "/docs/ai-for-leaders/curriculum-visual-tree"
+            },
+            {
+              "id": "ai-for-leaders/intro",
+              "path": "/docs/ai-for-leaders/intro",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "ai-for-leaders/machine-learning-fundamentals",
+              "path": "/docs/ai-for-leaders/machine-learning-fundamentals",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "deep-learning/CNNS",
+              "path": "/docs/deep-learning/CNNS",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "deep-learning/intro",
+              "path": "/docs/deep-learning/intro",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "deep-learning/perceptron",
+              "path": "/docs/deep-learning/perceptron",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "deep-learning/RNNs",
+              "path": "/docs/deep-learning/RNNs",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/AccessingLLMs",
+              "path": "/docs/language-models/AccessingLLMs",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/AttentionMechanism",
+              "path": "/docs/language-models/AttentionMechanism",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/BaseModels",
+              "path": "/docs/language-models/BaseModels",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/Evaluation",
+              "path": "/docs/language-models/Evaluation",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/EvolutionGpt2",
+              "path": "/docs/language-models/EvolutionGpt2",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/Hallucinations",
+              "path": "/docs/language-models/Hallucinations",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/intro",
+              "path": "/docs/language-models/intro",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/LLMIdentity",
+              "path": "/docs/language-models/LLMIdentity",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/LLMInconsistencies",
+              "path": "/docs/language-models/LLMInconsistencies",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/LLMJudgement",
+              "path": "/docs/language-models/LLMJudgement",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/LoRAFineTuning",
+              "path": "/docs/language-models/LoRAFineTuning",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/Multimodality",
+              "path": "/docs/language-models/Multimodality",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/NNInference",
+              "path": "/docs/language-models/NNInference",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/NNInternals",
+              "path": "/docs/language-models/NNInternals",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/NNTraining",
+              "path": "/docs/language-models/NNTraining",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/PostTraining",
+              "path": "/docs/language-models/PostTraining",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/PostTrainingReinforcementLearning",
+              "path": "/docs/language-models/PostTrainingReinforcementLearning",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/QueryToResponse",
+              "path": "/docs/language-models/QueryToResponse",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/RAGAgents",
+              "path": "/docs/language-models/RAGAgents",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/ReinforcementLearning",
+              "path": "/docs/language-models/ReinforcementLearning",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/ThinkingInTokens",
+              "path": "/docs/language-models/ThinkingInTokens",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/ThinkingRL",
+              "path": "/docs/language-models/ThinkingRL",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "language-models/Tokenization",
+              "path": "/docs/language-models/Tokenization",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "machine-learning/intro",
+              "path": "/docs/machine-learning/intro",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "machine-learning/logistic_regression_tutorial",
+              "path": "/docs/machine-learning/logistic_regression_tutorial",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "machine-learning/supervised-learning",
+              "path": "/docs/machine-learning/supervised-learning",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "resources/intro",
+              "path": "/docs/resources/intro",
+              "sidebar": "docsSidebar"
+            },
+            {
+              "id": "tutorials/logistic-regression",
+              "path": "/docs/tutorials/logistic-regression",
+              "sidebar": "docsSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docsSidebar": {
+              "link": {
+                "path": "/docs/ai-for-leaders/intro",
+                "label": "ai-for-leaders/intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

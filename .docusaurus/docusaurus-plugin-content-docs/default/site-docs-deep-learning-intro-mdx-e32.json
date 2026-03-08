@@ -1,0 +1,27 @@
+{
+  "id": "deep-learning/intro",
+  "title": "Introduction to Deep Learning",
+  "description": "Deep Learning is a subset of machine learning that uses neural networks with multiple layers (deep neural networks) to analyze various forms of data. While traditional machine learning algorithms require feature extraction by human experts, deep learning systems can automatically discover the representations needed for detection or classification from raw data.",
+  "source": "@site/docs/deep-learning/intro.mdx",
+  "sourceDirName": "deep-learning",
+  "slug": "/deep-learning/intro",
+  "permalink": "/docs/deep-learning/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/deep-learning/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Logistic Regression: A Complete Guide",
+    "permalink": "/docs/machine-learning/logistic_regression_tutorial"
+  },
+  "next": {
+    "title": "Understanding the Perceptron: A Dive into the Basics and the Perceptron Trick",
+    "permalink": "/docs/deep-learning/perceptron"
+  }
+}

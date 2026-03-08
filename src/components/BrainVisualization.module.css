@@ -1,0 +1,232 @@
+.brainContainer {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(0, 123, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(255, 153, 51, 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(19, 136, 8, 0.04) 0%, transparent 80%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(10, 10, 30, 0.9) 50%, rgba(22, 33, 62, 0.95) 100%);
+  border-radius: 30px;
+  overflow: hidden;
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 100px rgba(0, 123, 255, 0.1);
+}
+
+.brainWrapper {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.brainSvg {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  filter: drop-shadow(0 0 20px rgba(0, 123, 255, 0.3));
+}
+
+.brainLeft {
+  transform-origin: center;
+  animation: subtlePulse 4s ease-in-out infinite;
+}
+
+.brainRight {
+  transform-origin: center;
+  animation: subtlePulse 4s ease-in-out infinite 0.5s;
+}
+
+.cerebellum {
+  transform-origin: center;
+  animation: subtlePulse 3s ease-in-out infinite 1s;
+}
+
+.brainStem {
+  transform-origin: center;
+  animation: subtlePulse 3.5s ease-in-out infinite 1.5s;
+}
+
+.neuralConnections {
+  opacity: 0.6;
+  animation: connectionFlow 6s ease-in-out infinite;
+}
+
+.interConnections {
+  opacity: 0.7;
+  animation: connectionFlow 5s ease-in-out infinite 1s;
+}
+
+.neuralNodes {
+  animation: nodeActivity 3s ease-in-out infinite;
+}
+
+.centralNodes {
+  animation: centralActivity 2.5s ease-in-out infinite;
+}
+
+.highlights {
+  opacity: 0.4;
+  animation: highlightShimmer 4s ease-in-out infinite;
+}
+
+.dataFlow {
+  opacity: 0.8;
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes connectionFlow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes nodeActivity {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes centralActivity {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes highlightShimmer {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.brainLabels {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.brainLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 153, 51, 0.1);
+  padding: 10px 16px;
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 153, 51, 0.2);
+  box-shadow: 
+    0 4px 16px rgba(255, 153, 51, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  margin-bottom: 8px;
+}
+
+.brainSubLabel {
+  font-size: 0.75rem;
+  color: rgba(19, 136, 8, 0.9);
+  background: rgba(19, 136, 8, 0.08);
+  padding: 8px 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(19, 136, 8, 0.15);
+  box-shadow: 
+    0 2px 8px rgba(19, 136, 8, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .brainContainer {
+    height: 320px;
+    max-width: 350px;
+  }
+  
+  .brainWrapper {
+    height: 250px;
+  }
+  
+  .brainLabels {
+    bottom: 20px;
+  }
+  
+  .brainLabel {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+  
+  .brainSubLabel {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .brainContainer {
+    height: 280px;
+    max-width: 300px;
+  }
+  
+  .brainWrapper {
+    height: 220px;
+  }
+  
+  .brainLabels {
+    bottom: 16px;
+  }
+  
+  .brainLabel {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+  
+  .brainSubLabel {
+    font-size: 0.65rem;
+    padding: 5px 10px;
+  }
+}

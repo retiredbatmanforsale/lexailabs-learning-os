@@ -1,0 +1,450 @@
+/* Fellowship Page Styles */
+.fellowshipPage {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.heroSection {
+  padding: 8rem 0 6rem;
+  text-align: center;
+  background: 
+    radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(255, 153, 51, 0.1) 0%, transparent 60%);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='rgba(99,102,241,0.1)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E");
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
+}
+
+.heroTagline {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ff9933;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  color: #ffffff;
+  padding: 16px 32px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+}
+
+.primaryButton:hover {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+}
+
+.secondaryButton {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  color: #ffffff;
+  padding: 16px 32px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.secondaryButton::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: rgba(16, 32, 62, 0.9);
+  border-radius: 6px;
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+.secondaryButton:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+}
+
+.secondaryButton:hover::before {
+  background: rgba(16, 32, 62, 0.3);
+}
+
+/* Content Section */
+.contentSection {
+  padding: 6rem 0;
+}
+
+/* Intro Section */
+.introSection {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 6rem;
+  padding: 0 2rem;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.introText {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Programs Section */
+.programsSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.programCard {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 20px;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.programCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.programHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.programIcon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.programIcon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.programTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.programAudience {
+  font-size: 1.1rem;
+  color: #ff9933;
+  margin: 0.5rem 0 0 0;
+  font-weight: 500;
+}
+
+.programValue {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.learningOutcomes h4 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.outcomesList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+}
+
+.outcomesList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.outcomesList li:last-child {
+  border-bottom: none;
+}
+
+.outcomeIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.programCta {
+  text-align: center;
+}
+
+.programButton {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+}
+
+.programButton:hover {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+}
+
+/* Final CTA Section */
+.finalCtaSection {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border-radius: 20px;
+  margin: 6rem 0 0 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.ctaTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.ctaSubtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.finalCtaButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 996px) {
+  .heroSection {
+    padding: 6rem 0 4rem;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .heroTagline {
+    font-size: 1.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroButtons a {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .programCard {
+    padding: 2rem;
+  }
+
+  .programHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .programTitle {
+    font-size: 1.8rem;
+  }
+
+  .finalCtaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .finalCtaButtons a {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroSection {
+    padding: 4rem 0 3rem;
+  }
+
+  .contentSection {
+    padding: 4rem 0;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroTagline {
+    font-size: 1.3rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .introSection {
+    margin-bottom: 4rem;
+  }
+
+  .programCard {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .programHeader {
+    gap: 0.8rem;
+  }
+
+  .programIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .programIcon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .programTitle {
+    font-size: 1.6rem;
+  }
+
+  .programValue {
+    font-size: 1.1rem;
+  }
+
+  .outcomesList li {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+
+  .outcomeIcon {
+    font-size: 1.3rem;
+  }
+
+  .finalCtaSection {
+    padding: 4rem 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .ctaTitle {
+    font-size: 2.2rem;
+  }
+
+  .ctaSubtitle {
+    font-size: 1.2rem;
+  }
+} 
