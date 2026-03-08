@@ -4,6 +4,7 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx,md,mdx}",
     "./docs/**/*.{md,mdx}",
     "./blog/**/*.{md,mdx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
   ],
   darkMode: ['class', '[data-theme="dark"]'],
   theme: {

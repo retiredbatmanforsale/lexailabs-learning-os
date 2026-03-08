@@ -62,6 +62,32 @@
   /* Z-index */
   --ifm-z-index-fixed: 100;
   --ifm-z-index-overlay: 200;
+
+  /* LMS Primary - Blue */
+  --lms-primary-50: #EFF6FF;
+  --lms-primary-100: #DBEAFE;
+  --lms-primary-200: #BFDBFE;
+  --lms-primary-300: #93C5FD;
+  --lms-primary-400: #60A5FA;
+  --lms-primary-500: #3B82F6;
+  --lms-primary-600: #2563EB;
+  --lms-primary-700: #1D4ED8;
+  --lms-primary-800: #1E40AF;
+  --lms-primary-900: #1E3A8A;
+
+  /* LMS Coral - Accent */
+  --lms-coral-100: #FFF5F2;
+  --lms-coral-200: #FFDCD0;
+  --lms-coral-300: #FFC8B2;
+  --lms-coral-400: #FFB494;
+  --lms-coral-500: #FF7F50;
+  --lms-coral-600: #E66437;
+  --lms-coral-700: #C85028;
+
+  /* LMS Semantic */
+  --lms-success: #16A34A;
+  --lms-warning: #F59E0B;
+  --lms-error: #DC2626;
 }
 
 /* For readability concerns, use a lighter palette in dark mode while keeping brand feel. */
@@ -266,4 +292,19 @@ pre {
 :focus-visible {
   outline: 2px solid var(--ifm-color-primary);
   outline-offset: 2px;
+}
+
+/* Navbar "Get Started" button styling */
+.navbar-get-started-button {
+  background-color: var(--lexai-blue-500);
+  color: #ffffff !important;
+  border-radius: 0.5rem;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.navbar-get-started-button:hover {
+  background-color: var(--lexai-blue-600);
+  color: #ffffff !important;
 }

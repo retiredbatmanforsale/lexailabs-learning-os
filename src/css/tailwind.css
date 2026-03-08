@@ -1,41 +1,82 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+@theme {
+  /* LMS Primary Blue */
+  --color-lms-primary-50: #EFF6FF;
+  --color-lms-primary-100: #DBEAFE;
+  --color-lms-primary-200: #BFDBFE;
+  --color-lms-primary-300: #93C5FD;
+  --color-lms-primary-400: #60A5FA;
+  --color-lms-primary-500: #3B82F6;
+  --color-lms-primary-600: #2563EB;
+  --color-lms-primary-700: #1D4ED8;
+  --color-lms-primary-800: #1E40AF;
+  --color-lms-primary-900: #1E3A8A;
+
+  /* LMS Coral Accent */
+  --color-lms-coral-100: #FFF5F2;
+  --color-lms-coral-200: #FFDCD0;
+  --color-lms-coral-300: #FFC8B2;
+  --color-lms-coral-400: #FFB494;
+  --color-lms-coral-500: #FF7F50;
+  --color-lms-coral-600: #E66437;
+  --color-lms-coral-700: #C85028;
+
+  /* LMS Semantic */
+  --color-lms-success: #16A34A;
+  --color-lms-warning: #F59E0B;
+  --color-lms-error: #DC2626;
+
+  /* Marquee animation */
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
 
 /* Custom components for the tutorial */
 @layer components {
   .tutorial-container {
     @apply min-h-screen bg-black;
   }
-  
+
   .tutorial-header {
     @apply bg-white/10 backdrop-blur-md border-b border-white/20 sticky top-0 z-10;
   }
-  
+
   .tutorial-card {
     @apply bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 shadow-2xl;
   }
-  
+
   .tutorial-button {
     @apply px-6 py-4 backdrop-blur-sm rounded-xl border border-white/20 text-white font-medium transition-all duration-300 hover:bg-white/20;
   }
-  
+
   .tutorial-button-primary {
     @apply bg-gradient-to-r from-indian-saffron to-red-500 rounded-xl text-white font-medium transition-all duration-300 hover:from-orange-500 hover:to-red-600 shadow-lg;
   }
-  
+
   .tutorial-nav-button {
     @apply px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap;
   }
-  
+
   .tutorial-nav-active {
     @apply bg-gradient-to-r from-indian-saffron to-red-500 text-white shadow-lg;
   }
-  
+
   .tutorial-nav-completed {
     @apply bg-indian-green/20 text-green-300 border border-indian-green/30;
   }
-  
+
   .tutorial-nav-inactive {
     @apply text-white/70 hover:text-white hover:bg-white/10;
   }
