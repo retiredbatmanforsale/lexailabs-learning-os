@@ -9,11 +9,12 @@ function LoginPageContent() {
   const LoginForm = require('../components/LoginForm').default;
   const RegisterForm = require('../components/RegisterForm').default;
 
-  const [mode, setMode] = useState<'login' | 'register'>('login');
+  const [mode, setMode] = useState<'login' | 'register' | 'verify-email'>('login');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [prefilledEmail, setPrefilledEmail] = useState('');
+  const [registeredEmail, setRegisteredEmail] = useState('');
 
   const { isAuthenticated, hasAccess, loginWithGoogle, loginWithEmail, register } = useAuth();
   const history = useHistory();
@@ -82,15 +83,101 @@ function LoginPageContent() {
     setSuccessMessage(null);
     setIsLoading(true);
     try {
-      const result = await register(name, email, password);
-      setSuccessMessage(result.message);
-      setMode('login');
+      await register(name, email, password);
+      setRegisteredEmail(email);
+      setMode('verify-email');
     } catch (err: any) {
       setError(err.message || 'Registration failed');
     } finally {
       setIsLoading(false);
     }
   };
+
+  if (mode === 'verify-email') {
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '70vh',
+        padding: '2rem',
+      }}>
+        <div style={{
+          width: '100%',
+          maxWidth: '480px',
+          padding: '2.5rem',
+          border: '1px solid var(--ifm-color-emphasis-200)',
+          borderRadius: '1rem',
+          background: 'var(--ifm-background-surface-color)',
+          textAlign: 'center',
+        }}>
+          <div style={{
+            width: '64px',
+            height: '64px',
+            margin: '0 auto 1.5rem',
+            borderRadius: '50%',
+            background: '#eff6ff',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '2rem',
+          }}>
+            &#9993;
+          </div>
+          <h2 style={{ marginBottom: '0.75rem' }}>Check Your Email</h2>
+          <p style={{
+            color: 'var(--ifm-color-emphasis-600)',
+            fontSize: '1rem',
+            lineHeight: 1.6,
+            marginBottom: '0.5rem',
+          }}>
+            We've sent a verification link to
+          </p>
+          <p style={{
+            fontWeight: 600,
+            fontSize: '1.0625rem',
+            color: 'var(--ifm-font-color-base)',
+            marginBottom: '1.5rem',
+          }}>
+            {registeredEmail}
+          </p>
+          <p style={{
+            color: 'var(--ifm-color-emphasis-500)',
+            fontSize: '0.9375rem',
+            lineHeight: 1.6,
+            marginBottom: '2rem',
+          }}>
+            Click the verification link in the email to activate your account.
+            If you don't see it, check your spam folder.
+          </p>
+          <a
+            href="https://mail.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button--primary button--lg"
+            style={{ width: '100%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem' }}
+          >
+            Open Gmail &#8599;
+          </a>
+          <p style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-500)', marginBottom: '0' }}>
+            Already verified?{' '}
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setMode('login');
+                setError(null);
+                setSuccessMessage(null);
+              }}
+              style={{ fontWeight: 500 }}
+            >
+              Sign in
+            </a>
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{

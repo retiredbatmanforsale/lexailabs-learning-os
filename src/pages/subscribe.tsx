@@ -76,7 +76,7 @@ function SubscribePageContent() {
       }}>
         <h1 style={{ marginBottom: '0.5rem' }}>Premium Access</h1>
         <div style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--ifm-color-primary)', marginBottom: '0.5rem' }}>
-          &#8377;499
+          &#8377;3,999
         </div>
         <p style={{ color: 'var(--ifm-color-emphasis-600)', marginBottom: '1.5rem' }}>
           One-time payment for lifetime access
