@@ -1,537 +1,723 @@
 /**
- * CSS styles for homepage
+ * Landing Page Styles
+ * Design: Clean, minimal, light theme
+ * Fonts: Instrument Serif (headings), Plus Jakarta Sans (body)
+ * No shadows — subtle borders and background changes on hover
  */
 
-/* Hero section */
-.heroBanner {
-  padding: 6rem 0;
-  text-align: left;
+/* ============================================================================
+ * Hero Section - Centered
+ * ========================================================================= */
+
+.hero {
+  padding: 6rem 0 4rem;
+  background: #ffffff;
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
-  background: 
-    radial-gradient(ellipse at top right, rgba(0, 123, 255, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at bottom left, rgba(255, 153, 51, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at center, rgba(19, 136, 8, 0.05) 0%, transparent 70%),
-    linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
 }
 
-.heroBanner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='india-outline' x='0' y='0' width='400' height='400' patternUnits='userSpaceOnUse'%3E%3Cpath d='M80,80 Q100,70 120,80 Q140,90 160,80 Q180,70 200,80 L200,100 Q180,110 160,100 Q140,110 120,100 Q100,110 80,100 Z M80,120 Q100,110 120,120 Q140,130 160,120 Q180,110 200,120 L200,140 Q180,150 160,140 Q140,150 120,140 Q100,150 80,140 Z M80,160 Q100,150 120,160 Q140,170 160,160 Q180,150 200,160 L200,180 Q180,190 160,180 Q140,190 120,180 Q100,190 80,180 Z M80,200 Q100,190 120,200 Q140,210 160,200 Q180,190 200,200 L200,220 Q180,230 160,220 Q140,230 120,220 Q100,230 80,220 Z M80,240 Q100,230 120,240 Q140,250 160,240 Q180,230 200,240 L200,260 Q180,270 160,260 Q140,270 120,260 Q100,270 80,260 Z M80,280 Q100,270 120,280 Q140,290 160,280 Q180,270 200,280 L200,300 Q180,310 160,300 Q140,310 120,300 Q100,310 80,300 Z M80,320 Q100,310 120,320 Q140,330 160,320 Q180,310 200,320 L200,340 Q180,350 160,340 Q140,350 120,340 Q100,350 80,340 Z' fill='none' stroke='rgba(255,153,51,0.02)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23india-outline)'/%3E%3C/svg%3E");
-  opacity: 0.3;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.heroContent {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-  max-width: 1400px;
+.heroContainer {
+  max-width: 960px;
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
   padding: 0 2rem;
-}
-
-.heroLeft {
-  flex: 1;
-  max-width: 650px;
-  animation: slideInLeft 1s ease-out;
-}
-
-@keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.heroRight {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  animation: slideInRight 1s ease-out 0.2s both;
-}
-
-@keyframes slideInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.heroRight::before {
-  content: '';
-  position: absolute;
-  top: -20%;
-  left: -20%;
-  right: -20%;
-  bottom: -20%;
-  background: 
-    radial-gradient(circle at center, rgba(0, 123, 255, 0.1) 0%, transparent 40%),
-    radial-gradient(circle at 70% 30%, rgba(255, 153, 51, 0.08) 0%, transparent 50%);
-  border-radius: 50%;
-  z-index: -1;
-  animation: heroGlow 8s ease-in-out infinite alternate;
-}
-
-@keyframes heroGlow {
-  0% {
-    transform: scale(1) rotate(0deg);
-    opacity: 0.3;
-  }
-  100% {
-    transform: scale(1.1) rotate(10deg);
-    opacity: 0.6;
-  }
-}
-
-.heroTitle {
-  font-size: 4.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  line-height: 1.1;
-  position: relative;
-  color: #ffffff;
-}
-
-.heroTitleHighlight {
-  background: linear-gradient(45deg, #ff9933, #0066ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.heroSubtitle {
-  font-size: 1.3rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 3rem;
-  line-height: 1.6;
-  max-width: 500px;
-}
-
-.heroDescription {
-  font-size: 1.1rem;
-  color: #a8a8a8;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-.buttons {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.getStartedButton {
-  background: linear-gradient(135deg, #0066ff, #4da6ff);
-  color: #ffffff;
-  border: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3);
-  border-radius: 8px;
-  padding: 16px 32px;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.getStartedButton:hover {
-  background: linear-gradient(135deg, #0052cc, #0066ff);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(0, 102, 255, 0.4);
-}
-
-.contributeButton {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  color: #ffffff !important;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  padding: 16px 32px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  backdrop-filter: blur(10px);
-}
-
-.contributeButton:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 1);
-  color: #ffffff !important;
-  transform: translateY(-2px);
-}
-
-.heroStats {
-  display: flex;
-  gap: 3rem;
-  margin: 3rem 0;
-  align-items: center;
-}
-
-.statItem {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.statNumber {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 0.5rem;
-}
-
-.statLabel {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 500;
+  text-align: center;
 }
 
 .heroBadge {
   display: inline-flex;
   align-items: center;
-  padding: 12px 24px;
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(255, 153, 51, 0.1));
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 30px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.95rem;
-  font-weight: 600;
-  backdrop-filter: blur(15px);
-  margin-top: 2rem;
-  box-shadow: 
-    0 4px 15px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  animation: fadeInUp 1s ease-out 0.8s both;
+  gap: 0.5rem;
+  padding: 0.375rem 1rem;
+  background: #eff6ff;
+  color: var(--lexai-blue-500, #3b82f6);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #141414;
+  margin-bottom: 1.5rem;
+  font-family: 'Instrument Serif', Georgia, serif;
 }
 
-.heroImage {
-  width: 100%;
-  max-width: 500px;
-  animation: float 6s ease-in-out infinite;
+.heroHighlight {
+  color: var(--lexai-blue-500, #3b82f6);
+}
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  color: #666666;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.heroActions {
   display: flex;
+  gap: 0.75rem;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
+  margin-bottom: 3rem;
 }
 
-.heroImage::after {
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: var(--lexai-blue-500, #3b82f6);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  text-decoration: none !important;
+  transition: background 0.2s ease;
+  border: none;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.primaryButton:hover {
+  background: var(--lexai-blue-600, #2563eb);
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.outlineButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  color: #141414 !important;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 0.75rem;
+  text-decoration: none !important;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.outlineButton:hover {
+  border-color: #d4d4d4;
+  background: #fafafa;
+  color: #141414 !important;
+  text-decoration: none !important;
+}
+
+.heroStats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statNumber {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #141414;
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+.statLabel {
+  font-size: 0.9375rem;
+  color: #999999;
+  font-weight: 500;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.statDivider {
+  width: 1px;
+  height: 3rem;
+  background: #e5e5e5;
+}
+
+/* ============================================================================
+ * Trusted By Section (Marquee with company names + color logos)
+ * ========================================================================= */
+
+.trustedBy {
+  padding: 3.5rem 0;
+  background: #fafafa;
+}
+
+.trustedByHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.trustedByLabel {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #999999;
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.marqueeContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.marqueeContainer::before,
+.marqueeContainer::after {
   content: '';
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  background: linear-gradient(45deg, 
-    rgba(0, 123, 255, 0.1), 
-    rgba(255, 153, 51, 0.1), 
-    rgba(19, 136, 8, 0.1));
-  border-radius: 30px;
-  z-index: -1;
-  filter: blur(20px);
-  animation: imageGlow 4s ease-in-out infinite alternate;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 1;
+  pointer-events: none;
 }
 
-@keyframes imageGlow {
-  0% {
-    opacity: 0.3;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 0.7;
-    transform: scale(1.05);
-  }
+.marqueeContainer::before {
+  left: 0;
+  background: linear-gradient(to right, #fafafa, transparent);
 }
 
-.heroImage svg {
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.3));
+.marqueeContainer::after {
+  right: 0;
+  background: linear-gradient(to left, #fafafa, transparent);
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.marqueeTrack {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: max-content;
+  animation: marquee 50s linear infinite;
 }
 
-/* Topics section */
-.topicsSection {
-  padding: 5rem 0;
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+.logoItem {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.companyLogo {
+  height: 36px;
+  width: auto;
+  max-width: 36px;
+  object-fit: contain;
+}
+
+.companyName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #555555;
+  white-space: nowrap;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* ============================================================================
+ * Shared Section Styles
+ * ========================================================================= */
+
+.sectionContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .sectionTitle {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #141414;
+  margin-bottom: 0.75rem;
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  font-size: 1.0625rem;
+  color: #666666;
   margin-bottom: 3rem;
-  font-weight: 700;
-  color: #6366f1;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
-.topicsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-}
+/* ============================================================================
+ * Featured Courses Section
+ * ========================================================================= */
 
-.topicCard {
-  padding: 2rem;
-  border-radius: var(--ifm-global-radius);
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
-  transition: all 0.3s ease;
-  background-color: var(--ifm-card-background-color);
-  border: 1px solid rgba(99, 102, 241, 0.1);
-}
-
-.topicCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(99, 102, 241, 0.15);
-  border-color: rgba(99, 102, 241, 0.2);
-}
-
-.topicCard h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #6366f1;
-}
-
-.topicCard p {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-
-.topicLink {
-  display: inline-block;
-  margin-top: 0.5rem;
-  font-weight: 600;
-  color: #6366f1;
-  transition: color 0.2s ease;
-}
-
-.topicLink:hover {
-  text-decoration: none;
-  color: #4f46e5;
-}
-
-/* CTA section */
-.ctaSection {
+.courses {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  color: #ffffff;
+  background: #ffffff;
+}
+
+.coursesSectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.coursesLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  background: #fff5f2;
+  border: 1px solid #ffdcd0;
+  color: var(--lexai-coral-500, #ff7f50);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.courseCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f0f0f0;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #ffffff;
+  transition: border-color 0.2s ease;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.courseCard:hover {
+  border-color: #d4d4d4;
+}
+
+.courseImage {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.courseContent {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.courseBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.courseTitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #141414;
+  margin-bottom: 0.5rem;
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+.courseDescription {
+  font-size: 0.875rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  flex: 1;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.courseLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--lexai-blue-500, #3b82f6);
+  margin-top: auto;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.courseCard:hover .courseLink {
+  color: var(--lexai-blue-600, #2563eb);
+}
+
+/* ============================================================================
+ * Features Section
+ * ========================================================================= */
+
+.features {
+  padding: 5rem 0;
+  background: #fafafa;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.featureCard {
+  padding: 2rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 1.5rem;
+  background: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.featureCard:hover {
+  border-color: #dbeafe;
+}
+
+.featureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 0.5rem;
+  background: #eff6ff;
+  color: var(--lexai-blue-500, #3b82f6);
+  margin-bottom: 1.25rem;
+}
+
+.featureTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #141414;
+  margin-bottom: 0.5rem;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.featureDescription {
+  font-size: 0.9375rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* ============================================================================
+ * Instructor Section
+ * ========================================================================= */
+
+.instructor {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+.instructorCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 2.5rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 1rem;
+  background: #fafafa;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.instructorAvatar {
+  flex-shrink: 0;
+}
+
+.instructorAvatar img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0f0f0;
+}
+
+.instructorInfo {
+  flex: 1;
+}
+
+.instructorHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.375rem;
+}
+
+.instructorName {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #141414;
+  margin: 0;
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+.instructorBadge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #eff6ff;
+  color: var(--lexai-blue-500, #3b82f6);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.instructorCompany {
+  font-size: 0.9375rem;
+  color: #999999;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.instructorBio {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+
+.instructorBio li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.instructorBio li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d4d4d4;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+.instructorCredentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.credentialBadge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.credentialBadge[data-variant='blue'] {
+  background: #eff6ff;
+  color: var(--lexai-blue-500, #3b82f6);
+}
+
+.credentialBadge[data-variant='coral'] {
+  background: #fff5f2;
+  color: var(--lexai-coral-500, #ff7f50);
+}
+
+.credentialBadge[data-variant='green'] {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.instructorSocials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: #666666 !important;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.socialIcon:hover {
+  background: var(--lexai-blue-500, #3b82f6);
+  color: #ffffff !important;
+}
+
+/* ============================================================================
+ * CTA Section
+ * ========================================================================= */
+
+.cta {
+  padding: 5rem 0;
+  background: #fafafa;
+  border-top: 1px solid #f0f0f0;
 }
 
 .ctaContent {
-  max-width: 800px;
+  max-width: 560px;
   margin: 0 auto;
   text-align: center;
 }
 
-.ctaContent h2 {
-  font-size: 2.5rem;
+.ctaTitle {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #141414;
   margin-bottom: 1rem;
-  color: #6366f1;
+  font-family: 'Instrument Serif', Georgia, serif;
 }
 
-.ctaContent p {
-  font-size: 1.25rem;
+.ctaDescription {
+  font-size: 1.0625rem;
+  color: #666666;
   margin-bottom: 2rem;
-  color: #a8a8a8;
+  line-height: 1.6;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
-.ctaButtons {
+.ctaActions {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
-.ctaButtons .button--primary {
-  background: #6366f1;
-  color: #ffffff;
+/* ============================================================================
+ * Marquee Animation
+ * ========================================================================= */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-.ctaButtons .button--primary:hover {
-  background: #4f46e5;
-}
+/* ============================================================================
+ * Responsive
+ * ========================================================================= */
 
-.ctaButtons .button--secondary {
-  background: transparent;
-  border: 2px solid #6366f1;
-  color: #6366f1;
-}
-
-.ctaButtons .button--secondary:hover {
-  background: #6366f1;
-  color: #ffffff;
-}
-
-/* Responsive styles */
 @media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 4rem 0;
-    min-height: auto;
-  }
-
-  .heroContent {
-    flex-direction: column;
-    text-align: center;
-    gap: 3rem;
-  }
-
-  .heroLeft {
-    max-width: 100%;
-  }
-
   .heroTitle {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
-  .heroSubtitle {
-    font-size: 1.2rem;
-    max-width: 100%;
+  .coursesGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .buttons {
-    justify-content: center;
-    flex-wrap: wrap;
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
   }
 
-  .heroStats {
-    justify-content: center;
-    gap: 2rem;
-  }
-
-  .statItem {
+  .instructorCard {
+    flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
-  .heroImage {
-    max-width: 350px;
+  .instructorHeader {
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  .heroBadge {
-    margin-top: 1rem;
+  .instructorBio li {
+    text-align: left;
   }
 
-  .sectionTitle {
-    font-size: 2rem;
+  .instructorCredentials {
+    justify-content: center;
   }
 
-  .ctaContent h2 {
-    font-size: 2rem;
-  }
-
-  .ctaContent p {
-    font-size: 1.1rem;
+  .instructorSocials {
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .heroBanner {
-    padding: 3rem 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-
-  .heroContent {
-    gap: 2rem;
+  .hero {
+    padding: 4rem 0 3rem;
   }
 
   .heroTitle {
-    font-size: 2.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
   }
 
-  .heroSubtitle {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-  }
-
-  .buttons {
+  .heroActions {
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
   }
 
-  .getStartedButton,
-  .contributeButton {
+  .primaryButton,
+  .outlineButton {
     width: 100%;
-    text-align: center;
-    padding: 14px 28px;
-    font-size: 1rem;
-  }
-
-  .heroStats {
-    flex-direction: row;
-    gap: 2rem;
-    margin: 2rem 0;
-    justify-content: center;
-  }
-
-  .statNumber {
-    font-size: 2rem;
-  }
-
-  .statLabel {
-    font-size: 0.9rem;
-  }
-
-  .heroBadge {
-    font-size: 0.85rem;
-    padding: 10px 16px;
-    margin-top: 1.5rem;
-  }
-
-  .heroImage {
     max-width: 300px;
   }
 
-  .topicsGrid {
+  .heroStats {
+    gap: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+
+  .coursesGrid {
     grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
-  .ctaButtons {
+  .ctaActions {
     flex-direction: column;
+    align-items: center;
   }
 
-  .ctaButtons a {
+  .ctaActions .primaryButton,
+  .ctaActions .outlineButton {
     width: 100%;
+    max-width: 300px;
+  }
+
+  .instructorCard {
+    padding: 1.5rem;
+  }
+
+  .instructorAvatar img {
+    width: 110px;
+    height: 110px;
   }
 }

@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
@@ -9,7 +10,7 @@ const rehypeKatex = require('rehype-katex');
 const config: Config = {
   title: 'Lex AI',
   tagline: 'Lex AI – community-driven platform for Machine Learning, Deep Learning, and Language Models',
-  favicon: 'img/lexai-logo.svg',
+  favicon: 'img/lexailogo.svg',
 
   // Set the production url of your site here
   url: 'https://ai-ml-docs.org',
@@ -33,11 +34,25 @@ const config: Config = {
     locales: ['en'],
   },
 
+  customFields: {
+    apiUrl: process.env.API_URL || 'http://localhost:4000',
+    googleClientId: process.env.GOOGLE_CLIENT_ID || '',
+    razorpayKeyId: process.env.RAZORPAY_KEY_ID || '',
+  },
+
+  scripts: [
+    {
+      src: 'https://checkout.razorpay.com/v1/checkout.js',
+      async: true,
+    },
+  ],
+
   presets: [
     [
       'classic',
       {
         docs: {
+          routeBasePath: 'courses',
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -66,41 +81,36 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/social-card.jpg',
     navbar: {
+      title: 'Lex AI',
       logo: {
-        alt: 'Lex AI',
-        src: 'img/lexai-logo.svg',
+        alt: 'Lex AI Labs',
+        src: 'img/lexailogo.svg',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'docsSidebar',
-          position: 'left',
-          label: 'Resources',
-        },
-        {
           type: 'dropdown',
-          label: 'Topics',
+          label: 'Courses',
           position: 'left',
           items: [
             {
               label: 'AI for Leaders',
-              to: '/docs/ai-for-leaders/intro',
+              to: '/courses/ai-for-leaders/intro',
             },
             {
               label: 'Machine Learning',
-              to: '/docs/machine-learning/intro',
+              to: '/courses/machine-learning/intro',
             },
             {
               label: 'Deep Learning',
-              to: '/docs/deep-learning/intro',
+              to: '/courses/deep-learning/intro',
             },
             {
               label: 'Language Models',
-              to: '/docs/language-models/intro',
+              to: '/courses/language-models/intro',
             },
             {
               label: 'Resources',
-              to: '/docs/resources/intro',
+              to: '/courses/resources/intro',
             },
           ],
         },
@@ -112,19 +122,9 @@ const config: Config = {
           items: [
             {
               label: 'Interactive Logistic Regression',
-              to: '/docs/tutorials/logistic-regression',
+              to: '/courses/tutorials/logistic-regression',
             },
           ],
-        },
-        {
-          href: 'https://github.com/ai-ml-community/ai-ml-docs',
-          label: 'GitHub',
-          position: 'right',
-        },
-        {
-          to: '/contribute',
-          label: 'Contribute',
-          position: 'right',
         },
       ],
     },
@@ -132,23 +132,23 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Courses',
           items: [
             {
               label: 'AI for Leaders',
-              to: '/docs/ai-for-leaders/intro',
+              to: '/courses/ai-for-leaders/intro',
             },
             {
               label: 'Machine Learning',
-              to: '/docs/machine-learning/intro',
+              to: '/courses/machine-learning/intro',
             },
             {
               label: 'Deep Learning',
-              to: '/docs/deep-learning/intro',
+              to: '/courses/deep-learning/intro',
             },
             {
               label: 'Language Models',
-              to: '/docs/language-models/intro',
+              to: '/courses/language-models/intro',
             },
           ],
         },
@@ -196,8 +196,8 @@ const config: Config = {
     },
     colorMode: {
       defaultMode: 'light',
-      disableSwitch: false,
-      respectPrefersColorScheme: true,
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     stylesheets: [
       {
@@ -208,7 +208,7 @@ const config: Config = {
         crossorigin: 'anonymous',
       },
       {
-        href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap',
         type: 'text/css',
       },
     ],

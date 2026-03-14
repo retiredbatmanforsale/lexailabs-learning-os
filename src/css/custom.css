@@ -46,7 +46,7 @@
 
   /* Typography */
   --ifm-font-family-base: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, sans-serif;
-  --ifm-heading-font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, sans-serif;
+  --ifm-heading-font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
   --ifm-font-size-base: 16px;
   --ifm-line-height-base: 1.6;
   --ifm-heading-line-height: 1.2;
@@ -92,6 +92,7 @@
 /* Global styles */
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -107,10 +108,15 @@ body {
   color: var(--ifm-font-color-base);
 }
 
-/* Heading styles */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  font-family: var(--ifm-heading-font-family);
+/* Heading styles - Instrument Serif for display, Plus Jakarta Sans for smaller */
+h1, h2, h3 {
+  font-weight: 400;
+  font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+}
+
+h4, h5, h6 {
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, sans-serif;
 }
 
 /* Code blocks */
@@ -205,14 +211,14 @@ a:hover {
 /* Card styles for features and resource items */
 .card {
   border-radius: var(--ifm-global-radius);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #f0f0f0;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
   overflow: hidden;
 }
 
 .card:hover {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px);
+  border-color: #dbeafe;
+  background-color: #fafbff;
 }
 
 /* Page transitions */
@@ -260,6 +266,19 @@ pre {
 
 [data-theme='dark'] .navbar__item:hover {
   background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Navbar brand title - use Instrument Serif */
+.navbar__title {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+/* Navbar logo sizing */
+.navbar__logo img {
+  height: 32px;
+  width: auto;
 }
 
 /* Focus styles for accessibility */
