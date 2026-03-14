@@ -10,7 +10,7 @@ const rehypeKatex = require('rehype-katex');
 const config: Config = {
   title: 'Lex AI',
   tagline: 'Lex AI – community-driven platform for Machine Learning, Deep Learning, and Language Models',
-  favicon: 'img/lexai-logo.svg',
+  favicon: 'img/lexailogo.svg',
 
   // Set the production url of your site here
   url: 'https://ai-ml-docs.org',
@@ -81,20 +81,15 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/social-card.jpg',
     navbar: {
+      title: 'Lex AI',
       logo: {
-        alt: 'Lex AI',
-        src: 'img/lexai-logo.svg',
+        alt: 'Lex AI Labs',
+        src: 'img/lexailogo.svg',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'docsSidebar',
-          position: 'left',
-          label: 'Resources',
-        },
-        {
           type: 'dropdown',
-          label: 'Topics',
+          label: 'Courses',
           position: 'left',
           items: [
             {
@@ -130,16 +125,6 @@ const config: Config = {
               to: '/courses/tutorials/logistic-regression',
             },
           ],
-        },
-        {
-          href: 'https://github.com/ai-ml-community/ai-ml-docs',
-          label: 'GitHub',
-          position: 'right',
-        },
-        {
-          to: '/contribute',
-          label: 'Contribute',
-          position: 'right',
         },
       ],
     },
@@ -211,8 +196,8 @@ const config: Config = {
     },
     colorMode: {
       defaultMode: 'light',
-      disableSwitch: false,
-      respectPrefersColorScheme: true,
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     stylesheets: [
       {
@@ -223,7 +208,7 @@ const config: Config = {
         crossorigin: 'anonymous',
       },
       {
-        href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap',
         type: 'text/css',
       },
     ],

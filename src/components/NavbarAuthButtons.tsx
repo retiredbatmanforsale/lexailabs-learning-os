@@ -14,8 +14,7 @@ function NavbarAuthInner() {
     return (
       <Link
         to="/login"
-        className="button button--primary button--sm"
-        style={{ marginLeft: '0.5rem' }}
+        className="button button--primary button--lg"
       >
         Login
       </Link>
