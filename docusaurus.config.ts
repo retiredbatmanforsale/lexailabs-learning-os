@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
@@ -33,11 +34,25 @@ const config: Config = {
     locales: ['en'],
   },
 
+  customFields: {
+    apiUrl: process.env.API_URL || 'http://localhost:4000',
+    googleClientId: process.env.GOOGLE_CLIENT_ID || '',
+    razorpayKeyId: process.env.RAZORPAY_KEY_ID || '',
+  },
+
+  scripts: [
+    {
+      src: 'https://checkout.razorpay.com/v1/checkout.js',
+      async: true,
+    },
+  ],
+
   presets: [
     [
       'classic',
       {
         docs: {
+          routeBasePath: 'courses',
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -84,23 +99,23 @@ const config: Config = {
           items: [
             {
               label: 'AI for Leaders',
-              to: '/docs/ai-for-leaders/intro',
+              to: '/courses/ai-for-leaders/intro',
             },
             {
               label: 'Machine Learning',
-              to: '/docs/machine-learning/intro',
+              to: '/courses/machine-learning/intro',
             },
             {
               label: 'Deep Learning',
-              to: '/docs/deep-learning/intro',
+              to: '/courses/deep-learning/intro',
             },
             {
               label: 'Language Models',
-              to: '/docs/language-models/intro',
+              to: '/courses/language-models/intro',
             },
             {
               label: 'Resources',
-              to: '/docs/resources/intro',
+              to: '/courses/resources/intro',
             },
           ],
         },
@@ -112,7 +127,7 @@ const config: Config = {
           items: [
             {
               label: 'Interactive Logistic Regression',
-              to: '/docs/tutorials/logistic-regression',
+              to: '/courses/tutorials/logistic-regression',
             },
           ],
         },
@@ -132,23 +147,23 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Courses',
           items: [
             {
               label: 'AI for Leaders',
-              to: '/docs/ai-for-leaders/intro',
+              to: '/courses/ai-for-leaders/intro',
             },
             {
               label: 'Machine Learning',
-              to: '/docs/machine-learning/intro',
+              to: '/courses/machine-learning/intro',
             },
             {
               label: 'Deep Learning',
-              to: '/docs/deep-learning/intro',
+              to: '/courses/deep-learning/intro',
             },
             {
               label: 'Language Models',
-              to: '/docs/language-models/intro',
+              to: '/courses/language-models/intro',
             },
           ],
         },
