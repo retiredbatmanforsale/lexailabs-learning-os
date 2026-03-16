@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import { useNavbarMobileSidebar } from '@docusaurus/theme-common/internal';
 import NavDropdown from './NavDropdown';
@@ -12,12 +13,13 @@ function NavbarLogo(): React.JSX.Element {
   const {
     navbar: { title, logo },
   } = useThemeConfig();
+  const logoSrc = useBaseUrl(logo?.src);
 
   return (
     <Link to="/" className={styles.brand}>
       {logo && (
         <img
-          src={logo.src}
+          src={logoSrc}
           alt={logo.alt || ''}
           className={styles.logo}
         />

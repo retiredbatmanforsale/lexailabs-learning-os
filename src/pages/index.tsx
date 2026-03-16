@@ -211,11 +211,12 @@ function FeaturedCoursesSection() {
                   className={styles.downloadButton}
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <Download size={16} />
-                  Download Curriculum
+                  <Download size={14} />
+                  <span>Curriculum</span>
                 </a>
                 <Link to={course.href} className={styles.courseLink}>
-                  Start learning <ArrowRight size={14} />
+                  <span>Start learning</span>
+                  <ArrowRight size={14} />
                 </Link>
               </div>
             </div>
@@ -418,18 +419,17 @@ function MentorsSection() {
                     .join('')}
                 </span>
               </div>
-              <div className={styles.mentorHeader}>
-                <h3 className={styles.mentorName}>{mentor.name}</h3>
-                <span className={styles.mentorBadge}>{mentor.role}</span>
-              </div>
+              <h3 className={styles.mentorName}>{mentor.name}</h3>
+              <span className={styles.mentorBadge}>{mentor.role}</span>
               <p className={styles.mentorBio}>{mentor.bio}</p>
               <a
                 href={mentor.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.socialIcon}
+                className={styles.mentorLinkedin}
               >
-                <Linkedin size={18} />
+                <Linkedin size={16} />
+                <span>LinkedIn</span>
               </a>
             </div>
           ))}

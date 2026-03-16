@@ -433,23 +433,28 @@ function SubscribePageContent() {
               </h3>
 
               <div style={{
-                fontSize: '2.5rem',
-                fontWeight: 700,
-                color: '#3b82f6',
-                marginBottom: '0.25rem',
-                fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-              }}>
-                {plan.priceDisplay}
-              </div>
-
-              <p style={{
-                color: '#666666',
+                display: 'flex',
+                alignItems: 'baseline',
+                justifyContent: 'center',
+                gap: '0.25rem',
                 marginBottom: '1.5rem',
-                fontSize: '0.9375rem',
                 fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
               }}>
-                {meta.period}
-              </p>
+                <span style={{
+                  fontSize: '2.5rem',
+                  fontWeight: 700,
+                  color: '#3b82f6',
+                }}>
+                  {plan.priceDisplay}
+                </span>
+                <span style={{
+                  fontSize: '1rem',
+                  fontWeight: 400,
+                  color: '#999999',
+                }}>
+                  {meta.period}
+                </span>
+              </div>
 
               <ul style={{
                 listStyle: 'none',
