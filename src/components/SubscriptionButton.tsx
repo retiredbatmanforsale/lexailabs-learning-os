@@ -64,6 +64,15 @@ export default function SubscriptionButton({ planType, onSuccess, onError }: Pro
             onError?.(err.message || 'Subscription verification failed');
           }
         },
+        modal: {
+          ondismiss: () => {
+            // User closed popup without paying — clean up the CREATED subscription
+            apiFetch('/subscriptions/cancel-created', {
+              method: 'POST',
+              body: JSON.stringify({ subscriptionId: data.subscriptionId }),
+            }).catch(() => {});
+          },
+        },
         theme: {
           color: '#3b82f6',
         },
