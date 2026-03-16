@@ -96,28 +96,9 @@ export default function SubscriptionButton({ planType, onSuccess, onError }: Pro
     <button
       onClick={handleSubscribe}
       disabled={isLoading}
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-        padding: '0.75rem 1.75rem',
-        background: isLoading ? '#93c5fd' : '#3b82f6',
-        color: '#ffffff',
-        fontWeight: 600,
-        fontSize: '1rem',
-        borderRadius: '0.75rem',
-        border: 'none',
-        cursor: isLoading ? 'not-allowed' : 'pointer',
-        transition: 'background 0.2s ease',
-        fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-      }}
-      onMouseEnter={(e) => {
-        if (!isLoading) (e.target as HTMLButtonElement).style.background = '#2563eb';
-      }}
-      onMouseLeave={(e) => {
-        if (!isLoading) (e.target as HTMLButtonElement).style.background = '#3b82f6';
-      }}
+      className={`inline-flex items-center justify-center w-full px-7 py-3 ${
+        isLoading ? 'bg-blue-300 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600 cursor-pointer'
+      } text-white font-semibold rounded-xl border-none transition-colors`}
     >
       {isLoading ? 'Processing...' : 'Subscribe'}
     </button>

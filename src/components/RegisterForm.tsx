@@ -31,31 +31,19 @@ export default function RegisterForm({
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       {error && (
-        <div style={{
-          padding: '0.75rem 1rem',
-          background: 'var(--ifm-color-danger-contrast-background)',
-          color: 'var(--ifm-color-danger-dark)',
-          borderRadius: '0.5rem',
-          fontSize: '0.875rem',
-        }}>
+        <div className="px-4 py-3 bg-[var(--ifm-color-danger-contrast-background)] text-[var(--ifm-color-danger-dark)] rounded-lg text-sm">
           {error}
         </div>
       )}
       {successMessage && (
-        <div style={{
-          padding: '0.75rem 1rem',
-          background: 'var(--ifm-color-success-contrast-background)',
-          color: 'var(--ifm-color-success-dark)',
-          borderRadius: '0.5rem',
-          fontSize: '0.875rem',
-        }}>
+        <div className="px-4 py-3 bg-[var(--ifm-color-success-contrast-background)] text-[var(--ifm-color-success-dark)] rounded-lg text-sm">
           {successMessage}
         </div>
       )}
       <div>
-        <label htmlFor="register-name" style={{ display: 'block', marginBottom: '0.25rem', fontWeight: 500 }}>
+        <label htmlFor="register-name" className="block mb-1 font-medium">
           Full Name
         </label>
         <input
@@ -65,19 +53,11 @@ export default function RegisterForm({
           onChange={(e) => setName(e.target.value)}
           required
           placeholder="Jane Smith"
-          style={{
-            width: '100%',
-            padding: '0.625rem 0.75rem',
-            border: '1px solid var(--ifm-color-emphasis-300)',
-            borderRadius: '0.5rem',
-            fontSize: '1rem',
-            background: 'var(--ifm-background-color)',
-            color: 'var(--ifm-font-color-base)',
-          }}
+          className="w-full px-3 py-2.5 border border-[var(--ifm-color-emphasis-300)] rounded-lg text-base bg-[var(--ifm-background-color)] text-[var(--ifm-font-color-base)]"
         />
       </div>
       <div>
-        <label htmlFor="register-email" style={{ display: 'block', marginBottom: '0.25rem', fontWeight: 500 }}>
+        <label htmlFor="register-email" className="block mb-1 font-medium">
           Email
         </label>
         <input
@@ -87,19 +67,11 @@ export default function RegisterForm({
           onChange={(e) => setEmail(e.target.value)}
           required
           placeholder="you@example.com"
-          style={{
-            width: '100%',
-            padding: '0.625rem 0.75rem',
-            border: '1px solid var(--ifm-color-emphasis-300)',
-            borderRadius: '0.5rem',
-            fontSize: '1rem',
-            background: 'var(--ifm-background-color)',
-            color: 'var(--ifm-font-color-base)',
-          }}
+          className="w-full px-3 py-2.5 border border-[var(--ifm-color-emphasis-300)] rounded-lg text-base bg-[var(--ifm-background-color)] text-[var(--ifm-font-color-base)]"
         />
       </div>
       <div>
-        <label htmlFor="register-password" style={{ display: 'block', marginBottom: '0.25rem', fontWeight: 500 }}>
+        <label htmlFor="register-password" className="block mb-1 font-medium">
           Password
         </label>
         <input
@@ -110,22 +82,13 @@ export default function RegisterForm({
           required
           minLength={8}
           placeholder="Min. 8 characters"
-          style={{
-            width: '100%',
-            padding: '0.625rem 0.75rem',
-            border: '1px solid var(--ifm-color-emphasis-300)',
-            borderRadius: '0.5rem',
-            fontSize: '1rem',
-            background: 'var(--ifm-background-color)',
-            color: 'var(--ifm-font-color-base)',
-          }}
+          className="w-full px-3 py-2.5 border border-[var(--ifm-color-emphasis-300)] rounded-lg text-base bg-[var(--ifm-background-color)] text-[var(--ifm-font-color-base)]"
         />
       </div>
       <button
         type="submit"
         disabled={isLoading}
-        className="button button--primary button--lg"
-        style={{ width: '100%' }}
+        className="button button--primary button--lg w-full"
       >
         {isLoading ? 'Creating account...' : 'Create Account'}
       </button>

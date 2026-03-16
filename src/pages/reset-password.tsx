@@ -20,36 +20,17 @@ function ResetPasswordContent() {
 
   if (!token) {
     return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '70vh',
-        padding: '2rem',
-      }}>
-        <div style={{
-          width: '100%',
-          maxWidth: '420px',
-          padding: '2rem',
-          border: '1px solid var(--ifm-color-emphasis-200)',
-          borderRadius: '1rem',
-          background: 'var(--ifm-background-surface-color)',
-          textAlign: 'center',
-        }}>
-          <h2 style={{ marginBottom: '0.75rem' }}>Invalid Reset Link</h2>
-          <p style={{
-            color: 'var(--ifm-color-emphasis-600)',
-            fontSize: '1rem',
-            lineHeight: 1.6,
-            marginBottom: '1.5rem',
-          }}>
+      <div className="flex justify-center items-center min-h-[70vh] p-8">
+        <div className="w-full max-w-[420px] p-8 border border-[var(--ifm-color-emphasis-200)] rounded-2xl bg-[var(--ifm-background-surface-color)] text-center">
+          <h2 className="mb-3">Invalid Reset Link</h2>
+          <p className="text-[var(--ifm-color-emphasis-600)] text-base leading-relaxed mb-6">
             This password reset link is invalid or has expired. Please request a new one.
           </p>
-          <a href="/forgot-password" className="button button--primary button--lg" style={{ width: '100%', marginBottom: '1rem' }}>
+          <a href="/forgot-password" className="button button--primary button--lg w-full mb-4">
             Request New Link
           </a>
-          <p style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-500)', marginBottom: '0' }}>
-            <a href="/login" style={{ fontWeight: 500 }}>Back to sign in</a>
+          <p className="text-sm text-[var(--ifm-color-emphasis-500)] mb-0">
+            <a href="/login" className="font-medium">Back to sign in</a>
           </p>
         </div>
       </div>
@@ -91,32 +72,13 @@ function ResetPasswordContent() {
 
   if (success) {
     return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '70vh',
-        padding: '2rem',
-      }}>
-        <div style={{
-          width: '100%',
-          maxWidth: '420px',
-          padding: '2rem',
-          border: '1px solid var(--ifm-color-emphasis-200)',
-          borderRadius: '1rem',
-          background: 'var(--ifm-background-surface-color)',
-          textAlign: 'center',
-        }}>
-          <h2 style={{ marginBottom: '0.75rem' }}>Password Reset</h2>
-          <p style={{
-            color: 'var(--ifm-color-emphasis-600)',
-            fontSize: '1rem',
-            lineHeight: 1.6,
-            marginBottom: '1.5rem',
-          }}>
+      <div className="flex justify-center items-center min-h-[70vh] p-8">
+        <div className="w-full max-w-[420px] p-8 border border-[var(--ifm-color-emphasis-200)] rounded-2xl bg-[var(--ifm-background-surface-color)] text-center">
+          <h2 className="mb-3">Password Reset</h2>
+          <p className="text-[var(--ifm-color-emphasis-600)] text-base leading-relaxed mb-6">
             Your password has been reset. You can now sign in with your new password.
           </p>
-          <a href="/login" className="button button--primary button--lg" style={{ width: '100%' }}>
+          <a href="/login" className="button button--primary button--lg w-full">
             Sign In
           </a>
         </div>
@@ -125,34 +87,16 @@ function ResetPasswordContent() {
   }
 
   return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      minHeight: '70vh',
-      padding: '2rem',
-    }}>
-      <div style={{
-        width: '100%',
-        maxWidth: '420px',
-        padding: '2rem',
-        border: '1px solid var(--ifm-color-emphasis-200)',
-        borderRadius: '1rem',
-        background: 'var(--ifm-background-surface-color)',
-      }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '0.5rem' }}>Reset Password</h2>
-        <p style={{
-          textAlign: 'center',
-          color: 'var(--ifm-color-emphasis-600)',
-          fontSize: '0.9375rem',
-          marginBottom: '1.5rem',
-        }}>
+    <div className="flex justify-center items-center min-h-[70vh] p-8">
+      <div className="w-full max-w-[420px] p-8 border border-[var(--ifm-color-emphasis-200)] rounded-2xl bg-[var(--ifm-background-surface-color)]">
+        <h2 className="text-center mb-2">Reset Password</h2>
+        <p className="text-center text-[var(--ifm-color-emphasis-600)] text-[0.9375rem] mb-6">
           Enter your new password below.
         </p>
 
         <form onSubmit={handleSubmit}>
-          <div style={{ marginBottom: '1rem' }}>
-            <label htmlFor="password" style={{ display: 'block', marginBottom: '0.375rem', fontSize: '0.875rem', fontWeight: 500 }}>
+          <div className="mb-4">
+            <label htmlFor="password" className="block mb-1.5 text-sm font-medium">
               New Password
             </label>
             <input
@@ -163,21 +107,12 @@ function ResetPasswordContent() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="At least 8 characters"
-              style={{
-                width: '100%',
-                padding: '0.625rem 0.75rem',
-                border: '1px solid var(--ifm-color-emphasis-300)',
-                borderRadius: '0.5rem',
-                fontSize: '1rem',
-                background: 'var(--ifm-background-color)',
-                color: 'var(--ifm-font-color-base)',
-                boxSizing: 'border-box',
-              }}
+              className="w-full px-3 py-2.5 border border-[var(--ifm-color-emphasis-300)] rounded-lg text-base bg-[var(--ifm-background-color)] text-[var(--ifm-font-color-base)] box-border"
             />
           </div>
 
-          <div style={{ marginBottom: '1rem' }}>
-            <label htmlFor="confirmPassword" style={{ display: 'block', marginBottom: '0.375rem', fontSize: '0.875rem', fontWeight: 500 }}>
+          <div className="mb-4">
+            <label htmlFor="confirmPassword" className="block mb-1.5 text-sm font-medium">
               Confirm Password
             </label>
             <input
@@ -188,21 +123,12 @@ function ResetPasswordContent() {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="Re-enter your password"
-              style={{
-                width: '100%',
-                padding: '0.625rem 0.75rem',
-                border: '1px solid var(--ifm-color-emphasis-300)',
-                borderRadius: '0.5rem',
-                fontSize: '1rem',
-                background: 'var(--ifm-background-color)',
-                color: 'var(--ifm-font-color-base)',
-                boxSizing: 'border-box',
-              }}
+              className="w-full px-3 py-2.5 border border-[var(--ifm-color-emphasis-300)] rounded-lg text-base bg-[var(--ifm-background-color)] text-[var(--ifm-font-color-base)] box-border"
             />
           </div>
 
           {error && (
-            <p style={{ color: 'var(--ifm-color-danger)', fontSize: '0.875rem', marginBottom: '1rem' }}>
+            <p className="text-[var(--ifm-color-danger)] text-sm mb-4">
               {error}
             </p>
           )}
@@ -210,15 +136,14 @@ function ResetPasswordContent() {
           <button
             type="submit"
             disabled={isLoading}
-            className="button button--primary button--lg"
-            style={{ width: '100%', marginBottom: '1rem' }}
+            className="button button--primary button--lg w-full mb-4"
           >
             {isLoading ? 'Resetting...' : 'Reset Password'}
           </button>
         </form>
 
-        <p style={{ textAlign: 'center', fontSize: '0.875rem', marginBottom: '0' }}>
-          <a href="/login" style={{ fontWeight: 500 }}>Back to sign in</a>
+        <p className="text-center text-sm mb-0">
+          <a href="/login" className="font-medium">Back to sign in</a>
         </p>
       </div>
     </div>
@@ -229,7 +154,7 @@ export default function ResetPasswordPage() {
   return (
     <Layout title="Reset Password" description="Reset your Lex AI password">
       <BrowserOnly fallback={
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '70vh' }}>
+        <div className="flex justify-center items-center min-h-[70vh]">
           Loading...
         </div>
       }>

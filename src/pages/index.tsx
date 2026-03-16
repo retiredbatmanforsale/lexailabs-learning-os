@@ -2,9 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import { BookOpen, Users, Zap, Linkedin, Twitter, Github, ArrowRight } from 'lucide-react';
-import styles from './index.module.css';
 
-// Company logos with names
 const companyLogos = [
   { name: 'Google', src: require('@site/src/assets/logos/google.png').default },
   { name: 'Microsoft', src: require('@site/src/assets/logos/microsoft.png').default },
@@ -25,7 +23,6 @@ const companyLogos = [
 
 const instructorPic = require('@site/src/assets/instructor-pic.jpeg').default;
 
-// Featured courses data
 const featuredCourses = [
   {
     title: 'AI for Leaders',
@@ -74,32 +71,28 @@ const featuredCourses = [
   },
 ];
 
-// ============================================================================
-// Hero Section - Centered, no logo
-// ============================================================================
-
 function HeroSection() {
   return (
-    <section className={styles.hero}>
-      <div className={styles.heroContainer}>
-        <div className={styles.heroBadge}>
+    <section className="py-24 md:py-16 bg-white relative overflow-hidden">
+      <div className="max-w-[960px] mx-auto px-8 text-center">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 text-blue-500 rounded-full text-sm font-medium mb-6">
           <BookOpen size={14} />
           <span>AI-Powered Learning Platform</span>
         </div>
-        <h1 className={styles.heroTitle}>
+        <h1 className="text-5xl md:text-6xl lg:text-[4rem] font-normal leading-[1.1] text-[#141414] mb-6 font-serif">
           Build AI capability
           <br />
-          <span className={styles.heroHighlight}>for yourself</span>
+          <span className="text-blue-500">for yourself</span>
         </h1>
-        <p className={styles.heroSubtitle}>
+        <p className="text-lg text-[#666] leading-relaxed mb-10 max-w-[600px] mx-auto">
           Learn from industry experts and gain practical skills in Machine
           Learning, Deep Learning, Generative AI, and AI Applications with our
           comprehensive course suite.
         </p>
-        <div className={styles.heroActions}>
+        <div className="flex gap-3 justify-center mb-12 flex-col md:flex-row items-center">
           <a
             href="#featured-courses"
-            className={styles.primaryButton}
+            className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl no-underline transition-colors"
             onClick={(e) => {
               e.preventDefault();
               document.getElementById('featured-courses')?.scrollIntoView({ behavior: 'smooth' });
@@ -109,20 +102,20 @@ function HeroSection() {
             <ArrowRight size={18} />
           </a>
         </div>
-        <div className={styles.heroStats}>
-          <div className={styles.statItem}>
-            <span className={styles.statNumber}>5</span>
-            <span className={styles.statLabel}>Courses</span>
+        <div className="flex items-center gap-6 justify-center">
+          <div>
+            <span className="text-4xl font-normal text-[#141414] font-serif">5</span>
+            <span className="text-[15px] text-[#999] font-medium ml-2">Courses</span>
           </div>
-          <div className={styles.statDivider} />
-          <div className={styles.statItem}>
-            <span className={styles.statNumber}>100+</span>
-            <span className={styles.statLabel}>Resources</span>
+          <div className="w-px h-12 bg-[#e5e5e5]" />
+          <div>
+            <span className="text-4xl font-normal text-[#141414] font-serif">100+</span>
+            <span className="text-[15px] text-[#999] font-medium ml-2">Resources</span>
           </div>
-          <div className={styles.statDivider} />
-          <div className={styles.statItem}>
-            <span className={styles.statNumber}>500+</span>
-            <span className={styles.statLabel}>Learners</span>
+          <div className="w-px h-12 bg-[#e5e5e5]" />
+          <div>
+            <span className="text-4xl font-normal text-[#141414] font-serif">500+</span>
+            <span className="text-[15px] text-[#999] font-medium ml-2">Learners</span>
           </div>
         </div>
       </div>
@@ -130,28 +123,26 @@ function HeroSection() {
   );
 }
 
-// ============================================================================
-// Trusted By Section (Animated Marquee with names)
-// ============================================================================
-
 function TrustedBySection() {
   return (
-    <section className={styles.trustedBy}>
-      <div className={styles.trustedByHeader}>
-        <p className={styles.trustedByLabel}>
+    <section className="py-14 bg-[#fafafa]">
+      <div className="text-center mb-6">
+        <p className="text-lg font-medium text-[#999] mb-0">
           Our alumni work at leading companies worldwide
         </p>
       </div>
-      <div className={styles.marqueeContainer}>
-        <div className={styles.marqueeTrack}>
+      <div className="overflow-hidden relative">
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-[100px] z-10 bg-gradient-to-r from-[#fafafa] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[100px] z-10 bg-gradient-to-l from-[#fafafa] to-transparent" />
+        <div className="flex items-center gap-16 w-max animate-marquee hover:[animation-play-state:paused]">
           {[...companyLogos, ...companyLogos].map((logo, i) => (
-            <div key={`${logo.name}-${i}`} className={styles.logoItem}>
+            <div key={`${logo.name}-${i}`} className="flex-shrink-0 flex items-center gap-2">
               <img
                 src={logo.src}
                 alt={logo.name}
-                className={styles.companyLogo}
+                className="h-9 w-auto max-w-9 object-contain"
               />
-              <span className={styles.companyName}>{logo.name}</span>
+              <span className="text-lg font-semibold text-[#555] whitespace-nowrap">{logo.name}</span>
             </div>
           ))}
         </div>
@@ -160,47 +151,43 @@ function TrustedBySection() {
   );
 }
 
-// ============================================================================
-// Featured Courses Section
-// ============================================================================
-
 function FeaturedCoursesSection() {
   return (
-    <section id="featured-courses" className={styles.courses}>
-      <div className={styles.sectionContainer}>
-        <div className={styles.coursesSectionHeader}>
-          <span className={styles.coursesLabel}>Featured Courses</span>
-          <h2 className={styles.sectionTitle}>Start Your AI Journey</h2>
-          <p className={styles.sectionSubtitle}>
+    <section id="featured-courses" className="py-20 bg-white">
+      <div className="max-w-[1200px] mx-auto px-8">
+        <div className="text-center">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#fff5f2] border border-[#ffdcd0] text-[#ff7f50] text-[13px] font-semibold rounded-full mb-4">Featured Courses</span>
+          <h2 className="text-center text-3xl md:text-4xl font-normal text-[#141414] mb-3 font-serif">Start Your AI Journey</h2>
+          <p className="text-center text-[17px] text-[#666] mb-12 max-w-[560px] mx-auto">
             Hand-picked courses to help you build practical AI skills, whether
             you're a developer or business professional.
           </p>
         </div>
-        <div className={styles.coursesGrid}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredCourses.map((course) => (
             <Link
               key={course.title}
               to={course.href}
-              className={styles.courseCard}
+              className="flex flex-col border border-[#f0f0f0] rounded-2xl overflow-hidden bg-white hover:border-[#d4d4d4] transition-colors no-underline text-inherit group"
             >
               <div
-                className={styles.courseImage}
+                className="aspect-video flex items-center justify-center"
                 style={{ background: course.gradient }}
               >
                 <BookOpen size={32} color={course.iconColor} />
               </div>
-              <div className={styles.courseContent}>
+              <div className="p-5 pb-6 flex flex-col flex-1">
                 <span
-                  className={styles.courseBadge}
+                  className="text-xs font-semibold uppercase tracking-wide mb-2"
                   style={{ color: course.iconColor }}
                 >
                   {course.badge}
                 </span>
-                <h3 className={styles.courseTitle}>{course.title}</h3>
-                <p className={styles.courseDescription}>
+                <h3 className="text-xl font-normal text-[#141414] mb-2 font-serif">{course.title}</h3>
+                <p className="text-sm text-[#666] leading-relaxed mb-4 flex-1">
                   {course.description}
                 </p>
-                <span className={styles.courseLink}>
+                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-500 mt-auto group-hover:text-blue-600">
                   Start learning <ArrowRight size={14} />
                 </span>
               </div>
@@ -211,10 +198,6 @@ function FeaturedCoursesSection() {
     </section>
   );
 }
-
-// ============================================================================
-// Features Section
-// ============================================================================
 
 const features = [
   {
@@ -239,18 +222,18 @@ const features = [
 
 function FeaturesSection() {
   return (
-    <section className={styles.features}>
-      <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionTitle}>Why Learn with Lex AI?</h2>
-        <p className={styles.sectionSubtitle}>
+    <section className="py-20 bg-[#fafafa]">
+      <div className="max-w-[1200px] mx-auto px-8">
+        <h2 className="text-center text-3xl md:text-4xl font-normal text-[#141414] mb-3 font-serif">Why Learn with Lex AI?</h2>
+        <p className="text-center text-[17px] text-[#666] mb-12 max-w-[560px] mx-auto">
           Everything you need to master AI and Machine Learning, in one place.
         </p>
-        <div className={styles.featuresGrid}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-[480px] lg:max-w-none mx-auto">
           {features.map((feature, idx) => (
-            <div key={idx} className={styles.featureCard}>
-              <div className={styles.featureIcon}>{feature.icon}</div>
-              <h3 className={styles.featureTitle}>{feature.title}</h3>
-              <p className={styles.featureDescription}>
+            <div key={idx} className="p-8 border border-[#f0f0f0] rounded-3xl bg-white hover:border-blue-200 transition-colors">
+              <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-blue-50 text-blue-500 mb-5">{feature.icon}</div>
+              <h3 className="text-lg font-semibold text-[#141414] mb-2">{feature.title}</h3>
+              <p className="text-[15px] text-[#666] leading-relaxed m-0">
                 {feature.description}
               </p>
             </div>
@@ -261,68 +244,68 @@ function FeaturesSection() {
   );
 }
 
-// ============================================================================
-// Instructor Section
-// ============================================================================
-
 function InstructorSection() {
   return (
-    <section className={styles.instructor}>
-      <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionTitle}>Meet Your Instructor</h2>
-        <p className={styles.sectionSubtitle}>
+    <section className="py-20 bg-white">
+      <div className="max-w-[1200px] mx-auto px-8">
+        <h2 className="text-center text-3xl md:text-4xl font-normal text-[#141414] mb-3 font-serif">Meet Your Instructor</h2>
+        <p className="text-center text-[17px] text-[#666] mb-12 max-w-[560px] mx-auto">
           Learn from industry experts with real-world experience
         </p>
-        <div className={styles.instructorCard}>
-          <div className={styles.instructorAvatar}>
-            <img src={instructorPic} alt="Puru Kathuria - Lead Instructor" />
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-10 p-10 border border-[#f0f0f0] rounded-2xl bg-[#fafafa] max-w-[960px] mx-auto text-center md:text-left">
+          <div className="flex-shrink-0">
+            <img
+              src={instructorPic}
+              alt="Puru Kathuria - Lead Instructor"
+              className="w-[110px] h-[110px] md:w-[140px] md:h-[140px] rounded-full object-cover border-[3px] border-[#f0f0f0]"
+            />
           </div>
-          <div className={styles.instructorInfo}>
-            <div className={styles.instructorHeader}>
-              <h3 className={styles.instructorName}>Puru Kathuria</h3>
-              <span className={styles.instructorBadge}>Lead Instructor</span>
+          <div>
+            <div className="flex items-center gap-3 mb-1.5 flex-col md:flex-row">
+              <h3 className="text-2xl font-normal text-[#141414] m-0 font-serif">Puru Kathuria</h3>
+              <span className="inline-block px-3 py-1 bg-blue-50 text-blue-500 text-[13px] font-medium rounded-full">Lead Instructor</span>
             </div>
-            <p className={styles.instructorCompany}>
+            <p className="text-[15px] text-[#999] mb-4 mt-0">
               Founder, Lex AI | Former Software Engineer at Google
             </p>
-            <ul className={styles.instructorBio}>
-              <li>
+            <ul className="list-none p-0 m-0 mb-5">
+              <li className="flex items-start gap-3 text-[15px] text-[#666] leading-relaxed mb-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#d4d4d4] before:shrink-0 before:mt-2">
                 At Google, worked on Backend Engineering, Distributed Systems,
                 and AI for Cloud Security products
               </li>
-              <li>
+              <li className="flex items-start gap-3 text-[15px] text-[#666] leading-relaxed mb-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#d4d4d4] before:shrink-0 before:mt-2">
                 Teaches Applied AI (Machine Learning, Deep Learning, LLMs) at
                 Lex AI
               </li>
-              <li>
+              <li className="flex items-start gap-3 text-[15px] text-[#666] leading-relaxed mb-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#d4d4d4] before:shrink-0 before:mt-2">
                 Previously at MathWorks, focused on self-driving cars, motion
                 planning, and speech recognition
               </li>
-              <li>
+              <li className="flex items-start gap-3 text-[15px] text-[#666] leading-relaxed mb-2 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-[#d4d4d4] before:shrink-0 before:mt-2">
                 Founded a Deep Learning Book Club, fostering a community of
                 learners
               </li>
             </ul>
-            <div className={styles.instructorCredentials}>
-              <span className={styles.credentialBadge} data-variant="green">
+            <div className="flex flex-wrap gap-2 mb-5 justify-center md:justify-start">
+              <span className="inline-block px-3 py-1 text-[13px] font-medium rounded-full bg-green-50 text-green-600">
                 CS Engineering with ML &amp; AI focus
               </span>
-              <span className={styles.credentialBadge} data-variant="blue">
+              <span className="inline-block px-3 py-1 text-[13px] font-medium rounded-full bg-blue-50 text-blue-500">
                 Former SWE at Google
               </span>
-              <span className={styles.credentialBadge} data-variant="coral">
+              <span className="inline-block px-3 py-1 text-[13px] font-medium rounded-full bg-[#fff5f2] text-[#ff7f50]">
                 Former SWE at MathWorks
               </span>
-              <span className={styles.credentialBadge} data-variant="coral">
+              <span className="inline-block px-3 py-1 text-[13px] font-medium rounded-full bg-[#fff5f2] text-[#ff7f50]">
                 Trained 500+ students
               </span>
             </div>
-            <div className={styles.instructorSocials}>
+            <div className="flex gap-2 justify-center md:justify-start">
               <a
                 href="https://www.linkedin.com/in/purukathuria/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.socialIcon}
+                className="flex items-center justify-center w-9 h-9 rounded-full bg-[#f0f0f0] text-[#666] hover:bg-blue-500 hover:text-white transition-colors"
               >
                 <Linkedin size={18} />
               </a>
@@ -330,7 +313,7 @@ function InstructorSection() {
                 href="https://x.com/purukathuria"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.socialIcon}
+                className="flex items-center justify-center w-9 h-9 rounded-full bg-[#f0f0f0] text-[#666] hover:bg-blue-500 hover:text-white transition-colors"
               >
                 <Twitter size={18} />
               </a>
@@ -338,7 +321,7 @@ function InstructorSection() {
                 href="https://github.com/purukathuria"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.socialIcon}
+                className="flex items-center justify-center w-9 h-9 rounded-full bg-[#f0f0f0] text-[#666] hover:bg-blue-500 hover:text-white transition-colors"
               >
                 <Github size={18} />
               </a>
@@ -350,31 +333,30 @@ function InstructorSection() {
   );
 }
 
-// ============================================================================
-// CTA Section
-// ============================================================================
-
 function CTASection() {
   return (
-    <section className={styles.cta}>
-      <div className={styles.sectionContainer}>
-        <div className={styles.ctaContent}>
-          <h2 className={styles.ctaTitle}>
+    <section className="py-20 bg-[#fafafa] border-t border-[#f0f0f0]">
+      <div className="max-w-[1200px] mx-auto px-8">
+        <div className="max-w-[560px] mx-auto text-center">
+          <h2 className="text-4xl font-normal text-[#141414] mb-4 font-serif">
             Ready to Start Your AI Journey?
           </h2>
-          <p className={styles.ctaDescription}>
+          <p className="text-[17px] text-[#666] mb-8 leading-relaxed">
             Join hundreds of learners building the future with AI. Start for
             free, learn at your own pace.
           </p>
-          <div className={styles.ctaActions}>
+          <div className="flex gap-3 justify-center flex-col md:flex-row items-center">
             <Link
               to="/courses/machine-learning/intro"
-              className={styles.primaryButton}
+              className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl no-underline transition-colors"
             >
               Get Started Free
               <ArrowRight size={18} />
             </Link>
-            <Link to="/fellowship" className={styles.outlineButton}>
+            <Link
+              to="/fellowship"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-transparent text-[#141414] font-semibold border-[1.5px] border-[#e5e5e5] rounded-xl hover:border-[#d4d4d4] hover:bg-[#fafafa] no-underline transition-colors"
+            >
               AI Fellowship
             </Link>
           </div>
@@ -383,10 +365,6 @@ function CTASection() {
     </section>
   );
 }
-
-// ============================================================================
-// Page
-// ============================================================================
 
 export default function Home(): React.JSX.Element {
   return (

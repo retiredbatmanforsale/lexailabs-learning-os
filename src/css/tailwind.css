@@ -1,42 +1,119 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "../globals.css";
 
-/* Custom components for the tutorial */
+/* ========================================
+ * Tutorial Color Tokens (v4 @theme)
+ * Replaces old v3 tailwind.config.js colors
+ * ======================================== */
+@theme {
+  --color-indian-saffron: #ff9933;
+  --color-indian-green: #138808;
+  --color-indian-blue: #0066ff;
+  --color-accent-orange: #ffb366;
+  --color-accent-green: #20a020;
+  --color-accent-blue: #4da6ff;
+
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+  --animate-pulse-gentle: pulseGentle 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGentle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* ========================================
+ * Tutorial Component Classes
+ * ======================================== */
 @layer components {
   .tutorial-container {
-    @apply min-h-screen bg-black;
+    min-height: 100vh;
+    background-color: black;
   }
-  
+
   .tutorial-header {
-    @apply bg-white/10 backdrop-blur-md border-b border-white/20 sticky top-0 z-10;
+    background-color: rgb(255 255 255 / 0.1);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgb(255 255 255 / 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
-  
+
   .tutorial-card {
-    @apply bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 shadow-2xl;
+    background-color: rgb(255 255 255 / 0.05);
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    border: 1px solid rgb(255 255 255 / 0.1);
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   }
-  
+
   .tutorial-button {
-    @apply px-6 py-4 backdrop-blur-sm rounded-xl border border-white/20 text-white font-medium transition-all duration-300 hover:bg-white/20;
+    padding: 1rem 1.5rem;
+    backdrop-filter: blur(4px);
+    border-radius: 0.75rem;
+    border: 1px solid rgb(255 255 255 / 0.2);
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s;
   }
-  
+
+  .tutorial-button:hover {
+    background-color: rgb(255 255 255 / 0.2);
+  }
+
   .tutorial-button-primary {
-    @apply bg-gradient-to-r from-indian-saffron to-red-500 rounded-xl text-white font-medium transition-all duration-300 hover:from-orange-500 hover:to-red-600 shadow-lg;
+    background: linear-gradient(to right, #ff9933, #ef4444);
+    border-radius: 0.75rem;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
   }
-  
+
+  .tutorial-button-primary:hover {
+    background: linear-gradient(to right, #f97316, #dc2626);
+  }
+
   .tutorial-nav-button {
-    @apply px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    white-space: nowrap;
   }
-  
+
   .tutorial-nav-active {
-    @apply bg-gradient-to-r from-indian-saffron to-red-500 text-white shadow-lg;
+    background: linear-gradient(to right, #ff9933, #ef4444);
+    color: white;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
   }
-  
+
   .tutorial-nav-completed {
-    @apply bg-indian-green/20 text-green-300 border border-indian-green/30;
+    background-color: rgb(19 136 8 / 0.2);
+    color: #86efac;
+    border: 1px solid rgb(19 136 8 / 0.3);
   }
-  
+
   .tutorial-nav-inactive {
-    @apply text-white/70 hover:text-white hover:bg-white/10;
+    color: rgb(255 255 255 / 0.7);
+  }
+
+  .tutorial-nav-inactive:hover {
+    color: white;
+    background-color: rgb(255 255 255 / 0.1);
   }
 }

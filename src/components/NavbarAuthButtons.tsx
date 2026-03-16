@@ -22,7 +22,7 @@ function NavbarAuthInner() {
   }
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: '0.5rem' }}>
+    <div className="flex items-center gap-2 ml-2">
       {!hasAccess && (
         <Link
           to="/subscribe"
@@ -33,65 +33,42 @@ function NavbarAuthInner() {
       )}
       <div className="dropdown dropdown--hoverable dropdown--right">
         <button
-          className="button button--secondary button--sm"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.375rem',
-            padding: '0.25rem 0.5rem',
-          }}
+          className="button button--secondary button--sm flex items-center gap-1.5 px-2 py-1"
         >
           {user?.image ? (
             <img
               src={user.image}
               alt=""
-              style={{
-                width: '24px',
-                height: '24px',
-                borderRadius: '50%',
-              }}
+              className="w-6 h-6 rounded-full"
               referrerPolicy="no-referrer"
             />
           ) : (
-            <span style={{
-              width: '24px',
-              height: '24px',
-              borderRadius: '50%',
-              background: 'var(--ifm-color-primary)',
-              color: 'white',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '0.75rem',
-              fontWeight: 600,
-            }}>
+            <span className="w-6 h-6 rounded-full bg-[var(--ifm-color-primary)] text-white flex items-center justify-center text-xs font-semibold">
               {(user?.name || user?.email || '?')[0].toUpperCase()}
             </span>
           )}
         </button>
-        <ul className="dropdown__menu" style={{ minWidth: '160px' }}>
+        <ul className="dropdown__menu min-w-[160px]">
           <li>
-            <span className="dropdown__link" style={{ fontWeight: 500, cursor: 'default' }}>
+            <span className="dropdown__link font-medium cursor-default">
               {user?.name || user?.email}
             </span>
           </li>
           <li>
             <span
-              className="dropdown__link"
-              style={{ fontSize: '0.75rem', color: 'var(--ifm-color-emphasis-500)', cursor: 'default' }}
+              className="dropdown__link text-xs text-[var(--ifm-color-emphasis-500)] cursor-default"
             >
               {user?.email}
             </span>
           </li>
-          <li style={{ borderTop: '1px solid var(--ifm-color-emphasis-200)', marginTop: '0.25rem', paddingTop: '0.25rem' }}>
+          <li className="border-t border-[var(--ifm-color-emphasis-200)] mt-1 pt-1">
             <a
-              className="dropdown__link"
+              className="dropdown__link text-[var(--ifm-color-danger)]"
               onClick={(e) => {
                 e.preventDefault();
                 logout();
               }}
               href="#"
-              style={{ color: 'var(--ifm-color-danger)' }}
             >
               Sign Out
             </a>

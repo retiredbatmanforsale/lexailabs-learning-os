@@ -2,6 +2,14 @@
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "@/ui": ["./src/ui/index.ts"],
+      "@/ui/*": ["./src/ui/*"],
+      "@/components": ["./src/components/index.ts"],
+      "@/components/*": ["./src/components/*"],
+      "@/lib/*": ["./src/ui/lib/*"],
+      "@/primitives/*": ["./src/ui/primitives/*"]
+    },
     "resolveJsonModule": true,
     "target": "ESNext",
     "module": "NodeNext",

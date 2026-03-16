@@ -1,0 +1,473 @@
+/**
+ * Sarvam UI (Tatva) - Tailwind CSS v4 Theme
+ * 
+ * This file provides Tailwind v4 compatibility using the @theme directive.
+ * It imports styles.css automatically, so you only need this one file.
+ * 
+ * Usage (Tailwind v4):
+ *   @import "tailwindcss";
+ *   @import "@sarvam/tatva/theme.css";
+ *   @source "../node_modules/@sarvam/tatva/dist/**";
+ */
+
+@import "./styles.css";
+
+@theme {
+  /* ============================================
+   * Font Families
+   * Usage: font-matter, font-season
+   * ============================================ */
+  --font-matter: var(--tatva-family-matter);
+  --font-season: var(--tatva-family-season);
+
+  /* ============================================
+   * Colors
+   * All colors reference the CSS variables from styles.css
+   * This enables automatic light/dark mode switching
+   * ============================================ */
+
+  /* Background colors */
+  --color-tatva-background: rgb(var(--tatva-background-primary));
+  --color-tatva-background-primary: rgb(var(--tatva-background-primary));
+  --color-tatva-background-primary-hover: rgb(var(--tatva-background-primary-hover));
+  --color-tatva-background-secondary: rgb(var(--tatva-background-secondary));
+  --color-tatva-background-secondary-hover: rgb(var(--tatva-background-secondary-hover));
+  --color-tatva-background-tertiary: rgb(var(--tatva-background-tertiary));
+  --color-tatva-background-tertiary-hover: rgb(var(--tatva-background-tertiary-hover));
+  --color-tatva-background-black: rgb(var(--tatva-background-black));
+  --color-tatva-background-black-hover: rgb(var(--tatva-background-black-hover));
+
+  /* Content colors */
+  --color-tatva-content: rgb(var(--tatva-content-primary));
+  --color-tatva-content-primary: rgb(var(--tatva-content-primary));
+  --color-tatva-content-inverse: rgb(var(--tatva-content-inverse));
+  --color-tatva-content-secondary: rgb(var(--tatva-content-secondary));
+  --color-tatva-content-tertiary: rgb(var(--tatva-content-tertiary));
+  --color-tatva-content-quaternary: rgb(var(--tatva-content-quaternary));
+
+  /* Surface colors */
+  --color-tatva-surface: rgb(var(--tatva-surface-primary));
+  --color-tatva-surface-primary: rgb(var(--tatva-surface-primary));
+  --color-tatva-surface-secondary: rgb(var(--tatva-surface-secondary));
+
+  /* Border colors */
+  --color-tatva-border: rgb(var(--tatva-border-primary));
+  --color-tatva-border-primary: rgb(var(--tatva-border-primary));
+  --color-tatva-border-secondary: rgb(var(--tatva-border-secondary));
+  --color-tatva-border-tertiary: rgb(var(--tatva-border-tertiary));
+
+  /* Brand colors */
+  --color-tatva-brand: rgb(var(--tatva-brand-primary));
+  --color-tatva-brand-primary: rgb(var(--tatva-brand-primary));
+  --color-tatva-brand-primary-hover: rgb(var(--tatva-brand-primary-hover));
+  --color-tatva-brand-secondary: rgb(var(--tatva-brand-secondary));
+  --color-tatva-brand-secondary-hover: rgb(var(--tatva-brand-secondary-hover));
+  --color-tatva-brand-content-primary: rgb(var(--tatva-brand-content-primary));
+  --color-tatva-brand-content-secondary: rgb(var(--tatva-brand-content-secondary));
+
+  /* Semantic colors - Positive */
+  --color-tatva-positive: rgb(var(--tatva-positive-content));
+  --color-tatva-positive-background: rgb(var(--tatva-positive-background));
+  --color-tatva-positive-content: rgb(var(--tatva-positive-content));
+
+  /* Semantic colors - Warning */
+  --color-tatva-warning: rgb(var(--tatva-warning-content));
+  --color-tatva-warning-background: rgb(var(--tatva-warning-background));
+  --color-tatva-warning-content: rgb(var(--tatva-warning-content));
+
+  /* Semantic colors - Danger */
+  --color-tatva-danger: rgb(var(--tatva-danger-content));
+  --color-tatva-danger-background: rgb(var(--tatva-danger-background));
+  --color-tatva-danger-background-hover: rgb(var(--tatva-danger-background-hover));
+  --color-tatva-danger-content: rgb(var(--tatva-danger-content));
+
+  /* Accent colors - Indigo */
+  --color-tatva-indigo: rgb(var(--tatva-indigo-content));
+  --color-tatva-indigo-50: rgb(var(--tatva-indigo-50));
+  --color-tatva-indigo-100: rgb(var(--tatva-indigo-100));
+  --color-tatva-indigo-200: rgb(var(--tatva-indigo-200));
+  --color-tatva-indigo-300: rgb(var(--tatva-indigo-300));
+  --color-tatva-indigo-400: rgb(var(--tatva-indigo-400));
+  --color-tatva-indigo-500: rgb(var(--tatva-indigo-500));
+  --color-tatva-indigo-600: rgb(var(--tatva-indigo-600));
+  --color-tatva-indigo-700: rgb(var(--tatva-indigo-700));
+  --color-tatva-indigo-800: rgb(var(--tatva-indigo-800));
+  --color-tatva-indigo-900: rgb(var(--tatva-indigo-900));
+  --color-tatva-indigo-background: rgb(var(--tatva-indigo-background));
+  --color-tatva-indigo-content: rgb(var(--tatva-indigo-content));
+
+  /* Accent colors - Orange */
+  --color-tatva-orange: rgb(var(--tatva-orange-content));
+  --color-tatva-orange-50: rgb(var(--tatva-orange-50));
+  --color-tatva-orange-100: rgb(var(--tatva-orange-100));
+  --color-tatva-orange-200: rgb(var(--tatva-orange-200));
+  --color-tatva-orange-300: rgb(var(--tatva-orange-300));
+  --color-tatva-orange-400: rgb(var(--tatva-orange-400));
+  --color-tatva-orange-500: rgb(var(--tatva-orange-500));
+  --color-tatva-orange-600: rgb(var(--tatva-orange-600));
+  --color-tatva-orange-700: rgb(var(--tatva-orange-700));
+  --color-tatva-orange-800: rgb(var(--tatva-orange-800));
+  --color-tatva-orange-900: rgb(var(--tatva-orange-900));
+  --color-tatva-orange-background: rgb(var(--tatva-orange-background));
+  --color-tatva-orange-content: rgb(var(--tatva-orange-content));
+
+  /* Accent colors - Green */
+  --color-tatva-green: rgb(var(--tatva-green-content));
+  --color-tatva-green-50: rgb(var(--tatva-green-50));
+  --color-tatva-green-100: rgb(var(--tatva-green-100));
+  --color-tatva-green-200: rgb(var(--tatva-green-200));
+  --color-tatva-green-300: rgb(var(--tatva-green-300));
+  --color-tatva-green-400: rgb(var(--tatva-green-400));
+  --color-tatva-green-500: rgb(var(--tatva-green-500));
+  --color-tatva-green-600: rgb(var(--tatva-green-600));
+  --color-tatva-green-700: rgb(var(--tatva-green-700));
+  --color-tatva-green-800: rgb(var(--tatva-green-800));
+  --color-tatva-green-900: rgb(var(--tatva-green-900));
+  --color-tatva-green-background: rgb(var(--tatva-green-background));
+  --color-tatva-green-content: rgb(var(--tatva-green-content));
+
+  /* Accent colors - Pink */
+  --color-tatva-pink: rgb(var(--tatva-pink-content));
+  --color-tatva-pink-50: rgb(var(--tatva-pink-50));
+  --color-tatva-pink-100: rgb(var(--tatva-pink-100));
+  --color-tatva-pink-200: rgb(var(--tatva-pink-200));
+  --color-tatva-pink-300: rgb(var(--tatva-pink-300));
+  --color-tatva-pink-400: rgb(var(--tatva-pink-400));
+  --color-tatva-pink-500: rgb(var(--tatva-pink-500));
+  --color-tatva-pink-600: rgb(var(--tatva-pink-600));
+  --color-tatva-pink-700: rgb(var(--tatva-pink-700));
+  --color-tatva-pink-800: rgb(var(--tatva-pink-800));
+  --color-tatva-pink-900: rgb(var(--tatva-pink-900));
+  --color-tatva-pink-background: rgb(var(--tatva-pink-background));
+  --color-tatva-pink-content: rgb(var(--tatva-pink-content));
+
+  /* Accent colors - Red */
+  --color-tatva-red: rgb(var(--tatva-red-content));
+  --color-tatva-red-50: rgb(var(--tatva-red-50));
+  --color-tatva-red-100: rgb(var(--tatva-red-100));
+  --color-tatva-red-200: rgb(var(--tatva-red-200));
+  --color-tatva-red-300: rgb(var(--tatva-red-300));
+  --color-tatva-red-400: rgb(var(--tatva-red-400));
+  --color-tatva-red-500: rgb(var(--tatva-red-500));
+  --color-tatva-red-600: rgb(var(--tatva-red-600));
+  --color-tatva-red-700: rgb(var(--tatva-red-700));
+  --color-tatva-red-800: rgb(var(--tatva-red-800));
+  --color-tatva-red-900: rgb(var(--tatva-red-900));
+  --color-tatva-red-background: rgb(var(--tatva-red-background));
+  --color-tatva-red-content: rgb(var(--tatva-red-content));
+
+  /* Accent colors - Yellow */
+  --color-tatva-yellow: rgb(var(--tatva-yellow-content));
+  --color-tatva-yellow-50: rgb(var(--tatva-yellow-50));
+  --color-tatva-yellow-100: rgb(var(--tatva-yellow-100));
+  --color-tatva-yellow-200: rgb(var(--tatva-yellow-200));
+  --color-tatva-yellow-300: rgb(var(--tatva-yellow-300));
+  --color-tatva-yellow-400: rgb(var(--tatva-yellow-400));
+  --color-tatva-yellow-500: rgb(var(--tatva-yellow-500));
+  --color-tatva-yellow-600: rgb(var(--tatva-yellow-600));
+  --color-tatva-yellow-700: rgb(var(--tatva-yellow-700));
+  --color-tatva-yellow-800: rgb(var(--tatva-yellow-800));
+  --color-tatva-yellow-900: rgb(var(--tatva-yellow-900));
+  --color-tatva-yellow-background: rgb(var(--tatva-yellow-background));
+  --color-tatva-yellow-content: rgb(var(--tatva-yellow-content));
+
+  /* ============================================
+   * Border Radius
+   * Usage: rounded-tatva-none, rounded-tatva-xs, etc.
+   * ============================================ */
+  --radius-tatva-none: 0px;
+  --radius-tatva-xs: calc(var(--tatva-radius-base) * 1);
+  --radius-tatva-sm: calc(var(--tatva-radius-base) * 2);
+  --radius-tatva-md: calc(var(--tatva-radius-base) * 3);
+  --radius-tatva-lg: calc(var(--tatva-radius-base) * 5);
+  --radius-tatva-xl: calc(var(--tatva-radius-base) * 7);
+  --radius-tatva-full: calc(var(--tatva-radius-base) * 999);
+
+  /* ============================================
+   * Font Sizes
+   * Usage: text-tatva-body-xs, text-tatva-heading-lg, etc.
+   * ============================================ */
+  --text-tatva-body-xs: var(--tatva-font-size-base);
+  --text-tatva-body-sm: calc(var(--tatva-font-size-base) + 2px);
+  --text-tatva-body-md: calc(var(--tatva-font-size-base) + 3px);
+  --text-tatva-body-lg: calc(var(--tatva-font-size-base) + 6px);
+  --text-tatva-label-sm: calc(var(--tatva-font-size-base) + 2px);
+  --text-tatva-label-md: calc(var(--tatva-font-size-base) + 3px);
+  --text-tatva-heading-xs: calc(var(--tatva-font-size-base) + 4px);
+  --text-tatva-heading-sm: calc(var(--tatva-font-size-base) + 6px);
+  --text-tatva-heading-md: calc(var(--tatva-font-size-base) + 8px);
+  --text-tatva-heading-lg: calc(var(--tatva-font-size-base) + 12px);
+  --text-tatva-display-sm: calc(var(--tatva-font-size-base) + 16px);
+
+  /* ============================================
+   * Spacing
+   * Usage: p-tatva-4, m-tatva-8, gap-tatva-6, etc.
+   * ============================================ */
+  --spacing-tatva-0: calc(var(--tatva-spacing-base) * 0);
+  --spacing-tatva-0\.5: calc(var(--tatva-spacing-base) * 0.5);
+  --spacing-tatva-1: calc(var(--tatva-spacing-base) * 1);
+  --spacing-tatva-2: calc(var(--tatva-spacing-base) * 2);
+  --spacing-tatva-3: calc(var(--tatva-spacing-base) * 3);
+  --spacing-tatva-4: calc(var(--tatva-spacing-base) * 4);
+  --spacing-tatva-5: calc(var(--tatva-spacing-base) * 5);
+  --spacing-tatva-6: calc(var(--tatva-spacing-base) * 6);
+  --spacing-tatva-7: calc(var(--tatva-spacing-base) * 7);
+  --spacing-tatva-8: calc(var(--tatva-spacing-base) * 8);
+  --spacing-tatva-9: calc(var(--tatva-spacing-base) * 9);
+  --spacing-tatva-10: calc(var(--tatva-spacing-base) * 10);
+  --spacing-tatva-12: calc(var(--tatva-spacing-base) * 12);
+  --spacing-tatva-14: calc(var(--tatva-spacing-base) * 14);
+  --spacing-tatva-16: calc(var(--tatva-spacing-base) * 16);
+  --spacing-tatva-18: calc(var(--tatva-spacing-base) * 18);
+  --spacing-tatva-20: calc(var(--tatva-spacing-base) * 20);
+  --spacing-tatva-22: calc(var(--tatva-spacing-base) * 22);
+  --spacing-tatva-24: calc(var(--tatva-spacing-base) * 24);
+  --spacing-tatva-26: calc(var(--tatva-spacing-base) * 26);
+  --spacing-tatva-27: calc(var(--tatva-spacing-base) * 27);
+  --spacing-tatva-28: calc(var(--tatva-spacing-base) * 28);
+  --spacing-tatva-30: calc(var(--tatva-spacing-base) * 30);
+  --spacing-tatva-31: calc(var(--tatva-spacing-base) * 31);
+  --spacing-tatva-32: calc(var(--tatva-spacing-base) * 32);
+  --spacing-tatva-34: calc(var(--tatva-spacing-base) * 34);
+  --spacing-tatva-36: calc(var(--tatva-spacing-base) * 36);
+  --spacing-tatva-38: calc(var(--tatva-spacing-base) * 38);
+  --spacing-tatva-40: calc(var(--tatva-spacing-base) * 40);
+  --spacing-tatva-46: calc(var(--tatva-spacing-base) * 46);
+  --spacing-tatva-60: calc(var(--tatva-spacing-base) * 60);
+  --spacing-tatva-72: calc(var(--tatva-spacing-base) * 72);
+  --spacing-tatva-80: calc(var(--tatva-spacing-base) * 80);
+  --spacing-tatva-100: calc(var(--tatva-spacing-base) * 100);
+  --spacing-tatva-120: calc(var(--tatva-spacing-base) * 120);
+  --spacing-tatva-140: calc(var(--tatva-spacing-base) * 140);
+  --spacing-tatva-150: calc(var(--tatva-spacing-base) * 150);
+  --spacing-tatva-160: calc(var(--tatva-spacing-base) * 160);
+  --spacing-tatva-210: calc(var(--tatva-spacing-base) * 210);
+  --spacing-tatva-300: calc(var(--tatva-spacing-base) * 300);
+  --spacing-tatva-400: calc(var(--tatva-spacing-base) * 400);
+  --spacing-tatva-600: calc(var(--tatva-spacing-base) * 600);
+
+  /* ============================================
+   * Box Shadows
+   * Usage: shadow-tatva-l1, shadow-tatva-l2
+   * ============================================ */
+  --shadow-tatva-l1: 0 0 var(--tatva-shadow-blur) 0 rgb(var(--tatva-shadow-l1-color));
+  --shadow-tatva-l2: 0 0 var(--tatva-shadow-blur) 0 rgb(var(--tatva-shadow-l2-color));
+
+  /* ============================================
+   * Animations
+   * Usage: animate-tatva-spin, animate-tatva-fade-in, etc.
+   * ============================================ */
+  --animate-tatva-spin: tatva-spin 1s linear infinite;
+  --animate-tatva-fade-in: tatva-fade-in 200ms ease-out;
+  --animate-tatva-fade-out: tatva-fade-out 200ms ease-in;
+  --animate-tatva-slide-in-from-right: tatva-slide-in-from-right 300ms ease-out;
+  --animate-tatva-slide-out-to-right: tatva-slide-out-to-right 300ms ease-in;
+  --animate-tatva-slide-in-from-left: tatva-slide-in-from-left 300ms ease-out;
+  --animate-tatva-slide-out-to-left: tatva-slide-out-to-left 300ms ease-in;
+  --animate-tatva-zoom-in: tatva-zoom-in 200ms ease-out;
+  --animate-tatva-zoom-out: tatva-zoom-out 200ms ease-in;
+  --animate-tatva-dialog-overlay-in: tatva-dialog-overlay-in 150ms ease-out forwards;
+  --animate-tatva-dialog-overlay-out: tatva-dialog-overlay-out 150ms ease-in forwards;
+  --animate-tatva-dialog-content-in: tatva-dialog-content-in 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-tatva-dialog-content-out: tatva-dialog-content-out 150ms ease-in forwards;
+  --animate-tatva-skeleton-shimmer: tatva-skeleton-shimmer 2s infinite linear;
+  --animate-tatva-skeleton-pulse: tatva-skeleton-pulse 2s infinite ease-in-out;
+  --animate-tatva-accordion-down: tatva-accordion-down 200ms ease-out;
+  --animate-tatva-accordion-up: tatva-accordion-up 200ms ease-out;
+  --animate-tatva-linear-loader: tatva-linear-loader 1.5s infinite ease-in-out;
+}
+
+/* ============================================
+ * Keyframes
+ * These must be defined outside @theme
+ * ============================================ */
+
+@keyframes tatva-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tatva-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tatva-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes tatva-slide-in-from-right {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes tatva-slide-out-to-right {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes tatva-slide-in-from-left {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes tatva-slide-out-to-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes tatva-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes tatva-zoom-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes tatva-dialog-overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tatva-dialog-overlay-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes tatva-dialog-content-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes tatva-dialog-content-out {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+}
+
+@keyframes tatva-skeleton-shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes tatva-skeleton-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes tatva-accordion-down {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes tatva-accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+@keyframes tatva-linear-loader {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(400%);
+  }
+}

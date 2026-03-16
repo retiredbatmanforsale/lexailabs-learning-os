@@ -1,0 +1,414 @@
+@import "./fonts.css";
+
+/* 
+ * Distribution CSS - fonts, tokens and base styles.
+ * Consumer must extend their Tailwind config with sarvam-ui tokens.
+ * See: tailwind.config.ts for the token definitions to copy.
+ * 
+ * NOTE: All RGB values MUST be space-separated (not comma-separated)
+ * to support Tailwind's opacity modifier syntax (e.g., bg-color/50)
+ */
+
+/* Samvaad theme tokens - Light (default) */
+:root {
+  /* Figma Design system colors */
+
+  /* Background colors */
+  --tatva-background-primary: 255 255 255;
+  --tatva-background-primary-hover: 250 250 250;
+
+  --tatva-background-secondary: 245 245 245;
+  --tatva-background-secondary-hover: 240 240 240;
+
+  --tatva-background-tertiary: 240 240 240;
+  --tatva-background-tertiary-hover: 230 230 230;
+
+  --tatva-background-black: 20 20 20;
+  --tatva-background-black-hover: 61 61 61;
+
+  /* Content colors */
+  --tatva-content-primary: 20 20 20;
+  --tatva-content-inverse: 255 255 255;
+  --tatva-content-secondary: 102 102 102;
+  --tatva-content-tertiary: 153 153 153;
+  --tatva-content-quaternary: 179 179 179;
+
+  /* Surface colors */
+  --tatva-surface-primary: 250 250 250;
+  --tatva-surface-secondary: 255 255 255;
+
+  /* Border colors */
+  --tatva-border-primary: 240 240 240;
+  --tatva-border-secondary: 230 230 230;
+  --tatva-border-tertiary: 179 179 179;
+
+  /* Alpha colors - use bg-tatva-background-black/25 and bg-tatva-background-black/50 */
+
+  /* Brand colors */
+  --tatva-brand-primary: 232 239 252;
+  --tatva-brand-primary-hover: 250 252 255;
+  --tatva-brand-secondary: 210 223 249;
+  --tatva-brand-secondary-hover: 167 192 241;
+  --tatva-brand-content-primary: 51 51 204;
+  --tatva-brand-content-secondary: 33 33 145;
+
+  /* Semantic colors */
+  --tatva-positive-background: 242 248 235;
+  --tatva-positive-content: 110 163 53;
+
+  --tatva-warning-background: 255 248 230;
+  --tatva-warning-content: 162 114 36;
+  /* #A27224 */
+
+  --tatva-danger-background: 253 231 226;
+  --tatva-danger-background-hover: 248 209 198;
+  --tatva-danger-content: 184 21 20;
+
+  /* Accent colors - Indigo scale */
+  --tatva-indigo-50: 250 251 255;
+  --tatva-indigo-100: 232 239 252;
+  /* #e8effc */
+  --tatva-indigo-200: 210 223 249;
+  --tatva-indigo-300: 167 192 241;
+  --tatva-indigo-400: 124 150 230;
+  --tatva-indigo-500: 81 108 220;
+  --tatva-indigo-600: 66 80 213;
+  --tatva-indigo-700: 56 66 180;
+  --tatva-indigo-800: 51 51 204;
+  /* #3333cc */
+  --tatva-indigo-900: 33 33 145;
+  --tatva-indigo-background: var(--tatva-indigo-100);
+  --tatva-indigo-content: var(--tatva-indigo-800);
+
+  /* Accent colors - Orange scale */
+  --tatva-orange-50: 255 247 242;
+  --tatva-orange-100: 254 237 230;
+  /* #feede6 */
+  --tatva-orange-200: 253 220 204;
+  --tatva-orange-300: 250 185 153;
+  --tatva-orange-400: 245 150 102;
+  --tatva-orange-500: 240 120 60;
+  --tatva-orange-600: 233 108 47;
+  --tatva-orange-700: 210 90 30;
+  --tatva-orange-800: 230 101 27;
+  /* #e6651b */
+  --tatva-orange-900: 180 70 15;
+  --tatva-orange-background: var(--tatva-orange-100);
+  --tatva-orange-content: var(--tatva-orange-800);
+
+  /* Accent colors - Green scale */
+  --tatva-green-50: 242 248 235;
+  /* #f2f8eb */
+  --tatva-green-100: 227 241 216;
+  --tatva-green-200: 200 225 180;
+  --tatva-green-300: 165 200 135;
+  --tatva-green-400: 130 175 90;
+  --tatva-green-500: 95 150 55;
+  --tatva-green-600: 75 125 40;
+  --tatva-green-700: 65 105 30;
+  --tatva-green-800: 56 84 24;
+  /* #385418 */
+  --tatva-green-900: 40 60 15;
+  --tatva-green-background: var(--tatva-green-50);
+  --tatva-green-content: var(--tatva-green-800);
+
+  /* Accent colors - Pink scale */
+  --tatva-pink-50: 252 234 240;
+  /* #fceaf0 */
+  --tatva-pink-100: 250 220 230;
+  --tatva-pink-200: 245 195 210;
+  --tatva-pink-300: 235 155 180;
+  --tatva-pink-400: 220 110 145;
+  --tatva-pink-500: 200 70 115;
+  --tatva-pink-600: 157 32 85;
+  /* #9d2055 */
+  --tatva-pink-700: 140 25 75;
+  --tatva-pink-800: 120 20 65;
+  --tatva-pink-900: 90 15 50;
+  --tatva-pink-background: var(--tatva-pink-50);
+  --tatva-pink-content: var(--tatva-pink-600);
+
+  /* Accent colors - Red scale */
+  --tatva-red-50: 253 231 226;
+  /* #fde7e2 */
+  --tatva-red-100: 250 215 205;
+  --tatva-red-200: 245 185 170;
+  --tatva-red-300: 235 145 125;
+  --tatva-red-400: 220 100 80;
+  --tatva-red-500: 184 21 20;
+  /* #b81514 */
+  --tatva-red-600: 170 50 45;
+  --tatva-red-700: 150 40 35;
+  --tatva-red-800: 130 30 25;
+  --tatva-red-900: 100 20 15;
+  --tatva-red-background: var(--tatva-red-50);
+  --tatva-red-content: var(--tatva-red-500);
+
+  /* Accent colors - Yellow scale */
+  --tatva-yellow-50: 255 248 230;
+  /* #fff8e6 */
+  --tatva-yellow-100: 255 242 210;
+  --tatva-yellow-200: 255 230 175;
+  --tatva-yellow-300: 250 210 130;
+  --tatva-yellow-400: 240 185 90;
+  --tatva-yellow-500: 225 165 60;
+  --tatva-yellow-600: 210 150 45;
+  --tatva-yellow-700: 192 136 39;
+  /* #c08827 */
+  --tatva-yellow-800: 170 115 30;
+  --tatva-yellow-900: 140 90 20;
+  --tatva-yellow-background: var(--tatva-yellow-50);
+  --tatva-yellow-content: var(--tatva-yellow-700);
+
+  /* spacing and radius */
+  --tatva-spacing-base: 2px;
+  --tatva-radius-base: 4px;
+
+  /* font sizes */
+  --tatva-font-size-base: 12px;
+
+  /* font families */
+  --tatva-family-matter: "Matter", system-ui, sans-serif;
+  --tatva-family-season: "Season Mix", system-ui, sans-serif;
+
+  /* Drop shadows */
+  --tatva-shadow-l1-color: 240 240 240;
+  --tatva-shadow-l2-color: 230 230 230;
+  --tatva-shadow-blur: 24px;
+}
+
+.dark {
+  /* Background colors - rich dark with subtle cool undertones */
+  --tatva-background-primary: 9 9 11;
+  /* #09090b - zinc-950 */
+  --tatva-background-primary-hover: 24 24 27;
+  /* #18181b - zinc-900 */
+  --tatva-background-secondary: 24 24 27;
+  /* #18181b */
+  --tatva-background-secondary-hover: 39 39 42;
+  /* #27272a - zinc-800 */
+  --tatva-background-tertiary: 39 39 42;
+  /* #27272a */
+  --tatva-background-tertiary-hover: 63 63 70;
+  /* #3f3f46 - zinc-700 */
+  --tatva-background-black: 250 250 250;
+  /* inverts to white */
+  --tatva-background-black-hover: 228 228 231;
+  /* #e4e4e7 - zinc-200 */
+
+  /* Content colors - high contrast for readability */
+  --tatva-content-primary: 250 250 250;
+  /* #fafafa - zinc-50 */
+  --tatva-content-inverse: 9 9 11;
+  /* #09090b */
+  --tatva-content-secondary: 161 161 170;
+  /* #a1a1aa - zinc-400 */
+  --tatva-content-tertiary: 113 113 122;
+  /* #71717a - zinc-500 */
+  --tatva-content-quaternary: 82 82 91;
+  /* #52525b - zinc-600 */
+
+  /* Surface colors - layered elevation */
+  --tatva-surface-primary: 9 9 11;
+  /* #09090b - base layer */
+  --tatva-surface-secondary: 24 24 27;
+  /* #18181b - elevated */
+
+  /* Border colors - subtle but visible */
+  --tatva-border-primary: 39 39 42;
+  /* #27272a - zinc-800 */
+  --tatva-border-secondary: 63 63 70;
+  /* #3f3f46 - zinc-700 */
+  --tatva-border-tertiary: 82 82 91;
+  /* #52525b - zinc-600 */
+
+  /* Brand colors - vibrant indigo for dark mode */
+  --tatva-brand-primary: 30 41 82;
+  /* deep indigo bg */
+  --tatva-brand-primary-hover: 49 54 107;
+  --tatva-brand-secondary: 49 54 107;
+  --tatva-brand-secondary-hover: 67 72 132;
+  --tatva-brand-content-primary: 129 140 248;
+  /* #818cf8 - indigo-400 */
+  --tatva-brand-content-secondary: 165 180 252;
+  /* #a5b4fc - indigo-300 */
+
+  /* Semantic colors - vibrant on dark */
+  --tatva-positive-background: 20 42 34;
+  /* dark green */
+  --tatva-positive-content: 74 222 128;
+  /* #4ade80 - green-400 */
+  --tatva-warning-background: 46 38 21;
+  /* dark amber */
+  --tatva-warning-content: 251 191 36;
+  /* #fbbf24 - amber-400 */
+  --tatva-danger-background: 50 23 30;
+  /* dark red */
+  --tatva-danger-background-hover: 68 30 38;
+  --tatva-danger-content: 248 113 113;
+  /* #f87171 - red-400 */
+
+  /* Accent colors - Indigo scale (dark mode optimized) */
+  --tatva-indigo-50: 30 33 54;
+  --tatva-indigo-100: 30 41 82;
+  --tatva-indigo-200: 49 54 107;
+  --tatva-indigo-300: 67 72 132;
+  --tatva-indigo-400: 99 102 241;
+  /* #6366f1 - indigo-500 */
+  --tatva-indigo-500: 129 140 248;
+  /* #818cf8 - indigo-400 */
+  --tatva-indigo-600: 165 180 252;
+  /* #a5b4fc - indigo-300 */
+  --tatva-indigo-700: 199 210 254;
+  --tatva-indigo-800: 224 231 255;
+  --tatva-indigo-900: 238 242 255;
+  --tatva-indigo-background: var(--tatva-indigo-100);
+  --tatva-indigo-content: var(--tatva-indigo-500);
+
+  /* Accent colors - Orange scale (dark mode optimized) */
+  --tatva-orange-50: 43 30 22;
+  --tatva-orange-100: 67 42 22;
+  --tatva-orange-200: 92 55 22;
+  --tatva-orange-300: 124 75 30;
+  --tatva-orange-400: 249 115 22;
+  /* #f97316 - orange-500 */
+  --tatva-orange-500: 251 146 60;
+  /* #fb923c - orange-400 */
+  --tatva-orange-600: 253 186 116;
+  /* #fdba74 - orange-300 */
+  --tatva-orange-700: 254 215 170;
+  --tatva-orange-800: 255 237 213;
+  --tatva-orange-900: 255 247 237;
+  --tatva-orange-background: var(--tatva-orange-100);
+  --tatva-orange-content: var(--tatva-orange-500);
+
+  /* Accent colors - Green scale (dark mode optimized) */
+  --tatva-green-50: 20 42 34;
+  --tatva-green-100: 22 55 41;
+  --tatva-green-200: 26 72 51;
+  --tatva-green-300: 34 100 68;
+  --tatva-green-400: 34 197 94;
+  /* #22c55e - green-500 */
+  --tatva-green-500: 74 222 128;
+  /* #4ade80 - green-400 */
+  --tatva-green-600: 134 239 172;
+  /* #86efac - green-300 */
+  --tatva-green-700: 187 247 208;
+  --tatva-green-800: 220 252 231;
+  --tatva-green-900: 240 253 244;
+  --tatva-green-background: var(--tatva-green-100);
+  --tatva-green-content: var(--tatva-green-500);
+
+  /* Accent colors - Pink scale (dark mode optimized) */
+  --tatva-pink-50: 43 24 36;
+  --tatva-pink-100: 63 28 48;
+  --tatva-pink-200: 93 33 63;
+  --tatva-pink-300: 131 42 84;
+  --tatva-pink-400: 236 72 153;
+  /* #ec4899 - pink-500 */
+  --tatva-pink-500: 244 114 182;
+  /* #f472b6 - pink-400 */
+  --tatva-pink-600: 249 168 212;
+  /* #f9a8d4 - pink-300 */
+  --tatva-pink-700: 251 207 232;
+  --tatva-pink-800: 252 231 243;
+  --tatva-pink-900: 253 242 248;
+  --tatva-pink-background: var(--tatva-pink-100);
+  --tatva-pink-content: var(--tatva-pink-500);
+
+  /* Accent colors - Red scale (dark mode optimized) */
+  --tatva-red-50: 50 23 30;
+  --tatva-red-100: 68 28 35;
+  --tatva-red-200: 94 34 43;
+  --tatva-red-300: 130 42 54;
+  --tatva-red-400: 239 68 68;
+  /* #ef4444 - red-500 */
+  --tatva-red-500: 248 113 113;
+  /* #f87171 - red-400 */
+  --tatva-red-600: 252 165 165;
+  /* #fca5a5 - red-300 */
+  --tatva-red-700: 254 202 202;
+  --tatva-red-800: 254 226 226;
+  --tatva-red-900: 254 242 242;
+  --tatva-red-background: var(--tatva-red-100);
+  --tatva-red-content: var(--tatva-red-500);
+
+  /* Accent colors - Yellow scale (dark mode optimized) */
+  --tatva-yellow-50: 46 38 21;
+  --tatva-yellow-100: 63 52 22;
+  --tatva-yellow-200: 85 70 22;
+  --tatva-yellow-300: 113 94 26;
+  --tatva-yellow-400: 234 179 8;
+  /* #eab308 - yellow-500 */
+  --tatva-yellow-500: 250 204 21;
+  /* #facc15 - yellow-400 */
+  --tatva-yellow-600: 253 224 71;
+  /* #fde047 - yellow-300 */
+  --tatva-yellow-700: 254 240 138;
+  --tatva-yellow-800: 254 249 195;
+  --tatva-yellow-900: 254 252 232;
+  --tatva-yellow-background: var(--tatva-yellow-100);
+  --tatva-yellow-content: var(--tatva-yellow-500);
+
+  /* Drop shadows - subtle glow effect for dark mode */
+  --tatva-shadow-l1-color: 0 0 0;
+  --tatva-shadow-l2-color: 0 0 0;
+}
+
+/* Custom scrollbar - smaller and spaced from edge */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--tatva-background-tertiary));
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--tatva-background-tertiary-hover));
+  background-clip: padding-box;
+  border: 3px solid transparent;
+}
+
+/* Hide scrollbar corner */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+/* Overlay scrollbar over content (no extra layout space)
+ * Apply directly to any scrollable div - scrollbar overlays content at absolute edge
+ * Note: Content inside should not have right/bottom padding that conflicts
+ */
+.scrollbar-overlay {
+  --scrollbar-width: 10px;
+  position: relative;
+  overflow: auto;
+
+}
+
+/* Firefox */
+.scrollbar-overlay {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--tatva-background-tertiary)) transparent;
+}

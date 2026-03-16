@@ -96,58 +96,19 @@ function LoginPageContent() {
 
   if (mode === 'verify-email') {
     return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '70vh',
-        padding: '2rem',
-      }}>
-        <div style={{
-          width: '100%',
-          maxWidth: '480px',
-          padding: '2.5rem',
-          border: '1px solid var(--ifm-color-emphasis-200)',
-          borderRadius: '1rem',
-          background: 'var(--ifm-background-surface-color)',
-          textAlign: 'center',
-        }}>
-          <div style={{
-            width: '64px',
-            height: '64px',
-            margin: '0 auto 1.5rem',
-            borderRadius: '50%',
-            background: '#eff6ff',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '2rem',
-          }}>
+      <div className="flex justify-center items-center min-h-[70vh] p-8">
+        <div className="w-full max-w-[480px] p-10 border border-[var(--ifm-color-emphasis-200)] rounded-2xl bg-[var(--ifm-background-surface-color)] text-center">
+          <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-blue-50 flex items-center justify-center text-[2rem]">
             &#9993;
           </div>
-          <h2 style={{ marginBottom: '0.75rem' }}>Check Your Email</h2>
-          <p style={{
-            color: 'var(--ifm-color-emphasis-600)',
-            fontSize: '1rem',
-            lineHeight: 1.6,
-            marginBottom: '0.5rem',
-          }}>
+          <h2 className="mb-3">Check Your Email</h2>
+          <p className="text-[var(--ifm-color-emphasis-600)] text-base leading-relaxed mb-2">
             We've sent a verification link to
           </p>
-          <p style={{
-            fontWeight: 600,
-            fontSize: '1.0625rem',
-            color: 'var(--ifm-font-color-base)',
-            marginBottom: '1.5rem',
-          }}>
+          <p className="font-semibold text-[1.0625rem] text-[var(--ifm-font-color-base)] mb-6">
             {registeredEmail}
           </p>
-          <p style={{
-            color: 'var(--ifm-color-emphasis-500)',
-            fontSize: '0.9375rem',
-            lineHeight: 1.6,
-            marginBottom: '2rem',
-          }}>
+          <p className="text-[var(--ifm-color-emphasis-500)] text-[0.9375rem] leading-relaxed mb-8">
             Click the verification link in the email to activate your account.
             If you don't see it, check your spam folder.
           </p>
@@ -155,12 +116,11 @@ function LoginPageContent() {
             href="https://mail.google.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="button button--primary button--lg"
-            style={{ width: '100%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', marginBottom: '1rem' }}
+            className="button button--primary button--lg w-full inline-flex items-center justify-center gap-2 mb-4"
           >
             Open Gmail &#8599;
           </a>
-          <p style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-500)', marginBottom: '0' }}>
+          <p className="text-sm text-[var(--ifm-color-emphasis-500)] mb-0">
             Already verified?{' '}
             <a
               href="#"
@@ -170,7 +130,7 @@ function LoginPageContent() {
                 setError(null);
                 setSuccessMessage(null);
               }}
-              style={{ fontWeight: 500 }}
+              className="font-medium"
             >
               Sign in
             </a>
@@ -181,22 +141,9 @@ function LoginPageContent() {
   }
 
   return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      minHeight: '70vh',
-      padding: '2rem',
-    }}>
-      <div style={{
-        width: '100%',
-        maxWidth: '420px',
-        padding: '2rem',
-        border: '1px solid var(--ifm-color-emphasis-200)',
-        borderRadius: '1rem',
-        background: 'var(--ifm-background-surface-color)',
-      }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+    <div className="flex justify-center items-center min-h-[70vh] p-8">
+      <div className="w-full max-w-[420px] p-8 border border-[var(--ifm-color-emphasis-200)] rounded-2xl bg-[var(--ifm-background-surface-color)]">
+        <h2 className="text-center mb-6">
           {mode === 'login' ? 'Sign In' : 'Create Account'}
         </h2>
 
@@ -205,15 +152,10 @@ function LoginPageContent() {
           onError={() => setError('Google sign-in failed')}
         />
 
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '1rem',
-          margin: '1.5rem 0',
-        }}>
-          <hr style={{ flex: 1, border: 'none', borderTop: '1px solid var(--ifm-color-emphasis-200)' }} />
-          <span style={{ color: 'var(--ifm-color-emphasis-500)', fontSize: '0.875rem' }}>or</span>
-          <hr style={{ flex: 1, border: 'none', borderTop: '1px solid var(--ifm-color-emphasis-200)' }} />
+        <div className="flex items-center gap-4 my-6">
+          <hr className="flex-1 border-t border-[var(--ifm-color-emphasis-200)]" />
+          <span className="text-[var(--ifm-color-emphasis-500)] text-sm">or</span>
+          <hr className="flex-1 border-t border-[var(--ifm-color-emphasis-200)]" />
         </div>
 
         {mode === 'login' ? (
@@ -223,7 +165,7 @@ function LoginPageContent() {
               isLoading={isLoading}
               error={error}
             />
-            <p style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.875rem' }}>
+            <p className="text-center mt-4 text-sm">
               Don't have an account?{' '}
               <a
                 href="#"
@@ -234,13 +176,13 @@ function LoginPageContent() {
                   setSuccessMessage(null);
                   setPrefilledEmail('');
                 }}
-                style={{ fontWeight: 500 }}
+                className="font-medium"
               >
                 Create one
               </a>
             </p>
-            <p style={{ textAlign: 'center', fontSize: '0.875rem' }}>
-              <a href="/forgot-password" style={{ color: 'var(--ifm-color-emphasis-500)' }}>
+            <p className="text-center text-sm">
+              <a href="/forgot-password" className="text-[var(--ifm-color-emphasis-500)]">
                 Forgot password?
               </a>
             </p>
@@ -254,7 +196,7 @@ function LoginPageContent() {
               successMessage={successMessage}
               initialEmail={prefilledEmail}
             />
-            <p style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.875rem' }}>
+            <p className="text-center mt-4 text-sm">
               Already have an account?{' '}
               <a
                 href="#"
@@ -265,7 +207,7 @@ function LoginPageContent() {
                   setSuccessMessage(null);
                   setPrefilledEmail('');
                 }}
-                style={{ fontWeight: 500 }}
+                className="font-medium"
               >
                 Sign in
               </a>
@@ -281,7 +223,7 @@ export default function LoginPage() {
   return (
     <Layout title="Sign In" description="Sign in to access Lex AI courses">
       <BrowserOnly fallback={
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '70vh' }}>
+        <div className="flex justify-center items-center min-h-[70vh]">
           Loading...
         </div>
       }>

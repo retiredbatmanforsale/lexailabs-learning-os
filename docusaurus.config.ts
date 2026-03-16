@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import path from 'path';
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
@@ -44,6 +45,26 @@ const config: Config = {
     {
       src: 'https://checkout.razorpay.com/v1/checkout.js',
       async: true,
+    },
+  ],
+
+  plugins: [
+    function customAliasPlugin() {
+      return {
+        name: 'custom-aliases',
+        configureWebpack() {
+          return {
+            resolve: {
+              alias: {
+                '@/ui': path.resolve(__dirname, 'src/ui'),
+                '@/components': path.resolve(__dirname, 'src/components'),
+                '@/lib': path.resolve(__dirname, 'src/ui/lib'),
+                '@/primitives': path.resolve(__dirname, 'src/ui/primitives'),
+              },
+            },
+          };
+        },
+      };
     },
   ],
 

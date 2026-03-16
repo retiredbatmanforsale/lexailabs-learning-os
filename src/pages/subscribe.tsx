@@ -68,14 +68,7 @@ function SubscribePageContent() {
 
   if (isLoading) {
     return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '70vh',
-        fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-        color: '#666666',
-      }}>
+      <div className="flex justify-center items-center min-h-[70vh] text-[#666]">
         Loading...
       </div>
     );
@@ -107,105 +100,39 @@ function SubscribePageContent() {
       : 'Subscription';
 
     return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '70vh',
-        padding: '2rem',
-      }}>
-        <div style={{
-          width: '100%',
-          maxWidth: '480px',
-          padding: '2.5rem',
-          border: '1px solid #f0f0f0',
-          borderRadius: '0.75rem',
-          background: '#ffffff',
-          textAlign: 'center',
-        }}>
-          <h2 style={{
-            fontFamily: "'Instrument Serif', Georgia, serif",
-            fontWeight: 400,
-            fontSize: '2rem',
-            color: '#141414',
-            marginBottom: '1.5rem',
-          }}>
+      <div className="flex justify-center items-center min-h-[70vh] p-8">
+        <div className="w-full max-w-[480px] p-10 border border-[#f0f0f0] rounded-xl bg-white text-center">
+          <h2 className="font-serif font-normal text-[2rem] text-[#141414] mb-6">
             Your Subscription
           </h2>
 
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            padding: '0.375rem 1rem',
-            background: '#eff6ff',
-            color: '#3b82f6',
-            borderRadius: '9999px',
-            fontSize: '0.875rem',
-            fontWeight: 500,
-            marginBottom: '1rem',
-            fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-          }}>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 text-blue-500 rounded-full text-sm font-medium mb-4">
             {planLabel} Plan
           </div>
 
-          <p style={{
-            fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-            color: '#666666',
-            fontSize: '0.9375rem',
-            marginBottom: '0.25rem',
-          }}>
-            Status: <strong style={{ color: '#141414' }}>{subscriptionInfo.status}</strong>
+          <p className="text-[#666] text-[15px] mb-1">
+            Status: <strong className="text-[#141414]">{subscriptionInfo.status}</strong>
           </p>
 
           {subscriptionInfo.currentPeriodEnd && (
-            <p style={{
-              fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-              color: '#666666',
-              fontSize: '0.9375rem',
-              marginBottom: '1.5rem',
-            }}>
+            <p className="text-[#666] text-[15px] mb-6">
               {subscriptionInfo.cancelledAt ? 'Access until: ' : 'Next billing date: '}
-              <strong style={{ color: '#141414' }}>
+              <strong className="text-[#141414]">
                 {new Date(subscriptionInfo.currentPeriodEnd).toLocaleDateString()}
               </strong>
             </p>
           )}
 
           {paymentError && (
-            <div style={{
-              padding: '0.75rem 1rem',
-              background: '#fef2f2',
-              color: '#dc2626',
-              borderRadius: '0.5rem',
-              fontSize: '0.875rem',
-              marginBottom: '1rem',
-              fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-            }}>
+            <div className="px-4 py-3 bg-red-50 text-red-600 rounded-lg text-sm mb-4">
               {paymentError}
             </div>
           )}
 
-          <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center' }}>
+          <div className="flex gap-3 justify-center">
             <button
               onClick={() => history.push('/courses/machine-learning/intro')}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '0.75rem 1.75rem',
-                background: '#3b82f6',
-                color: '#ffffff',
-                fontWeight: 600,
-                fontSize: '1rem',
-                borderRadius: '0.75rem',
-                border: 'none',
-                cursor: 'pointer',
-                transition: 'background 0.2s ease',
-                fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-              }}
-              onMouseEnter={(e) => { (e.target as HTMLButtonElement).style.background = '#2563eb'; }}
-              onMouseLeave={(e) => { (e.target as HTMLButtonElement).style.background = '#3b82f6'; }}
+              className="inline-flex items-center justify-center px-7 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl border-none cursor-pointer transition-colors"
             >
               Go to Courses
             </button>
@@ -213,23 +140,7 @@ function SubscribePageContent() {
               <button
                 onClick={handleCancel}
                 disabled={cancelling}
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '0.75rem 1.75rem',
-                  background: 'transparent',
-                  color: '#dc2626',
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  borderRadius: '0.75rem',
-                  border: '1px solid #fca5a5',
-                  cursor: cancelling ? 'not-allowed' : 'pointer',
-                  transition: 'background 0.2s ease',
-                  fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-                }}
-                onMouseEnter={(e) => { (e.target as HTMLButtonElement).style.background = '#fef2f2'; }}
-                onMouseLeave={(e) => { (e.target as HTMLButtonElement).style.background = 'transparent'; }}
+                className="inline-flex items-center justify-center px-7 py-3 bg-transparent text-red-600 font-semibold rounded-xl border border-red-300 hover:bg-red-50 cursor-pointer transition-colors disabled:cursor-not-allowed"
               >
                 {cancelling ? 'Cancelling...' : 'Cancel'}
               </button>
@@ -243,62 +154,22 @@ function SubscribePageContent() {
   // ─── Already has access (legacy premium or institution) ──────
   if (hasAccess) {
     return (
-      <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '70vh',
-        textAlign: 'center',
-        padding: '2rem',
-      }}>
-        <h1 style={{
-          fontFamily: "'Instrument Serif', Georgia, serif",
-          fontWeight: 400,
-          fontSize: '2.5rem',
-          color: '#141414',
-          marginBottom: '0.75rem',
-        }}>
+      <div className="flex flex-col items-center justify-center min-h-[70vh] text-center p-8">
+        <h1 className="font-serif font-normal text-[2.5rem] text-[#141414] mb-3">
           You already have access!
         </h1>
         {accessType === 'institution' ? (
-          <p style={{
-            fontSize: '1.125rem',
-            color: '#666666',
-            fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-          }}>
-            You have access through <strong style={{ color: '#141414' }}>{organizationName}</strong>.
+          <p className="text-lg text-[#666]">
+            You have access through <strong className="text-[#141414]">{organizationName}</strong>.
           </p>
         ) : (
-          <p style={{
-            fontSize: '1.125rem',
-            color: '#666666',
-            fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-          }}>
+          <p className="text-lg text-[#666]">
             You have premium access. Enjoy all courses!
           </p>
         )}
         <button
           onClick={() => history.push('/courses/machine-learning/intro')}
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '0.5rem',
-            marginTop: '1.5rem',
-            padding: '0.75rem 1.75rem',
-            background: '#3b82f6',
-            color: '#ffffff',
-            fontWeight: 600,
-            fontSize: '1rem',
-            borderRadius: '0.75rem',
-            border: 'none',
-            cursor: 'pointer',
-            transition: 'background 0.2s ease',
-            fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-          }}
-          onMouseEnter={(e) => { (e.target as HTMLButtonElement).style.background = '#2563eb'; }}
-          onMouseLeave={(e) => { (e.target as HTMLButtonElement).style.background = '#3b82f6'; }}
+          className="inline-flex items-center justify-center gap-2 mt-6 px-7 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl border-none cursor-pointer transition-colors"
         >
           Go to Courses
         </button>
@@ -309,167 +180,68 @@ function SubscribePageContent() {
   // ─── Pricing cards view ──────────────────────────────────────
   if (plansLoading) {
     return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '70vh',
-        fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-        color: '#666666',
-      }}>
+      <div className="flex justify-center items-center min-h-[70vh] text-[#666]">
         Loading plans...
       </div>
     );
   }
 
   return (
-    <div style={{ padding: '4rem 2rem', maxWidth: '1100px', margin: '0 auto' }}>
-      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <div style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '0.5rem',
-          padding: '0.375rem 1rem',
-          background: '#eff6ff',
-          color: '#3b82f6',
-          borderRadius: '9999px',
-          fontSize: '0.875rem',
-          fontWeight: 500,
-          marginBottom: '1.25rem',
-          fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-        }}>
+    <div className="p-16 md:p-8 max-w-[1100px] mx-auto">
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 text-blue-500 rounded-full text-sm font-medium mb-5">
           Choose Your Plan
         </div>
-        <h1 style={{
-          fontFamily: "'Instrument Serif', Georgia, serif",
-          fontWeight: 400,
-          fontSize: '3rem',
-          color: '#141414',
-          marginBottom: '0.75rem',
-          lineHeight: 1.1,
-        }}>
+        <h1 className="font-serif font-normal text-5xl md:text-4xl text-[#141414] mb-3 leading-tight">
           Start learning AI today
         </h1>
-        <p style={{
-          fontSize: '1.125rem',
-          color: '#666666',
-          maxWidth: '560px',
-          margin: '0 auto',
-          lineHeight: 1.7,
-          fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-        }}>
+        <p className="text-lg text-[#666] max-w-[560px] mx-auto leading-relaxed">
           Get full access to all courses, tutorials, and resources.
         </p>
       </div>
 
       {paymentError && (
-        <div style={{
-          padding: '0.75rem 1rem',
-          background: '#fef2f2',
-          color: '#dc2626',
-          borderRadius: '0.5rem',
-          fontSize: '0.875rem',
-          marginBottom: '1.5rem',
-          maxWidth: '600px',
-          margin: '0 auto 1.5rem',
-          textAlign: 'center',
-          fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-        }}>
+        <div className="px-4 py-3 bg-red-50 text-red-600 rounded-lg text-sm mb-6 max-w-[600px] mx-auto text-center">
           {paymentError}
         </div>
       )}
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-        gap: '1.5rem',
-        alignItems: 'stretch',
-      }}>
+      <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6 items-stretch">
         {plans.map((plan) => {
           const meta = PLAN_META[plan.planType] || { period: '' };
           return (
             <div
               key={plan.planType}
-              style={{
-                padding: '2rem',
-                border: meta.highlight ? '2px solid #3b82f6' : '1px solid #f0f0f0',
-                borderRadius: '0.75rem',
-                background: '#ffffff',
-                textAlign: 'center',
-                display: 'flex',
-                flexDirection: 'column',
-                position: 'relative',
-                transition: 'border-color 0.2s ease',
-              }}
+              className={`p-8 border rounded-xl bg-white text-center flex flex-col relative transition-colors ${
+                meta.highlight ? 'border-2 border-blue-500' : 'border-[#f0f0f0]'
+              }`}
             >
               {meta.badge && (
-                <div style={{
-                  position: 'absolute',
-                  top: '-12px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  background: meta.highlight ? '#3b82f6' : '#ff7f50',
-                  color: '#ffffff',
-                  padding: '0.25rem 1rem',
-                  borderRadius: '9999px',
-                  fontSize: '0.75rem',
-                  fontWeight: 600,
-                  whiteSpace: 'nowrap',
-                  fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-                }}>
+                <div
+                  className={`absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-semibold whitespace-nowrap text-white ${
+                    meta.highlight ? 'bg-blue-500' : 'bg-[#ff7f50]'
+                  }`}
+                >
                   {meta.badge}
                 </div>
               )}
 
-              <h3 style={{
-                fontFamily: "'Instrument Serif', Georgia, serif",
-                fontWeight: 400,
-                fontSize: '1.5rem',
-                color: '#141414',
-                marginBottom: '0.5rem',
-                marginTop: meta.badge ? '0.75rem' : 0,
-              }}>
+              <h3 className={`font-serif font-normal text-2xl text-[#141414] mb-2 ${meta.badge ? 'mt-3' : 'mt-0'}`}>
                 {plan.label}
               </h3>
 
-              <div style={{
-                fontSize: '2.5rem',
-                fontWeight: 700,
-                color: '#3b82f6',
-                marginBottom: '0.25rem',
-                fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-              }}>
+              <div className="text-[2.5rem] font-bold text-blue-500 mb-1">
                 {plan.priceDisplay}
               </div>
 
-              <p style={{
-                color: '#666666',
-                marginBottom: '1.5rem',
-                fontSize: '0.9375rem',
-                fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-              }}>
+              <p className="text-[#666] mb-6 text-[15px]">
                 {meta.period}
               </p>
 
-              <ul style={{
-                listStyle: 'none',
-                padding: 0,
-                margin: '0 0 1.5rem 0',
-                textAlign: 'left',
-                flex: 1,
-              }}>
+              <ul className="list-none p-0 m-0 mb-6 flex-1 text-left">
                 {FEATURES.map((item) => (
-                  <li key={item} style={{
-                    padding: '0.5rem 0',
-                    borderBottom: '1px solid #f5f5f5',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.625rem',
-                    fontSize: '0.9375rem',
-                    color: '#333333',
-                    fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-                  }}>
-                    <span style={{ color: '#10b981', fontWeight: 700, fontSize: '0.875rem' }}>&#10003;</span>
+                  <li key={item} className="py-2 border-b border-[#f5f5f5] flex items-center gap-2.5 text-[15px] text-[#333]">
+                    <span className="text-emerald-500 font-bold text-sm">&#10003;</span>
                     {item}
                   </li>
                 ))}
@@ -492,14 +264,7 @@ export default function SubscribePage() {
   return (
     <Layout title="Subscribe" description="Get access to all Lex AI courses">
       <BrowserOnly fallback={
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          minHeight: '70vh',
-          fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-          color: '#666666',
-        }}>
+        <div className="flex justify-center items-center min-h-[70vh] text-[#666]">
           Loading...
         </div>
       }>

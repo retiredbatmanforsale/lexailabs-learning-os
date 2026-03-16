@@ -8,23 +8,16 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  /* LexAI Labs brand tokens */
-  --lexai-blue-500: #3b82f6;     /* Primary Blue 500 */
-  --lexai-blue-600: #2563eb;     /* Primary Blue 600 (hover) */
-  --lexai-coral-500: #ff7f50;    /* Accent Coral 500 */
-  --lexai-content-primary: #141414;
-  --lexai-bg-primary: #ffffff;
+  /* Map Tatva tokens into Infima theme variables (light mode) */
+  --ifm-color-primary: rgb(var(--lms-primary-500));
+  --ifm-color-primary-dark: rgb(var(--lms-primary-600));
+  --ifm-color-primary-darker: rgb(var(--lms-primary-700));
+  --ifm-color-primary-darkest: rgb(var(--lms-primary-900));
+  --ifm-color-primary-light: rgb(var(--lms-primary-400));
+  --ifm-color-primary-lighter: rgb(var(--lms-primary-300));
+  --ifm-color-primary-lightest: rgb(var(--lms-primary-200));
 
-  /* Map brand tokens into Infima theme variables (light mode) */
-  --ifm-color-primary: var(--lexai-blue-500);
-  --ifm-color-primary-dark: var(--lexai-blue-600);
-  --ifm-color-primary-darker: #1d4ed8;
-  --ifm-color-primary-darkest: #1e3a8a;
-  --ifm-color-primary-light: #60a5fa;
-  --ifm-color-primary-lighter: #93c5fd;
-  --ifm-color-primary-lightest: #bfdbfe;
-
-  --ifm-color-secondary: var(--lexai-coral-500);
+  --ifm-color-secondary: rgb(var(--lms-coral-500));
   --ifm-color-secondary-dark: #f9735c;
   --ifm-color-secondary-darker: #ea5f3f;
   --ifm-color-secondary-darkest: #c2410c;
@@ -32,14 +25,14 @@
   --ifm-color-secondary-lighter: #ffc2a6;
   --ifm-color-secondary-lightest: #ffe0cf;
 
-  /* Success, info, warning, error colors (kept close to previous palette) */
-  --ifm-color-success: #10b981;
+  /* Success, info, warning, error colors */
+  --ifm-color-success: rgb(var(--lms-success));
   --ifm-color-info: #0ea5e9;
-  --ifm-color-warning: #f59e0b;
-  --ifm-color-error: #ef4444;
+  --ifm-color-warning: rgb(var(--lms-warning));
+  --ifm-color-error: rgb(var(--lms-error));
 
-  --ifm-link-color: var(--lexai-blue-500);
-  --ifm-link-hover-color: var(--lexai-blue-600);
+  --ifm-link-color: rgb(var(--lms-primary-500));
+  --ifm-link-hover-color: rgb(var(--lms-primary-600));
 
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.04);
@@ -64,31 +57,6 @@
   --ifm-z-index-overlay: 200;
 }
 
-/* For readability concerns, use a lighter palette in dark mode while keeping brand feel. */
-[data-theme='dark'] {
-  --ifm-color-primary: #60a5fa;
-  --ifm-color-primary-dark: var(--lexai-blue-500);
-  --ifm-color-primary-darker: var(--lexai-blue-600);
-  --ifm-color-primary-darkest: #1d4ed8;
-  --ifm-color-primary-light: #93c5fd;
-  --ifm-color-primary-lighter: #bfdbfe;
-  --ifm-color-primary-lightest: #dbeafe;
-
-  /* Coral accent tuned for dark backgrounds */
-  --ifm-color-secondary: #ff9a73;
-  --ifm-color-secondary-dark: var(--lexai-coral-500);
-  --ifm-color-secondary-darker: #ea5f3f;
-  --ifm-color-secondary-darkest: #c2410c;
-  --ifm-color-secondary-light: #ffc2a6;
-  --ifm-color-secondary-lighter: #ffe0cf;
-  --ifm-color-secondary-lightest: #fff2e8;
-
-  --ifm-link-color: #93c5fd;
-  --ifm-link-hover-color: #bfdbfe;
-
-  --docusaurus-highlighted-code-line-bg: rgba(15, 23, 42, 0.85);
-}
-
 /* Global styles */
 html {
   font-size: 16px;
@@ -99,13 +67,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--lexai-bg-primary);
-  color: var(--lexai-content-primary);
-}
-
-[data-theme='dark'] body {
-  background-color: var(--ifm-background-color);
-  color: var(--ifm-font-color-base);
+  background-color: rgb(var(--tatva-background-primary));
+  color: rgb(var(--tatva-content-primary));
 }
 
 /* Heading styles - Instrument Serif for display, Plus Jakarta Sans for smaller */
@@ -134,11 +97,6 @@ pre, code {
   font-family: 'Lora', Georgia, 'Times New Roman', serif;
 }
 
-[data-theme='dark'] .theme-doc-markdown {
-  /* Let Docusaurus manage colors for dark mode; only keep typography. */
-  color: inherit;
-}
-
 /* LexAI brand: navbar, menus, buttons use Plus Jakarta Sans */
 .navbar,
 .navbar__brand,
@@ -160,34 +118,34 @@ a:hover {
 
 /* Primary buttons */
 .button.button--primary {
-  background-color: var(--lexai-blue-500);
-  border-color: var(--lexai-blue-500);
+  background-color: rgb(var(--lms-primary-500));
+  border-color: rgb(var(--lms-primary-500));
   color: #ffffff;
 }
 
 .button.button--primary:hover {
-  background-color: var(--lexai-blue-600);
-  border-color: var(--lexai-blue-600);
+  background-color: rgb(var(--lms-primary-600));
+  border-color: rgb(var(--lms-primary-600));
   color: #ffffff;
 }
 
 /* Secondary buttons */
 .button.button--secondary {
   background-color: transparent;
-  border-color: var(--lexai-blue-500);
-  color: var(--lexai-blue-500);
+  border-color: rgb(var(--lms-primary-500));
+  color: rgb(var(--lms-primary-500));
 }
 
 .button.button--secondary:hover {
   background-color: rgba(59, 130, 246, 0.06);
-  border-color: var(--lexai-blue-600);
-  color: var(--lexai-blue-600);
+  border-color: rgb(var(--lms-primary-600));
+  color: rgb(var(--lms-primary-600));
 }
 
 /* Accent-style badges / chips could use coral if needed */
 .badge--accent,
 .badge--secondary {
-  background-color: var(--lexai-coral-500);
+  background-color: rgb(var(--lms-coral-500));
   color: #ffffff;
 }
 
@@ -204,21 +162,17 @@ a:hover {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
 }
 
-[data-theme='dark'] .header-github-link::before {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
-}
-
 /* Card styles for features and resource items */
 .card {
   border-radius: var(--ifm-global-radius);
-  border: 1px solid #f0f0f0;
+  border: 1px solid rgb(var(--tatva-border-primary));
   transition: border-color 0.2s ease, background-color 0.2s ease;
   overflow: hidden;
 }
 
 .card:hover {
-  border-color: #dbeafe;
-  background-color: #fafbff;
+  border-color: rgb(var(--lms-primary-200));
+  background-color: rgb(var(--lms-primary-50) / 0.3);
 }
 
 /* Page transitions */
@@ -262,10 +216,6 @@ pre {
 .navbar__item:hover {
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: var(--ifm-global-radius);
-}
-
-[data-theme='dark'] .navbar__item:hover {
-  background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Navbar brand title - use Instrument Serif */

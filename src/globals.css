@@ -1,0 +1,654 @@
+@import "tailwindcss";
+
+/* ========================================
+ * Font Configuration
+ * Using Google Fonts via next/font
+ * - Plus Jakarta Sans: UI, body text (sans-serif)
+ * - Lora: Headings, display text (serif)
+ * ======================================== */
+
+/* ========================================
+ * Design Tokens - Light Mode (Default)
+ * ======================================== */
+:root {
+  /* ========================================
+   * LexAI LMS Color System
+   * Blue = Interaction (trust, cognition, learning)
+   * Coral = Emotion (success, progress, highlights)
+   * ======================================== */
+
+  /* LMS Primary - Blue (Functional Brand) */
+  --lms-primary-50: 239 246 255;   /* #EFF6FF - Soft backgrounds */
+  --lms-primary-100: 219 234 254;  /* #DBEAFE */
+  --lms-primary-200: 191 219 254;  /* #BFDBFE */
+  --lms-primary-300: 147 197 253;  /* #93C5FD */
+  --lms-primary-400: 96 165 250;   /* #60A5FA */
+  --lms-primary-500: 59 130 246;   /* #3B82F6 - Primary CTA */
+  --lms-primary-600: 37 99 235;    /* #2563EB - Hover state */
+  --lms-primary-700: 29 78 216;    /* #1D4ED8 */
+  --lms-primary-800: 30 64 175;    /* #1E40AF */
+  --lms-primary-900: 30 58 138;    /* #1E3A8A */
+
+  /* LMS Coral - Accent (Emotional Highlights) */
+  --lms-coral-50: 255 247 245;     /* Light tint */
+  --lms-coral-100: 255 245 242;    /* #FFF5F2 - Warm card tint */
+  --lms-coral-200: 255 220 208;    /* #FFDCD0 */
+  --lms-coral-300: 255 200 178;    /* #FFC8B2 */
+  --lms-coral-400: 255 180 148;    /* #FFB494 - Progress bars */
+  --lms-coral-500: 255 127 80;     /* #FF7F50 - Achievements, badges */
+  --lms-coral-600: 230 100 55;     /* #E66437 */
+  --lms-coral-700: 200 80 40;      /* #C85028 */
+
+  /* LMS Semantic Colors */
+  --lms-success: 22 163 74;        /* #16A34A - Completed states */
+  --lms-warning: 245 158 11;       /* #F59E0B - Warnings */
+  --lms-error: 220 38 38;          /* #DC2626 - Errors */
+
+  /* ========================================
+   * Tatva Foundation (Premium SaaS Neutrals)
+   * ======================================== */
+  --tatva-background-primary: 255 255 255;
+  --tatva-background-primary-hover: 250 250 250;
+  --tatva-background-secondary: 245 245 245;
+  --tatva-background-secondary-hover: 240 240 240;
+  --tatva-background-tertiary: 240 240 240;
+  --tatva-background-tertiary-hover: 230 230 230;
+  --tatva-background-black: 20 20 20;
+  --tatva-background-black-hover: 61 61 61;
+
+  --tatva-content-primary: 20 20 20;
+  --tatva-content-inverse: 255 255 255;
+  --tatva-content-secondary: 102 102 102;
+  --tatva-content-tertiary: 153 153 153;
+  --tatva-content-quaternary: 179 179 179;
+
+  --tatva-surface-primary: 250 250 250;
+  --tatva-surface-secondary: 255 255 255;
+
+  --tatva-border-primary: 240 240 240;
+  --tatva-border-secondary: 230 230 230;
+  --tatva-border-tertiary: 179 179 179;
+
+  /* Brand colors - now using LMS Blue */
+  --tatva-brand-primary: 239 246 255;          /* lms-primary-50 */
+  --tatva-brand-primary-hover: 219 234 254;    /* lms-primary-100 */
+  --tatva-brand-secondary: 191 219 254;        /* lms-primary-200 */
+  --tatva-brand-secondary-hover: 147 197 253;  /* lms-primary-300 */
+  --tatva-brand-content-primary: 59 130 246;   /* lms-primary-500 */
+  --tatva-brand-content-secondary: 37 99 235;  /* lms-primary-600 */
+
+  /* Semantic colors - Softer, muted tones matching toast design */
+  --tatva-positive-background: 229 237 226;    /* #E5EDE2 - Soft sage/olive green */
+  --tatva-positive-content: 92 138 80;         /* #5C8A50 - Muted olive green */
+  --tatva-warning-background: 245 236 215;     /* #F5ECD7 - Soft tan/beige */
+  --tatva-warning-content: 160 130 60;         /* #A0823C - Muted tan/brown */
+  --tatva-danger-background: 251 234 234;      /* #FBEAEA - Soft pink/rose */
+  --tatva-danger-background-hover: 248 220 220;
+  --tatva-danger-content: 200 70 70;           /* #C84646 - Muted red */
+
+  /* Accent colors - Indigo scale (using LMS Blue) */
+  --tatva-indigo-50: 239 246 255;
+  --tatva-indigo-100: 219 234 254;
+  --tatva-indigo-200: 191 219 254;
+  --tatva-indigo-300: 147 197 253;
+  --tatva-indigo-400: 96 165 250;
+  --tatva-indigo-500: 59 130 246;
+  --tatva-indigo-600: 37 99 235;
+  --tatva-indigo-700: 29 78 216;
+  --tatva-indigo-800: 30 64 175;
+  --tatva-indigo-900: 30 58 138;
+  --tatva-indigo-background: var(--tatva-indigo-100);
+  --tatva-indigo-content: var(--tatva-indigo-600);
+
+  /* Accent colors - Orange scale (using LMS Coral) */
+  --tatva-orange-50: 255 247 245;
+  --tatva-orange-100: 255 245 242;
+  --tatva-orange-200: 255 220 208;
+  --tatva-orange-300: 255 200 178;
+  --tatva-orange-400: 255 180 148;
+  --tatva-orange-500: 255 127 80;
+  --tatva-orange-600: 230 100 55;
+  --tatva-orange-700: 200 80 40;
+  --tatva-orange-800: 180 70 30;
+  --tatva-orange-900: 150 55 20;
+  --tatva-orange-background: var(--tatva-orange-100);
+  --tatva-orange-content: var(--tatva-orange-600);
+
+  /* Accent colors - Green scale (Muted sage/olive tones) */
+  --tatva-green-50: 245 248 243;     /* #F5F8F3 */
+  --tatva-green-100: 229 237 226;    /* #E5EDE2 */
+  --tatva-green-200: 210 225 204;    /* #D2E1CC */
+  --tatva-green-300: 178 204 168;    /* #B2CCA8 */
+  --tatva-green-400: 140 175 128;    /* #8CAF80 */
+  --tatva-green-500: 110 155 95;     /* #6E9B5F */
+  --tatva-green-600: 92 138 80;      /* #5C8A50 */
+  --tatva-green-700: 75 112 65;      /* #4B7041 */
+  --tatva-green-800: 60 90 52;       /* #3C5A34 */
+  --tatva-green-900: 48 72 42;       /* #30482A */
+  --tatva-green-background: var(--tatva-green-100);
+  --tatva-green-content: var(--tatva-green-600);
+
+  /* Accent colors - Pink scale */
+  --tatva-pink-50: 253 242 248;
+  --tatva-pink-100: 252 231 243;
+  --tatva-pink-200: 251 207 232;
+  --tatva-pink-300: 249 168 212;
+  --tatva-pink-400: 244 114 182;
+  --tatva-pink-500: 236 72 153;
+  --tatva-pink-600: 219 39 119;
+  --tatva-pink-700: 190 24 93;
+  --tatva-pink-800: 157 23 77;
+  --tatva-pink-900: 131 24 67;
+  --tatva-pink-background: var(--tatva-pink-50);
+  --tatva-pink-content: var(--tatva-pink-600);
+
+  /* Accent colors - Red scale */
+  --tatva-red-50: 254 242 242;
+  --tatva-red-100: 254 226 226;
+  --tatva-red-200: 254 202 202;
+  --tatva-red-300: 252 165 165;
+  --tatva-red-400: 248 113 113;
+  --tatva-red-500: 239 68 68;
+  --tatva-red-600: 220 38 38;
+  --tatva-red-700: 185 28 28;
+  --tatva-red-800: 153 27 27;
+  --tatva-red-900: 127 29 29;
+  --tatva-red-background: var(--tatva-red-50);
+  --tatva-red-content: var(--tatva-red-600);
+
+  /* Accent colors - Yellow scale */
+  --tatva-yellow-50: 255 251 235;
+  --tatva-yellow-100: 254 249 195;
+  --tatva-yellow-200: 254 240 138;
+  --tatva-yellow-300: 253 224 71;
+  --tatva-yellow-400: 250 204 21;
+  --tatva-yellow-500: 234 179 8;
+  --tatva-yellow-600: 202 138 4;
+  --tatva-yellow-700: 161 98 7;
+  --tatva-yellow-800: 133 77 14;
+  --tatva-yellow-900: 113 63 18;
+  --tatva-yellow-background: var(--tatva-yellow-50);
+  --tatva-yellow-content: var(--tatva-yellow-600);
+
+  /* Spacing and radius */
+  --tatva-spacing-base: 2px;
+  --tatva-radius-base: 5px;
+  --tatva-font-size-base: 12px;
+
+  /* Font families */
+  --tatva-family-matter: var(--font-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+  --tatva-family-season: var(--font-lora), "Lora", Georgia, serif;
+
+  /* Drop shadows */
+  --tatva-shadow-l1-color: 240 240 240;
+  --tatva-shadow-l2-color: 230 230 230;
+  --tatva-shadow-blur: 24px;
+}
+
+/* ========================================
+ * Dark Mode
+ * ======================================== */
+.dark {
+  /* Background colors */
+  --tatva-background-primary: 9 9 11;
+  --tatva-background-primary-hover: 24 24 27;
+  --tatva-background-secondary: 24 24 27;
+  --tatva-background-secondary-hover: 39 39 42;
+  --tatva-background-tertiary: 39 39 42;
+  --tatva-background-tertiary-hover: 63 63 70;
+  --tatva-background-black: 250 250 250;
+  --tatva-background-black-hover: 228 228 231;
+
+  /* Content colors */
+  --tatva-content-primary: 250 250 250;
+  --tatva-content-inverse: 9 9 11;
+  --tatva-content-secondary: 161 161 170;
+  --tatva-content-tertiary: 113 113 122;
+  --tatva-content-quaternary: 82 82 91;
+
+  /* Surface colors */
+  --tatva-surface-primary: 9 9 11;
+  --tatva-surface-secondary: 24 24 27;
+
+  /* Border colors */
+  --tatva-border-primary: 39 39 42;
+  --tatva-border-secondary: 63 63 70;
+  --tatva-border-tertiary: 82 82 91;
+
+  /* Brand colors - vibrant blue for dark mode */
+  --tatva-brand-primary: 30 58 138;
+  --tatva-brand-primary-hover: 30 64 175;
+  --tatva-brand-secondary: 29 78 216;
+  --tatva-brand-secondary-hover: 37 99 235;
+  --tatva-brand-content-primary: 96 165 250;
+  --tatva-brand-content-secondary: 147 197 253;
+
+  /* LMS colors for dark mode */
+  --lms-primary-500: 96 165 250;
+  --lms-primary-600: 59 130 246;
+  --lms-primary-50: 30 58 138;
+  --lms-coral-500: 255 140 100;
+  --lms-coral-400: 255 160 130;
+  --lms-coral-100: 50 30 25;
+
+  /* Semantic colors */
+  --tatva-positive-background: 20 42 34;
+  --tatva-positive-content: 74 222 128;
+  --tatva-warning-background: 46 38 21;
+  --tatva-warning-content: 251 191 36;
+  --tatva-danger-background: 50 23 30;
+  --tatva-danger-background-hover: 68 30 38;
+  --tatva-danger-content: 248 113 113;
+  --lms-success: 74 222 128;
+  --lms-warning: 251 191 36;
+  --lms-error: 248 113 113;
+
+  /* Drop shadows */
+  --tatva-shadow-l1-color: 0 0 0;
+  --tatva-shadow-l2-color: 0 0 0;
+}
+
+/* ========================================
+ * Custom Scrollbar - Auto-hide on scroll stop
+ * ======================================== */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+/* Use overlay scrollbar on supported browsers */
+@supports (overflow: overlay) {
+  html {
+    overflow-y: overlay;
+    scrollbar-gutter: auto;
+  }
+}
+
+/* Thin scrollbar that fades */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+/* Show scrollbar on hover of scrollable area */
+*:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+*:hover::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Show scrollbar when actively scrolling */
+.is-scrolling::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox - auto-hide scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+*:hover {
+  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================
+ * Tailwind v4 Theme Tokens
+ * ======================================== */
+@theme {
+  /* Font family utilities */
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-serif: var(--font-lora), "Lora", Georgia, serif;
+  --font-matter: var(--tatva-family-matter);
+  --font-season: var(--tatva-family-season);
+
+  /* ========================================
+   * LMS Primary Colors (Blue - Interaction)
+   * ======================================== */
+  --color-lms-primary-50: rgb(var(--lms-primary-50));
+  --color-lms-primary-100: rgb(var(--lms-primary-100));
+  --color-lms-primary-200: rgb(var(--lms-primary-200));
+  --color-lms-primary-300: rgb(var(--lms-primary-300));
+  --color-lms-primary-400: rgb(var(--lms-primary-400));
+  --color-lms-primary-500: rgb(var(--lms-primary-500));
+  --color-lms-primary-600: rgb(var(--lms-primary-600));
+  --color-lms-primary-700: rgb(var(--lms-primary-700));
+  --color-lms-primary-800: rgb(var(--lms-primary-800));
+  --color-lms-primary-900: rgb(var(--lms-primary-900));
+  --color-lms-primary: rgb(var(--lms-primary-500));
+  --color-lms-primary-hover: rgb(var(--lms-primary-600));
+  --color-lms-primary-soft: rgb(var(--lms-primary-50));
+
+  /* ========================================
+   * LMS Coral Colors (Accent - Emotion)
+   * ======================================== */
+  --color-lms-coral-50: rgb(var(--lms-coral-50));
+  --color-lms-coral-100: rgb(var(--lms-coral-100));
+  --color-lms-coral-200: rgb(var(--lms-coral-200));
+  --color-lms-coral-300: rgb(var(--lms-coral-300));
+  --color-lms-coral-400: rgb(var(--lms-coral-400));
+  --color-lms-coral-500: rgb(var(--lms-coral-500));
+  --color-lms-coral-600: rgb(var(--lms-coral-600));
+  --color-lms-coral-700: rgb(var(--lms-coral-700));
+  --color-lms-coral: rgb(var(--lms-coral-500));
+  --color-lms-coral-soft: rgb(var(--lms-coral-400));
+  --color-lms-coral-tint: rgb(var(--lms-coral-100));
+
+  /* ========================================
+   * LMS Semantic Colors
+   * ======================================== */
+  --color-lms-success: rgb(var(--lms-success));
+  --color-lms-warning: rgb(var(--lms-warning));
+  --color-lms-error: rgb(var(--lms-error));
+
+  /* ========================================
+   * Tatva Background Colors
+   * ======================================== */
+  --color-tatva-background: rgb(var(--tatva-background-primary));
+  --color-tatva-background-primary: rgb(var(--tatva-background-primary));
+  --color-tatva-background-primary-hover: rgb(var(--tatva-background-primary-hover));
+  --color-tatva-background-secondary: rgb(var(--tatva-background-secondary));
+  --color-tatva-background-secondary-hover: rgb(var(--tatva-background-secondary-hover));
+  --color-tatva-background-tertiary: rgb(var(--tatva-background-tertiary));
+  --color-tatva-background-tertiary-hover: rgb(var(--tatva-background-tertiary-hover));
+  --color-tatva-background-black: rgb(var(--tatva-background-black));
+  --color-tatva-background-black-hover: rgb(var(--tatva-background-black-hover));
+
+  /* ========================================
+   * Tatva Content Colors
+   * ======================================== */
+  --color-tatva-content: rgb(var(--tatva-content-primary));
+  --color-tatva-content-primary: rgb(var(--tatva-content-primary));
+  --color-tatva-content-inverse: rgb(var(--tatva-content-inverse));
+  --color-tatva-content-secondary: rgb(var(--tatva-content-secondary));
+  --color-tatva-content-tertiary: rgb(var(--tatva-content-tertiary));
+  --color-tatva-content-quaternary: rgb(var(--tatva-content-quaternary));
+
+  /* ========================================
+   * Tatva Surface Colors
+   * ======================================== */
+  --color-tatva-surface: rgb(var(--tatva-surface-primary));
+  --color-tatva-surface-primary: rgb(var(--tatva-surface-primary));
+  --color-tatva-surface-secondary: rgb(var(--tatva-surface-secondary));
+
+  /* ========================================
+   * Tatva Border Colors
+   * ======================================== */
+  --color-tatva-border: rgb(var(--tatva-border-primary));
+  --color-tatva-border-primary: rgb(var(--tatva-border-primary));
+  --color-tatva-border-secondary: rgb(var(--tatva-border-secondary));
+  --color-tatva-border-tertiary: rgb(var(--tatva-border-tertiary));
+
+  /* ========================================
+   * Tatva Brand Colors
+   * ======================================== */
+  --color-tatva-brand: rgb(var(--tatva-brand-primary));
+  --color-tatva-brand-primary: rgb(var(--tatva-brand-primary));
+  --color-tatva-brand-primary-hover: rgb(var(--tatva-brand-primary-hover));
+  --color-tatva-brand-secondary: rgb(var(--tatva-brand-secondary));
+  --color-tatva-brand-secondary-hover: rgb(var(--tatva-brand-secondary-hover));
+  --color-tatva-brand-content-primary: rgb(var(--tatva-brand-content-primary));
+  --color-tatva-brand-content-secondary: rgb(var(--tatva-brand-content-secondary));
+
+  /* ========================================
+   * Tatva Semantic Colors
+   * ======================================== */
+  --color-tatva-positive: rgb(var(--tatva-positive-content));
+  --color-tatva-positive-background: rgb(var(--tatva-positive-background));
+  --color-tatva-positive-content: rgb(var(--tatva-positive-content));
+  --color-tatva-warning: rgb(var(--tatva-warning-content));
+  --color-tatva-warning-background: rgb(var(--tatva-warning-background));
+  --color-tatva-warning-content: rgb(var(--tatva-warning-content));
+  --color-tatva-danger: rgb(var(--tatva-danger-content));
+  --color-tatva-danger-background: rgb(var(--tatva-danger-background));
+  --color-tatva-danger-background-hover: rgb(var(--tatva-danger-background-hover));
+  --color-tatva-danger-content: rgb(var(--tatva-danger-content));
+
+  /* ========================================
+   * Tatva Accent Colors - Indigo
+   * ======================================== */
+  --color-tatva-indigo: rgb(var(--tatva-indigo-content));
+  --color-tatva-indigo-50: rgb(var(--tatva-indigo-50));
+  --color-tatva-indigo-100: rgb(var(--tatva-indigo-100));
+  --color-tatva-indigo-200: rgb(var(--tatva-indigo-200));
+  --color-tatva-indigo-300: rgb(var(--tatva-indigo-300));
+  --color-tatva-indigo-400: rgb(var(--tatva-indigo-400));
+  --color-tatva-indigo-500: rgb(var(--tatva-indigo-500));
+  --color-tatva-indigo-600: rgb(var(--tatva-indigo-600));
+  --color-tatva-indigo-700: rgb(var(--tatva-indigo-700));
+  --color-tatva-indigo-800: rgb(var(--tatva-indigo-800));
+  --color-tatva-indigo-900: rgb(var(--tatva-indigo-900));
+  --color-tatva-indigo-background: rgb(var(--tatva-indigo-background));
+  --color-tatva-indigo-content: rgb(var(--tatva-indigo-content));
+
+  /* ========================================
+   * Tatva Accent Colors - Orange
+   * ======================================== */
+  --color-tatva-orange: rgb(var(--tatva-orange-content));
+  --color-tatva-orange-50: rgb(var(--tatva-orange-50));
+  --color-tatva-orange-100: rgb(var(--tatva-orange-100));
+  --color-tatva-orange-200: rgb(var(--tatva-orange-200));
+  --color-tatva-orange-300: rgb(var(--tatva-orange-300));
+  --color-tatva-orange-400: rgb(var(--tatva-orange-400));
+  --color-tatva-orange-500: rgb(var(--tatva-orange-500));
+  --color-tatva-orange-600: rgb(var(--tatva-orange-600));
+  --color-tatva-orange-700: rgb(var(--tatva-orange-700));
+  --color-tatva-orange-800: rgb(var(--tatva-orange-800));
+  --color-tatva-orange-900: rgb(var(--tatva-orange-900));
+  --color-tatva-orange-background: rgb(var(--tatva-orange-background));
+  --color-tatva-orange-content: rgb(var(--tatva-orange-content));
+
+  /* ========================================
+   * Tatva Accent Colors - Green
+   * ======================================== */
+  --color-tatva-green: rgb(var(--tatva-green-content));
+  --color-tatva-green-50: rgb(var(--tatva-green-50));
+  --color-tatva-green-100: rgb(var(--tatva-green-100));
+  --color-tatva-green-200: rgb(var(--tatva-green-200));
+  --color-tatva-green-300: rgb(var(--tatva-green-300));
+  --color-tatva-green-400: rgb(var(--tatva-green-400));
+  --color-tatva-green-500: rgb(var(--tatva-green-500));
+  --color-tatva-green-600: rgb(var(--tatva-green-600));
+  --color-tatva-green-700: rgb(var(--tatva-green-700));
+  --color-tatva-green-800: rgb(var(--tatva-green-800));
+  --color-tatva-green-900: rgb(var(--tatva-green-900));
+  --color-tatva-green-background: rgb(var(--tatva-green-background));
+  --color-tatva-green-content: rgb(var(--tatva-green-content));
+
+  /* ========================================
+   * Tatva Accent Colors - Pink
+   * ======================================== */
+  --color-tatva-pink: rgb(var(--tatva-pink-content));
+  --color-tatva-pink-50: rgb(var(--tatva-pink-50));
+  --color-tatva-pink-100: rgb(var(--tatva-pink-100));
+  --color-tatva-pink-200: rgb(var(--tatva-pink-200));
+  --color-tatva-pink-300: rgb(var(--tatva-pink-300));
+  --color-tatva-pink-400: rgb(var(--tatva-pink-400));
+  --color-tatva-pink-500: rgb(var(--tatva-pink-500));
+  --color-tatva-pink-600: rgb(var(--tatva-pink-600));
+  --color-tatva-pink-700: rgb(var(--tatva-pink-700));
+  --color-tatva-pink-800: rgb(var(--tatva-pink-800));
+  --color-tatva-pink-900: rgb(var(--tatva-pink-900));
+  --color-tatva-pink-background: rgb(var(--tatva-pink-background));
+  --color-tatva-pink-content: rgb(var(--tatva-pink-content));
+
+  /* ========================================
+   * Tatva Accent Colors - Red
+   * ======================================== */
+  --color-tatva-red: rgb(var(--tatva-red-content));
+  --color-tatva-red-50: rgb(var(--tatva-red-50));
+  --color-tatva-red-100: rgb(var(--tatva-red-100));
+  --color-tatva-red-200: rgb(var(--tatva-red-200));
+  --color-tatva-red-300: rgb(var(--tatva-red-300));
+  --color-tatva-red-400: rgb(var(--tatva-red-400));
+  --color-tatva-red-500: rgb(var(--tatva-red-500));
+  --color-tatva-red-600: rgb(var(--tatva-red-600));
+  --color-tatva-red-700: rgb(var(--tatva-red-700));
+  --color-tatva-red-800: rgb(var(--tatva-red-800));
+  --color-tatva-red-900: rgb(var(--tatva-red-900));
+  --color-tatva-red-background: rgb(var(--tatva-red-background));
+  --color-tatva-red-content: rgb(var(--tatva-red-content));
+
+  /* ========================================
+   * Tatva Accent Colors - Yellow
+   * ======================================== */
+  --color-tatva-yellow: rgb(var(--tatva-yellow-content));
+  --color-tatva-yellow-50: rgb(var(--tatva-yellow-50));
+  --color-tatva-yellow-100: rgb(var(--tatva-yellow-100));
+  --color-tatva-yellow-200: rgb(var(--tatva-yellow-200));
+  --color-tatva-yellow-300: rgb(var(--tatva-yellow-300));
+  --color-tatva-yellow-400: rgb(var(--tatva-yellow-400));
+  --color-tatva-yellow-500: rgb(var(--tatva-yellow-500));
+  --color-tatva-yellow-600: rgb(var(--tatva-yellow-600));
+  --color-tatva-yellow-700: rgb(var(--tatva-yellow-700));
+  --color-tatva-yellow-800: rgb(var(--tatva-yellow-800));
+  --color-tatva-yellow-900: rgb(var(--tatva-yellow-900));
+  --color-tatva-yellow-background: rgb(var(--tatva-yellow-background));
+  --color-tatva-yellow-content: rgb(var(--tatva-yellow-content));
+
+  /* ========================================
+   * Spacing Tokens
+   * ======================================== */
+  --spacing-tatva-0: 0px;
+  --spacing-tatva-0\.5: 1px;
+  --spacing-tatva-1: 2px;
+  --spacing-tatva-2: 4px;
+  --spacing-tatva-3: 6px;
+  --spacing-tatva-4: 8px;
+  --spacing-tatva-5: 10px;
+  --spacing-tatva-6: 12px;
+  --spacing-tatva-8: 16px;
+  --spacing-tatva-10: 20px;
+  --spacing-tatva-12: 24px;
+  --spacing-tatva-14: 28px;
+  --spacing-tatva-16: 32px;
+  --spacing-tatva-18: 36px;
+  --spacing-tatva-20: 40px;
+  --spacing-tatva-22: 44px;
+  --spacing-tatva-24: 48px;
+  --spacing-tatva-26: 52px;
+  --spacing-tatva-28: 56px;
+  --spacing-tatva-30: 60px;
+  --spacing-tatva-32: 64px;
+  --spacing-tatva-36: 72px;
+  --spacing-tatva-40: 80px;
+
+  /* ========================================
+   * Border Radius Tokens
+   * ======================================== */
+  --radius-tatva-xs: 4px;
+  --radius-tatva-sm: 8px;
+  --radius-tatva-md: 12px;
+  --radius-tatva-lg: 20px;
+  --radius-tatva-xl: 28px;
+  --radius-tatva-full: 9999px;
+
+  /* ========================================
+   * Shadow Tokens
+   * ======================================== */
+  --shadow-tatva-l1: 0 1px 3px 0 rgb(var(--tatva-shadow-l1-color) / 0.5), 0 1px 2px -1px rgb(var(--tatva-shadow-l1-color) / 0.5);
+  --shadow-tatva-l2: 0 4px 6px -1px rgb(var(--tatva-shadow-l2-color) / 0.5), 0 2px 4px -2px rgb(var(--tatva-shadow-l2-color) / 0.5);
+
+  /* ========================================
+   * Font Size Tokens (for text-tatva-* utilities)
+   * Clear typographic hierarchy with proper differentiation
+   * ======================================== */
+  --text-tatva-body-xs: 12px;
+  --text-tatva-body-sm: 14px;
+  --text-tatva-body-md: 16px;
+  --text-tatva-body-lg: 18px;
+  --text-tatva-label-sm: 12px;
+  --text-tatva-label-md: 14px;
+  --text-tatva-heading-xs: 16px;
+  --text-tatva-heading-sm: 20px;
+  --text-tatva-heading-md: 24px;
+  --text-tatva-heading-lg: 28px;
+  --text-tatva-display-sm: 32px;
+
+  /* ========================================
+   * Grid Template Rows (for accordion animation)
+   * ======================================== */
+  --grid-rows-tatva-0: 0fr;
+  --grid-rows-tatva-1: 1fr;
+}
+
+/* ========================================
+ * Base Styles
+ * ======================================== */
+body {
+  font-family: var(--tatva-family-matter);
+  background-color: rgb(var(--tatva-background-primary));
+  color: rgb(var(--tatva-content-primary));
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ========================================
+ * Font System
+ * - Plus Jakarta Sans: Headings (SemiBold/Bold), Body (Regular)
+ * - Lora: Long-form reading (articles, course content, notes)
+ * ======================================== */
+
+/* Headings - Plus Jakarta Sans SemiBold/Bold */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--tatva-family-matter);
+  font-weight: 600;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+/* Long-form reading content - Lora */
+.font-reading,
+.prose,
+article.content,
+.course-content,
+.lesson-content,
+.article-body {
+  font-family: var(--tatva-family-season);
+}
+
+/* ========================================
+ * Marquee Animation
+ * ======================================== */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
