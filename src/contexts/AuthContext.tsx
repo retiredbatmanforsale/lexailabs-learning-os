@@ -21,7 +21,7 @@ interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   hasAccess: boolean;
-  accessType: 'premium' | 'institution' | null;
+  accessType: 'premium' | 'subscription' | 'institution' | null;
   organizationName: string | null;
   isLoading: boolean;
 }
@@ -111,7 +111,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           name: '',
           email: payload.email,
           role: payload.role,
-          isPremium: payload.hasAccess && payload.accessType === 'premium',
+          isPremium: payload.hasAccess && (payload.accessType === 'premium' || payload.accessType === 'subscription'),
         },
         isAuthenticated: true,
         hasAccess: payload.hasAccess,
@@ -171,7 +171,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           apiFetch<{
             user: User;
             hasAccess: boolean;
-            accessType: 'premium' | 'institution' | null;
+            accessType: 'premium' | 'subscription' | 'institution' | null;
             organizationName: string | null;
           }>('/auth/me')
             .then((data) => {
@@ -211,7 +211,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const profile = await apiFetch<{
           user: User;
           hasAccess: boolean;
-          accessType: 'premium' | 'institution' | null;
+          accessType: 'premium' | 'subscription' | 'institution' | null;
           organizationName: string | null;
         }>('/auth/me');
         setState((prev) => ({
@@ -245,7 +245,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const profile = await apiFetch<{
           user: User;
           hasAccess: boolean;
-          accessType: 'premium' | 'institution' | null;
+          accessType: 'premium' | 'subscription' | 'institution' | null;
           organizationName: string | null;
         }>('/auth/me');
         setState((prev) => ({

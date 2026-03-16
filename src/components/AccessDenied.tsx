@@ -62,7 +62,7 @@ export default function AccessDenied() {
     }}>
       <h1>Unlock Premium Access</h1>
       <p style={{ fontSize: '1.125rem', color: 'var(--ifm-color-emphasis-600)', maxWidth: '500px' }}>
-        Get full access to all courses, tutorials, and resources with a one-time payment.
+        Get full access to all courses, tutorials, and resources with a subscription.
       </p>
       <Link
         to="/subscribe"
