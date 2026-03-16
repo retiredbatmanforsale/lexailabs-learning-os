@@ -12,38 +12,19 @@ const FEATURES = [
   'Regular content updates',
 ];
 
-interface PlanCard {
+const PLAN_META: Record<string, { badge?: string; highlight?: boolean; period: string }> = {
+  MONTHLY: { period: '/month' },
+  QUARTERLY: { badge: 'Most Popular', highlight: true, period: '/3 months' },
+  YEARLY: { badge: 'Best Value', period: '/year' },
+};
+
+interface PlanFromAPI {
   planType: 'MONTHLY' | 'QUARTERLY' | 'YEARLY';
   label: string;
-  price: string;
-  period: string;
-  badge?: string;
-  highlight?: boolean;
+  price: number;
+  priceDisplay: string;
+  interval: string;
 }
-
-const PLANS: PlanCard[] = [
-  {
-    planType: 'MONTHLY',
-    label: 'Monthly',
-    price: '\u20B9499',
-    period: '/month',
-  },
-  {
-    planType: 'QUARTERLY',
-    label: 'Quarterly',
-    price: '\u20B91,199',
-    period: '/3 months',
-    badge: 'Most Popular',
-    highlight: true,
-  },
-  {
-    planType: 'YEARLY',
-    label: 'Yearly',
-    price: '\u20B93,999',
-    period: '/year',
-    badge: 'Best Value',
-  },
-];
 
 function SubscribePageContent() {
   const { useAuth } = require('../hooks/useAuth');
@@ -53,6 +34,8 @@ function SubscribePageContent() {
   const { isAuthenticated, hasAccess, accessType, organizationName, isLoading, refreshTokens } = useAuth();
   const [paymentError, setPaymentError] = useState<string | null>(null);
   const [subscriptionInfo, setSubscriptionInfo] = useState<any>(null);
+  const [plans, setPlans] = useState<PlanFromAPI[]>([]);
+  const [plansLoading, setPlansLoading] = useState(true);
   const [cancelling, setCancelling] = useState(false);
   const history = useHistory();
 
@@ -61,6 +44,14 @@ function SubscribePageContent() {
       history.push('/login?redirect=/subscribe');
     }
   }, [isLoading, isAuthenticated, history]);
+
+  // Fetch plans from backend (public endpoint, no auth needed)
+  useEffect(() => {
+    apiFetch<{ plans: PlanFromAPI[] }>('/subscriptions/plans')
+      .then((data) => setPlans(data.plans))
+      .catch(() => {})
+      .finally(() => setPlansLoading(false));
+  }, []);
 
   useEffect(() => {
     if (isAuthenticated && (accessType === 'subscription' || accessType === 'premium')) {
@@ -311,6 +302,21 @@ function SubscribePageContent() {
   }
 
   // ─── Pricing cards view ──────────────────────────────────────
+  if (plansLoading) {
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '70vh',
+        fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
+        color: '#666666',
+      }}>
+        Loading plans...
+      </div>
+    );
+  }
+
   return (
     <div style={{ padding: '4rem 2rem', maxWidth: '1100px', margin: '0 auto' }}>
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
@@ -374,101 +380,104 @@ function SubscribePageContent() {
         gap: '1.5rem',
         alignItems: 'stretch',
       }}>
-        {PLANS.map((plan) => (
-          <div
-            key={plan.planType}
-            style={{
-              padding: '2rem',
-              border: plan.highlight ? '2px solid #3b82f6' : '1px solid #f0f0f0',
-              borderRadius: '0.75rem',
-              background: '#ffffff',
-              textAlign: 'center',
-              display: 'flex',
-              flexDirection: 'column',
-              position: 'relative',
-              transition: 'border-color 0.2s ease',
-            }}
-          >
-            {plan.badge && (
-              <div style={{
-                position: 'absolute',
-                top: '-12px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                background: plan.highlight ? '#3b82f6' : '#ff7f50',
-                color: '#ffffff',
-                padding: '0.25rem 1rem',
-                borderRadius: '9999px',
-                fontSize: '0.75rem',
-                fontWeight: 600,
-                whiteSpace: 'nowrap',
-                fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-              }}>
-                {plan.badge}
-              </div>
-            )}
-
-            <h3 style={{
-              fontFamily: "'Instrument Serif', Georgia, serif",
-              fontWeight: 400,
-              fontSize: '1.5rem',
-              color: '#141414',
-              marginBottom: '0.5rem',
-              marginTop: plan.badge ? '0.75rem' : 0,
-            }}>
-              {plan.label}
-            </h3>
-
-            <div style={{
-              fontSize: '2.5rem',
-              fontWeight: 700,
-              color: '#3b82f6',
-              marginBottom: '0.25rem',
-              fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-            }}>
-              {plan.price}
-            </div>
-
-            <p style={{
-              color: '#666666',
-              marginBottom: '1.5rem',
-              fontSize: '0.9375rem',
-              fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
-            }}>
-              {plan.period}
-            </p>
-
-            <ul style={{
-              listStyle: 'none',
-              padding: 0,
-              margin: '0 0 1.5rem 0',
-              textAlign: 'left',
-              flex: 1,
-            }}>
-              {FEATURES.map((item) => (
-                <li key={item} style={{
-                  padding: '0.5rem 0',
-                  borderBottom: '1px solid #f5f5f5',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.625rem',
-                  fontSize: '0.9375rem',
-                  color: '#333333',
+        {plans.map((plan) => {
+          const meta = PLAN_META[plan.planType] || { period: '' };
+          return (
+            <div
+              key={plan.planType}
+              style={{
+                padding: '2rem',
+                border: meta.highlight ? '2px solid #3b82f6' : '1px solid #f0f0f0',
+                borderRadius: '0.75rem',
+                background: '#ffffff',
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                position: 'relative',
+                transition: 'border-color 0.2s ease',
+              }}
+            >
+              {meta.badge && (
+                <div style={{
+                  position: 'absolute',
+                  top: '-12px',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  background: meta.highlight ? '#3b82f6' : '#ff7f50',
+                  color: '#ffffff',
+                  padding: '0.25rem 1rem',
+                  borderRadius: '9999px',
+                  fontSize: '0.75rem',
+                  fontWeight: 600,
+                  whiteSpace: 'nowrap',
                   fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
                 }}>
-                  <span style={{ color: '#10b981', fontWeight: 700, fontSize: '0.875rem' }}>&#10003;</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
+                  {meta.badge}
+                </div>
+              )}
 
-            <SubscriptionButton
-              planType={plan.planType}
-              onSuccess={() => history.push('/courses/machine-learning/intro')}
-              onError={(err: string) => setPaymentError(err)}
-            />
-          </div>
-        ))}
+              <h3 style={{
+                fontFamily: "'Instrument Serif', Georgia, serif",
+                fontWeight: 400,
+                fontSize: '1.5rem',
+                color: '#141414',
+                marginBottom: '0.5rem',
+                marginTop: meta.badge ? '0.75rem' : 0,
+              }}>
+                {plan.label}
+              </h3>
+
+              <div style={{
+                fontSize: '2.5rem',
+                fontWeight: 700,
+                color: '#3b82f6',
+                marginBottom: '0.25rem',
+                fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
+              }}>
+                {plan.priceDisplay}
+              </div>
+
+              <p style={{
+                color: '#666666',
+                marginBottom: '1.5rem',
+                fontSize: '0.9375rem',
+                fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
+              }}>
+                {meta.period}
+              </p>
+
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: '0 0 1.5rem 0',
+                textAlign: 'left',
+                flex: 1,
+              }}>
+                {FEATURES.map((item) => (
+                  <li key={item} style={{
+                    padding: '0.5rem 0',
+                    borderBottom: '1px solid #f5f5f5',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.625rem',
+                    fontSize: '0.9375rem',
+                    color: '#333333',
+                    fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
+                  }}>
+                    <span style={{ color: '#10b981', fontWeight: 700, fontSize: '0.875rem' }}>&#10003;</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <SubscriptionButton
+                planType={plan.planType}
+                onSuccess={() => history.push('/courses/machine-learning/intro')}
+                onError={(err: string) => setPaymentError(err)}
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
