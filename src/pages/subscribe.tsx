@@ -30,6 +30,10 @@ function SubscribePageContent() {
   const { useAuth } = require('../hooks/useAuth');
   const SubscriptionButton = require('../components/SubscriptionButton').default;
   const { apiFetch } = require('../services/api');
+  const useDocusaurusContext = require('@docusaurus/useDocusaurusContext').default;
+
+  const { siteConfig } = useDocusaurusContext();
+  const apiUrl = (siteConfig.customFields?.apiUrl as string) || 'http://localhost:4000';
 
   const { isAuthenticated, hasAccess, accessType, organizationName, isLoading, refreshTokens } = useAuth();
   const [paymentError, setPaymentError] = useState<string | null>(null);
@@ -45,13 +49,14 @@ function SubscribePageContent() {
     }
   }, [isLoading, isAuthenticated, history]);
 
-  // Fetch plans from backend (public endpoint, no auth needed)
+  // Fetch plans directly from backend URL (no auth needed, avoids race with setApiUrl)
   useEffect(() => {
-    apiFetch<{ plans: PlanFromAPI[] }>('/subscriptions/plans')
+    fetch(`${apiUrl}/subscriptions/plans`)
+      .then((res) => res.json())
       .then((data) => setPlans(data.plans))
       .catch(() => {})
       .finally(() => setPlansLoading(false));
-  }, []);
+  }, [apiUrl]);
 
   useEffect(() => {
     if (isAuthenticated && (accessType === 'subscription' || accessType === 'premium')) {
