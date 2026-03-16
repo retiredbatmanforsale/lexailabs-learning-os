@@ -1,0 +1,113 @@
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: 100%;
+}
+
+/* Left section */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Brand / Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none !important;
+  color: inherit !important;
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+}
+
+.title {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--lexai-content-primary);
+  white-space: nowrap;
+}
+
+/* Vertical separator between brand and nav */
+.separator {
+  width: 1px;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Desktop navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+/* Right section */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Auth buttons only on desktop */
+.authDesktop {
+  display: flex;
+}
+
+/* Mobile hamburger toggle */
+.mobileToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--lexai-content-primary);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  padding: 0;
+}
+
+.mobileToggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive: hide desktop nav, show mobile toggle */
+@media (max-width: 996px) {
+  .nav {
+    display: none;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .authDesktop {
+    display: flex;
+  }
+
+  .mobileToggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .authDesktop {
+    display: none;
+  }
+}

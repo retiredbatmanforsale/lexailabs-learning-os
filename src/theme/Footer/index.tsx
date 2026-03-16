@@ -61,12 +61,18 @@ export default function Footer(): React.JSX.Element {
           <div>
             <h4 className={styles.heading}>Get in Touch</h4>
             <div className={styles.contactLinks}>
-              <a href="mailto:puru@lexailabs.com" className={styles.contactLink}>
-                puru@lexailabs.com
+              <a href="mailto:support@lexailabs.com" className={styles.contactLink}>
+                support@lexailabs.com
               </a>
               <a href="tel:+919996692323" className={styles.contactLink}>
                 +91 99966 92323
               </a>
+              <address className={styles.address}>
+                Level 18, ONE HORIZON CENTER<br />
+                Unit-59, Golf Course Rd<br />
+                DLF Phase 5, Sector 43<br />
+                Gurugram, Haryana 122002
+              </address>
             </div>
           </div>
 

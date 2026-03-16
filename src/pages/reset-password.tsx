@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { useLocation } from '@docusaurus/router';
+import { Eye, EyeOff } from 'lucide-react';
 
 function ResetPasswordContent() {
   const useDocusaurusContext = require('@docusaurus/useDocusaurusContext').default;
@@ -14,6 +15,8 @@ function ResetPasswordContent() {
 
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
@@ -155,50 +158,96 @@ function ResetPasswordContent() {
             <label htmlFor="password" style={{ display: 'block', marginBottom: '0.375rem', fontSize: '0.875rem', fontWeight: 500 }}>
               New Password
             </label>
-            <input
-              id="password"
-              type="password"
-              required
-              minLength={8}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="At least 8 characters"
-              style={{
-                width: '100%',
-                padding: '0.625rem 0.75rem',
-                border: '1px solid var(--ifm-color-emphasis-300)',
-                borderRadius: '0.5rem',
-                fontSize: '1rem',
-                background: 'var(--ifm-background-color)',
-                color: 'var(--ifm-font-color-base)',
-                boxSizing: 'border-box',
-              }}
-            />
+            <div style={{ position: 'relative' }}>
+              <input
+                id="password"
+                type={showPassword ? 'text' : 'password'}
+                required
+                minLength={8}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="At least 8 characters"
+                style={{
+                  width: '100%',
+                  padding: '0.625rem 2.5rem 0.625rem 0.75rem',
+                  border: '1px solid var(--ifm-color-emphasis-300)',
+                  borderRadius: '0.5rem',
+                  fontSize: '1rem',
+                  background: 'var(--ifm-background-color)',
+                  color: 'var(--ifm-font-color-base)',
+                  boxSizing: 'border-box',
+                }}
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword((prev) => !prev)}
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+                style={{
+                  position: 'absolute',
+                  right: '0.625rem',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: '0.25rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#9ca3af',
+                }}
+              >
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
+            </div>
           </div>
 
           <div style={{ marginBottom: '1rem' }}>
             <label htmlFor="confirmPassword" style={{ display: 'block', marginBottom: '0.375rem', fontSize: '0.875rem', fontWeight: 500 }}>
               Confirm Password
             </label>
-            <input
-              id="confirmPassword"
-              type="password"
-              required
-              minLength={8}
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              placeholder="Re-enter your password"
-              style={{
-                width: '100%',
-                padding: '0.625rem 0.75rem',
-                border: '1px solid var(--ifm-color-emphasis-300)',
-                borderRadius: '0.5rem',
-                fontSize: '1rem',
-                background: 'var(--ifm-background-color)',
-                color: 'var(--ifm-font-color-base)',
-                boxSizing: 'border-box',
-              }}
-            />
+            <div style={{ position: 'relative' }}>
+              <input
+                id="confirmPassword"
+                type={showConfirmPassword ? 'text' : 'password'}
+                required
+                minLength={8}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                placeholder="Re-enter your password"
+                style={{
+                  width: '100%',
+                  padding: '0.625rem 2.5rem 0.625rem 0.75rem',
+                  border: '1px solid var(--ifm-color-emphasis-300)',
+                  borderRadius: '0.5rem',
+                  fontSize: '1rem',
+                  background: 'var(--ifm-background-color)',
+                  color: 'var(--ifm-font-color-base)',
+                  boxSizing: 'border-box',
+                }}
+              />
+              <button
+                type="button"
+                onClick={() => setShowConfirmPassword((prev) => !prev)}
+                aria-label={showConfirmPassword ? 'Hide password' : 'Show password'}
+                style={{
+                  position: 'absolute',
+                  right: '0.625rem',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: '0.25rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#9ca3af',
+                }}
+              >
+                {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
+            </div>
           </div>
 
           {error && (

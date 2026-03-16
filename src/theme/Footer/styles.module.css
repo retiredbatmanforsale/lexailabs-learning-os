@@ -82,6 +82,14 @@
   color: #3b82f6;
 }
 
+.address {
+  font-style: normal;
+  font-size: 0.8125rem;
+  color: #999999;
+  line-height: 1.6;
+  margin-top: 0.25rem;
+}
+
 /* Quick Links */
 .linkList {
   list-style: none;

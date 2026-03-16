@@ -303,12 +303,18 @@
   overflow: hidden;
   background: #ffffff;
   transition: border-color 0.2s ease;
-  text-decoration: none !important;
-  color: inherit !important;
 }
 
 .courseCard:hover {
   border-color: #d4d4d4;
+}
+
+.courseCardLink {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+  color: inherit !important;
+  flex: 1;
 }
 
 .courseImage {
@@ -351,19 +357,45 @@
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
+.courseActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem 1.25rem 0.875rem;
+  border-top: 1px solid #f0f0f0;
+}
+
 .courseLink {
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--lexai-blue-500, #3b82f6);
-  margin-top: auto;
+  color: var(--lexai-blue-500, #3b82f6) !important;
+  text-decoration: none !important;
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
 .courseCard:hover .courseLink {
-  color: var(--lexai-blue-600, #2563eb);
+  color: var(--lexai-blue-600, #2563eb) !important;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--lexai-coral-500, #ff7f50) !important;
+  text-decoration: none !important;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.downloadButton:hover {
+  color: #e5693f !important;
+  text-decoration: none !important;
 }
 
 /* ============================================================================
@@ -573,6 +605,98 @@
 }
 
 /* ============================================================================
+ * Mentors Section
+ * ========================================================================= */
+
+.mentors {
+  padding: 5rem 0;
+  background: #fafafa;
+}
+
+.mentorsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.mentorCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+  border-radius: 1rem;
+  background: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.mentorCard:hover {
+  border-color: #dbeafe;
+}
+
+.mentorAvatar {
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mentorInitials {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--lexai-blue-500, #3b82f6);
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.mentorHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  width: 100%;
+  padding: 1rem 1.5rem 0.75rem;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.mentorName {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+.mentorBadge {
+  display: inline-block;
+  padding: 0.2rem 0.625rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.mentorBio {
+  font-size: 0.875rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  flex: 1;
+}
+
+.mentorCard .socialIcon {
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================================================
  * CTA Section
  * ========================================================================= */
 
@@ -665,6 +789,11 @@
   .instructorSocials {
     justify-content: center;
   }
+
+  .mentorsGrid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -719,5 +848,9 @@
   .instructorAvatar img {
     width: 110px;
     height: 110px;
+  }
+
+  .mentorCard {
+    /* already vertical */
   }
 }

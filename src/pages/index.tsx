@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
-import { BookOpen, Users, Zap, Linkedin, Twitter, Github, ArrowRight } from 'lucide-react';
+import { BookOpen, Users, Zap, Linkedin, Twitter, Github, ArrowRight, Youtube, Instagram, Download, Lightbulb, BarChart3 } from 'lucide-react';
 import styles from './index.module.css';
 
 // Company logos with names
@@ -35,6 +35,7 @@ const featuredCourses = [
     badge: 'Beginner',
     gradient: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)',
     iconColor: '#3b82f6',
+    curriculumPdf: '/files/ai-for-leaders-curriculum.pdf',
   },
   {
     title: 'Machine Learning',
@@ -44,6 +45,7 @@ const featuredCourses = [
     badge: 'Intermediate',
     gradient: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)',
     iconColor: '#16a34a',
+    curriculumPdf: '/files/machine-learning-curriculum.pdf',
   },
   {
     title: 'Deep Learning',
@@ -53,6 +55,7 @@ const featuredCourses = [
     badge: 'Advanced',
     gradient: 'linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%)',
     iconColor: '#9333ea',
+    curriculumPdf: '/files/deep-learning-curriculum.pdf',
   },
   {
     title: 'Language Models',
@@ -62,6 +65,7 @@ const featuredCourses = [
     badge: 'Intermediate',
     gradient: 'linear-gradient(135deg, #fff5f2 0%, #ffdcd0 100%)',
     iconColor: '#ff7f50',
+    curriculumPdf: '/files/language-models-curriculum.pdf',
   },
   {
     title: 'Resources',
@@ -71,6 +75,7 @@ const featuredCourses = [
     badge: 'All Levels',
     gradient: 'linear-gradient(135deg, #fefce8 0%, #fef9c3 100%)',
     iconColor: '#ca8a04',
+    curriculumPdf: '/files/resources-curriculum.pdf',
   },
 ];
 
@@ -84,7 +89,7 @@ function HeroSection() {
       <div className={styles.heroContainer}>
         <div className={styles.heroBadge}>
           <BookOpen size={14} />
-          <span>AI-Powered Learning Platform</span>
+          <span>Become AI-Native</span>
         </div>
         <h1 className={styles.heroTitle}>
           Build AI capability
@@ -178,33 +183,42 @@ function FeaturedCoursesSection() {
         </div>
         <div className={styles.coursesGrid}>
           {featuredCourses.map((course) => (
-            <Link
-              key={course.title}
-              to={course.href}
-              className={styles.courseCard}
-            >
-              <div
-                className={styles.courseImage}
-                style={{ background: course.gradient }}
-              >
-                <BookOpen size={32} color={course.iconColor} />
-              </div>
-              <div className={styles.courseContent}>
-                <span
-                  className={styles.courseBadge}
-                  style={{ color: course.iconColor }}
+            <div key={course.title} className={styles.courseCard}>
+              <Link to={course.href} className={styles.courseCardLink}>
+                <div
+                  className={styles.courseImage}
+                  style={{ background: course.gradient }}
                 >
-                  {course.badge}
-                </span>
-                <h3 className={styles.courseTitle}>{course.title}</h3>
-                <p className={styles.courseDescription}>
-                  {course.description}
-                </p>
-                <span className={styles.courseLink}>
+                  <BookOpen size={32} color={course.iconColor} />
+                </div>
+                <div className={styles.courseContent}>
+                  <span
+                    className={styles.courseBadge}
+                    style={{ color: course.iconColor }}
+                  >
+                    {course.badge}
+                  </span>
+                  <h3 className={styles.courseTitle}>{course.title}</h3>
+                  <p className={styles.courseDescription}>
+                    {course.description}
+                  </p>
+                </div>
+              </Link>
+              <div className={styles.courseActions}>
+                <a
+                  href={course.curriculumPdf}
+                  download
+                  className={styles.downloadButton}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Download size={16} />
+                  Download Curriculum
+                </a>
+                <Link to={course.href} className={styles.courseLink}>
                   Start learning <ArrowRight size={14} />
-                </span>
+                </Link>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
@@ -218,22 +232,22 @@ function FeaturedCoursesSection() {
 
 const features = [
   {
-    icon: <BookOpen size={24} />,
-    title: 'Structured Courses',
-    description:
-      'From foundational ML concepts to cutting-edge Language Models, learn through well-organized, comprehensive curricula.',
-  },
-  {
-    icon: <Zap size={24} />,
-    title: 'Interactive Learning',
-    description:
-      'Experiment with algorithms through interactive tutorials. Learn by doing with hands-on code examples and visualizations.',
-  },
-  {
     icon: <Users size={24} />,
-    title: 'Community Driven',
+    title: 'Industry-Led Learning',
     description:
-      'Built by the community, for the community. Contribute, collaborate, and grow together with fellow AI practitioners.',
+      'Learn from practitioners who build AI systems in the real world. Our courses are designed to help you think like an AI engineer, not just understand theory.',
+  },
+  {
+    icon: <BookOpen size={24} />,
+    title: 'Structured, Iterative Curriculum',
+    description:
+      'Progress through carefully designed learning paths built from real industry experience and continuously refined through feedback from top tech talent.',
+  },
+  {
+    icon: <Lightbulb size={24} />,
+    title: 'Interactive Concept Mastery',
+    description:
+      'Our custom-built interactive tools help you clearly understand the intuition, mathematics, and mechanics behind AI and machine learning concepts—so you can move beyond memorization and confidently apply what you learn.',
   },
 ];
 
@@ -243,7 +257,7 @@ function FeaturesSection() {
       <div className={styles.sectionContainer}>
         <h2 className={styles.sectionTitle}>Why Learn with Lex AI?</h2>
         <p className={styles.sectionSubtitle}>
-          Everything you need to master AI and Machine Learning, in one place.
+          Everything you need to become AI-native and future-ready, guided by experts building in the field.
         </p>
         <div className={styles.featuresGrid}>
           {features.map((feature, idx) => (
@@ -291,16 +305,16 @@ function InstructorSection() {
                 and AI for Cloud Security products
               </li>
               <li>
-                Teaches Applied AI (Machine Learning, Deep Learning, LLMs) at
-                Lex AI
+                Leads the Applied AI curriculum and learning experience at Lex
+                AI, covering Machine Learning, Deep Learning, and LLMs
               </li>
               <li>
                 Previously at MathWorks, focused on self-driving cars, motion
                 planning, and speech recognition
               </li>
               <li>
-                Founded a Deep Learning Book Club, fostering a community of
-                learners
+                Founded a Deep Learning Book Club, and is currently building a
+                community for AI knowledge in India
               </li>
             </ul>
             <div className={styles.instructorCredentials}>
@@ -335,6 +349,22 @@ function InstructorSection() {
                 <Twitter size={18} />
               </a>
               <a
+                href="https://www.youtube.com/@PuruKathuriax"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialIcon}
+              >
+                <Youtube size={18} />
+              </a>
+              <a
+                href="https://www.instagram.com/purukathuriax/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialIcon}
+              >
+                <Instagram size={18} />
+              </a>
+              <a
                 href="https://github.com/purukathuria"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -351,6 +381,65 @@ function InstructorSection() {
 }
 
 // ============================================================================
+// Mentors Section
+// ============================================================================
+
+const mentors = [
+  {
+    name: 'Ashish Joshi',
+    role: 'Mentor',
+    bio: 'Brings deep expertise in AI and software engineering, mentoring learners on building production-grade AI systems.',
+    linkedin: '#',
+  },
+  {
+    name: 'Sambharan Choudhary',
+    role: 'Mentor',
+    bio: 'Guides learners through complex AI concepts with practical, industry-grounded perspectives and hands-on support.',
+    linkedin: '#',
+  },
+];
+
+function MentorsSection() {
+  return (
+    <section className={styles.mentors}>
+      <div className={styles.sectionContainer}>
+        <h2 className={styles.sectionTitle}>Meet Your Mentors</h2>
+        <p className={styles.sectionSubtitle}>
+          Learn alongside experienced professionals who guide your AI journey
+        </p>
+        <div className={styles.mentorsGrid}>
+          {mentors.map((mentor) => (
+            <div key={mentor.name} className={styles.mentorCard}>
+              <div className={styles.mentorAvatar}>
+                <span className={styles.mentorInitials}>
+                  {mentor.name
+                    .split(' ')
+                    .map((n) => n[0])
+                    .join('')}
+                </span>
+              </div>
+              <div className={styles.mentorHeader}>
+                <h3 className={styles.mentorName}>{mentor.name}</h3>
+                <span className={styles.mentorBadge}>{mentor.role}</span>
+              </div>
+              <p className={styles.mentorBio}>{mentor.bio}</p>
+              <a
+                href={mentor.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialIcon}
+              >
+                <Linkedin size={18} />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ============================================================================
 // CTA Section
 // ============================================================================
 
@@ -360,22 +449,19 @@ function CTASection() {
       <div className={styles.sectionContainer}>
         <div className={styles.ctaContent}>
           <h2 className={styles.ctaTitle}>
-            Ready to Start Your AI Journey?
+            Ready to start your AI journey?
           </h2>
           <p className={styles.ctaDescription}>
-            Join hundreds of learners building the future with AI. Start for
-            free, learn at your own pace.
+            Join hundreds of learners building the future with AI. Start
+            learning at your own pace today.
           </p>
           <div className={styles.ctaActions}>
             <Link
-              to="/courses/machine-learning/intro"
+              to="/login?tab=register"
               className={styles.primaryButton}
             >
-              Get Started Free
+              Get Started
               <ArrowRight size={18} />
-            </Link>
-            <Link to="/fellowship" className={styles.outlineButton}>
-              AI Fellowship
             </Link>
           </div>
         </div>
@@ -400,6 +486,7 @@ export default function Home(): React.JSX.Element {
         <FeaturedCoursesSection />
         <FeaturesSection />
         <InstructorSection />
+        <MentorsSection />
         <CTASection />
       </main>
     </Layout>

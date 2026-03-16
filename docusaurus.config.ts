@@ -89,47 +89,7 @@ const config: Config = {
         alt: 'Lex AI Labs',
         src: 'img/lexailogo.svg',
       },
-      items: [
-        {
-          type: 'dropdown',
-          label: 'Courses',
-          position: 'left',
-          items: [
-            {
-              label: 'AI for Leaders',
-              to: '/courses/ai-for-leaders/intro',
-            },
-            {
-              label: 'Machine Learning',
-              to: '/courses/machine-learning/intro',
-            },
-            {
-              label: 'Deep Learning',
-              to: '/courses/deep-learning/intro',
-            },
-            {
-              label: 'Language Models',
-              to: '/courses/language-models/intro',
-            },
-            {
-              label: 'Resources',
-              to: '/courses/resources/intro',
-            },
-          ],
-        },
-        {to: '/fellowship', label: 'AI Fellowship', position: 'left'},
-        {
-          type: 'dropdown',
-          label: 'Tutorials',
-          position: 'left',
-          items: [
-            {
-              label: 'Interactive Logistic Regression',
-              to: '/courses/tutorials/logistic-regression',
-            },
-          ],
-        },
-      ],
+      items: [],
     },
     footer: {
       style: 'dark',

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Eye, EyeOff } from 'lucide-react';
 
 interface Props {
   onSubmit: (email: string, password: string) => Promise<void>;
@@ -9,6 +10,7 @@ interface Props {
 export default function LoginForm({ onSubmit, isLoading, error }: Props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,23 +56,46 @@ export default function LoginForm({ onSubmit, isLoading, error }: Props) {
         <label htmlFor="login-password" style={{ display: 'block', marginBottom: '0.25rem', fontWeight: 500 }}>
           Password
         </label>
-        <input
-          id="login-password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          placeholder="Enter your password"
-          style={{
-            width: '100%',
-            padding: '0.625rem 0.75rem',
-            border: '1px solid var(--ifm-color-emphasis-300)',
-            borderRadius: '0.5rem',
-            fontSize: '1rem',
-            background: 'var(--ifm-background-color)',
-            color: 'var(--ifm-font-color-base)',
-          }}
-        />
+        <div style={{ position: 'relative' }}>
+          <input
+            id="login-password"
+            type={showPassword ? 'text' : 'password'}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            placeholder="Enter your password"
+            style={{
+              width: '100%',
+              padding: '0.625rem 2.5rem 0.625rem 0.75rem',
+              border: '1px solid var(--ifm-color-emphasis-300)',
+              borderRadius: '0.5rem',
+              fontSize: '1rem',
+              background: 'var(--ifm-background-color)',
+              color: 'var(--ifm-font-color-base)',
+            }}
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword((prev) => !prev)}
+            aria-label={showPassword ? 'Hide password' : 'Show password'}
+            style={{
+              position: 'absolute',
+              right: '0.625rem',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              padding: '0.25rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#9ca3af',
+            }}
+          >
+            {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+          </button>
+        </div>
       </div>
       <button
         type="submit"

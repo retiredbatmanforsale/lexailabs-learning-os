@@ -258,27 +258,42 @@ pre {
   overflow-x: auto;
 }
 
-/* Navbar item hover effect */
+/* ============================================
+   Glassmorphism Navbar Shell
+   ============================================ */
+.navbar {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: none !important;
+  height: 64px;
+}
+
+.navbar--fixed-top {
+  background: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Override default Infima navbar inner padding */
+.navbar > .navbar__inner {
+  max-width: 100%;
+  padding: 0;
+  height: 100%;
+}
+
+/* Hide default Infima dropdown menus (we use custom dropdowns) */
+.navbar .dropdown__menu {
+  display: none !important;
+}
+
+/* Remove default Infima navbar item hover (replaced by custom trigger) */
 .navbar__item:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: var(--ifm-global-radius);
+  background: none;
 }
 
-[data-theme='dark'] .navbar__item:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-/* Navbar brand title - use Instrument Serif */
-.navbar__title {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-weight: 400;
-  font-size: 1.25rem;
-}
-
-/* Navbar logo sizing */
-.navbar__logo img {
-  height: 32px;
-  width: auto;
+/* Hide default navbar items container since items: [] */
+.navbar__items {
+  display: contents;
 }
 
 /* Focus styles for accessibility */
