@@ -398,13 +398,19 @@ const mentors = [
     bio: 'Guides learners through complex AI concepts with practical, industry-grounded perspectives and hands-on support.',
     linkedin: '#',
   },
+  {
+    name: 'Kartik Kulkarni',
+    role: 'Advisor',
+    bio: 'Provides strategic guidance and industry insights, helping shape the learning experience and curriculum direction.',
+    linkedin: '#',
+  },
 ];
 
 function MentorsSection() {
   return (
     <section className={styles.mentors}>
       <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionTitle}>Meet Your Mentors</h2>
+        <h2 className={styles.sectionTitle}>Mentors &amp; Advisors</h2>
         <p className={styles.sectionSubtitle}>
           Learn alongside experienced professionals who guide your AI journey
         </p>
