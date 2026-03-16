@@ -21,7 +21,10 @@ function LoginPageContent() {
   const location = useLocation();
 
   const params = new URLSearchParams(location.search);
-  const redirect = params.get('redirect') || (hasAccess ? '/courses/machine-learning/intro' : '/subscribe');
+  const rawRedirect = params.get('redirect');
+  const redirect = (rawRedirect && rawRedirect.startsWith('/') && !rawRedirect.startsWith('//'))
+    ? rawRedirect
+    : (hasAccess ? '/courses/machine-learning/intro' : '/subscribe');
   const verified = params.get('verified');
   const errorParam = params.get('error');
 
@@ -66,9 +69,7 @@ function LoginPageContent() {
         setMode('register');
         setError(null);
         setSuccessMessage(
-          err.data.organizationName
-            ? `Your institution (${err.data.organizationName}) has pre-approved your access. Create an account to get started.`
-            : 'Your institution has pre-approved your access. Create an account to get started.'
+          err.message || 'Your institution has pre-approved your access. Create an account to get started.'
         );
       } else {
         setError(err.message || 'Sign-in failed');
