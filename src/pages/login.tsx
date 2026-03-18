@@ -52,7 +52,11 @@ function LoginPageContent() {
     try {
       await loginWithGoogle(credential);
     } catch (err: any) {
-      setError(err.message || 'Google sign-in failed');
+      if (err.data?.code === 'B2B_PENDING_INVITE') {
+        setError('Your institution has invited you. Please check your email for the invitation link to set up your account.');
+      } else {
+        setError(err.message || 'Google sign-in failed');
+      }
     } finally {
       setIsLoading(false);
     }
