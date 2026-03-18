@@ -420,8 +420,107 @@ function AdminPanelContent() {
         <div style={cardStyle}>
           <h3 style={{ margin: '0 0 0.75rem', fontSize: '1rem' }}>Bulk Upload (CSV)</h3>
           <p style={{ fontSize: '0.8125rem', color: 'var(--ifm-color-emphasis-500)', margin: '0 0 0.75rem' }}>
-            Upload a CSV file with columns: email, name (optional)
+            Upload a CSV file with student emails and optional names. See the expected format below.
           </p>
+
+          {/* Example CSV preview */}
+          <div style={{
+            border: '1px solid var(--ifm-color-emphasis-200)',
+            borderRadius: '0.5rem',
+            overflow: 'hidden',
+            marginBottom: '1rem',
+          }}>
+            <div style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              padding: '0.5rem 0.75rem',
+              background: 'var(--ifm-color-emphasis-100)',
+              borderBottom: '1px solid var(--ifm-color-emphasis-200)',
+            }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--ifm-color-emphasis-700)' }}>
+                students_template.csv
+              </span>
+              <button
+                onClick={() => {
+                  const csvContent = 'email,name\nalice@university.edu,Alice Johnson\nbob@university.edu,Bob Smith\ncharlie@university.edu,\njane@university.edu,Jane Doe\n';
+                  const blob = new Blob([csvContent], { type: 'text/csv' });
+                  const url = URL.createObjectURL(blob);
+                  const a = document.createElement('a');
+                  a.href = url;
+                  a.download = 'students_template.csv';
+                  a.click();
+                  URL.revokeObjectURL(url);
+                }}
+                style={{
+                  background: 'none',
+                  border: '1px solid var(--ifm-color-emphasis-300)',
+                  borderRadius: '0.25rem',
+                  cursor: 'pointer',
+                  fontSize: '0.6875rem',
+                  color: 'var(--ifm-color-primary)',
+                  padding: '0.2rem 0.5rem',
+                  fontWeight: 500,
+                }}
+              >
+                Download Template
+              </button>
+            </div>
+            <table style={{
+              width: '100%',
+              borderCollapse: 'collapse',
+              fontSize: '0.8125rem',
+              fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace',
+            }}>
+              <thead>
+                <tr style={{ background: 'var(--ifm-color-emphasis-100)' }}>
+                  <th style={{
+                    textAlign: 'left',
+                    padding: '0.375rem 0.75rem',
+                    borderBottom: '1px solid var(--ifm-color-emphasis-200)',
+                    borderRight: '1px solid var(--ifm-color-emphasis-200)',
+                    fontWeight: 600,
+                    color: 'var(--ifm-color-emphasis-800)',
+                  }}>email</th>
+                  <th style={{
+                    textAlign: 'left',
+                    padding: '0.375rem 0.75rem',
+                    borderBottom: '1px solid var(--ifm-color-emphasis-200)',
+                    fontWeight: 600,
+                    color: 'var(--ifm-color-emphasis-800)',
+                  }}>name</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { email: 'alice@university.edu', name: 'Alice Johnson' },
+                  { email: 'bob@university.edu', name: 'Bob Smith' },
+                  { email: 'charlie@university.edu', name: '' },
+                  { email: 'jane@university.edu', name: 'Jane Doe' },
+                ].map((row, i) => (
+                  <tr key={i} style={{
+                    borderBottom: i < 3 ? '1px solid var(--ifm-color-emphasis-200)' : 'none',
+                  }}>
+                    <td style={{
+                      padding: '0.375rem 0.75rem',
+                      borderRight: '1px solid var(--ifm-color-emphasis-200)',
+                      color: 'var(--ifm-font-color-base)',
+                    }}>{row.email}</td>
+                    <td style={{
+                      padding: '0.375rem 0.75rem',
+                      color: row.name ? 'var(--ifm-font-color-base)' : 'var(--ifm-color-emphasis-400)',
+                      fontStyle: row.name ? 'normal' : 'italic',
+                    }}>{row.name || '(optional)'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p style={{ fontSize: '0.75rem', color: 'var(--ifm-color-emphasis-500)', margin: '0 0 0.75rem', lineHeight: 1.5 }}>
+            The first row must be the header: <strong>email,name</strong>. The <strong>name</strong> column is optional &mdash; leave it blank if unknown. Max 10,000 rows per upload.
+          </p>
+
           <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', flexWrap: 'wrap' }}>
             <input
               type="file"
