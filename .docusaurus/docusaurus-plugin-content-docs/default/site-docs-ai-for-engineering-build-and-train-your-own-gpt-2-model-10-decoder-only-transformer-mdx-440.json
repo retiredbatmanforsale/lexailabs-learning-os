@@ -1,0 +1,28 @@
+{
+  "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/decoder-only-transformer",
+  "title": "Decoder Only Transformer",
+  "description": "<iframe",
+  "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/10-decoder-only-transformer.mdx",
+  "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+  "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/decoder-only-transformer",
+  "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/decoder-only-transformer",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/10-decoder-only-transformer.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Decoder Only Transformer",
+    "sidebar_position": 10
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Generation of Next Tokens",
+    "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/generation-of-next-tokens"
+  },
+  "next": {
+    "title": "Deep Neural Networks",
+    "permalink": "/courses/ai-for-engineering/deep-neural-networks/intro"
+  }
+}

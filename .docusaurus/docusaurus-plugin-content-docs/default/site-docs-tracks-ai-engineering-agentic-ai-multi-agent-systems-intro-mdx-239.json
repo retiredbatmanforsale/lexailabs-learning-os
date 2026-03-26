@@ -1,0 +1,22 @@
+{
+  "id": "tracks/ai-engineering/agentic-ai-multi-agent-systems/intro",
+  "title": "Agentic AI",
+  "description": "This course will cover building agentic systems, tool use, planning patterns, and evaluation for AI agents.",
+  "source": "@site/docs/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro.mdx",
+  "sourceDirName": "tracks/ai-engineering/agentic-ai-multi-agent-systems",
+  "slug": "/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro",
+  "permalink": "/courses/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Agentic AI"
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "AI Research",
+    "permalink": "/courses/tracks/ai-engineering/ai-research/intro"
+  }
+}

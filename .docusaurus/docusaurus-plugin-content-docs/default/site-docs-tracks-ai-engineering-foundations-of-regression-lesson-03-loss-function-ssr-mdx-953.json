@@ -1,0 +1,19 @@
+{
+  "id": "tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr",
+  "title": "Loss Function and SSR in Linear Regression",
+  "description": "Overview",
+  "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr.mdx",
+  "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
+  "slug": "/tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr",
+  "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "lesson03-loss-function-ssr",
+    "title": "Loss Function and SSR in Linear Regression",
+    "sidebar_label": "Loss Function and SSR in Linear Regression"
+  }
+}

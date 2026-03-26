@@ -1,0 +1,15 @@
+{
+  "id": "build-gpt/l0-intro",
+  "title": "l0-intro",
+  "description": "",
+  "source": "@site/docs/build-gpt/l0-intro.mdx",
+  "sourceDirName": "build-gpt",
+  "slug": "/build-gpt/l0-intro",
+  "permalink": "/courses/build-gpt/l0-intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/build-gpt/l0-intro.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

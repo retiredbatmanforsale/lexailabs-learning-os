@@ -1,0 +1,28 @@
+{
+  "id": "tracks/ai-engineering/build-and-train-gpt/causal-masking",
+  "title": "Causal Masking",
+  "description": "<iframe",
+  "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/05-causal-masking.mdx",
+  "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
+  "slug": "/tracks/ai-engineering/build-and-train-gpt/causal-masking",
+  "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/causal-masking",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/05-causal-masking.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Causal Masking",
+    "sidebar_position": 5
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Attention + Multi-Head Attention",
+    "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/attention-multi-head-attention"
+  },
+  "next": {
+    "title": "Residual Connections",
+    "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/residual-connections"
+  }
+}

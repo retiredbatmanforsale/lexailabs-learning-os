@@ -1,0 +1,28 @@
+{
+  "id": "tracks/ai-engineering/build-and-train-gpt/lesson04-attention",
+  "title": "Attention + Multi-Head Attention",
+  "description": "<iframe",
+  "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/lesson04-attention.mdx",
+  "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
+  "slug": "/tracks/ai-engineering/build-and-train-gpt/lesson04-attention",
+  "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson04-attention",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/lesson04-attention.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Attention + Multi-Head Attention",
+    "sidebar_position": 4
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Positional Embeddings / Positional Encodings",
+    "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings"
+  },
+  "next": {
+    "title": "Causal Masking",
+    "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson05-masking"
+  }
+}

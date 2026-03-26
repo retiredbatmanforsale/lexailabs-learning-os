@@ -1,0 +1,26 @@
+{
+  "id": "tracks/ai-for-leaders/llms-101/intro",
+  "title": "LLMs 101",
+  "description": "This course will introduce large language models, what they can and can’t do, and how leaders should evaluate them.",
+  "source": "@site/docs/tracks/ai-for-leaders/llms-101/intro.mdx",
+  "sourceDirName": "tracks/ai-for-leaders/llms-101",
+  "slug": "/tracks/ai-for-leaders/llms-101/intro",
+  "permalink": "/courses/tracks/ai-for-leaders/llms-101/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-for-leaders/llms-101/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "LLMs 101"
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Prompt Engineering",
+    "permalink": "/courses/tracks/ai-for-leaders/prompt-engineering/intro"
+  },
+  "next": {
+    "title": "Foundations of Regression",
+    "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/intro"
+  }
+}

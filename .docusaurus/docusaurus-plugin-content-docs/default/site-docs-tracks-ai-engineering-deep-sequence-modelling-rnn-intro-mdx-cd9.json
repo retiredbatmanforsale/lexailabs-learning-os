@@ -1,0 +1,26 @@
+{
+  "id": "tracks/ai-engineering/deep-sequence-modelling-rnn/intro",
+  "title": "Deep Sequence Modelling: RNN",
+  "description": "This course will introduce recurrent neural networks and practical sequence modelling techniques.",
+  "source": "@site/docs/tracks/ai-engineering/deep-sequence-modelling-rnn/intro.mdx",
+  "sourceDirName": "tracks/ai-engineering/deep-sequence-modelling-rnn",
+  "slug": "/tracks/ai-engineering/deep-sequence-modelling-rnn/intro",
+  "permalink": "/courses/tracks/ai-engineering/deep-sequence-modelling-rnn/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/deep-sequence-modelling-rnn/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Deep Sequence Modelling: RNN"
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Deep Computer Vision: CNN",
+    "permalink": "/courses/tracks/ai-engineering/deep-computer-vision-cnn/intro"
+  },
+  "next": {
+    "title": "Build and Train Your Own GPT-2 Model",
+    "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/intro"
+  }
+}

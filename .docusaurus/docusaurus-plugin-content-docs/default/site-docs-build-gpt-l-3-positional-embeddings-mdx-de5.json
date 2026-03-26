@@ -1,0 +1,15 @@
+{
+  "id": "build-gpt/l3-positional-embeddings",
+  "title": "l3-positional-embeddings",
+  "description": "",
+  "source": "@site/docs/build-gpt/l3-positional-embeddings.mdx",
+  "sourceDirName": "build-gpt",
+  "slug": "/build-gpt/l3-positional-embeddings",
+  "permalink": "/courses/build-gpt/l3-positional-embeddings",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/build-gpt/l3-positional-embeddings.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

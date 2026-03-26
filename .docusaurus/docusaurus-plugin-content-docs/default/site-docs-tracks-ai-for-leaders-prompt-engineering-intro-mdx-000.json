@@ -1,0 +1,26 @@
+{
+  "id": "tracks/ai-for-leaders/prompt-engineering/intro",
+  "title": "Prompt Engineering",
+  "description": "This course will cover practical prompting patterns to improve quality, reliability, and safety in everyday workflows.",
+  "source": "@site/docs/tracks/ai-for-leaders/prompt-engineering/intro.mdx",
+  "sourceDirName": "tracks/ai-for-leaders/prompt-engineering",
+  "slug": "/tracks/ai-for-leaders/prompt-engineering/intro",
+  "permalink": "/courses/tracks/ai-for-leaders/prompt-engineering/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-for-leaders/prompt-engineering/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Prompt Engineering"
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "GenAI for Everyone",
+    "permalink": "/courses/tracks/ai-for-leaders/generative-ai-for-everyone/intro"
+  },
+  "next": {
+    "title": "LLMs 101",
+    "permalink": "/courses/tracks/ai-for-leaders/llms-101/intro"
+  }
+}

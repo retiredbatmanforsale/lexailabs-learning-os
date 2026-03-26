@@ -1,0 +1,26 @@
+{
+  "id": "ai-for-engineering/agentic-ai/intro",
+  "title": "Agentic AI",
+  "description": "This course will cover building agentic systems, tool use, planning patterns, and evaluation for AI agents.",
+  "source": "@site/docs/ai-for-engineering/agentic-ai/intro.mdx",
+  "sourceDirName": "ai-for-engineering/agentic-ai",
+  "slug": "/ai-for-engineering/agentic-ai/intro",
+  "permalink": "/courses/ai-for-engineering/agentic-ai/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/agentic-ai/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Agentic AI"
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "AI Research",
+    "permalink": "/courses/ai-for-engineering/ai-research/intro"
+  },
+  "next": {
+    "title": "Introduction to Machine Learning",
+    "permalink": "/courses/machine-learning/intro"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification",
+  "title": "Why Linear Regression Cant Solve Classification",
+  "description": "Overview",
+  "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification.mdx",
+  "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
+  "slug": "/tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification",
+  "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "lesson09-why-not-for-classification",
+    "title": "Why Linear Regression Cant Solve Classification",
+    "sidebar_label": "Why Linear Regression Cant Solve Classification"
+  }
+}

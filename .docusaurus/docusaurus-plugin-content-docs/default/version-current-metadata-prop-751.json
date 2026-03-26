@@ -1,0 +1,398 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "docsSidebar": [
+      {
+        "type": "category",
+        "label": "AI for Leaders (Track)",
+        "items": [
+          {
+            "type": "link",
+            "label": "AI for Leaders",
+            "href": "/courses/tracks/ai-for-leaders/",
+            "docId": "tracks/ai-for-leaders/index",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "AI Literacy",
+            "href": "/courses/tracks/ai-for-leaders/ai-literacy/intro",
+            "docId": "tracks/ai-for-leaders/ai-literacy/intro",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Generative AI for Everyone",
+            "href": "/courses/tracks/ai-for-leaders/generative-ai-for-everyone/intro",
+            "docId": "tracks/ai-for-leaders/generative-ai-for-everyone/intro",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Prompt Engineering",
+            "href": "/courses/tracks/ai-for-leaders/prompt-engineering/intro",
+            "docId": "tracks/ai-for-leaders/prompt-engineering/intro",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "LLMs 101",
+            "href": "/courses/tracks/ai-for-leaders/llms-101/intro",
+            "docId": "tracks/ai-for-leaders/llms-101/intro",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "AI Engineering (Track)",
+        "items": [
+          {
+            "type": "link",
+            "label": "Foundations of Regression",
+            "href": "/courses/tracks/ai-engineering/foundations-of-regression/intro",
+            "docId": "tracks/ai-engineering/foundations-of-regression/intro",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Deep Neural Networks",
+            "href": "/courses/tracks/ai-engineering/deep-neural-networks/intro",
+            "docId": "tracks/ai-engineering/deep-neural-networks/intro",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Deep Computer Vision (CNN)",
+            "href": "/courses/tracks/ai-engineering/deep-computer-vision-cnn/intro",
+            "docId": "tracks/ai-engineering/deep-computer-vision-cnn/intro",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Deep Sequence Modelling (RNN)",
+            "href": "/courses/tracks/ai-engineering/deep-sequence-modelling-rnn/intro",
+            "docId": "tracks/ai-engineering/deep-sequence-modelling-rnn/intro",
+            "unlisted": false
+          },
+          {
+            "type": "category",
+            "label": "Build & Train GPT",
+            "items": [
+              {
+                "type": "link",
+                "label": "Problem with RNNs and LSTMs",
+                "href": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns",
+                "docId": "tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns",
+                "unlisted": false
+              },
+              {
+                "type": "link",
+                "label": "Token Embeddings",
+                "href": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings",
+                "docId": "tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings",
+                "unlisted": false
+              },
+              {
+                "type": "link",
+                "label": "Positional Embeddings / Positional Encodings",
+                "href": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings",
+                "docId": "tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings",
+                "unlisted": false
+              },
+              {
+                "type": "link",
+                "label": "Attention + Multi-Head Attention",
+                "href": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson04-attention",
+                "docId": "tracks/ai-engineering/build-and-train-gpt/lesson04-attention",
+                "unlisted": false
+              },
+              {
+                "type": "link",
+                "label": "Causal Masking",
+                "href": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson05-masking",
+                "docId": "tracks/ai-engineering/build-and-train-gpt/lesson05-masking",
+                "unlisted": false
+              },
+              {
+                "type": "link",
+                "label": "Residual Connections",
+                "href": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson06-residual",
+                "docId": "tracks/ai-engineering/build-and-train-gpt/lesson06-residual",
+                "unlisted": false
+              },
+              {
+                "type": "link",
+                "label": "Layer Normalization",
+                "href": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm",
+                "docId": "tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm",
+                "unlisted": false
+              },
+              {
+                "type": "link",
+                "label": "Feed Forward Neural Networks",
+                "href": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson08-ffn",
+                "docId": "tracks/ai-engineering/build-and-train-gpt/lesson08-ffn",
+                "unlisted": false
+              },
+              {
+                "type": "link",
+                "label": "Generation of Next Tokens",
+                "href": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred",
+                "docId": "tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred",
+                "unlisted": false
+              },
+              {
+                "type": "link",
+                "label": "Decoder Only Transformer",
+                "href": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer",
+                "docId": "tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer",
+                "unlisted": false
+              }
+            ],
+            "collapsed": true,
+            "collapsible": true,
+            "href": "/courses/tracks/ai-engineering/build-and-train-gpt/intro"
+          },
+          {
+            "type": "link",
+            "label": "Attention is All You Need (Transformer)",
+            "href": "/courses/tracks/ai-engineering/attention-is-all-you-need-transformer/intro",
+            "docId": "tracks/ai-engineering/attention-is-all-you-need-transformer/intro",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "AI Research",
+            "href": "/courses/tracks/ai-engineering/ai-research/intro",
+            "docId": "tracks/ai-engineering/ai-research/intro",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Agentic AI & Multi-Agent Systems",
+            "href": "/courses/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro",
+            "docId": "tracks/ai-engineering/agentic-ai-multi-agent-systems/intro",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      }
+    ]
+  },
+  "docs": {
+    "tracks/ai-engineering/agentic-ai-multi-agent-systems/intro": {
+      "id": "tracks/ai-engineering/agentic-ai-multi-agent-systems/intro",
+      "title": "Agentic AI",
+      "description": "This course will cover building agentic systems, tool use, planning patterns, and evaluation for AI agents.",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/ai-research/intro": {
+      "id": "tracks/ai-engineering/ai-research/intro",
+      "title": "AI Research",
+      "description": "This course will cover how to read papers, reproduce results, and turn research ideas into working experiments.",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/attention-is-all-you-need-transformer/intro": {
+      "id": "tracks/ai-engineering/attention-is-all-you-need-transformer/intro",
+      "title": "Attention Is All You Need",
+      "description": "This course will cover the transformer architecture and the attention mechanism that powers modern language models.",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/build-and-train-gpt/intro": {
+      "id": "tracks/ai-engineering/build-and-train-gpt/intro",
+      "title": "Build and Train Your Own GPT-2 Model",
+      "description": "This course will walk through building a GPT-2 style transformer and training it end-to-end.",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns": {
+      "id": "tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns",
+      "title": "Problem with RNNs and LSTMs",
+      "description": "<iframe",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings": {
+      "id": "tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings",
+      "title": "Token Embeddings",
+      "description": "<iframe",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings": {
+      "id": "tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings",
+      "title": "Positional Embeddings / Positional Encodings",
+      "description": "<iframe",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/build-and-train-gpt/lesson04-attention": {
+      "id": "tracks/ai-engineering/build-and-train-gpt/lesson04-attention",
+      "title": "Attention + Multi-Head Attention",
+      "description": "<iframe",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/build-and-train-gpt/lesson05-masking": {
+      "id": "tracks/ai-engineering/build-and-train-gpt/lesson05-masking",
+      "title": "Causal Masking",
+      "description": "<iframe",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/build-and-train-gpt/lesson06-residual": {
+      "id": "tracks/ai-engineering/build-and-train-gpt/lesson06-residual",
+      "title": "Residual Connections",
+      "description": "<iframe",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm": {
+      "id": "tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm",
+      "title": "Layer Normalization",
+      "description": "<iframe",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/build-and-train-gpt/lesson08-ffn": {
+      "id": "tracks/ai-engineering/build-and-train-gpt/lesson08-ffn",
+      "title": "Feed Forward Neural Networks",
+      "description": "<iframe",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred": {
+      "id": "tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred",
+      "title": "Generation of Next Tokens",
+      "description": "<iframe",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer": {
+      "id": "tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer",
+      "title": "Decoder Only Transformer",
+      "description": "<iframe",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/deep-computer-vision-cnn/intro": {
+      "id": "tracks/ai-engineering/deep-computer-vision-cnn/intro",
+      "title": "Deep Computer Vision: CNN",
+      "description": "This course will cover convolutional neural networks and modern computer vision systems.",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/deep-neural-networks/intro": {
+      "id": "tracks/ai-engineering/deep-neural-networks/intro",
+      "title": "Deep Neural Networks",
+      "description": "This course will cover core deep learning building blocks, training dynamics, and best practices for dense networks.",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/deep-sequence-modelling-rnn/intro": {
+      "id": "tracks/ai-engineering/deep-sequence-modelling-rnn/intro",
+      "title": "Deep Sequence Modelling: RNN",
+      "description": "This course will introduce recurrent neural networks and practical sequence modelling techniques.",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/foundations-of-regression/intro": {
+      "id": "tracks/ai-engineering/foundations-of-regression/intro",
+      "title": "Foundations of Regression",
+      "description": "This course will cover regression fundamentals, evaluation, and how to choose the right model for prediction tasks.",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models",
+      "title": "Line & Linear Models",
+      "description": "Overview"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson02-model-equation-line": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson02-model-equation-line",
+      "title": "Model Equation and Equation of a Line",
+      "description": "Overview"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr",
+      "title": "Loss Function and SSR in Linear Regression",
+      "description": "Overview"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson04-optimizer-gradient-descent": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson04-optimizer-gradient-descent",
+      "title": "Optimizer and Gradient Descent",
+      "description": "Overview"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson05-visualization-linear-regression": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson05-visualization-linear-regression",
+      "title": "Visualization of Linear Regression",
+      "description": "Overview"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson06-multivariate-linear-regression": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson06-multivariate-linear-regression",
+      "title": "Multi-Variate Linear Regression",
+      "description": "Overview"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson07-implement-linear-regression-scratch": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson07-implement-linear-regression-scratch",
+      "title": "Implement Linear Regression from Scratch",
+      "description": "Overview"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson08-shortcomings-linear-regression": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson08-shortcomings-linear-regression",
+      "title": "Shortcomings of Linear Regression",
+      "description": "Overview"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification",
+      "title": "Why Linear Regression Cant Solve Classification",
+      "description": "Overview"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson10-intuition-logistic-regression": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson10-intuition-logistic-regression",
+      "title": "Intuition behind Logistic Regression",
+      "description": "Overview"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic",
+      "title": "Model Equation for Logistic",
+      "description": "Overview"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson12-loss-function-bce": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson12-loss-function-bce",
+      "title": "Binary Cross Entropy",
+      "description": "Overview"
+    },
+    "tracks/ai-engineering/foundations-of-regression/lesson13-gradient-descent-logistic": {
+      "id": "tracks/ai-engineering/foundations-of-regression/lesson13-gradient-descent-logistic",
+      "title": "Gradient Descent for Logistic Regression",
+      "description": "Overview"
+    },
+    "tracks/ai-for-leaders/ai-literacy/intro": {
+      "id": "tracks/ai-for-leaders/ai-literacy/intro",
+      "title": "AI Literacy",
+      "description": "This course will build foundational AI literacy for leaders, covering key concepts, risks, and decision frameworks.",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-for-leaders/generative-ai-for-everyone/intro": {
+      "id": "tracks/ai-for-leaders/generative-ai-for-everyone/intro",
+      "title": "GenAI for Everyone",
+      "description": "This course will explain generative AI in plain language and how teams can adopt it safely and effectively.",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-for-leaders/index": {
+      "id": "tracks/ai-for-leaders/index",
+      "title": "AI for Leaders",
+      "description": "Welcome to AI for Leaders - a comprehensive resource designed specifically for business leaders, executives, and decision-makers who need to understand artificial intelligence without diving into technical complexities.",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-for-leaders/llms-101/intro": {
+      "id": "tracks/ai-for-leaders/llms-101/intro",
+      "title": "LLMs 101",
+      "description": "This course will introduce large language models, what they can and can’t do, and how leaders should evaluate them.",
+      "sidebar": "docsSidebar"
+    },
+    "tracks/ai-for-leaders/prompt-engineering/intro": {
+      "id": "tracks/ai-for-leaders/prompt-engineering/intro",
+      "title": "Prompt Engineering",
+      "description": "This course will cover practical prompting patterns to improve quality, reliability, and safety in everyday workflows.",
+      "sidebar": "docsSidebar"
+    }
+  }
+}
