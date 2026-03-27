@@ -15,6 +15,7 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 import { useAuth } from '@/hooks/useAuth';
+import { useCourseLink } from '@/hooks/useCourseLink';
 import {
   courseCategories,
   engineeringSubcategories,
@@ -56,7 +57,8 @@ export default function Navigation() {
     defaultSubcategory
   );
   const [scrolled, setScrolled] = useState(false);
-  const { user, isAuthenticated } = useAuth();
+  const { user, isAuthenticated, hasAccess } = useAuth();
+  const { handleCourseClick } = useCourseLink();
 
   const userInitial = user?.name?.charAt(0)?.toUpperCase() ?? 'U';
   const engineeringGrouped = getEngineeringBySubcategory();
@@ -88,6 +90,7 @@ export default function Navigation() {
               alt="Lex AI Labs"
               width={72}
               height={72}
+              priority
               className="w-10 h-10 sm:w-12 sm:h-12 p-1 mr-2 sm:p-2"
             />
             <span className="text-3xl md:text-4xl font-serif italic text-neutral-900 tracking-tight">
@@ -183,11 +186,12 @@ export default function Navigation() {
                                     href={href}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    onClick={(e) => handleCourseClick(e, href)}
                                   >
                                     {content}
                                   </a>
                                 ) : (
-                                  <Link key={course.id} href={href}>
+                                  <Link key={course.id} href={href} onClick={(e) => handleCourseClick(e, href)}>
                                     {content}
                                   </Link>
                                 );
@@ -222,11 +226,12 @@ export default function Navigation() {
                                   href={href}
                                   target="_blank"
                                   rel="noopener noreferrer"
+                                  onClick={(e) => handleCourseClick(e, href)}
                                 >
                                   {content}
                                 </a>
                               ) : (
-                                <Link key={course.id} href={href}>
+                                <Link key={course.id} href={href} onClick={(e) => handleCourseClick(e, href)}>
                                   {content}
                                 </Link>
                               );
@@ -243,7 +248,7 @@ export default function Navigation() {
 
           {/* Auth CTA — Desktop */}
           <div className="hidden lg:flex items-center gap-3">
-            {isAuthenticated ? (
+            {isAuthenticated && hasAccess ? (
               <>
                 <div className="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center text-sm font-medium">
                   {userInitial}
@@ -253,6 +258,18 @@ export default function Navigation() {
                   className="text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors"
                 >
                   Dashboard
+                </Link>
+              </>
+            ) : isAuthenticated && !hasAccess ? (
+              <>
+                <div className="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center text-sm font-medium">
+                  {userInitial}
+                </div>
+                <Link
+                  href="/subscribe"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-white bg-neutral-900 rounded-full hover:opacity-80 transition-all"
+                >
+                  Subscribe
                 </Link>
               </>
             ) : (
@@ -389,7 +406,7 @@ export default function Navigation() {
                                   href={href}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  onClick={() => setMobileMenuOpen(false)}
+                                  onClick={(e) => { handleCourseClick(e, href); setMobileMenuOpen(false); }}
                                 >
                                   {content}
                                 </a>
@@ -397,7 +414,7 @@ export default function Navigation() {
                                 <Link
                                   key={course.id}
                                   href={href}
-                                  onClick={() => setMobileMenuOpen(false)}
+                                  onClick={(e) => { handleCourseClick(e, href); setMobileMenuOpen(false); }}
                                 >
                                   {content}
                                 </Link>
@@ -472,7 +489,7 @@ export default function Navigation() {
                                           href={href}
                                           target="_blank"
                                           rel="noopener noreferrer"
-                                          onClick={() => setMobileMenuOpen(false)}
+                                          onClick={(e) => { handleCourseClick(e, href); setMobileMenuOpen(false); }}
                                         >
                                           {content}
                                         </a>
@@ -480,7 +497,7 @@ export default function Navigation() {
                                         <Link
                                           key={course.id}
                                           href={href}
-                                          onClick={() => setMobileMenuOpen(false)}
+                                          onClick={(e) => { handleCourseClick(e, href); setMobileMenuOpen(false); }}
                                         >
                                           {content}
                                         </Link>
@@ -504,7 +521,7 @@ export default function Navigation() {
                   transition={{ delay: 0.2 }}
                   className="mt-8 pt-6 border-t border-neutral-100 space-y-3"
                 >
-                  {isAuthenticated ? (
+                  {isAuthenticated && hasAccess ? (
                     <>
                       <div className="flex items-center gap-3 py-2 px-4">
                         <div className="w-9 h-9 rounded-full bg-neutral-900 text-white flex items-center justify-center text-sm font-medium">
@@ -520,6 +537,24 @@ export default function Navigation() {
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         Dashboard
+                      </Link>
+                    </>
+                  ) : isAuthenticated && !hasAccess ? (
+                    <>
+                      <div className="flex items-center gap-3 py-2 px-4">
+                        <div className="w-9 h-9 rounded-full bg-neutral-900 text-white flex items-center justify-center text-sm font-medium">
+                          {userInitial}
+                        </div>
+                        <span className="text-sm font-medium text-neutral-900">
+                          {user?.name}
+                        </span>
+                      </div>
+                      <Link
+                        href="/subscribe"
+                        className="flex items-center justify-center gap-3 w-full py-4 text-base font-medium text-white bg-neutral-900 rounded-2xl hover:opacity-80 active:scale-[0.98] transition-all"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Subscribe
                       </Link>
                     </>
                   ) : (

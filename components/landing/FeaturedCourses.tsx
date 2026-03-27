@@ -5,6 +5,7 @@ import { Monitor, Play, Download } from 'lucide-react';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 import { featuredCourses } from '@/data/courses';
+import { useCourseLink } from '@/hooks/useCourseLink';
 import type { LucideIcon } from 'lucide-react';
 
 const thumbnailAccents: Record<string, string> = {
@@ -49,6 +50,7 @@ function getLevelColor(level: string) {
 export default function FeaturedCourses() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const coursesUrl = process.env.NEXT_PUBLIC_COURSES_URL || '';
+  const { handleCourseClick } = useCourseLink();
 
   return (
     <section ref={ref} id="courses" className="py-16 md:py-24 bg-white">
@@ -117,6 +119,7 @@ export default function FeaturedCourses() {
                         href={`${coursesUrl}${course.href}`}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => handleCourseClick(e, `${coursesUrl}${course.href}`)}
                         className="flex-1 inline-flex items-center justify-center gap-2 py-3.5 text-sm font-medium text-white bg-neutral-900 rounded-full hover:opacity-80 transition-all"
                       >
                         Start learning
@@ -136,6 +139,7 @@ export default function FeaturedCourses() {
                       href={`${coursesUrl}${course.href}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => handleCourseClick(e, `${coursesUrl}${course.href}`)}
                       className="w-full inline-flex items-center justify-center gap-2 py-3.5 text-sm font-medium text-white bg-neutral-900 rounded-full hover:opacity-80 transition-all"
                     >
                       Start learning

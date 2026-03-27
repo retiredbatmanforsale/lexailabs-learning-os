@@ -25,8 +25,8 @@ function ResetPasswordContent() {
 
   if (!token) {
     return (
-      <div className="flex-1 flex justify-center items-center min-h-[70vh] px-4 py-12">
-        <div className="w-full max-w-md bg-white rounded-3xl border border-neutral-100 shadow-sm p-8 text-center">
+      <div className="flex-1 flex justify-center items-center min-h-[80vh] px-4 py-12 pt-28">
+        <div className="w-full max-w-md bg-white/95 backdrop-blur-sm rounded-3xl border border-white/60 shadow-lg p-10 text-center">
           <h2 className="text-2xl font-serif text-neutral-900 mb-3">Invalid Reset Link</h2>
           <p className="text-neutral-500 mb-6">
             This password reset link is invalid or has expired. Please request a new one.
@@ -80,8 +80,8 @@ function ResetPasswordContent() {
 
   if (success) {
     return (
-      <div className="flex-1 flex justify-center items-center min-h-[70vh] px-4 py-12">
-        <div className="w-full max-w-md bg-white rounded-3xl border border-neutral-100 shadow-sm p-8 text-center">
+      <div className="flex-1 flex justify-center items-center min-h-[80vh] px-4 py-12 pt-28">
+        <div className="w-full max-w-md bg-white/95 backdrop-blur-sm rounded-3xl border border-white/60 shadow-lg p-10 text-center">
           <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-green-50 flex items-center justify-center">
             <CheckCircle className="w-8 h-8 text-green-500" />
           </div>
@@ -98,8 +98,8 @@ function ResetPasswordContent() {
   }
 
   return (
-    <div className="flex-1 flex justify-center items-center min-h-[70vh] px-4 py-12">
-      <div className="w-full max-w-md bg-white rounded-3xl border border-neutral-100 shadow-sm p-8">
+    <div className="flex-1 flex justify-center items-center min-h-[80vh] px-4 py-12 pt-28">
+      <div className="w-full max-w-md bg-white/95 backdrop-blur-sm rounded-3xl border border-white/60 shadow-lg p-10">
         <h2 className="text-2xl font-serif text-neutral-900 text-center mb-2">Reset Password</h2>
         <p className="text-center text-neutral-500 text-sm mb-6">
           Enter your new password below.
@@ -177,16 +177,24 @@ function ResetPasswordContent() {
 
 export default function ResetPasswordPage() {
   return (
-    <>
-      <Navigation />
-      <Suspense fallback={
-        <div className="flex-1 flex justify-center items-center min-h-[70vh]">
-          <div className="h-8 w-8 animate-spin rounded-full border-2 border-neutral-300 border-t-neutral-900" />
-        </div>
-      }>
-        <ResetPasswordContent />
-      </Suspense>
-      <Footer />
-    </>
+    <div className="min-h-screen flex flex-col relative">
+      {/* Background — coral gradient matching login */}
+      <div className="fixed inset-0 bg-gradient-coral" />
+      <div className="fixed inset-0 grain" />
+      <div className="fixed top-20 left-1/4 w-72 h-72 bg-coral-200/30 rounded-full blur-3xl pointer-events-none" />
+      <div className="fixed bottom-20 right-1/4 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navigation />
+        <Suspense fallback={
+          <div className="flex-1 flex justify-center items-center min-h-[80vh]">
+            <div className="h-8 w-8 animate-spin rounded-full border-2 border-neutral-300 border-t-neutral-900" />
+          </div>
+        }>
+          <ResetPasswordContent />
+        </Suspense>
+        <Footer />
+      </div>
+    </div>
   );
 }

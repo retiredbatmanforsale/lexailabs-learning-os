@@ -26,14 +26,15 @@ function LoginContent() {
   const [prefilledEmail, setPrefilledEmail] = useState('');
   const [registeredEmail, setRegisteredEmail] = useState('');
 
-  // Sync mode with URL tab parameter changes
+  // Sync mode with URL tab parameter changes (only when tabParam changes)
   useEffect(() => {
-    if (tabParam === 'register' && mode !== 'verify-email') {
-      setMode('register');
-    } else if (!tabParam && mode !== 'verify-email') {
-      setMode('login');
+    if (tabParam === 'register') {
+      setMode((prev) => (prev === 'verify-email' ? prev : 'register'));
+    } else if (tabParam === null) {
+      setMode((prev) => (prev === 'verify-email' ? prev : 'login'));
     }
-  }, [tabParam, mode]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tabParam]);
 
   const rawRedirect = searchParams.get('redirect');
   const redirect =
