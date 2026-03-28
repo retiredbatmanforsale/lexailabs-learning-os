@@ -278,7 +278,7 @@ export default function Navigation() {
                 <div className="relative" ref={profileRef}>
                   <button
                     onClick={() => setProfileOpen(!profileOpen)}
-                    className="w-9 h-9 rounded-full bg-neutral-900 text-white flex items-center justify-center text-sm font-semibold hover:ring-2 hover:ring-neutral-300 transition-all overflow-hidden"
+                    className="relative w-9 h-9 rounded-full bg-neutral-900 text-white flex items-center justify-center text-sm font-semibold hover:ring-2 hover:ring-neutral-300 transition-all overflow-hidden"
                   >
                     {user?.image ? (
                       <Image

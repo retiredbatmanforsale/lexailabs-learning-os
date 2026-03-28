@@ -3,7 +3,6 @@
 import { Suspense, useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
-import { COURSES_URL } from '@/lib/utils';
 import GoogleSignInButton from '@/components/auth/GoogleSignInButton';
 import LoginForm from '@/components/auth/LoginForm';
 import RegisterForm from '@/components/auth/RegisterForm';
@@ -42,7 +41,7 @@ function LoginContent() {
     rawRedirect && rawRedirect.startsWith('/') && !rawRedirect.startsWith('//')
       ? rawRedirect
       : hasAccess
-        ? `${COURSES_URL}/courses/tracks/ai-for-leaders/`
+        ? '/courses/tracks/ai-for-leaders/'
         : '/subscribe';
 
   const verified = searchParams.get('verified');
@@ -62,7 +61,8 @@ function LoginContent() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      if (redirect.startsWith('http')) {
+      if (redirect.startsWith('http') || redirect.startsWith('/courses')) {
+        // Full-page navigation for external URLs and course paths (served via rewrite)
         window.location.href = redirect;
       } else {
         router.push(redirect);

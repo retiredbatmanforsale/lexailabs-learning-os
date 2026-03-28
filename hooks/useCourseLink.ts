@@ -16,17 +16,17 @@ export function useCourseLink() {
 
   const handleCourseClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      e.preventDefault();
       if (!isAuthenticated) {
-        e.preventDefault();
         router.push('/login?tab=register');
         return;
       }
       if (!hasAccess) {
-        e.preventDefault();
         router.push('/subscribe');
         return;
       }
-      // User has access — let the link navigate normally
+      // Full-page navigation so the server-side rewrite proxies to Docusaurus
+      window.location.href = href;
     },
     [isAuthenticated, hasAccess, router]
   );

@@ -6,9 +6,8 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 /**
- * Courses URL — environment-specific.
- * Production: set NEXT_PUBLIC_COURSES_URL explicitly.
- * Staging / fallback: defaults to staging URL.
+ * Courses URL prefix for building course links.
+ * Empty string = relative paths (courses served from same domain via Next.js rewrites).
+ * Set NEXT_PUBLIC_COURSES_URL only if courses are on a separate domain.
  */
-export const COURSES_URL =
-  process.env.NEXT_PUBLIC_COURSES_URL || 'https://staging.learn.lexailabs.com';
+export const COURSES_URL = process.env.NEXT_PUBLIC_COURSES_URL || '';

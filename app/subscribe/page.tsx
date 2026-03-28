@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Check, Crown, Star, Zap, ArrowRight, Shield } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
-import { COURSES_URL } from '@/lib/utils';
 import { apiFetch } from '@/services/api';
 import Navigation from '@/components/landing/Navigation';
 import Footer from '@/components/landing/Footer';
@@ -27,8 +26,6 @@ const PLAN_META: Record<
     badge?: string;
     highlight?: boolean;
     icon: typeof Zap;
-    monthlyBreakdown?: (price: number) => string;
-    savings?: string;
   }
 > = {
   MONTHLY: {
@@ -42,18 +39,12 @@ const PLAN_META: Record<
     badge: 'Most Popular',
     highlight: true,
     icon: Star,
-    monthlyBreakdown: (price: number) =>
-      `₹${Math.round(price / 3).toLocaleString('en-IN')}/mo`,
-    savings: 'Save ~11%',
   },
   YEARLY: {
     period: 'per year',
     periodShort: '/yr',
     badge: 'Best Value',
     icon: Crown,
-    monthlyBreakdown: (price: number) =>
-      `₹${Math.round(price / 12).toLocaleString('en-IN')}/mo`,
-    savings: 'Save ~30%',
   },
 };
 
@@ -66,7 +57,7 @@ const FEATURES = [
   'New courses as they launch',
 ];
 
-const defaultCourseRedirect = `${COURSES_URL}/courses/tracks/ai-for-leaders/`;
+const defaultCourseRedirect = '/courses/tracks/ai-for-leaders/';
 
 export default function SubscribePage() {
   const router = useRouter();
@@ -230,7 +221,7 @@ export default function SubscribePage() {
       <div className="relative z-10 flex flex-col min-h-screen">
         <Navigation />
 
-        <div className="flex-1 flex flex-col items-center justify-center px-4 py-16 pt-28">
+        <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-16 pt-28">
           {/* Header */}
           <div className="text-center mb-12 max-w-xl">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/60 backdrop-blur-sm text-neutral-600 rounded-full text-xs font-medium uppercase tracking-wider mb-5">
@@ -252,7 +243,7 @@ export default function SubscribePage() {
           )}
 
           {/* Cards */}
-          <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 md:items-end">
+          <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 md:items-end">
             {plans.map((plan) => {
               const meta = PLAN_META[plan.planType] || {
                 period: '',
@@ -313,17 +304,6 @@ export default function SubscribePage() {
                           {meta.periodShort}
                         </span>
                       </div>
-                      {meta.monthlyBreakdown && (
-                        <p className="text-sm text-neutral-400 mt-1.5">
-                          {meta.monthlyBreakdown(plan.price)} billed{' '}
-                          {plan.planType === 'QUARTERLY' ? 'quarterly' : 'annually'}
-                          {meta.savings && (
-                            <span className="ml-1.5 text-green-600 font-medium">
-                              &middot; {meta.savings}
-                            </span>
-                          )}
-                        </p>
-                      )}
                     </div>
 
                     {/* Features */}
