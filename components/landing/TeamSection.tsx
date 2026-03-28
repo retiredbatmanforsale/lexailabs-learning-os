@@ -146,7 +146,7 @@ export default function TeamSection() {
             <span className="text-blue-500 italic mt-1">{" "}Lex AI</span>
           </h2>
           <p className="text-neutral-600 text-base md:text-lg max-w-2xl mx-auto mt-4 md:mt-6">
-            Engineers, founders, and leaders from Google, Amazon, CMU and India&apos;s
+            Engineers, founders, and leaders from Google, Amazon, Oracle and India&apos;s
             top AI companies
           </p>
         </motion.div>
@@ -210,7 +210,7 @@ export default function TeamSection() {
             })}
           </div>
           <p className="text-xs md:text-sm text-neutral-600">
-            Learn from <span className="font-semibold text-neutral-900">9+ industry mentors</span>{' '}
+            Learn from <span className="font-semibold text-neutral-900">industry mentors</span>{' '}
             who ship AI at scale
           </p>
         </motion.div>

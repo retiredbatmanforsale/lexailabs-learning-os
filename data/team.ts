@@ -35,7 +35,7 @@ export const team: TeamMember[] = [
   {
     name: 'Nipun Katyal',
     role: 'AI Vector Search Engineer',
-    company: 'CMU',
+    company: 'Oracle',
     linkedin: 'https://www.linkedin.com/in/nipun-katyal/',
     type: 'mentor',
     image: '/assets/team/nipun-katyal.jpg',

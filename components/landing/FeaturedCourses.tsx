@@ -6,15 +6,16 @@ import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 import { featuredCourses } from '@/data/courses';
 import { useCourseLink } from '@/hooks/useCourseLink';
+import { COURSES_URL } from '@/lib/utils';
 import type { LucideIcon } from 'lucide-react';
 
 const thumbnailAccents: Record<string, string> = {
-  'ai-literacy': 'from-neutral-800 via-neutral-700 to-neutral-800',
-  'prompt-engineering': 'from-slate-800 via-slate-700 to-slate-800',
-  'foundations-of-regression': 'from-neutral-800 via-blue-800 to-blue-900',
-  'deep-neural-networks': 'from-neutral-800 via-violet-800 to-violet-900',
-  'attention-is-all-you-need': 'from-neutral-800 via-emerald-800 to-emerald-900',
-  'build-and-train-gpt': 'from-neutral-800 via-indigo-800 to-indigo-900',
+  'ai-literacy': 'from-neutral-100 via-coral-50 to-coral-100',
+  'prompt-engineering': 'from-slate-100 via-slate-50 to-neutral-100',
+  'foundations-of-regression': 'from-blue-50 via-blue-100 to-indigo-100',
+  'deep-neural-networks': 'from-violet-50 via-purple-100 to-violet-100',
+  'attention-is-all-you-need': 'from-emerald-50 via-teal-100 to-emerald-100',
+  'build-and-train-gpt': 'from-indigo-50 via-blue-100 to-indigo-100',
 };
 
 function CourseThumbnail({ title, icon: Icon, courseId }: { title: string; icon: LucideIcon; courseId: string }) {
@@ -23,10 +24,10 @@ function CourseThumbnail({ title, icon: Icon, courseId }: { title: string; icon:
   return (
     <div className={`aspect-[16/10] relative overflow-hidden rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center p-6`}>
       {/* Large watermark icon */}
-      <Icon className="absolute right-4 bottom-4 w-24 h-24 text-white/[0.08]" strokeWidth={1} />
+      <Icon className="absolute right-4 bottom-4 w-24 h-24 text-neutral-900/[0.05]" strokeWidth={1} />
       {/* Title */}
       <div className="relative z-10 text-center px-4">
-        <p className="text-white/90 font-serif italic text-2xl md:text-3xl leading-snug">
+        <p className="text-neutral-800 font-serif italic text-2xl md:text-3xl leading-snug">
           {title}
         </p>
       </div>
@@ -49,7 +50,6 @@ function getLevelColor(level: string) {
 
 export default function FeaturedCourses() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const coursesUrl = process.env.NEXT_PUBLIC_COURSES_URL || '';
   const { handleCourseClick } = useCourseLink();
 
   return (
@@ -116,10 +116,10 @@ export default function FeaturedCourses() {
                   {course.curriculumUrl ? (
                     <div className="flex gap-3">
                       <Link
-                        href={`${coursesUrl}${course.href}`}
+                        href={`${COURSES_URL}${course.href}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => handleCourseClick(e, `${coursesUrl}${course.href}`)}
+                        onClick={(e) => handleCourseClick(e, `${COURSES_URL}${course.href}`)}
                         className="flex-1 inline-flex items-center justify-center gap-2 py-3.5 text-sm font-medium text-white bg-neutral-900 rounded-full hover:opacity-80 transition-all"
                       >
                         Start learning
@@ -136,10 +136,10 @@ export default function FeaturedCourses() {
                     </div>
                   ) : (
                     <Link
-                      href={`${coursesUrl}${course.href}`}
+                      href={`${COURSES_URL}${course.href}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={(e) => handleCourseClick(e, `${coursesUrl}${course.href}`)}
+                      onClick={(e) => handleCourseClick(e, `${COURSES_URL}${course.href}`)}
                       className="w-full inline-flex items-center justify-center gap-2 py-3.5 text-sm font-medium text-white bg-neutral-900 rounded-full hover:opacity-80 transition-all"
                     >
                       Start learning

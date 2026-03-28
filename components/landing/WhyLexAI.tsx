@@ -32,7 +32,7 @@ const features = [
 ];
 
 const stats = [
-  { value: '500+', label: 'Active Learners' },
+  { value: '1,000+', label: 'Active Learners' },
   { value: '90%', label: 'Completion Rate' },
   { value: '4.9/5', label: 'Avg Rating' },
 ];

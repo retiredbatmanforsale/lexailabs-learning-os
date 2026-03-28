@@ -7,11 +7,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { companies } from '@/data/companies';
 
-const stats = [
-  { value: '500+', label: 'Learners' },
-  { value: '12', label: 'Structured Courses' },
-  { value: '9+', label: 'Industry Mentors' },
-];
+const learnerCount = { value: '1,000+', label: 'Learners Enrolled' };
 
 const doubled = [...companies, ...companies];
 
@@ -74,28 +70,20 @@ export default function Hero() {
             </Button>
           </motion.div>
 
-          {/* Stats */}
+          {/* Learner Count — enlarged single metric */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex items-center justify-center gap-8 md:gap-12"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+            className="inline-flex items-center gap-3 md:gap-4 px-6 md:px-8 py-3 md:py-4"
           >
-            {stats.map((stat, index) => (
-              <div key={stat.label} className="flex items-center gap-8 md:gap-12">
-                {index > 0 && (
-                  <div className="w-px h-8 bg-neutral-300" />
-                )}
-                <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-serif text-neutral-900">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs md:text-sm text-neutral-500 mt-1">
-                    {stat.label}
-                  </div>
-                </div>
-              </div>
-            ))}
+            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse-slow" />
+            <span className="text-3xl md:text-4xl lg:text-5xl font-serif text-neutral-900">
+              {learnerCount.value}
+            </span>
+            <span className="text-sm md:text-base text-neutral-500 font-medium">
+              {learnerCount.label}
+            </span>
           </motion.div>
         </div>
       </div>
@@ -108,7 +96,7 @@ export default function Hero() {
         className="relative z-10 pb-12 md:pb-16"
       >
         <p className="text-center text-sm text-neutral-400 uppercase tracking-wider mb-6">
-          Our alumni work at leading companies worldwide
+          Our instructors &amp; mentors are from
         </p>
 
         <div className="relative">

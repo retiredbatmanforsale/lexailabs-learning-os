@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { testimonials } from '@/data/testimonials';
 
@@ -36,26 +37,118 @@ const avatarGradients = [
   'from-coral-400 to-orange-400',
   'from-blue-400 to-cyan-400',
   'from-violet-400 to-purple-400',
+  'from-emerald-400 to-teal-400',
+  'from-pink-400 to-rose-400',
 ];
+
+interface TestimonialCardProps {
+  testimonial: (typeof testimonials)[0];
+  index: number;
+}
+
+function TestimonialCard({ testimonial, index }: TestimonialCardProps) {
+  const avatarGradient = avatarGradients[index % avatarGradients.length];
+  const viewLink = testimonial.postLink || testimonial.linkedin;
+
+  return (
+    <div className="flex-shrink-0 w-[320px] sm:w-[360px] md:w-[400px] mx-2 md:mx-3">
+      <div className="bg-white rounded-2xl border border-neutral-200/60 shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex flex-col h-[280px]">
+        <div className="flex flex-col flex-1 min-h-0 px-5 pt-4 pb-5">
+          {/* Top row: quote icon + view link */}
+          <div className="flex items-center justify-between mb-3 flex-shrink-0">
+            <QuoteIcon className="w-4 h-4 text-coral-400" />
+            {viewLink && (
+              <Link
+                href={viewLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] text-neutral-400 hover:text-neutral-600 transition-colors"
+              >
+                {testimonial.source === 'linkedin' ? 'view on linkedin' : 'from feedback'}
+              </Link>
+            )}
+          </div>
+
+          {/* Content */}
+          <div className="flex-1 min-h-0 overflow-y-auto hide-scroll mb-4">
+            <p className="text-neutral-600 text-[13px] leading-[1.7]">
+              {testimonial.content.split('\n\n')[0]}
+            </p>
+          </div>
+
+          {/* Author — bottom */}
+          <div className="flex items-center gap-3 pt-3 border-t border-neutral-100 flex-shrink-0">
+            {testimonial.image ? (
+              <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  fill
+                  className="object-cover"
+                  sizes="32px"
+                />
+              </div>
+            ) : (
+              <div
+                className={`flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br ${avatarGradient} flex-shrink-0`}
+              >
+                <span className="text-white font-semibold text-[10px]">
+                  {getInitials(testimonial.name)}
+                </span>
+              </div>
+            )}
+            <div className="min-w-0 flex-1">
+              <h4 className="font-semibold text-neutral-900 text-[13px] leading-tight">
+                {testimonial.name}
+              </h4>
+              <p className="text-neutral-400 text-[11px] truncate mt-0.5">
+                {testimonial.role}
+              </p>
+            </div>
+            {testimonial.linkedin && (
+              <Link
+                href={testimonial.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${testimonial.name}'s LinkedIn`}
+                className="flex-shrink-0 hover:opacity-80 transition-opacity"
+              >
+                <LinkedinIcon className="w-3.5 h-3.5 text-[#0A66C2]" />
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Testimonials() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Split testimonials into two rows
+  const mid = Math.ceil(testimonials.length / 2);
+  const row1 = testimonials.slice(0, mid);
+  const row2 = testimonials.slice(mid);
+
+  // Double for seamless looping
+  const row1Doubled = [...row1, ...row1];
+  const row2Doubled = [...row2, ...row2];
 
   return (
     <section
       ref={ref}
       id="stories"
-      className="py-16 md:py-24 bg-neutral-50 relative overflow-hidden"
+      className="py-16 md:py-24 bg-white relative overflow-hidden"
     >
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-radial from-coral-50 to-transparent rounded-full blur-3xl pointer-events-none opacity-40" />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-10 md:mb-14 px-4"
         >
           <span className="text-xs font-medium text-neutral-400 uppercase tracking-[0.2em] mb-4 block">
             Transformation Stories
@@ -66,99 +159,53 @@ export default function Testimonials() {
           </h2>
         </motion.div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-          {testimonials.map((testimonial, index) => {
-            const avatarGradient = avatarGradients[index % avatarGradients.length];
-            const viewLink = testimonial.postLink || testimonial.linkedin;
+        {/* Two-row scrolling testimonials */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="space-y-4 md:space-y-5"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {/* Row 1 — scrolls left */}
+          <div className="relative">
+            <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-            return (
-              <motion.div
-                key={testimonial.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.15,
-                  ease: [0.25, 0.1, 0.25, 1],
-                }}
-              >
-                <div className="bg-neutral-50/80 rounded-2xl shadow-[inset_0_2px_6px_rgba(0,0,0,0.04),inset_0_0_0_1px_rgba(0,0,0,0.03)] flex flex-col h-[460px]">
-                  <div className="flex flex-col flex-1 min-h-0 px-6 pt-5 pb-6">
-                    {/* Top row: quote icon + view link */}
-                    <div className="flex items-center justify-between mb-4 flex-shrink-0">
-                      <QuoteIcon className="w-5 h-5 text-orange-400" />
-                      {viewLink && (
-                        <Link
-                          href={viewLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[11px] text-neutral-400 hover:text-neutral-600 transition-colors"
-                        >
-                          {testimonial.source === 'linkedin' ? 'view on linkedin' : 'from feedback'}
-                        </Link>
-                      )}
-                    </div>
+            <div
+              className="flex animate-marquee-slow"
+              style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+            >
+              {row1Doubled.map((testimonial, index) => (
+                <TestimonialCard
+                  key={`row1-${testimonial.id}-${index}`}
+                  testimonial={testimonial}
+                  index={index % row1.length}
+                />
+              ))}
+            </div>
+          </div>
 
-                    {/* Content — scrollable, hidden scrollbar */}
-                    <div className="flex-1 min-h-0 overflow-y-auto hide-scroll mb-5">
-                      {testimonial.content.split('\n\n').map((paragraph, pIndex) => (
-                        <p
-                          key={pIndex}
-                          className="text-neutral-600 text-[14px] leading-[1.75] mb-3 last:mb-0"
-                        >
-                          {paragraph}
-                        </p>
-                      ))}
-                    </div>
+          {/* Row 2 — scrolls right (reverse) */}
+          <div className="relative">
+            <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-                    {/* Author — bottom */}
-                    <div className="flex items-center gap-3 pt-4 border-t border-neutral-200/60 flex-shrink-0">
-                      {testimonial.image ? (
-                        <div className="relative w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
-                          <Image
-                            src={testimonial.image}
-                            alt={testimonial.name}
-                            fill
-                            className="object-cover"
-                            sizes="36px"
-                          />
-                        </div>
-                      ) : (
-                        <div
-                          className={`flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br ${avatarGradient} flex-shrink-0`}
-                        >
-                          <span className="text-white font-semibold text-xs">
-                            {getInitials(testimonial.name)}
-                          </span>
-                        </div>
-                      )}
-                      <div className="min-w-0 flex-1">
-                        <h4 className="font-semibold text-neutral-900 text-sm leading-tight">
-                          {testimonial.name}
-                        </h4>
-                        <p className="text-neutral-400 text-xs truncate mt-0.5">
-                          {testimonial.role}
-                        </p>
-                      </div>
-                      {testimonial.linkedin && (
-                        <Link
-                          href={testimonial.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={`${testimonial.name}'s LinkedIn`}
-                          className="flex-shrink-0 hover:opacity-80 transition-opacity"
-                        >
-                          <LinkedinIcon className="w-4 h-4 text-[#0A66C2]" />
-                        </Link>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
+            <div
+              className="flex animate-marquee-slow-reverse"
+              style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+            >
+              {row2Doubled.map((testimonial, index) => (
+                <TestimonialCard
+                  key={`row2-${testimonial.id}-${index}`}
+                  testimonial={testimonial}
+                  index={(index % row2.length) + mid}
+                />
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

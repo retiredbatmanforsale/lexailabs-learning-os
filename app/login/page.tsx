@@ -3,6 +3,7 @@
 import { Suspense, useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useAuth } from '@/hooks/useAuth';
+import { COURSES_URL } from '@/lib/utils';
 import GoogleSignInButton from '@/components/auth/GoogleSignInButton';
 import LoginForm from '@/components/auth/LoginForm';
 import RegisterForm from '@/components/auth/RegisterForm';
@@ -41,7 +42,7 @@ function LoginContent() {
     rawRedirect && rawRedirect.startsWith('/') && !rawRedirect.startsWith('//')
       ? rawRedirect
       : hasAccess
-        ? `${process.env.NEXT_PUBLIC_COURSES_URL}/courses/machine-learning/intro`
+        ? `${COURSES_URL}/courses/tracks/ai-for-leaders/`
         : '/subscribe';
 
   const verified = searchParams.get('verified');
@@ -183,7 +184,7 @@ function LoginContent() {
         {/* Divider */}
         <div className="flex items-center gap-4 my-8">
           <hr className="flex-1 border-neutral-200" />
-          <span className="text-neutral-400 text-xs uppercase tracking-wider">or continue with email</span>
+          <span className="text-neutral-400 text-xs uppercase tracking-wider">or</span>
           <hr className="flex-1 border-neutral-200" />
         </div>
 

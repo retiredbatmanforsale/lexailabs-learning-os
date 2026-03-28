@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ChevronDown,
@@ -11,18 +11,18 @@ import {
   Network,
   Cpu,
   Blocks,
+  LogOut,
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useAuth } from '@/hooks/useAuth';
 import { useCourseLink } from '@/hooks/useCourseLink';
+import { COURSES_URL } from '@/lib/utils';
 import {
   courseCategories,
   engineeringSubcategories,
   getEngineeringBySubcategory,
 } from '@/data/courses';
-
-const COURSES_URL = process.env.NEXT_PUBLIC_COURSES_URL ?? '';
 
 const categoryKeys = ['AI for Leaders', 'AI for Engineers'] as const;
 
@@ -57,11 +57,27 @@ export default function Navigation() {
     defaultSubcategory
   );
   const [scrolled, setScrolled] = useState(false);
-  const { user, isAuthenticated, hasAccess } = useAuth();
+  const [profileOpen, setProfileOpen] = useState(false);
+  const profileRef = useRef<HTMLDivElement>(null);
+  const { user, isAuthenticated, hasAccess, logout } = useAuth();
   const { handleCourseClick } = useCourseLink();
 
-  const userInitial = user?.name?.charAt(0)?.toUpperCase() ?? 'U';
+  const userInitial =
+    user?.name?.charAt(0)?.toUpperCase() ||
+    user?.email?.charAt(0)?.toUpperCase() ||
+    'U';
   const engineeringGrouped = getEngineeringBySubcategory();
+
+  // Close profile dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (profileRef.current && !profileRef.current.contains(e.target as Node)) {
+        setProfileOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -248,30 +264,69 @@ export default function Navigation() {
 
           {/* Auth CTA — Desktop */}
           <div className="hidden lg:flex items-center gap-3">
-            {isAuthenticated && hasAccess ? (
-              <>
-                <div className="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center text-sm font-medium">
-                  {userInitial}
+            {isAuthenticated ? (
+              <div className="flex items-center gap-3">
+                {!hasAccess && (
+                  <Link
+                    href="/subscribe"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-white bg-neutral-900 rounded-full hover:opacity-80 transition-all"
+                  >
+                    Subscribe
+                  </Link>
+                )}
+                {/* Profile Avatar + Dropdown */}
+                <div className="relative" ref={profileRef}>
+                  <button
+                    onClick={() => setProfileOpen(!profileOpen)}
+                    className="w-9 h-9 rounded-full bg-neutral-900 text-white flex items-center justify-center text-sm font-semibold hover:ring-2 hover:ring-neutral-300 transition-all overflow-hidden"
+                  >
+                    {user?.image ? (
+                      <Image
+                        src={user.image}
+                        alt={user.name || 'Profile'}
+                        fill
+                        className="object-cover"
+                        sizes="36px"
+                      />
+                    ) : (
+                      userInitial
+                    )}
+                  </button>
+
+                  <AnimatePresence>
+                    {profileOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 6, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 6, scale: 0.95 }}
+                        transition={{ duration: 0.12, ease: 'easeOut' }}
+                        className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-xl border border-neutral-100 overflow-hidden z-50"
+                      >
+                        <div className="px-4 py-3 border-b border-neutral-100">
+                          <p className="text-sm font-medium text-neutral-900 truncate">
+                            {user?.name || 'User'}
+                          </p>
+                          <p className="text-xs text-neutral-400 truncate mt-0.5">
+                            {user?.email}
+                          </p>
+                        </div>
+                        <div className="py-1">
+                          <button
+                            onClick={() => {
+                              setProfileOpen(false);
+                              logout();
+                            }}
+                            className="w-full flex items-center gap-2.5 px-4 py-2.5 text-sm text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900 transition-colors"
+                          >
+                            <LogOut className="w-4 h-4" />
+                            Log out
+                          </button>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
-                <Link
-                  href="/dashboard"
-                  className="text-sm font-medium text-neutral-700 hover:text-neutral-900 transition-colors"
-                >
-                  Dashboard
-                </Link>
-              </>
-            ) : isAuthenticated && !hasAccess ? (
-              <>
-                <div className="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center text-sm font-medium">
-                  {userInitial}
-                </div>
-                <Link
-                  href="/subscribe"
-                  className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-white bg-neutral-900 rounded-full hover:opacity-80 transition-all"
-                >
-                  Subscribe
-                </Link>
-              </>
+              </div>
             ) : (
               <>
                 <Link
@@ -521,41 +576,50 @@ export default function Navigation() {
                   transition={{ delay: 0.2 }}
                   className="mt-8 pt-6 border-t border-neutral-100 space-y-3"
                 >
-                  {isAuthenticated && hasAccess ? (
+                  {isAuthenticated ? (
                     <>
                       <div className="flex items-center gap-3 py-2 px-4">
-                        <div className="w-9 h-9 rounded-full bg-neutral-900 text-white flex items-center justify-center text-sm font-medium">
-                          {userInitial}
+                        <div className="w-9 h-9 rounded-full bg-neutral-900 text-white flex items-center justify-center text-sm font-semibold overflow-hidden relative">
+                          {user?.image ? (
+                            <Image
+                              src={user.image}
+                              alt={user.name || 'Profile'}
+                              fill
+                              className="object-cover"
+                              sizes="36px"
+                            />
+                          ) : (
+                            userInitial
+                          )}
                         </div>
-                        <span className="text-sm font-medium text-neutral-900">
-                          {user?.name}
-                        </span>
-                      </div>
-                      <Link
-                        href="/dashboard"
-                        className="flex items-center justify-center gap-3 w-full py-4 text-base font-medium text-white bg-neutral-900 rounded-2xl hover:opacity-80 active:scale-[0.98] transition-all"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        Dashboard
-                      </Link>
-                    </>
-                  ) : isAuthenticated && !hasAccess ? (
-                    <>
-                      <div className="flex items-center gap-3 py-2 px-4">
-                        <div className="w-9 h-9 rounded-full bg-neutral-900 text-white flex items-center justify-center text-sm font-medium">
-                          {userInitial}
+                        <div className="min-w-0 flex-1">
+                          <p className="text-sm font-medium text-neutral-900 truncate">
+                            {user?.name || 'User'}
+                          </p>
+                          <p className="text-xs text-neutral-400 truncate">
+                            {user?.email}
+                          </p>
                         </div>
-                        <span className="text-sm font-medium text-neutral-900">
-                          {user?.name}
-                        </span>
                       </div>
-                      <Link
-                        href="/subscribe"
-                        className="flex items-center justify-center gap-3 w-full py-4 text-base font-medium text-white bg-neutral-900 rounded-2xl hover:opacity-80 active:scale-[0.98] transition-all"
-                        onClick={() => setMobileMenuOpen(false)}
+                      {!hasAccess && (
+                        <Link
+                          href="/subscribe"
+                          className="flex items-center justify-center gap-3 w-full py-4 text-base font-medium text-white bg-neutral-900 rounded-2xl hover:opacity-80 active:scale-[0.98] transition-all"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          Subscribe
+                        </Link>
+                      )}
+                      <button
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          logout();
+                        }}
+                        className="flex items-center justify-center gap-2 w-full py-3 text-sm font-medium text-neutral-600 border border-neutral-200 rounded-2xl hover:bg-neutral-50 transition-all"
                       >
-                        Subscribe
-                      </Link>
+                        <LogOut className="w-4 h-4" />
+                        Log out
+                      </button>
                     </>
                   ) : (
                     <>

@@ -64,8 +64,9 @@ export default function GoogleSignInButton({ onSuccess, onError }: Props) {
       window.google.accounts.id.renderButton(buttonRef.current, {
         theme: 'outline',
         size: 'large',
+        shape: 'pill',
         width: 350,
-        text: 'signin_with',
+        text: 'continue_with',
       });
     };
 

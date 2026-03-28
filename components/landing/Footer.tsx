@@ -2,14 +2,13 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-
-const coursesUrl = process.env.NEXT_PUBLIC_COURSES_URL || '';
+import { COURSES_URL } from '@/lib/utils';
 
 const menuLinks = [
-  { label: 'AI Literacy', href: `${coursesUrl}/courses/tracks/ai-for-leaders/ai-literacy/intro` },
-  { label: 'Foundations of Regression', href: `${coursesUrl}/courses/tracks/ai-engineering/foundations-of-regression/intro` },
-  { label: 'Build & Train GPT', href: `${coursesUrl}/courses/tracks/ai-engineering/build-and-train-gpt/intro` },
-  { label: 'Agentic AI', href: `${coursesUrl}/courses/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro` },
+  { label: 'AI Literacy', href: `${COURSES_URL}/courses/tracks/ai-for-leaders/ai-literacy/intro` },
+  { label: 'Foundations of Regression', href: `${COURSES_URL}/courses/tracks/ai-engineering/foundations-of-regression/intro` },
+  { label: 'Build & Train GPT', href: `${COURSES_URL}/courses/tracks/ai-engineering/build-and-train-gpt/intro` },
+  { label: 'Agentic AI', href: `${COURSES_URL}/courses/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro` },
 ];
 
 const policyLinks = [

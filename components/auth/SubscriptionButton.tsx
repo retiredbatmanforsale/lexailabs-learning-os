@@ -18,9 +18,10 @@ interface Props {
   planType: 'MONTHLY' | 'QUARTERLY' | 'YEARLY';
   onSuccess?: () => void;
   onError?: (error: string) => void;
+  variant?: 'default' | 'highlighted';
 }
 
-export default function SubscriptionButton({ planType, onSuccess, onError }: Props) {
+export default function SubscriptionButton({ planType, onSuccess, onError, variant = 'default' }: Props) {
   const [isLoading, setIsLoading] = useState(false);
   const { user, refreshTokens } = useAuth();
   const razorpayKeyId = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID;
@@ -102,7 +103,12 @@ export default function SubscriptionButton({ planType, onSuccess, onError }: Pro
     <Button
       onClick={handleSubscribe}
       loading={isLoading}
-      className="w-full"
+      variant={variant === 'highlighted' ? 'default' : 'outline'}
+      className={`w-full rounded-full h-12 text-base ${
+        variant === 'highlighted'
+          ? 'bg-blue-600 hover:bg-blue-700 text-white'
+          : ''
+      }`}
     >
       Subscribe
     </Button>
