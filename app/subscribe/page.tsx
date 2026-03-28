@@ -57,7 +57,7 @@ const FEATURES = [
   'New courses as they launch',
 ];
 
-const defaultCourseRedirect = '/courses/tracks/ai-for-leaders/';
+const defaultCourseRedirect = '/courses/ai-for-leaders/intro';
 
 export default function SubscribePage() {
   const router = useRouter();

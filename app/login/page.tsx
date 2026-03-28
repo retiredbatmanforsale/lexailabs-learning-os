@@ -41,7 +41,7 @@ function LoginContent() {
     rawRedirect && rawRedirect.startsWith('/') && !rawRedirect.startsWith('//')
       ? rawRedirect
       : hasAccess
-        ? '/courses/tracks/ai-for-leaders/'
+        ? '/courses/ai-for-leaders/intro'
         : '/subscribe';
 
   const verified = searchParams.get('verified');

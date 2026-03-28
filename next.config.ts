@@ -29,11 +29,8 @@ const nextConfig: NextConfig = {
     return {
       // afterFiles: checked AFTER public/ and pages, so no conflict with Next.js assets
       afterFiles: [
-        // Docusaurus course pages
-        {
-          source: '/courses/:path*',
-          destination: `${DOCUSAURUS_ORIGIN}/courses/:path*`,
-        },
+        // NOTE: /courses/:path* HTML pages are handled by middleware.ts
+        // (which fetches from Docusaurus, injects custom navbar/footer)
         // Docusaurus JS/CSS bundles (public/assets/ has logos/team/testimonials, no js/ or css/)
         {
           source: '/assets/js/:path*',

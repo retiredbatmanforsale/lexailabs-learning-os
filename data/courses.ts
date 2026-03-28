@@ -39,7 +39,7 @@ export const courses: Course[] = [
     description: 'Core AI concepts and terminology for business leaders',
     level: 'Beginner',
     category: 'AI for Leaders',
-    href: '/courses/tracks/ai-for-leaders/ai-literacy/intro',
+    href: '/courses/ai-for-leaders/intro',
     thumbnail: 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=600&h=400&fit=crop',
     featured: true,
     outcomes: [
@@ -57,7 +57,7 @@ export const courses: Course[] = [
     description: 'Craft effective prompts to get the best out of any LLM',
     level: 'Beginner',
     category: 'AI for Leaders',
-    href: '/courses/tracks/ai-for-leaders/prompt-engineering/intro',
+    href: '/courses/ai-for-leaders/intro',
     thumbnail: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop',
     featured: true,
     outcomes: [
@@ -75,7 +75,7 @@ export const courses: Course[] = [
     description: 'Understand generative AI and its real-world applications',
     level: 'Beginner',
     category: 'AI for Leaders',
-    href: '/courses/tracks/ai-for-leaders/generative-ai-for-everyone/intro',
+    href: '/courses/ai-for-leaders/intro',
     thumbnail: 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&h=400&fit=crop',
     featured: false,
     outcomes: [
@@ -93,7 +93,7 @@ export const courses: Course[] = [
     description: 'Large Language Models 101',
     level: 'Intermediate',
     category: 'AI for Leaders',
-    href: '/courses/tracks/ai-for-leaders/llms-101/intro',
+    href: '/courses/ai-for-leaders/intro',
     thumbnail: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop',
     featured: false,
     outcomes: [
@@ -114,7 +114,7 @@ export const courses: Course[] = [
     level: 'Intermediate',
     category: 'AI for Engineers',
     subcategory: 'Foundations',
-    href: '/courses/tracks/ai-engineering/foundations-of-regression/intro',
+    href: '/courses/machine-learning/intro',
     thumbnail: 'https://images.unsplash.com/photo-1635322966219-b75ed372eb01?w=600&h=400&fit=crop',
     featured: true,
     outcomes: [
@@ -133,7 +133,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Deep Learning',
-    href: '/courses/tracks/ai-engineering/deep-neural-networks/intro',
+    href: '/courses/deep-learning/intro',
     thumbnail: 'https://images.unsplash.com/photo-1614850523011-8f49ffc73908?w=600&h=400&fit=crop',
     featured: true,
     outcomes: [
@@ -152,7 +152,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Deep Learning',
-    href: '/courses/tracks/ai-engineering/deep-computer-vision-cnn/intro',
+    href: '/courses/deep-learning/intro',
     thumbnail: 'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=600&h=400&fit=crop',
     featured: false,
     outcomes: [
@@ -171,7 +171,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Deep Learning',
-    href: '/courses/tracks/ai-engineering/deep-sequence-modelling-rnn/intro',
+    href: '/courses/deep-learning/intro',
     thumbnail: 'https://images.unsplash.com/photo-1614851099511-773084f6911d?w=600&h=400&fit=crop',
     featured: false,
     outcomes: [
@@ -190,7 +190,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Transformers & LLMs',
-    href: '/courses/tracks/ai-engineering/attention-is-all-you-need-transformer/intro',
+    href: '/courses/language-models/intro',
     thumbnail: 'https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=600&h=400&fit=crop',
     featured: true,
     outcomes: [
@@ -209,7 +209,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Transformers & LLMs',
-    href: '/courses/tracks/ai-engineering/build-and-train-gpt/intro',
+    href: '/courses/language-models/intro',
     thumbnail: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&h=400&fit=crop',
     featured: true,
     outcomes: [
@@ -228,7 +228,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Applied AI',
-    href: '/courses/tracks/ai-engineering/ai-research/intro',
+    href: '/courses/resources/intro',
     thumbnail: 'https://images.unsplash.com/photo-1618172193622-ae2d025f4032?w=600&h=400&fit=crop',
     featured: false,
     outcomes: [
@@ -247,7 +247,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Applied AI',
-    href: '/courses/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro',
+    href: '/courses/resources/intro',
     thumbnail: 'https://images.unsplash.com/photo-1617957718614-8c23f060c2d0?w=600&h=400&fit=crop',
     featured: false,
     outcomes: [

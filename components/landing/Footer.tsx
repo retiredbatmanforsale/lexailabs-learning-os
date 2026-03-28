@@ -5,10 +5,10 @@ import Link from 'next/link';
 import { COURSES_URL } from '@/lib/utils';
 
 const menuLinks = [
-  { label: 'AI Literacy', href: `${COURSES_URL}/courses/tracks/ai-for-leaders/ai-literacy/intro` },
-  { label: 'Foundations of Regression', href: `${COURSES_URL}/courses/tracks/ai-engineering/foundations-of-regression/intro` },
-  { label: 'Build & Train GPT', href: `${COURSES_URL}/courses/tracks/ai-engineering/build-and-train-gpt/intro` },
-  { label: 'Agentic AI', href: `${COURSES_URL}/courses/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro` },
+  { label: 'AI for Leaders', href: `${COURSES_URL}/courses/ai-for-leaders/intro` },
+  { label: 'Machine Learning', href: `${COURSES_URL}/courses/machine-learning/intro` },
+  { label: 'Deep Learning', href: `${COURSES_URL}/courses/deep-learning/intro` },
+  { label: 'Language Models', href: `${COURSES_URL}/courses/language-models/intro` },
 ];
 
 const policyLinks = [
