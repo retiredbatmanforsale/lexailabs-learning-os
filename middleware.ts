@@ -46,6 +46,11 @@ export async function middleware(request: NextRequest) {
       });
     }
 
+    // If Docusaurus returns 404, redirect to our custom "course not found" page
+    if (res.status === 404) {
+      return NextResponse.redirect(new URL('/course-not-found', request.url));
+    }
+
     let html = await res.text();
 
     // ── Inject custom styles ──────────────────────────────────────────
@@ -53,7 +58,7 @@ export async function middleware(request: NextRequest) {
 <style data-lexai>
   /* Hide Docusaurus navbar & footer */
   nav.navbar, .navbar, .navbar-sidebar__backdrop, .navbar-sidebar { display: none !important; }
-  footer.footer, footer.footer--dark { display: none !important; }
+  footer.footer, footer.footer--dark, footer[class*="footer_"] { display: none !important; }
 
   /* Reset Docusaurus navbar-height offset */
   :root { --ifm-navbar-height: 0px !important; }
@@ -317,22 +322,20 @@ export async function middleware(request: NextRequest) {
     });
   }
 
-  // ── Force full-page navigation for home / Next.js links ──
+  // ── Kill Docusaurus SPA: force full-page navigation on ALL internal links ──
   document.addEventListener('click', function(e) {
-    var nav = e.target.closest('[data-lexai-nav]');
-    if (nav) {
-      e.preventDefault();
-      e.stopPropagation();
-      window.location.href = nav.getAttribute('href');
-      return;
-    }
-    var home = e.target.closest('a[href="/"]');
-    if (home) {
-      e.preventDefault();
-      e.stopPropagation();
-      window.location.href = '/';
-      return;
-    }
+    var link = e.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    if (!href) return;
+
+    // Skip external, anchor, mailto, tel, and javascript links
+    if (/^(https?:|#|javascript:|mailto:|tel:)/.test(href)) return;
+
+    // Every internal link does a full page reload so middleware always runs
+    e.preventDefault();
+    e.stopPropagation();
+    window.location.href = href;
   }, true);
 })();
 </script>`;

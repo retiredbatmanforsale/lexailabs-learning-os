@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { companies } from '@/data/companies';
 
@@ -62,11 +61,13 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex items-center justify-center mb-12"
           >
-            <Button asChild size="lg" className="rounded-full px-8">
-              <Link href="#courses">
-                Explore Courses
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
+            <Button
+              size="lg"
+              className="rounded-full px-8"
+              onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Explore Courses
+              <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </motion.div>
 
