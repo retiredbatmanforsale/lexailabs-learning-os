@@ -10,8 +10,12 @@ import { COURSES_URL } from '@/lib/utils';
 import type { LucideIcon } from 'lucide-react';
 
 const thumbnailAccents: Record<string, string> = {
+  'ai-for-leaders': 'from-amber-50 via-orange-50 to-amber-100',
   'ai-literacy': 'from-neutral-100 via-coral-50 to-coral-100',
   'prompt-engineering': 'from-slate-100 via-slate-50 to-neutral-100',
+  'machine-learning': 'from-cyan-50 via-sky-100 to-cyan-100',
+  'deep-learning': 'from-rose-50 via-pink-50 to-rose-100',
+  'language-models': 'from-teal-50 via-emerald-50 to-teal-100',
   'foundations-of-regression': 'from-blue-50 via-blue-100 to-indigo-100',
   'deep-neural-networks': 'from-violet-50 via-purple-100 to-violet-100',
   'attention-is-all-you-need': 'from-emerald-50 via-teal-100 to-emerald-100',

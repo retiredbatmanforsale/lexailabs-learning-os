@@ -35,7 +35,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 3,
     name: 'Megha Sahni',
-    role: 'Associate Software Engineer at JPMorgan Chase',
+    role: 'Software Engineer at JPMorgan Chase & Co.',
     image: '/assets/testimonials/megha-sahni.jpg',
     linkedin: 'https://www.linkedin.com/in/mesahni/',
     postLink:
@@ -47,9 +47,8 @@ export const testimonials: Testimonial[] = [
   {
     id: 4,
     name: 'Nipun Katyal',
-    role: 'AI Vector Search Engineer at Oracle',
-    image:
-      'https://media.licdn.com/dms/image/v2/C5103AQF0X2dyoEZGdQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1559472916576?e=1772064000&v=beta&t=qCKtYUARUaM0qC6fRkm2ZKW8CLBrizTOhJM_yKkV3QI',
+    role: 'Member of Technical Staff - AI Vector Search at Oracle',
+    image: '/assets/testimonials/nipun-katyal.jpg',
     linkedin: 'https://www.linkedin.com/in/nipun-katyal/',
     content:
       'I had the pleasure of working with Puru at MathWorks. My peers and I always appreciated the depth with which Puru approached engineering problems as well as his philosophy towards designing solutions. He has a commendable grasp on a variety of domains like natural language processing and audio processing.',
@@ -59,8 +58,7 @@ export const testimonials: Testimonial[] = [
     id: 5,
     name: 'Nishchay Anand',
     role: 'Senior Software Engineer',
-    image:
-      'https://media.licdn.com/dms/image/v2/C4D03AQHJ51KzqnWsPw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1651405634966?e=1772064000&v=beta&t=-kdQEisGNLLjOS4Ch60Ymbe-lJ0wPuicJDFhg9rp-jM',
+    image: '/assets/testimonials/nishchay-anand.jpg',
     linkedin: 'https://www.linkedin.com/in/nishchay-anand-ba3768170/',
     content:
       'I had the privilege of learning from Puru during the System Design Fellowship. He turns each learning session into an approachable conversation, bridging the gap between theory and real-world intuition. His sessions will always leave you smarter, more confident, and genuinely excited to build.',
@@ -69,9 +67,8 @@ export const testimonials: Testimonial[] = [
   {
     id: 6,
     name: 'Shiv Singh',
-    role: 'Enterprise Architect',
-    image:
-      'https://media.licdn.com/dms/image/v2/C5103AQErJ7GduGtBCQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1550487747800?e=1772064000&v=beta&t=a9MX0oL3na-8extM8zGK8qh0N09tvqPf9ACJHOGq4ak',
+    role: 'Senior Solution Architect at Dassault Systemes',
+    image: '/assets/testimonials/shiv-singh.jpg',
     linkedin: 'https://www.linkedin.com/in/singhshiv/',
     content:
       "I've had the chance to interact with Puru and learn valuable insights into Machine Learning through him. He has a natural ability to simplify complex topics and explain them in a way that makes sense, no matter how technical they are.",
@@ -81,8 +78,7 @@ export const testimonials: Testimonial[] = [
     id: 7,
     name: 'Abhinav Srivastava',
     role: 'Consultant at Deloitte',
-    image:
-      'https://media.licdn.com/dms/image/v2/D5603AQHihtHRY-4wVA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718189059201?e=1772064000&v=beta&t=Epj0OQDe_IfJTN_EP11tEMZpBbcRlG2rG50aiTouik0',
+    image: '/assets/testimonials/abhinav-srivastava.jpg',
     linkedin: 'https://www.linkedin.com/in/abhinav-srivastava-1046601a5/',
     content:
       'Puru has a way of making machine learning feel less like rocket science and more like a conversation. During my time at the LexAI Fellowship, he made topics that usually seem intimidating feel surprisingly manageable.',
@@ -91,9 +87,8 @@ export const testimonials: Testimonial[] = [
   {
     id: 8,
     name: 'Maneet Kaur Bagga',
-    role: 'UX Researcher at MathWorks',
-    image:
-      'https://media.licdn.com/dms/image/v2/D5603AQEj4Jxy36rgyA/profile-displayphoto-shrink_800_800/B56ZmKOkA9IsAc-/0/1758960698380?e=1772064000&v=beta&t=hnr-oMSb9Kdvsq0zr3HrHufNDVKmI88CkIWwRSTY-Bc',
+    role: 'Senior Associate UX Researcher at MathWorks',
+    image: '/assets/testimonials/maneet-kaur-bagga.jpg',
     linkedin: 'https://www.linkedin.com/in/maneet-kaur-bagga-8225701aa/',
     content:
       'His mentoring and teaching abilities are truly outstanding, especially his approach of focusing on practical, industry-applicable knowledge. He equipped me with real-world Machine Learning skills and insights needed to thrive.',
@@ -103,8 +98,7 @@ export const testimonials: Testimonial[] = [
     id: 9,
     name: 'Riddhi Menroy',
     role: 'Computer Engineering Student at Thapar Institute',
-    image:
-      'https://media.licdn.com/dms/image/v2/D5603AQEdPOomItqr4Q/profile-displayphoto-shrink_800_800/B56ZPkje5CG8Ac-/0/1734706328304?e=1772064000&v=beta&t=CxqzUITkSv8jTNAEaoE1qt6rtbZ72msy4KM2AJ_yXCY',
+    image: '/assets/testimonials/riddhi-menroy.jpg',
     linkedin: 'https://www.linkedin.com/in/riddhi-menroy/',
     content:
       "I've had the opportunity to learn from Puru during the Lex AI Fellowship. He breaks down complex concepts, especially the math, into simple, intuitive steps. Even the most abstract ideas feel approachable.",
@@ -113,9 +107,8 @@ export const testimonials: Testimonial[] = [
   {
     id: 10,
     name: 'Deepak Sharma',
-    role: 'Software Engineer',
-    image:
-      'https://media.licdn.com/dms/image/v2/D5603AQFm41sgW-HxBw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696006622890?e=1772064000&v=beta&t=8_mAzU5EkW2UD1_98oliqKpmuhvKCNWCqeH3wkJVHjo',
+    role: 'Software Engineer at Newton School',
+    image: '/assets/testimonials/deepak-sharma.jpg',
     linkedin: 'https://www.linkedin.com/in/deepak-sharma-6a7a07121/',
     content:
       'Working with Puru has been one of the most enriching experiences of my journey. His technical depth across system design, AI/ML, and large-scale engineering challenges is truly exceptional. He has a rare ability to simplify complex problems.',
@@ -125,8 +118,7 @@ export const testimonials: Testimonial[] = [
     id: 11,
     name: 'Karan Bhutani',
     role: 'Consultant at Deloitte',
-    image:
-      'https://media.licdn.com/dms/image/v2/D5603AQGjdyAf0_x5Dw/profile-displayphoto-crop_800_800/B56ZhehE6yHkAI-/0/1753932387091?e=1772064000&v=beta&t=PeRW2dHaRZqTkKXhLy4T27kCgnKe0Q2SJBJ7777f21s',
+    image: '/assets/testimonials/karan-bhutani.jpg',
     linkedin: 'https://www.linkedin.com/in/karan-bhutani/',
     content:
       "Puru didn't just shape how I write code, he changed how I think about technology and its purpose. Watching him work is like seeing someone translate philosophy into engineering: grounded in first principles, deeply thoughtful.",
