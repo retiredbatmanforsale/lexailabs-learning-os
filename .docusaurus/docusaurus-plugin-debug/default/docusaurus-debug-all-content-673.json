@@ -15,21 +15,21 @@
           "editUrlLocalized": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/i18n/en/docusaurus-plugin-content-docs/current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/lexai/Documents/lexai-docusaurus/sidebars.ts",
-          "contentPath": "/Users/lexai/Documents/lexai-docusaurus/docs",
-          "contentPathLocalized": "/Users/lexai/Documents/lexai-docusaurus/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/aloksinghtomar/Desktop/LexAI/lexai-learning/sidebars.ts",
+          "contentPath": "/Users/aloksinghtomar/Desktop/LexAI/lexai-learning/docs",
+          "contentPathLocalized": "/Users/aloksinghtomar/Desktop/LexAI/lexai-learning/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
-              "id": "tracks/ai-engineering/agentic-ai-multi-agent-systems/intro",
+              "id": "ai-for-engineering/agentic-ai/intro",
               "title": "Agentic AI",
               "description": "This course will cover building agentic systems, tool use, planning patterns, and evaluation for AI agents.",
-              "source": "@site/docs/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro.mdx",
-              "sourceDirName": "tracks/ai-engineering/agentic-ai-multi-agent-systems",
-              "slug": "/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro",
-              "permalink": "/courses/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro",
+              "source": "@site/docs/ai-for-engineering/agentic-ai/intro.mdx",
+              "sourceDirName": "ai-for-engineering/agentic-ai",
+              "slug": "/ai-for-engineering/agentic-ai/intro",
+              "permalink": "/courses/ai-for-engineering/agentic-ai/intro",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/agentic-ai/intro.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -38,20 +38,24 @@
               "sidebar": "docsSidebar",
               "previous": {
                 "title": "AI Research",
-                "permalink": "/courses/tracks/ai-engineering/ai-research/intro"
+                "permalink": "/courses/ai-for-engineering/ai-research/intro"
+              },
+              "next": {
+                "title": "Introduction to Machine Learning",
+                "permalink": "/courses/machine-learning/intro"
               }
             },
             {
-              "id": "tracks/ai-engineering/ai-research/intro",
+              "id": "ai-for-engineering/ai-research/intro",
               "title": "AI Research",
               "description": "This course will cover how to read papers, reproduce results, and turn research ideas into working experiments.",
-              "source": "@site/docs/tracks/ai-engineering/ai-research/intro.mdx",
-              "sourceDirName": "tracks/ai-engineering/ai-research",
-              "slug": "/tracks/ai-engineering/ai-research/intro",
-              "permalink": "/courses/tracks/ai-engineering/ai-research/intro",
+              "source": "@site/docs/ai-for-engineering/ai-research/intro.mdx",
+              "sourceDirName": "ai-for-engineering/ai-research",
+              "slug": "/ai-for-engineering/ai-research/intro",
+              "permalink": "/courses/ai-for-engineering/ai-research/intro",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/ai-research/intro.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/ai-research/intro.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -59,25 +63,25 @@
               },
               "sidebar": "docsSidebar",
               "previous": {
-                "title": "Attention Is All You Need",
-                "permalink": "/courses/tracks/ai-engineering/attention-is-all-you-need-transformer/intro"
+                "title": "Tree-Based Algorithms (Classical ML)",
+                "permalink": "/courses/ai-for-engineering/tree-based-algorithms-classical-ml/intro"
               },
               "next": {
                 "title": "Agentic AI",
-                "permalink": "/courses/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro"
+                "permalink": "/courses/ai-for-engineering/agentic-ai/intro"
               }
             },
             {
-              "id": "tracks/ai-engineering/attention-is-all-you-need-transformer/intro",
+              "id": "ai-for-engineering/attention-is-all-you-need/intro",
               "title": "Attention Is All You Need",
               "description": "This course will cover the transformer architecture and the attention mechanism that powers modern language models.",
-              "source": "@site/docs/tracks/ai-engineering/attention-is-all-you-need-transformer/intro.mdx",
-              "sourceDirName": "tracks/ai-engineering/attention-is-all-you-need-transformer",
-              "slug": "/tracks/ai-engineering/attention-is-all-you-need-transformer/intro",
-              "permalink": "/courses/tracks/ai-engineering/attention-is-all-you-need-transformer/intro",
+              "source": "@site/docs/ai-for-engineering/attention-is-all-you-need/intro.mdx",
+              "sourceDirName": "ai-for-engineering/attention-is-all-you-need",
+              "slug": "/ai-for-engineering/attention-is-all-you-need/intro",
+              "permalink": "/courses/ai-for-engineering/attention-is-all-you-need/intro",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/attention-is-all-you-need-transformer/intro.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/attention-is-all-you-need/intro.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -85,135 +89,25 @@
               },
               "sidebar": "docsSidebar",
               "previous": {
-                "title": "Decoder Only Transformer",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer"
-              },
-              "next": {
-                "title": "AI Research",
-                "permalink": "/courses/tracks/ai-engineering/ai-research/intro"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/build-and-train-gpt/intro",
-              "title": "Build and Train Your Own GPT-2 Model",
-              "description": "This course will walk through building a GPT-2 style transformer and training it end-to-end.",
-              "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/intro.mdx",
-              "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
-              "slug": "/tracks/ai-engineering/build-and-train-gpt/intro",
-              "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/intro",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/intro.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "title": "Build and Train Your Own GPT-2 Model"
-              },
-              "sidebar": "docsSidebar",
-              "previous": {
                 "title": "Deep Sequence Modelling: RNN",
-                "permalink": "/courses/tracks/ai-engineering/deep-sequence-modelling-rnn/intro"
+                "permalink": "/courses/ai-for-engineering/deep-sequence-modelling-rnn/intro"
               },
               "next": {
-                "title": "Problem with RNNs and LSTMs",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns",
-              "title": "Problem with RNNs and LSTMs",
-              "description": "<iframe",
-              "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns.mdx",
-              "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
-              "slug": "/tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns",
-              "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns.mdx",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 1,
-              "frontMatter": {
-                "title": "Problem with RNNs and LSTMs",
-                "sidebar_position": 1
-              },
-              "sidebar": "docsSidebar",
-              "previous": {
                 "title": "Build and Train Your Own GPT-2 Model",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/intro"
-              },
-              "next": {
-                "title": "Token Embeddings",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings"
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/intro"
               }
             },
             {
-              "id": "tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings",
-              "title": "Token Embeddings",
-              "description": "<iframe",
-              "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings.mdx",
-              "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
-              "slug": "/tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings",
-              "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings.mdx",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "title": "Token Embeddings",
-                "sidebar_position": 2
-              },
-              "sidebar": "docsSidebar",
-              "previous": {
-                "title": "Problem with RNNs and LSTMs",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns"
-              },
-              "next": {
-                "title": "Positional Embeddings / Positional Encodings",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings",
-              "title": "Positional Embeddings / Positional Encodings",
-              "description": "<iframe",
-              "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings.mdx",
-              "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
-              "slug": "/tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings",
-              "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings.mdx",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 3,
-              "frontMatter": {
-                "title": "Positional Embeddings / Positional Encodings",
-                "sidebar_position": 3
-              },
-              "sidebar": "docsSidebar",
-              "previous": {
-                "title": "Token Embeddings",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings"
-              },
-              "next": {
-                "title": "Attention + Multi-Head Attention",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson04-attention"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/build-and-train-gpt/lesson04-attention",
+              "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/attention-multi-head-attention",
               "title": "Attention + Multi-Head Attention",
               "description": "<iframe",
-              "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/lesson04-attention.mdx",
-              "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
-              "slug": "/tracks/ai-engineering/build-and-train-gpt/lesson04-attention",
-              "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson04-attention",
+              "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/04-attention-multi-head-attention.mdx",
+              "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+              "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/attention-multi-head-attention",
+              "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/attention-multi-head-attention",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/lesson04-attention.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/04-attention-multi-head-attention.mdx",
               "tags": [],
               "version": "current",
               "sidebarPosition": 4,
@@ -224,24 +118,24 @@
               "sidebar": "docsSidebar",
               "previous": {
                 "title": "Positional Embeddings / Positional Encodings",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings"
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/positional-embeddings"
               },
               "next": {
                 "title": "Causal Masking",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson05-masking"
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/causal-masking"
               }
             },
             {
-              "id": "tracks/ai-engineering/build-and-train-gpt/lesson05-masking",
+              "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/causal-masking",
               "title": "Causal Masking",
               "description": "<iframe",
-              "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/lesson05-masking.mdx",
-              "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
-              "slug": "/tracks/ai-engineering/build-and-train-gpt/lesson05-masking",
-              "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson05-masking",
+              "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/05-causal-masking.mdx",
+              "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+              "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/causal-masking",
+              "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/causal-masking",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/lesson05-masking.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/05-causal-masking.mdx",
               "tags": [],
               "version": "current",
               "sidebarPosition": 5,
@@ -252,136 +146,24 @@
               "sidebar": "docsSidebar",
               "previous": {
                 "title": "Attention + Multi-Head Attention",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson04-attention"
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/attention-multi-head-attention"
               },
               "next": {
                 "title": "Residual Connections",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson06-residual"
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/residual-connections"
               }
             },
             {
-              "id": "tracks/ai-engineering/build-and-train-gpt/lesson06-residual",
-              "title": "Residual Connections",
-              "description": "<iframe",
-              "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/lesson06-residual.mdx",
-              "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
-              "slug": "/tracks/ai-engineering/build-and-train-gpt/lesson06-residual",
-              "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson06-residual",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/lesson06-residual.mdx",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 6,
-              "frontMatter": {
-                "title": "Residual Connections",
-                "sidebar_position": 6
-              },
-              "sidebar": "docsSidebar",
-              "previous": {
-                "title": "Causal Masking",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson05-masking"
-              },
-              "next": {
-                "title": "Layer Normalization",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm",
-              "title": "Layer Normalization",
-              "description": "<iframe",
-              "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm.mdx",
-              "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
-              "slug": "/tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm",
-              "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm.mdx",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 7,
-              "frontMatter": {
-                "title": "Layer Normalization",
-                "sidebar_position": 7
-              },
-              "sidebar": "docsSidebar",
-              "previous": {
-                "title": "Residual Connections",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson06-residual"
-              },
-              "next": {
-                "title": "Feed Forward Neural Networks",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson08-ffn"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/build-and-train-gpt/lesson08-ffn",
-              "title": "Feed Forward Neural Networks",
-              "description": "<iframe",
-              "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/lesson08-ffn.mdx",
-              "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
-              "slug": "/tracks/ai-engineering/build-and-train-gpt/lesson08-ffn",
-              "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson08-ffn",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/lesson08-ffn.mdx",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 8,
-              "frontMatter": {
-                "title": "Feed Forward Neural Networks",
-                "sidebar_position": 8
-              },
-              "sidebar": "docsSidebar",
-              "previous": {
-                "title": "Layer Normalization",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm"
-              },
-              "next": {
-                "title": "Generation of Next Tokens",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred",
-              "title": "Generation of Next Tokens",
-              "description": "<iframe",
-              "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred.mdx",
-              "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
-              "slug": "/tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred",
-              "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred.mdx",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 9,
-              "frontMatter": {
-                "title": "Generation of Next Tokens",
-                "sidebar_position": 9
-              },
-              "sidebar": "docsSidebar",
-              "previous": {
-                "title": "Feed Forward Neural Networks",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson08-ffn"
-              },
-              "next": {
-                "title": "Decoder Only Transformer",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer",
+              "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/decoder-only-transformer",
               "title": "Decoder Only Transformer",
               "description": "<iframe",
-              "source": "@site/docs/tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer.mdx",
-              "sourceDirName": "tracks/ai-engineering/build-and-train-gpt",
-              "slug": "/tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer",
-              "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer",
+              "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/10-decoder-only-transformer.mdx",
+              "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+              "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/decoder-only-transformer",
+              "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/decoder-only-transformer",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/10-decoder-only-transformer.mdx",
               "tags": [],
               "version": "current",
               "sidebarPosition": 10,
@@ -392,24 +174,246 @@
               "sidebar": "docsSidebar",
               "previous": {
                 "title": "Generation of Next Tokens",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred"
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/generation-of-next-tokens"
               },
               "next": {
-                "title": "Attention Is All You Need",
-                "permalink": "/courses/tracks/ai-engineering/attention-is-all-you-need-transformer/intro"
+                "title": "Deep Neural Networks",
+                "permalink": "/courses/ai-for-engineering/deep-neural-networks/intro"
               }
             },
             {
-              "id": "tracks/ai-engineering/deep-computer-vision-cnn/intro",
-              "title": "Deep Computer Vision: CNN",
-              "description": "This course will cover convolutional neural networks and modern computer vision systems.",
-              "source": "@site/docs/tracks/ai-engineering/deep-computer-vision-cnn/intro.mdx",
-              "sourceDirName": "tracks/ai-engineering/deep-computer-vision-cnn",
-              "slug": "/tracks/ai-engineering/deep-computer-vision-cnn/intro",
-              "permalink": "/courses/tracks/ai-engineering/deep-computer-vision-cnn/intro",
+              "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/feed-forward-neural-networks",
+              "title": "Feed Forward Neural Networks",
+              "description": "<iframe",
+              "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/08-feed-forward-neural-networks.mdx",
+              "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+              "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/feed-forward-neural-networks",
+              "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/feed-forward-neural-networks",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/deep-computer-vision-cnn/intro.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/08-feed-forward-neural-networks.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 8,
+              "frontMatter": {
+                "title": "Feed Forward Neural Networks",
+                "sidebar_position": 8
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Layer Normalization",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/layer-normalization"
+              },
+              "next": {
+                "title": "Generation of Next Tokens",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/generation-of-next-tokens"
+              }
+            },
+            {
+              "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/generation-of-next-tokens",
+              "title": "Generation of Next Tokens",
+              "description": "<iframe",
+              "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/09-generation-of-next-tokens.mdx",
+              "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+              "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/generation-of-next-tokens",
+              "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/generation-of-next-tokens",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/09-generation-of-next-tokens.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 9,
+              "frontMatter": {
+                "title": "Generation of Next Tokens",
+                "sidebar_position": 9
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Feed Forward Neural Networks",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/feed-forward-neural-networks"
+              },
+              "next": {
+                "title": "Decoder Only Transformer",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/decoder-only-transformer"
+              }
+            },
+            {
+              "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/intro",
+              "title": "Build and Train Your Own GPT-2 Model",
+              "description": "This course will walk through building a GPT-2 style transformer and training it end-to-end.",
+              "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/intro.mdx",
+              "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+              "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/intro",
+              "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/intro.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Build and Train Your Own GPT-2 Model"
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Attention Is All You Need",
+                "permalink": "/courses/ai-for-engineering/attention-is-all-you-need/intro"
+              },
+              "next": {
+                "title": "Problem with RNNs and LSTMs",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms"
+              }
+            },
+            {
+              "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/layer-normalization",
+              "title": "Layer Normalization",
+              "description": "<iframe",
+              "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/07-layer-normalization.mdx",
+              "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+              "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/layer-normalization",
+              "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/layer-normalization",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/07-layer-normalization.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 7,
+              "frontMatter": {
+                "title": "Layer Normalization",
+                "sidebar_position": 7
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Residual Connections",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/residual-connections"
+              },
+              "next": {
+                "title": "Feed Forward Neural Networks",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/feed-forward-neural-networks"
+              }
+            },
+            {
+              "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/positional-embeddings",
+              "title": "Positional Embeddings / Positional Encodings",
+              "description": "<iframe",
+              "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/03-positional-embeddings.mdx",
+              "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+              "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/positional-embeddings",
+              "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/positional-embeddings",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/03-positional-embeddings.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Positional Embeddings / Positional Encodings",
+                "sidebar_position": 3
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Token Embeddings",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings"
+              },
+              "next": {
+                "title": "Attention + Multi-Head Attention",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/attention-multi-head-attention"
+              }
+            },
+            {
+              "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms",
+              "title": "Problem with RNNs and LSTMs",
+              "description": "<iframe",
+              "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/01-problem-with-rnns-lstms.mdx",
+              "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+              "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms",
+              "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/01-problem-with-rnns-lstms.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Problem with RNNs and LSTMs",
+                "sidebar_position": 1
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Build and Train Your Own GPT-2 Model",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/intro"
+              },
+              "next": {
+                "title": "Token Embeddings",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings"
+              }
+            },
+            {
+              "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/residual-connections",
+              "title": "Residual Connections",
+              "description": "<iframe",
+              "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/06-residual-connections.mdx",
+              "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+              "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/residual-connections",
+              "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/residual-connections",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/06-residual-connections.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 6,
+              "frontMatter": {
+                "title": "Residual Connections",
+                "sidebar_position": 6
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Causal Masking",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/causal-masking"
+              },
+              "next": {
+                "title": "Layer Normalization",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/layer-normalization"
+              }
+            },
+            {
+              "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings",
+              "title": "Token Embeddings",
+              "description": "<iframe",
+              "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/02-token-embeddings.mdx",
+              "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+              "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings",
+              "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/02-token-embeddings.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Token Embeddings",
+                "sidebar_position": 2
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Problem with RNNs and LSTMs",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms"
+              },
+              "next": {
+                "title": "Positional Embeddings / Positional Encodings",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/positional-embeddings"
+              }
+            },
+            {
+              "id": "ai-for-engineering/deep-computer-vision-cnn/intro",
+              "title": "Deep Computer Vision: CNN",
+              "description": "This course will cover convolutional neural networks and modern computer vision systems.",
+              "source": "@site/docs/ai-for-engineering/deep-computer-vision-cnn/intro.mdx",
+              "sourceDirName": "ai-for-engineering/deep-computer-vision-cnn",
+              "slug": "/ai-for-engineering/deep-computer-vision-cnn/intro",
+              "permalink": "/courses/ai-for-engineering/deep-computer-vision-cnn/intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/deep-computer-vision-cnn/intro.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -417,25 +421,25 @@
               },
               "sidebar": "docsSidebar",
               "previous": {
-                "title": "Deep Neural Networks",
-                "permalink": "/courses/tracks/ai-engineering/deep-neural-networks/intro"
+                "title": "Where Classical Machine Learning Models Are Used in the Market",
+                "permalink": "/courses/ai-for-leaders/classical-ml-in-market"
               },
               "next": {
                 "title": "Deep Sequence Modelling: RNN",
-                "permalink": "/courses/tracks/ai-engineering/deep-sequence-modelling-rnn/intro"
+                "permalink": "/courses/ai-for-engineering/deep-sequence-modelling-rnn/intro"
               }
             },
             {
-              "id": "tracks/ai-engineering/deep-neural-networks/intro",
+              "id": "ai-for-engineering/deep-neural-networks/intro",
               "title": "Deep Neural Networks",
               "description": "This course will cover core deep learning building blocks, training dynamics, and best practices for dense networks.",
-              "source": "@site/docs/tracks/ai-engineering/deep-neural-networks/intro.mdx",
-              "sourceDirName": "tracks/ai-engineering/deep-neural-networks",
-              "slug": "/tracks/ai-engineering/deep-neural-networks/intro",
-              "permalink": "/courses/tracks/ai-engineering/deep-neural-networks/intro",
+              "source": "@site/docs/ai-for-engineering/deep-neural-networks/intro.mdx",
+              "sourceDirName": "ai-for-engineering/deep-neural-networks",
+              "slug": "/ai-for-engineering/deep-neural-networks/intro",
+              "permalink": "/courses/ai-for-engineering/deep-neural-networks/intro",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/deep-neural-networks/intro.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/deep-neural-networks/intro.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -443,25 +447,25 @@
               },
               "sidebar": "docsSidebar",
               "previous": {
-                "title": "Foundations of Regression",
-                "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/intro"
+                "title": "Decoder Only Transformer",
+                "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/decoder-only-transformer"
               },
               "next": {
-                "title": "Deep Computer Vision: CNN",
-                "permalink": "/courses/tracks/ai-engineering/deep-computer-vision-cnn/intro"
+                "title": "Foundations of Regression",
+                "permalink": "/courses/ai-for-engineering/foundations-of-regression/intro"
               }
             },
             {
-              "id": "tracks/ai-engineering/deep-sequence-modelling-rnn/intro",
+              "id": "ai-for-engineering/deep-sequence-modelling-rnn/intro",
               "title": "Deep Sequence Modelling: RNN",
               "description": "This course will introduce recurrent neural networks and practical sequence modelling techniques.",
-              "source": "@site/docs/tracks/ai-engineering/deep-sequence-modelling-rnn/intro.mdx",
-              "sourceDirName": "tracks/ai-engineering/deep-sequence-modelling-rnn",
-              "slug": "/tracks/ai-engineering/deep-sequence-modelling-rnn/intro",
-              "permalink": "/courses/tracks/ai-engineering/deep-sequence-modelling-rnn/intro",
+              "source": "@site/docs/ai-for-engineering/deep-sequence-modelling-rnn/intro.mdx",
+              "sourceDirName": "ai-for-engineering/deep-sequence-modelling-rnn",
+              "slug": "/ai-for-engineering/deep-sequence-modelling-rnn/intro",
+              "permalink": "/courses/ai-for-engineering/deep-sequence-modelling-rnn/intro",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/deep-sequence-modelling-rnn/intro.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/deep-sequence-modelling-rnn/intro.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -470,24 +474,24 @@
               "sidebar": "docsSidebar",
               "previous": {
                 "title": "Deep Computer Vision: CNN",
-                "permalink": "/courses/tracks/ai-engineering/deep-computer-vision-cnn/intro"
+                "permalink": "/courses/ai-for-engineering/deep-computer-vision-cnn/intro"
               },
               "next": {
-                "title": "Build and Train Your Own GPT-2 Model",
-                "permalink": "/courses/tracks/ai-engineering/build-and-train-gpt/intro"
+                "title": "Attention Is All You Need",
+                "permalink": "/courses/ai-for-engineering/attention-is-all-you-need/intro"
               }
             },
             {
-              "id": "tracks/ai-engineering/foundations-of-regression/intro",
+              "id": "ai-for-engineering/foundations-of-regression/intro",
               "title": "Foundations of Regression",
               "description": "This course will cover regression fundamentals, evaluation, and how to choose the right model for prediction tasks.",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/intro.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/intro",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/intro",
+              "source": "@site/docs/ai-for-engineering/foundations-of-regression/intro.mdx",
+              "sourceDirName": "ai-for-engineering/foundations-of-regression",
+              "slug": "/ai-for-engineering/foundations-of-regression/intro",
+              "permalink": "/courses/ai-for-engineering/foundations-of-regression/intro",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/intro.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/foundations-of-regression/intro.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -495,272 +499,51 @@
               },
               "sidebar": "docsSidebar",
               "previous": {
-                "title": "LLMs 101",
-                "permalink": "/courses/tracks/ai-for-leaders/llms-101/intro"
+                "title": "Deep Neural Networks",
+                "permalink": "/courses/ai-for-engineering/deep-neural-networks/intro"
               },
               "next": {
-                "title": "Deep Neural Networks",
-                "permalink": "/courses/tracks/ai-engineering/deep-neural-networks/intro"
+                "title": "Tree-Based Algorithms (Classical ML)",
+                "permalink": "/courses/ai-for-engineering/tree-based-algorithms-classical-ml/intro"
               }
             },
             {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models",
-              "title": "Line & Linear Models",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models",
+              "id": "ai-for-engineering/tree-based-algorithms-classical-ml/intro",
+              "title": "Tree-Based Algorithms (Classical ML)",
+              "description": "This course will cover decision trees, random forests, and gradient boosting for tabular machine learning.",
+              "source": "@site/docs/ai-for-engineering/tree-based-algorithms-classical-ml/intro.mdx",
+              "sourceDirName": "ai-for-engineering/tree-based-algorithms-classical-ml",
+              "slug": "/ai-for-engineering/tree-based-algorithms-classical-ml/intro",
+              "permalink": "/courses/ai-for-engineering/tree-based-algorithms-classical-ml/intro",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/tree-based-algorithms-classical-ml/intro.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
-                "id": "lesson01-line-linear-models",
-                "title": "Line & Linear Models",
-                "sidebar_label": "Line & Linear Models"
+                "title": "Tree-Based Algorithms (Classical ML)"
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Foundations of Regression",
+                "permalink": "/courses/ai-for-engineering/foundations-of-regression/intro"
+              },
+              "next": {
+                "title": "AI Research",
+                "permalink": "/courses/ai-for-engineering/ai-research/intro"
               }
             },
             {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson02-model-equation-line",
-              "title": "Model Equation and Equation of a Line",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson02-model-equation-line.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson02-model-equation-line",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson02-model-equation-line",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson02-model-equation-line.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "id": "lesson02-model-equation-line",
-                "title": "Model Equation and Equation of a Line",
-                "sidebar_label": "Model Equation and Equation of a Line"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr",
-              "title": "Loss Function and SSR in Linear Regression",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "id": "lesson03-loss-function-ssr",
-                "title": "Loss Function and SSR in Linear Regression",
-                "sidebar_label": "Loss Function and SSR in Linear Regression"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson04-optimizer-gradient-descent",
-              "title": "Optimizer and Gradient Descent",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson04-optimizer-gradient-descent.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson04-optimizer-gradient-descent",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson04-optimizer-gradient-descent",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson04-optimizer-gradient-descent.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "id": "lesson04-optimizer-gradient-descent",
-                "title": "Optimizer and Gradient Descent",
-                "sidebar_label": "Optimizer and Gradient Descent"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson05-visualization-linear-regression",
-              "title": "Visualization of Linear Regression",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson05-visualization-linear-regression.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson05-visualization-linear-regression",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson05-visualization-linear-regression",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson05-visualization-linear-regression.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "id": "lesson05-visualization-linear-regression",
-                "title": "Visualization of Linear Regression",
-                "sidebar_label": "Visualization of Linear Regression"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson06-multivariate-linear-regression",
-              "title": "Multi-Variate Linear Regression",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson06-multivariate-linear-regression.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson06-multivariate-linear-regression",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson06-multivariate-linear-regression",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson06-multivariate-linear-regression.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "id": "lesson06-multivariate-linear-regression",
-                "title": "Multi-Variate Linear Regression",
-                "sidebar_label": "Multi-Variate Linear Regression"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson07-implement-linear-regression-scratch",
-              "title": "Implement Linear Regression from Scratch",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson07-implement-linear-regression-scratch.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson07-implement-linear-regression-scratch",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson07-implement-linear-regression-scratch",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson07-implement-linear-regression-scratch.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "id": "lesson07-implement-linear-regression-scratch",
-                "title": "Implement Linear Regression from Scratch",
-                "sidebar_label": "Implement Linear Regression from Scratch"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson08-shortcomings-linear-regression",
-              "title": "Shortcomings of Linear Regression",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson08-shortcomings-linear-regression.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson08-shortcomings-linear-regression",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson08-shortcomings-linear-regression",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson08-shortcomings-linear-regression.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "id": "lesson08-shortcomings-linear-regression",
-                "title": "Shortcomings of Linear Regression",
-                "sidebar_label": "Shortcomings of Linear Regression"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification",
-              "title": "Why Linear Regression Cant Solve Classification",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "id": "lesson09-why-not-for-classification",
-                "title": "Why Linear Regression Cant Solve Classification",
-                "sidebar_label": "Why Linear Regression Cant Solve Classification"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson10-intuition-logistic-regression",
-              "title": "Intuition behind Logistic Regression",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson10-intuition-logistic-regression.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson10-intuition-logistic-regression",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson10-intuition-logistic-regression",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson10-intuition-logistic-regression.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "id": "lesson10-intuition-logistic-regression",
-                "title": "Intuition behind Logistic Regression",
-                "sidebar_label": "Intuition behind Logistic Regression"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic",
-              "title": "Model Equation for Logistic",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "id": "lesson11-model-equation-logistic",
-                "title": "Model Equation for Logistic",
-                "sidebar_label": "Model Equation for Logistic"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson12-loss-function-bce",
-              "title": "Binary Cross Entropy",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson12-loss-function-bce.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson12-loss-function-bce",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson12-loss-function-bce",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson12-loss-function-bce.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "id": "lesson12-loss-function-bce",
-                "title": "Binary Cross Entropy",
-                "sidebar_label": "Binary Cross Entropy"
-              }
-            },
-            {
-              "id": "tracks/ai-engineering/foundations-of-regression/lesson13-gradient-descent-logistic",
-              "title": "Gradient Descent for Logistic Regression",
-              "description": "Overview",
-              "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson13-gradient-descent-logistic.mdx",
-              "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
-              "slug": "/tracks/ai-engineering/foundations-of-regression/lesson13-gradient-descent-logistic",
-              "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson13-gradient-descent-logistic",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson13-gradient-descent-logistic.mdx",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "id": "lesson13-gradient-descent-logistic",
-                "title": "Gradient Descent for Logistic Regression",
-                "sidebar_label": "Gradient Descent for Logistic Regression"
-              }
-            },
-            {
-              "id": "tracks/ai-for-leaders/ai-literacy/intro",
+              "id": "ai-for-leaders/ai-literacy/intro",
               "title": "AI Literacy",
               "description": "This course will build foundational AI literacy for leaders, covering key concepts, risks, and decision frameworks.",
-              "source": "@site/docs/tracks/ai-for-leaders/ai-literacy/intro.mdx",
-              "sourceDirName": "tracks/ai-for-leaders/ai-literacy",
-              "slug": "/tracks/ai-for-leaders/ai-literacy/intro",
-              "permalink": "/courses/tracks/ai-for-leaders/ai-literacy/intro",
+              "source": "@site/docs/ai-for-leaders/ai-literacy/intro.mdx",
+              "sourceDirName": "ai-for-leaders/ai-literacy",
+              "slug": "/ai-for-leaders/ai-literacy/intro",
+              "permalink": "/courses/ai-for-leaders/ai-literacy/intro",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-for-leaders/ai-literacy/intro.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/ai-literacy/intro.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -768,25 +551,175 @@
               },
               "sidebar": "docsSidebar",
               "previous": {
-                "title": "AI for Leaders",
-                "permalink": "/courses/tracks/ai-for-leaders/"
+                "title": "Prompt Engineering",
+                "permalink": "/courses/ai-for-leaders/prompt-engineering/intro"
               },
               "next": {
-                "title": "GenAI for Everyone",
-                "permalink": "/courses/tracks/ai-for-leaders/generative-ai-for-everyone/intro"
+                "title": "Interactive Curriculum Tree",
+                "permalink": "/courses/ai-for-leaders/curriculum-tree"
               }
             },
             {
-              "id": "tracks/ai-for-leaders/generative-ai-for-everyone/intro",
-              "title": "GenAI for Everyone",
-              "description": "This course will explain generative AI in plain language and how teams can adopt it safely and effectively.",
-              "source": "@site/docs/tracks/ai-for-leaders/generative-ai-for-everyone/intro.mdx",
-              "sourceDirName": "tracks/ai-for-leaders/generative-ai-for-everyone",
-              "slug": "/tracks/ai-for-leaders/generative-ai-for-everyone/intro",
-              "permalink": "/courses/tracks/ai-for-leaders/generative-ai-for-everyone/intro",
+              "id": "ai-for-leaders/algorithms-high-level-overview",
+              "title": "High-Level Breadth of Classical Machine Learning Algorithms",
+              "description": "As a leader, you don't need to understand the mathematical complexities behind machine learning algorithms, but you do need to know which tools work best for different business challenges. This guide provides an intuitive overview of the most commonly used classical ML algorithms, helping you make informed decisions about AI initiatives in your organization.",
+              "source": "@site/docs/ai-for-leaders/algorithms-high-level-overview.mdx",
+              "sourceDirName": "ai-for-leaders",
+              "slug": "/ai-for-leaders/algorithms-high-level-overview",
+              "permalink": "/courses/ai-for-leaders/algorithms-high-level-overview",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-for-leaders/generative-ai-for-everyone/intro.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/algorithms-high-level-overview.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "sidebar_position": 4
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "ML Problems: Classification, Regression, and Learning Approaches",
+                "permalink": "/courses/ai-for-leaders/classification-regression-supervised-unsupervised"
+              },
+              "next": {
+                "title": "Where Classical Machine Learning Models Are Used in the Market",
+                "permalink": "/courses/ai-for-leaders/classical-ml-in-market"
+              }
+            },
+            {
+              "id": "ai-for-leaders/classical-ml-in-market",
+              "title": "Where Classical Machine Learning Models Are Used in the Market",
+              "description": "As a product leader at a major tech company, you're constantly evaluating which AI approaches will give you the fastest time-to-market, clearest ROI, and most sustainable competitive advantage. The ML landscape isn't just about choosing the \"best\" algorithm—it's about choosing the right tool for your specific market position, data constraints, and business timeline.",
+              "source": "@site/docs/ai-for-leaders/classical-ml-in-market.mdx",
+              "sourceDirName": "ai-for-leaders",
+              "slug": "/ai-for-leaders/classical-ml-in-market",
+              "permalink": "/courses/ai-for-leaders/classical-ml-in-market",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/classical-ml-in-market.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "sidebar_position": 5
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "High-Level Breadth of Classical Machine Learning Algorithms",
+                "permalink": "/courses/ai-for-leaders/algorithms-high-level-overview"
+              },
+              "next": {
+                "title": "Deep Computer Vision: CNN",
+                "permalink": "/courses/ai-for-engineering/deep-computer-vision-cnn/intro"
+              }
+            },
+            {
+              "id": "ai-for-leaders/classification-regression-supervised-unsupervised",
+              "title": "ML Problems: Classification, Regression, and Learning Approaches",
+              "description": "Now that you understand the fundamentals of machine learning, let's dive deeper into the different types of problems ML can solve and how machines approach learning. This knowledge will help you identify the right AI solutions for your specific business challenges.",
+              "source": "@site/docs/ai-for-leaders/classification-regression-supervised-unsupervised.mdx",
+              "sourceDirName": "ai-for-leaders",
+              "slug": "/ai-for-leaders/classification-regression-supervised-unsupervised",
+              "permalink": "/courses/ai-for-leaders/classification-regression-supervised-unsupervised",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/classification-regression-supervised-unsupervised.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Understanding Machine Learning Fundamentals",
+                "permalink": "/courses/ai-for-leaders/machine-learning-fundamentals"
+              },
+              "next": {
+                "title": "High-Level Breadth of Classical Machine Learning Algorithms",
+                "permalink": "/courses/ai-for-leaders/algorithms-high-level-overview"
+              }
+            },
+            {
+              "id": "ai-for-leaders/curriculum-overview",
+              "title": "AI for Leaders: Complete Curriculum Overview",
+              "description": "This document provides the hierarchical structure and learning progression for the AI for Leaders curriculum. It's designed to guide leaders from foundational concepts to advanced AI strategy and implementation.",
+              "source": "@site/docs/ai-for-leaders/curriculum-overview.mdx",
+              "sourceDirName": "ai-for-leaders",
+              "slug": "/ai-for-leaders/curriculum-overview",
+              "permalink": "/courses/ai-for-leaders/curriculum-overview",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/curriculum-overview.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Interactive Curriculum Tree",
+                "permalink": "/courses/ai-for-leaders/curriculum-tree"
+              },
+              "next": {
+                "title": "Understanding Machine Learning Fundamentals",
+                "permalink": "/courses/ai-for-leaders/machine-learning-fundamentals"
+              }
+            },
+            {
+              "id": "ai-for-leaders/curriculum-tree",
+              "title": "Interactive Curriculum Tree",
+              "description": "Welcome to the AI for Leaders Interactive Curriculum Tree - your personalized roadmap through the complete AI for Leaders program. This interactive visualization replaces traditional flat curriculum lists with an engaging, gamified learning experience designed specifically for business leaders.",
+              "source": "@site/docs/ai-for-leaders/curriculum-tree.mdx",
+              "sourceDirName": "ai-for-leaders",
+              "slug": "/ai-for-leaders/curriculum-tree",
+              "permalink": "/courses/ai-for-leaders/curriculum-tree",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/curriculum-tree.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "AI Literacy",
+                "permalink": "/courses/ai-for-leaders/ai-literacy/intro"
+              },
+              "next": {
+                "title": "AI for Leaders: Complete Curriculum Overview",
+                "permalink": "/courses/ai-for-leaders/curriculum-overview"
+              }
+            },
+            {
+              "id": "ai-for-leaders/curriculum-visual-tree",
+              "title": "AI for Leaders: Visual Curriculum Tree",
+              "description": "Learning Progression Overview",
+              "source": "@site/docs/ai-for-leaders/curriculum-visual-tree.md",
+              "sourceDirName": "ai-for-leaders",
+              "slug": "/ai-for-leaders/curriculum-visual-tree",
+              "permalink": "/courses/ai-for-leaders/curriculum-visual-tree",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/curriculum-visual-tree.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "id": "ai-for-leaders/genai-for-everyone/intro",
+              "title": "GenAI for Everyone",
+              "description": "This course will explain generative AI in plain language and how teams can adopt it safely and effectively.",
+              "source": "@site/docs/ai-for-leaders/genai-for-everyone/intro.mdx",
+              "sourceDirName": "ai-for-leaders/genai-for-everyone",
+              "slug": "/ai-for-leaders/genai-for-everyone/intro",
+              "permalink": "/courses/ai-for-leaders/genai-for-everyone/intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/genai-for-everyone/intro.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -794,25 +727,25 @@
               },
               "sidebar": "docsSidebar",
               "previous": {
-                "title": "AI Literacy",
-                "permalink": "/courses/tracks/ai-for-leaders/ai-literacy/intro"
+                "title": "LLMs 101",
+                "permalink": "/courses/ai-for-leaders/llms-101/intro"
               },
               "next": {
                 "title": "Prompt Engineering",
-                "permalink": "/courses/tracks/ai-for-leaders/prompt-engineering/intro"
+                "permalink": "/courses/ai-for-leaders/prompt-engineering/intro"
               }
             },
             {
-              "id": "tracks/ai-for-leaders/index",
+              "id": "ai-for-leaders/intro",
               "title": "AI for Leaders",
               "description": "Welcome to AI for Leaders - a comprehensive resource designed specifically for business leaders, executives, and decision-makers who need to understand artificial intelligence without diving into technical complexities.",
-              "source": "@site/docs/tracks/ai-for-leaders/index.mdx",
-              "sourceDirName": "tracks/ai-for-leaders",
-              "slug": "/tracks/ai-for-leaders/",
-              "permalink": "/courses/tracks/ai-for-leaders/",
+              "source": "@site/docs/ai-for-leaders/intro.mdx",
+              "sourceDirName": "ai-for-leaders",
+              "slug": "/ai-for-leaders/intro",
+              "permalink": "/courses/ai-for-leaders/intro",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-for-leaders/index.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/intro.mdx",
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -821,21 +754,21 @@
               },
               "sidebar": "docsSidebar",
               "next": {
-                "title": "AI Literacy",
-                "permalink": "/courses/tracks/ai-for-leaders/ai-literacy/intro"
+                "title": "LLMs 101",
+                "permalink": "/courses/ai-for-leaders/llms-101/intro"
               }
             },
             {
-              "id": "tracks/ai-for-leaders/llms-101/intro",
+              "id": "ai-for-leaders/llms-101/intro",
               "title": "LLMs 101",
               "description": "This course will introduce large language models, what they can and can’t do, and how leaders should evaluate them.",
-              "source": "@site/docs/tracks/ai-for-leaders/llms-101/intro.mdx",
-              "sourceDirName": "tracks/ai-for-leaders/llms-101",
-              "slug": "/tracks/ai-for-leaders/llms-101/intro",
-              "permalink": "/courses/tracks/ai-for-leaders/llms-101/intro",
+              "source": "@site/docs/ai-for-leaders/llms-101/intro.mdx",
+              "sourceDirName": "ai-for-leaders/llms-101",
+              "slug": "/ai-for-leaders/llms-101/intro",
+              "permalink": "/courses/ai-for-leaders/llms-101/intro",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-for-leaders/llms-101/intro.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/llms-101/intro.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -843,25 +776,52 @@
               },
               "sidebar": "docsSidebar",
               "previous": {
-                "title": "Prompt Engineering",
-                "permalink": "/courses/tracks/ai-for-leaders/prompt-engineering/intro"
+                "title": "AI for Leaders",
+                "permalink": "/courses/ai-for-leaders/intro"
               },
               "next": {
-                "title": "Foundations of Regression",
-                "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/intro"
+                "title": "GenAI for Everyone",
+                "permalink": "/courses/ai-for-leaders/genai-for-everyone/intro"
               }
             },
             {
-              "id": "tracks/ai-for-leaders/prompt-engineering/intro",
-              "title": "Prompt Engineering",
-              "description": "This course will cover practical prompting patterns to improve quality, reliability, and safety in everyday workflows.",
-              "source": "@site/docs/tracks/ai-for-leaders/prompt-engineering/intro.mdx",
-              "sourceDirName": "tracks/ai-for-leaders/prompt-engineering",
-              "slug": "/tracks/ai-for-leaders/prompt-engineering/intro",
-              "permalink": "/courses/tracks/ai-for-leaders/prompt-engineering/intro",
+              "id": "ai-for-leaders/machine-learning-fundamentals",
+              "title": "Understanding Machine Learning Fundamentals",
+              "description": "As a leader in today's data-driven world, understanding machine learning isn't just about staying current with technology—it's about making informed strategic decisions that can transform your business. This guide will walk you through the essential concepts of machine learning in clear, business-focused terms.",
+              "source": "@site/docs/ai-for-leaders/machine-learning-fundamentals.mdx",
+              "sourceDirName": "ai-for-leaders",
+              "slug": "/ai-for-leaders/machine-learning-fundamentals",
+              "permalink": "/courses/ai-for-leaders/machine-learning-fundamentals",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-for-leaders/prompt-engineering/intro.mdx",
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/machine-learning-fundamentals.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "AI for Leaders: Complete Curriculum Overview",
+                "permalink": "/courses/ai-for-leaders/curriculum-overview"
+              },
+              "next": {
+                "title": "ML Problems: Classification, Regression, and Learning Approaches",
+                "permalink": "/courses/ai-for-leaders/classification-regression-supervised-unsupervised"
+              }
+            },
+            {
+              "id": "ai-for-leaders/prompt-engineering/intro",
+              "title": "Prompt Engineering",
+              "description": "This course will cover practical prompting patterns to improve quality, reliability, and safety in everyday workflows.",
+              "source": "@site/docs/ai-for-leaders/prompt-engineering/intro.mdx",
+              "sourceDirName": "ai-for-leaders/prompt-engineering",
+              "slug": "/ai-for-leaders/prompt-engineering/intro",
+              "permalink": "/courses/ai-for-leaders/prompt-engineering/intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-leaders/prompt-engineering/intro.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -870,11 +830,939 @@
               "sidebar": "docsSidebar",
               "previous": {
                 "title": "GenAI for Everyone",
-                "permalink": "/courses/tracks/ai-for-leaders/generative-ai-for-everyone/intro"
+                "permalink": "/courses/ai-for-leaders/genai-for-everyone/intro"
               },
               "next": {
-                "title": "LLMs 101",
-                "permalink": "/courses/tracks/ai-for-leaders/llms-101/intro"
+                "title": "AI Literacy",
+                "permalink": "/courses/ai-for-leaders/ai-literacy/intro"
+              }
+            },
+            {
+              "id": "build-gpt/l0-intro",
+              "title": "l0-intro",
+              "description": "",
+              "source": "@site/docs/build-gpt/l0-intro.mdx",
+              "sourceDirName": "build-gpt",
+              "slug": "/build-gpt/l0-intro",
+              "permalink": "/courses/build-gpt/l0-intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/build-gpt/l0-intro.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "id": "build-gpt/l1-problems-rnns",
+              "title": "l1-problems-rnns",
+              "description": "",
+              "source": "@site/docs/build-gpt/l1-problems-rnns.mdx",
+              "sourceDirName": "build-gpt",
+              "slug": "/build-gpt/l1-problems-rnns",
+              "permalink": "/courses/build-gpt/l1-problems-rnns",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/build-gpt/l1-problems-rnns.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "id": "build-gpt/l2-token-embeddings",
+              "title": "l2-token-embeddings",
+              "description": "",
+              "source": "@site/docs/build-gpt/l2-token-embeddings.mdx",
+              "sourceDirName": "build-gpt",
+              "slug": "/build-gpt/l2-token-embeddings",
+              "permalink": "/courses/build-gpt/l2-token-embeddings",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/build-gpt/l2-token-embeddings.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "id": "build-gpt/l3-positional-embeddings",
+              "title": "l3-positional-embeddings",
+              "description": "",
+              "source": "@site/docs/build-gpt/l3-positional-embeddings.mdx",
+              "sourceDirName": "build-gpt",
+              "slug": "/build-gpt/l3-positional-embeddings",
+              "permalink": "/courses/build-gpt/l3-positional-embeddings",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/build-gpt/l3-positional-embeddings.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
+            },
+            {
+              "id": "deep-learning/CNNS",
+              "title": "Deep Learning for Computer Vision and Convolutional Neural Networks (CNNs)",
+              "description": "Chapter 1: Teaching Machines to See — The Fundamentals of Computer Vision",
+              "source": "@site/docs/deep-learning/CNNS.mdx",
+              "sourceDirName": "deep-learning",
+              "slug": "/deep-learning/CNNS",
+              "permalink": "/courses/deep-learning/CNNS",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/deep-learning/CNNS.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Understanding the Perceptron: A Dive into the Basics and the Perceptron Trick",
+                "permalink": "/courses/deep-learning/perceptron"
+              },
+              "next": {
+                "title": "Deep Sequence Modelling and Recurrent Neural Networks (RNNs)",
+                "permalink": "/courses/deep-learning/RNNs"
+              }
+            },
+            {
+              "id": "deep-learning/intro",
+              "title": "Introduction to Deep Learning",
+              "description": "Deep Learning is a subset of machine learning that uses neural networks with multiple layers (deep neural networks) to analyze various forms of data. While traditional machine learning algorithms require feature extraction by human experts, deep learning systems can automatically discover the representations needed for detection or classification from raw data.",
+              "source": "@site/docs/deep-learning/intro.mdx",
+              "sourceDirName": "deep-learning",
+              "slug": "/deep-learning/intro",
+              "permalink": "/courses/deep-learning/intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/deep-learning/intro.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Logistic Regression: A Complete Guide",
+                "permalink": "/courses/machine-learning/logistic_regression_tutorial"
+              },
+              "next": {
+                "title": "Understanding the Perceptron: A Dive into the Basics and the Perceptron Trick",
+                "permalink": "/courses/deep-learning/perceptron"
+              }
+            },
+            {
+              "id": "deep-learning/perceptron",
+              "title": "Understanding the Perceptron: A Dive into the Basics and the Perceptron Trick",
+              "description": "Perceptron Visualization",
+              "source": "@site/docs/deep-learning/perceptron.mdx",
+              "sourceDirName": "deep-learning",
+              "slug": "/deep-learning/perceptron",
+              "permalink": "/courses/deep-learning/perceptron",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/deep-learning/perceptron.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Introduction to Deep Learning",
+                "permalink": "/courses/deep-learning/intro"
+              },
+              "next": {
+                "title": "Deep Learning for Computer Vision and Convolutional Neural Networks (CNNs)",
+                "permalink": "/courses/deep-learning/CNNS"
+              }
+            },
+            {
+              "id": "deep-learning/RNNs",
+              "title": "Deep Sequence Modelling and Recurrent Neural Networks (RNNs)",
+              "description": "Chapter 1: Foundations of Deep Sequence Modeling",
+              "source": "@site/docs/deep-learning/RNNs.mdx",
+              "sourceDirName": "deep-learning",
+              "slug": "/deep-learning/RNNs",
+              "permalink": "/courses/deep-learning/RNNs",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/deep-learning/RNNs.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Deep Learning for Computer Vision and Convolutional Neural Networks (CNNs)",
+                "permalink": "/courses/deep-learning/CNNS"
+              },
+              "next": {
+                "title": "Introduction to Large Language Models",
+                "permalink": "/courses/language-models/intro"
+              }
+            },
+            {
+              "id": "language-models/AccessingLLMs",
+              "title": "Accessing and Understanding LLMs: From Cloud to Local",
+              "description": "Introduction:",
+              "source": "@site/docs/language-models/AccessingLLMs.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/AccessingLLMs",
+              "permalink": "/courses/language-models/AccessingLLMs",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/AccessingLLMs.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 16,
+              "frontMatter": {
+                "sidebar_position": 16
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Navigating the LLM Landscape: Evaluation, News, and Access",
+                "permalink": "/courses/language-models/Evaluation"
+              },
+              "next": {
+                "title": "From Query to Response: Understanding the LLM Journey",
+                "permalink": "/courses/language-models/QueryToResponse"
+              }
+            },
+            {
+              "id": "language-models/AttentionMechanism",
+              "title": "Attention Mechanism: The Heart of Transformers",
+              "description": "Learning Objective",
+              "source": "@site/docs/language-models/AttentionMechanism.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/AttentionMechanism",
+              "permalink": "/courses/language-models/AttentionMechanism",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/AttentionMechanism.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "sidebar_position": 5,
+                "title": "Attention Mechanism: The Heart of Transformers"
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Tokenization",
+                "permalink": "/courses/language-models/Tokenization"
+              },
+              "next": {
+                "title": "Understanding Neural Network Training for Tokenized Sequences",
+                "permalink": "/courses/language-models/NNTraining"
+              }
+            },
+            {
+              "id": "language-models/BaseModels",
+              "title": "Understanding Base Models in Large Language Models",
+              "description": "Introduction",
+              "source": "@site/docs/language-models/BaseModels.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/BaseModels",
+              "permalink": "/courses/language-models/BaseModels",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/BaseModels.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "sidebar_position": 5
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Understanding GPT-2 and the Evolution of Large Language Models",
+                "permalink": "/courses/language-models/EvolutionGpt2"
+              },
+              "next": {
+                "title": "Navigating the Hallucinations: Understanding and Improving LLM Accuracy",
+                "permalink": "/courses/language-models/Hallucinations"
+              }
+            },
+            {
+              "id": "language-models/Evaluation",
+              "title": "Navigating the LLM Landscape: Evaluation, News, and Access",
+              "description": "Introduction:",
+              "source": "@site/docs/language-models/Evaluation.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/Evaluation",
+              "permalink": "/courses/language-models/Evaluation",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/Evaluation.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 15,
+              "frontMatter": {
+                "sidebar_position": 15
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "The Evolving LLM: Multimodality, Agents, and the Future of AI",
+                "permalink": "/courses/language-models/Multimodality"
+              },
+              "next": {
+                "title": "Accessing and Understanding LLMs: From Cloud to Local",
+                "permalink": "/courses/language-models/AccessingLLMs"
+              }
+            },
+            {
+              "id": "language-models/EvolutionGpt2",
+              "title": "Understanding GPT-2 and the Evolution of Large Language Models",
+              "description": "Introduction to GPT-2",
+              "source": "@site/docs/language-models/EvolutionGpt2.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/EvolutionGpt2",
+              "permalink": "/courses/language-models/EvolutionGpt2",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/EvolutionGpt2.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "sidebar_position": 5
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Post-Training of Large Language Models",
+                "permalink": "/courses/language-models/PostTraining"
+              },
+              "next": {
+                "title": "Understanding Base Models in Large Language Models",
+                "permalink": "/courses/language-models/BaseModels"
+              }
+            },
+            {
+              "id": "language-models/Hallucinations",
+              "title": "Navigating the Hallucinations: Understanding and Improving LLM Accuracy",
+              "description": "Introduction:",
+              "source": "@site/docs/language-models/Hallucinations.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/Hallucinations",
+              "permalink": "/courses/language-models/Hallucinations",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/Hallucinations.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 6,
+              "frontMatter": {
+                "sidebar_position": 6
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Understanding Base Models in Large Language Models",
+                "permalink": "/courses/language-models/BaseModels"
+              },
+              "next": {
+                "title": "The Illusion of Self: Understanding LLM Identity",
+                "permalink": "/courses/language-models/LLMIdentity"
+              }
+            },
+            {
+              "id": "language-models/intro",
+              "title": "Introduction to Large Language Models",
+              "description": "Understanding Large Language Models (LLMs)",
+              "source": "@site/docs/language-models/intro.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/intro",
+              "permalink": "/courses/language-models/intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/intro.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Deep Sequence Modelling and Recurrent Neural Networks (RNNs)",
+                "permalink": "/courses/deep-learning/RNNs"
+              },
+              "next": {
+                "title": "Tokenization",
+                "permalink": "/courses/language-models/Tokenization"
+              }
+            },
+            {
+              "id": "language-models/LLMIdentity",
+              "title": "The Illusion of Self: Understanding LLM Identity",
+              "description": "Introduction:",
+              "source": "@site/docs/language-models/LLMIdentity.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/LLMIdentity",
+              "permalink": "/courses/language-models/LLMIdentity",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/LLMIdentity.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 7,
+              "frontMatter": {
+                "sidebar_position": 7
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Navigating the Hallucinations: Understanding and Improving LLM Accuracy",
+                "permalink": "/courses/language-models/Hallucinations"
+              },
+              "next": {
+                "title": "Thinking in Tokens: Understanding LLM Computational Limitations",
+                "permalink": "/courses/language-models/ThinkingInTokens"
+              }
+            },
+            {
+              "id": "language-models/LLMInconsistencies",
+              "title": "The Quirks and Foundations: LLM Inconsistencies and Pre-Training",
+              "description": "Introduction:",
+              "source": "@site/docs/language-models/LLMInconsistencies.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/LLMInconsistencies",
+              "permalink": "/courses/language-models/LLMInconsistencies",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/LLMInconsistencies.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 9,
+              "frontMatter": {
+                "sidebar_position": 9
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Thinking in Tokens: Understanding LLM Computational Limitations",
+                "permalink": "/courses/language-models/ThinkingInTokens"
+              },
+              "next": {
+                "title": "The School of LLMs: Post-Training and Reinforcement Learning",
+                "permalink": "/courses/language-models/PostTrainingReinforcementLearning"
+              }
+            },
+            {
+              "id": "language-models/LLMJudgement",
+              "title": "LLM Judgment: Reinforcement Learning in Unverifiable Domains",
+              "description": "Introduction:",
+              "source": "@site/docs/language-models/LLMJudgement.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/LLMJudgement",
+              "permalink": "/courses/language-models/LLMJudgement",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/LLMJudgement.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 13,
+              "frontMatter": {
+                "sidebar_position": 13
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Beyond Human Limits: Reinforcement Learning and the Future of LLM Thinking",
+                "permalink": "/courses/language-models/ReinforcementLearning"
+              },
+              "next": {
+                "title": "The Evolving LLM: Multimodality, Agents, and the Future of AI",
+                "permalink": "/courses/language-models/Multimodality"
+              }
+            },
+            {
+              "id": "language-models/LoRAFineTuning",
+              "title": "LoRA Fine-Tuning: Efficient Adaptation for Large Language Models",
+              "description": "Learning Objective",
+              "source": "@site/docs/language-models/LoRAFineTuning.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/LoRAFineTuning",
+              "permalink": "/courses/language-models/LoRAFineTuning",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/LoRAFineTuning.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 14,
+              "frontMatter": {
+                "sidebar_position": 14,
+                "title": "LoRA Fine-Tuning: Efficient Adaptation for Large Language Models"
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "The School of LLMs: Post-Training and Reinforcement Learning",
+                "permalink": "/courses/language-models/PostTrainingReinforcementLearning"
+              },
+              "next": {
+                "title": "Retrieval-Augmented Generation (RAG) Agents",
+                "permalink": "/courses/language-models/RAGAgents"
+              }
+            },
+            {
+              "id": "language-models/Multimodality",
+              "title": "The Evolving LLM: Multimodality, Agents, and the Future of AI",
+              "description": "Introduction:",
+              "source": "@site/docs/language-models/Multimodality.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/Multimodality",
+              "permalink": "/courses/language-models/Multimodality",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/Multimodality.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 14,
+              "frontMatter": {
+                "sidebar_position": 14
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "LLM Judgment: Reinforcement Learning in Unverifiable Domains",
+                "permalink": "/courses/language-models/LLMJudgement"
+              },
+              "next": {
+                "title": "Navigating the LLM Landscape: Evaluation, News, and Access",
+                "permalink": "/courses/language-models/Evaluation"
+              }
+            },
+            {
+              "id": "language-models/NNInference",
+              "title": "Understanding Inference in Neural Network-Based Language Models",
+              "description": "Introduction",
+              "source": "@site/docs/language-models/NNInference.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/NNInference",
+              "permalink": "/courses/language-models/NNInference",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/NNInference.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "sidebar_position": 4
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Understanding Neural Network Training for Tokenized Sequences",
+                "permalink": "/courses/language-models/NNTraining"
+              },
+              "next": {
+                "title": "Internals of Neural Networks",
+                "permalink": "/courses/language-models/NNInternals"
+              }
+            },
+            {
+              "id": "language-models/NNInternals",
+              "title": "Internals of Neural Networks",
+              "description": "Introduction",
+              "source": "@site/docs/language-models/NNInternals.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/NNInternals",
+              "permalink": "/courses/language-models/NNInternals",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/NNInternals.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "sidebar_position": 4
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Understanding Inference in Neural Network-Based Language Models",
+                "permalink": "/courses/language-models/NNInference"
+              },
+              "next": {
+                "title": "Post-Training of Large Language Models",
+                "permalink": "/courses/language-models/PostTraining"
+              }
+            },
+            {
+              "id": "language-models/NNTraining",
+              "title": "Understanding Neural Network Training for Tokenized Sequences",
+              "description": "1\\. Introduction",
+              "source": "@site/docs/language-models/NNTraining.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/NNTraining",
+              "permalink": "/courses/language-models/NNTraining",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/NNTraining.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Attention Mechanism: The Heart of Transformers",
+                "permalink": "/courses/language-models/AttentionMechanism"
+              },
+              "next": {
+                "title": "Understanding Inference in Neural Network-Based Language Models",
+                "permalink": "/courses/language-models/NNInference"
+              }
+            },
+            {
+              "id": "language-models/PostTraining",
+              "title": "Post-Training of Large Language Models",
+              "description": "Introduction",
+              "source": "@site/docs/language-models/PostTraining.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/PostTraining",
+              "permalink": "/courses/language-models/PostTraining",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/PostTraining.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "sidebar_position": 5
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Internals of Neural Networks",
+                "permalink": "/courses/language-models/NNInternals"
+              },
+              "next": {
+                "title": "Understanding GPT-2 and the Evolution of Large Language Models",
+                "permalink": "/courses/language-models/EvolutionGpt2"
+              }
+            },
+            {
+              "id": "language-models/PostTrainingReinforcementLearning",
+              "title": "The School of LLMs: Post-Training and Reinforcement Learning",
+              "description": "Introduction:",
+              "source": "@site/docs/language-models/PostTrainingReinforcementLearning.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/PostTrainingReinforcementLearning",
+              "permalink": "/courses/language-models/PostTrainingReinforcementLearning",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/PostTrainingReinforcementLearning.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 10,
+              "frontMatter": {
+                "sidebar_position": 10
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "The Quirks and Foundations: LLM Inconsistencies and Pre-Training",
+                "permalink": "/courses/language-models/LLMInconsistencies"
+              },
+              "next": {
+                "title": "LoRA Fine-Tuning: Efficient Adaptation for Large Language Models",
+                "permalink": "/courses/language-models/LoRAFineTuning"
+              }
+            },
+            {
+              "id": "language-models/QueryToResponse",
+              "title": "From Query to Response: Understanding the LLM Journey",
+              "description": "Introduction:",
+              "source": "@site/docs/language-models/QueryToResponse.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/QueryToResponse",
+              "permalink": "/courses/language-models/QueryToResponse",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/QueryToResponse.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 17,
+              "frontMatter": {
+                "sidebar_position": 17
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Accessing and Understanding LLMs: From Cloud to Local",
+                "permalink": "/courses/language-models/AccessingLLMs"
+              },
+              "next": {
+                "title": "Interactive Logistic Regression Tutorial",
+                "permalink": "/courses/tutorials/logistic-regression"
+              }
+            },
+            {
+              "id": "language-models/RAGAgents",
+              "title": "Retrieval-Augmented Generation (RAG) Agents",
+              "description": "Learning Objective",
+              "source": "@site/docs/language-models/RAGAgents.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/RAGAgents",
+              "permalink": "/courses/language-models/RAGAgents",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/RAGAgents.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 15,
+              "frontMatter": {
+                "sidebar_position": 15,
+                "title": "Retrieval-Augmented Generation (RAG) Agents"
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "LoRA Fine-Tuning: Efficient Adaptation for Large Language Models",
+                "permalink": "/courses/language-models/LoRAFineTuning"
+              },
+              "next": {
+                "title": "LLM Thinking: Reinforcement Learning and the Emergence of Reasoning",
+                "permalink": "/courses/language-models/ThinkingRL"
+              }
+            },
+            {
+              "id": "language-models/ReinforcementLearning",
+              "title": "Beyond Human Limits: Reinforcement Learning and the Future of LLM Thinking",
+              "description": "Introduction:",
+              "source": "@site/docs/language-models/ReinforcementLearning.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/ReinforcementLearning",
+              "permalink": "/courses/language-models/ReinforcementLearning",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/ReinforcementLearning.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 12,
+              "frontMatter": {
+                "sidebar_position": 12
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "LLM Thinking: Reinforcement Learning and the Emergence of Reasoning",
+                "permalink": "/courses/language-models/ThinkingRL"
+              },
+              "next": {
+                "title": "LLM Judgment: Reinforcement Learning in Unverifiable Domains",
+                "permalink": "/courses/language-models/LLMJudgement"
+              }
+            },
+            {
+              "id": "language-models/ThinkingInTokens",
+              "title": "Thinking in Tokens: Understanding LLM Computational Limitations",
+              "description": "Introduction:",
+              "source": "@site/docs/language-models/ThinkingInTokens.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/ThinkingInTokens",
+              "permalink": "/courses/language-models/ThinkingInTokens",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/ThinkingInTokens.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 8,
+              "frontMatter": {
+                "sidebar_position": 8
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "The Illusion of Self: Understanding LLM Identity",
+                "permalink": "/courses/language-models/LLMIdentity"
+              },
+              "next": {
+                "title": "The Quirks and Foundations: LLM Inconsistencies and Pre-Training",
+                "permalink": "/courses/language-models/LLMInconsistencies"
+              }
+            },
+            {
+              "id": "language-models/ThinkingRL",
+              "title": "LLM Thinking: Reinforcement Learning and the Emergence of Reasoning",
+              "description": "Introduction:",
+              "source": "@site/docs/language-models/ThinkingRL.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/ThinkingRL",
+              "permalink": "/courses/language-models/ThinkingRL",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/ThinkingRL.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 11,
+              "frontMatter": {
+                "sidebar_position": 11
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Retrieval-Augmented Generation (RAG) Agents",
+                "permalink": "/courses/language-models/RAGAgents"
+              },
+              "next": {
+                "title": "Beyond Human Limits: Reinforcement Learning and the Future of LLM Thinking",
+                "permalink": "/courses/language-models/ReinforcementLearning"
+              }
+            },
+            {
+              "id": "language-models/Tokenization",
+              "title": "Tokenization",
+              "description": "Tokenization \\- Transforming Text for Neural Networks",
+              "source": "@site/docs/language-models/Tokenization.mdx",
+              "sourceDirName": "language-models",
+              "slug": "/language-models/Tokenization",
+              "permalink": "/courses/language-models/Tokenization",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/language-models/Tokenization.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Introduction to Large Language Models",
+                "permalink": "/courses/language-models/intro"
+              },
+              "next": {
+                "title": "Attention Mechanism: The Heart of Transformers",
+                "permalink": "/courses/language-models/AttentionMechanism"
+              }
+            },
+            {
+              "id": "machine-learning/intro",
+              "title": "Introduction to Machine Learning",
+              "description": "What is Machine Learning?",
+              "source": "@site/docs/machine-learning/intro.mdx",
+              "sourceDirName": "machine-learning",
+              "slug": "/machine-learning/intro",
+              "permalink": "/courses/machine-learning/intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/machine-learning/intro.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Agentic AI",
+                "permalink": "/courses/ai-for-engineering/agentic-ai/intro"
+              },
+              "next": {
+                "title": "Supervised Learning",
+                "permalink": "/courses/machine-learning/supervised-learning"
+              }
+            },
+            {
+              "id": "machine-learning/logistic_regression_tutorial",
+              "title": "Logistic Regression: A Complete Guide",
+              "description": "This notebook provides a comprehensive introduction to logistic regression, covering:",
+              "source": "@site/docs/machine-learning/logistic_regression_tutorial.mdx",
+              "sourceDirName": "machine-learning",
+              "slug": "/machine-learning/logistic_regression_tutorial",
+              "permalink": "/courses/machine-learning/logistic_regression_tutorial",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/machine-learning/logistic_regression_tutorial.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Supervised Learning",
+                "permalink": "/courses/machine-learning/supervised-learning"
+              },
+              "next": {
+                "title": "Introduction to Deep Learning",
+                "permalink": "/courses/deep-learning/intro"
+              }
+            },
+            {
+              "id": "machine-learning/supervised-learning",
+              "title": "Supervised Learning",
+              "description": "Supervised learning is a type of machine learning where the model is trained on labeled data. In this approach, the algorithm learns from a training dataset that includes both input features and their corresponding correct outputs.",
+              "source": "@site/docs/machine-learning/supervised-learning.mdx",
+              "sourceDirName": "machine-learning",
+              "slug": "/machine-learning/supervised-learning",
+              "permalink": "/courses/machine-learning/supervised-learning",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/machine-learning/supervised-learning.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Introduction to Machine Learning",
+                "permalink": "/courses/machine-learning/intro"
+              },
+              "next": {
+                "title": "Logistic Regression: A Complete Guide",
+                "permalink": "/courses/machine-learning/logistic_regression_tutorial"
+              }
+            },
+            {
+              "id": "resources/intro",
+              "title": "AI & ML Resources",
+              "description": "This section provides a curated collection of resources for machine learning, deep learning, and language models. Whether you're just starting your journey or looking to deepen your expertise, you'll find valuable tools, datasets, libraries, and educational materials here.",
+              "source": "@site/docs/resources/intro.mdx",
+              "sourceDirName": "resources",
+              "slug": "/resources/intro",
+              "permalink": "/courses/resources/intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/resources/intro.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "Interactive Logistic Regression Tutorial",
+                "permalink": "/courses/tutorials/logistic-regression"
+              }
+            },
+            {
+              "id": "tutorials/logistic-regression",
+              "title": "Interactive Logistic Regression Tutorial",
+              "description": "Learn logistic regression through hands-on visualization and interactive animations",
+              "source": "@site/docs/tutorials/logistic-regression.mdx",
+              "sourceDirName": "tutorials",
+              "slug": "/tutorials/logistic-regression",
+              "permalink": "/courses/tutorials/logistic-regression",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tutorials/logistic-regression.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Interactive Logistic Regression Tutorial",
+                "description": "Learn logistic regression through hands-on visualization and interactive animations",
+                "keywords": [
+                  "logistic regression",
+                  "machine learning",
+                  "tutorial",
+                  "interactive",
+                  "visualization",
+                  "AI",
+                  "India"
+                ],
+                "sidebar_position": 1
+              },
+              "sidebar": "docsSidebar",
+              "previous": {
+                "title": "From Query to Response: Understanding the LLM Journey",
+                "permalink": "/courses/language-models/QueryToResponse"
+              },
+              "next": {
+                "title": "AI & ML Resources",
+                "permalink": "/courses/resources/intro"
               }
             }
           ],
@@ -883,31 +1771,51 @@
             "docsSidebar": [
               {
                 "type": "category",
-                "label": "AI for Leaders (Track)",
+                "label": "AI for Leaders",
                 "items": [
                   {
                     "type": "doc",
-                    "id": "tracks/ai-for-leaders/index"
+                    "id": "ai-for-leaders/intro"
                   },
                   {
                     "type": "doc",
-                    "label": "AI Literacy",
-                    "id": "tracks/ai-for-leaders/ai-literacy/intro"
+                    "id": "ai-for-leaders/llms-101/intro"
                   },
                   {
                     "type": "doc",
-                    "label": "Generative AI for Everyone",
-                    "id": "tracks/ai-for-leaders/generative-ai-for-everyone/intro"
+                    "id": "ai-for-leaders/genai-for-everyone/intro"
                   },
                   {
                     "type": "doc",
-                    "label": "Prompt Engineering",
-                    "id": "tracks/ai-for-leaders/prompt-engineering/intro"
+                    "id": "ai-for-leaders/prompt-engineering/intro"
                   },
                   {
                     "type": "doc",
-                    "label": "LLMs 101",
-                    "id": "tracks/ai-for-leaders/llms-101/intro"
+                    "id": "ai-for-leaders/ai-literacy/intro"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "ai-for-leaders/curriculum-tree"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "ai-for-leaders/curriculum-overview"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "ai-for-leaders/machine-learning-fundamentals"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "ai-for-leaders/classification-regression-supervised-unsupervised"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "ai-for-leaders/algorithms-high-level-overview"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "ai-for-leaders/classical-ml-in-market"
                   }
                 ],
                 "collapsed": true,
@@ -915,75 +1823,67 @@
               },
               {
                 "type": "category",
-                "label": "AI Engineering (Track)",
+                "label": "AI for Engineering",
                 "items": [
                   {
                     "type": "doc",
-                    "label": "Foundations of Regression",
-                    "id": "tracks/ai-engineering/foundations-of-regression/intro"
+                    "id": "ai-for-engineering/deep-computer-vision-cnn/intro"
                   },
                   {
                     "type": "doc",
-                    "label": "Deep Neural Networks",
-                    "id": "tracks/ai-engineering/deep-neural-networks/intro"
+                    "id": "ai-for-engineering/deep-sequence-modelling-rnn/intro"
                   },
                   {
                     "type": "doc",
-                    "label": "Deep Computer Vision (CNN)",
-                    "id": "tracks/ai-engineering/deep-computer-vision-cnn/intro"
-                  },
-                  {
-                    "type": "doc",
-                    "label": "Deep Sequence Modelling (RNN)",
-                    "id": "tracks/ai-engineering/deep-sequence-modelling-rnn/intro"
+                    "id": "ai-for-engineering/attention-is-all-you-need/intro"
                   },
                   {
                     "type": "category",
-                    "label": "Build & Train GPT",
+                    "label": "Build and Train Your Own GPT-2 Model",
                     "link": {
                       "type": "doc",
-                      "id": "tracks/ai-engineering/build-and-train-gpt/intro"
+                      "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/intro"
                     },
                     "items": [
                       {
                         "type": "doc",
-                        "id": "tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns"
+                        "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms"
                       },
                       {
                         "type": "doc",
-                        "id": "tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings"
+                        "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings"
                       },
                       {
                         "type": "doc",
-                        "id": "tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings"
+                        "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/positional-embeddings"
                       },
                       {
                         "type": "doc",
-                        "id": "tracks/ai-engineering/build-and-train-gpt/lesson04-attention"
+                        "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/attention-multi-head-attention"
                       },
                       {
                         "type": "doc",
-                        "id": "tracks/ai-engineering/build-and-train-gpt/lesson05-masking"
+                        "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/causal-masking"
                       },
                       {
                         "type": "doc",
-                        "id": "tracks/ai-engineering/build-and-train-gpt/lesson06-residual"
+                        "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/residual-connections"
                       },
                       {
                         "type": "doc",
-                        "id": "tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm"
+                        "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/layer-normalization"
                       },
                       {
                         "type": "doc",
-                        "id": "tracks/ai-engineering/build-and-train-gpt/lesson08-ffn"
+                        "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/feed-forward-neural-networks"
                       },
                       {
                         "type": "doc",
-                        "id": "tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred"
+                        "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/generation-of-next-tokens"
                       },
                       {
                         "type": "doc",
-                        "id": "tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer"
+                        "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/decoder-only-transformer"
                       }
                     ],
                     "collapsed": true,
@@ -991,18 +1891,191 @@
                   },
                   {
                     "type": "doc",
-                    "label": "Attention is All You Need (Transformer)",
-                    "id": "tracks/ai-engineering/attention-is-all-you-need-transformer/intro"
+                    "id": "ai-for-engineering/deep-neural-networks/intro"
                   },
                   {
                     "type": "doc",
-                    "label": "AI Research",
-                    "id": "tracks/ai-engineering/ai-research/intro"
+                    "id": "ai-for-engineering/foundations-of-regression/intro"
                   },
                   {
                     "type": "doc",
-                    "label": "Agentic AI & Multi-Agent Systems",
-                    "id": "tracks/ai-engineering/agentic-ai-multi-agent-systems/intro"
+                    "id": "ai-for-engineering/tree-based-algorithms-classical-ml/intro"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "ai-for-engineering/ai-research/intro"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "ai-for-engineering/agentic-ai/intro"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Machine Learning",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "machine-learning/intro"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "machine-learning/supervised-learning"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "machine-learning/logistic_regression_tutorial"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Deep Learning",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "deep-learning/intro"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "deep-learning/perceptron"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "deep-learning/CNNS"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "deep-learning/RNNs"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Language Models",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "language-models/intro"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/Tokenization"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/AttentionMechanism"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/NNTraining"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/NNInference"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/NNInternals"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/PostTraining"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/EvolutionGpt2"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/BaseModels"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/Hallucinations"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/LLMIdentity"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/ThinkingInTokens"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/LLMInconsistencies"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/PostTrainingReinforcementLearning"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/LoRAFineTuning"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/RAGAgents"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/ThinkingRL"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/ReinforcementLearning"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/LLMJudgement"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/Multimodality"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/Evaluation"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/AccessingLLMs"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "language-models/QueryToResponse"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Interactive Tutorials",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "tutorials/logistic-regression"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Resources",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "resources/intro"
                   }
                 ],
                 "collapsed": true,
@@ -1017,169 +2090,15 @@
   "docusaurus-plugin-content-blog": {
     "default": {
       "blogSidebarTitle": "Recent posts",
-      "blogPosts": [
-        {
-          "id": "/2024/04/24/welcome",
-          "metadata": {
-            "permalink": "/blog/2024/04/24/welcome",
-            "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/blog/2024-04-24-welcome.mdx",
-            "source": "@site/blog/2024-04-24-welcome.mdx",
-            "title": "Welcome to AI Seekhega India Blog",
-            "description": "Welcome to the official blog of AI Seekhega India! This is where we'll share updates, tutorials, and insights about artificial intelligence and machine learning.",
-            "date": "2024-04-24T00:00:00.000Z",
-            "formattedDate": "April 24, 2024",
-            "tags": [
-              {
-                "label": "announcement",
-                "permalink": "/blog/tags/announcement"
-              },
-              {
-                "label": "welcome",
-                "permalink": "/blog/tags/welcome"
-              }
-            ],
-            "readingTime": 0.405,
-            "hasTruncateMarker": false,
-            "authors": [
-              {
-                "name": "AI Seekhega India Team"
-              }
-            ],
-            "frontMatter": {
-              "title": "Welcome to AI Seekhega India Blog",
-              "author": "AI Seekhega India Team",
-              "tags": [
-                "announcement",
-                "welcome"
-              ],
-              "date": "2024-04-24"
-            },
-            "unlisted": false
-          },
-          "content": "Welcome to the official blog of AI Seekhega India! This is where we'll share updates, tutorials, and insights about artificial intelligence and machine learning.\n\n## What to Expect\n\n- Tutorials and guides\n- Project updates\n- Community highlights\n- Research summaries\n- Best practices and tips\n\n## Get Involved\n\nWe encourage community members to contribute to our blog. If you have something to share about AI and ML, please check out our [contribution guidelines](/contribute).\n\nStay tuned for more content coming soon!"
-        }
-      ],
-      "blogListPaginated": [
-        {
-          "items": [
-            "/2024/04/24/welcome"
-          ],
-          "metadata": {
-            "permalink": "/blog",
-            "page": 1,
-            "postsPerPage": 10,
-            "totalPages": 1,
-            "totalCount": 1,
-            "blogDescription": "Blog",
-            "blogTitle": "Blog"
-          }
-        }
-      ],
-      "blogTags": {
-        "/blog/tags/announcement": {
-          "label": "announcement",
-          "items": [
-            "/2024/04/24/welcome"
-          ],
-          "permalink": "/blog/tags/announcement",
-          "pages": [
-            {
-              "items": [
-                "/2024/04/24/welcome"
-              ],
-              "metadata": {
-                "permalink": "/blog/tags/announcement",
-                "page": 1,
-                "postsPerPage": 10,
-                "totalPages": 1,
-                "totalCount": 1,
-                "blogDescription": "Blog",
-                "blogTitle": "Blog"
-              }
-            }
-          ],
-          "unlisted": false
-        },
-        "/blog/tags/welcome": {
-          "label": "welcome",
-          "items": [
-            "/2024/04/24/welcome"
-          ],
-          "permalink": "/blog/tags/welcome",
-          "pages": [
-            {
-              "items": [
-                "/2024/04/24/welcome"
-              ],
-              "metadata": {
-                "permalink": "/blog/tags/welcome",
-                "page": 1,
-                "postsPerPage": 10,
-                "totalPages": 1,
-                "totalCount": 1,
-                "blogDescription": "Blog",
-                "blogTitle": "Blog"
-              }
-            }
-          ],
-          "unlisted": false
-        }
-      },
-      "blogTagsListPath": "/blog/tags"
+      "blogPosts": [],
+      "blogListPaginated": [],
+      "blogTags": {},
+      "blogTagsListPath": "/blog/tags",
+      "blogTagsPaginated": []
     }
   },
   "docusaurus-plugin-content-pages": {
-    "default": [
-      {
-        "type": "jsx",
-        "permalink": "/accept-invite",
-        "source": "@site/src/pages/accept-invite.tsx"
-      },
-      {
-        "type": "jsx",
-        "permalink": "/admin",
-        "source": "@site/src/pages/admin.tsx"
-      },
-      {
-        "type": "mdx",
-        "permalink": "/contribute",
-        "source": "@site/src/pages/contribute.mdx",
-        "title": "How to Contribute",
-        "description": "Thank you for your interest in contributing to the AI & ML Documentation project! This community-driven resource depends on contributions from people like you.",
-        "frontMatter": {},
-        "unlisted": false
-      },
-      {
-        "type": "jsx",
-        "permalink": "/fellowship",
-        "source": "@site/src/pages/fellowship.tsx"
-      },
-      {
-        "type": "jsx",
-        "permalink": "/forgot-password",
-        "source": "@site/src/pages/forgot-password.tsx"
-      },
-      {
-        "type": "jsx",
-        "permalink": "/",
-        "source": "@site/src/pages/index.tsx"
-      },
-      {
-        "type": "jsx",
-        "permalink": "/login",
-        "source": "@site/src/pages/login.tsx"
-      },
-      {
-        "type": "jsx",
-        "permalink": "/reset-password",
-        "source": "@site/src/pages/reset-password.tsx"
-      },
-      {
-        "type": "jsx",
-        "permalink": "/subscribe",
-        "source": "@site/src/pages/subscribe.tsx"
-      }
-    ]
+    "default": null
   },
   "docusaurus-plugin-debug": {},
   "docusaurus-theme-classic": {},

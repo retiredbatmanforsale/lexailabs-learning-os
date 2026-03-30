@@ -4,321 +4,445 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug', '6eb'),
+    component: ComponentCreator('/__docusaurus/debug', '847'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config', 'd54'),
+    component: ComponentCreator('/__docusaurus/debug/config', 'c84'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content', 'ab6'),
+    component: ComponentCreator('/__docusaurus/debug/content', 'd08'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData', '753'),
+    component: ComponentCreator('/__docusaurus/debug/globalData', 'b1f'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata', '553'),
+    component: ComponentCreator('/__docusaurus/debug/metadata', 'd3b'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry', '570'),
+    component: ComponentCreator('/__docusaurus/debug/registry', 'f40'),
     exact: true
   },
   {
     path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes', 'ca2'),
-    exact: true
-  },
-  {
-    path: '/accept-invite',
-    component: ComponentCreator('/accept-invite', '81a'),
-    exact: true
-  },
-  {
-    path: '/admin',
-    component: ComponentCreator('/admin', 'a78'),
-    exact: true
-  },
-  {
-    path: '/blog',
-    component: ComponentCreator('/blog', 'aae'),
-    exact: true
-  },
-  {
-    path: '/blog/2024/04/24/welcome',
-    component: ComponentCreator('/blog/2024/04/24/welcome', '870'),
-    exact: true
-  },
-  {
-    path: '/blog/archive',
-    component: ComponentCreator('/blog/archive', '2aa'),
-    exact: true
-  },
-  {
-    path: '/blog/tags',
-    component: ComponentCreator('/blog/tags', 'ac0'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/announcement',
-    component: ComponentCreator('/blog/tags/announcement', 'd6e'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/welcome',
-    component: ComponentCreator('/blog/tags/welcome', 'f29'),
-    exact: true
-  },
-  {
-    path: '/contribute',
-    component: ComponentCreator('/contribute', 'b1b'),
-    exact: true
-  },
-  {
-    path: '/fellowship',
-    component: ComponentCreator('/fellowship', 'ca8'),
-    exact: true
-  },
-  {
-    path: '/forgot-password',
-    component: ComponentCreator('/forgot-password', '3ba'),
-    exact: true
-  },
-  {
-    path: '/login',
-    component: ComponentCreator('/login', '075'),
-    exact: true
-  },
-  {
-    path: '/reset-password',
-    component: ComponentCreator('/reset-password', '6ba'),
-    exact: true
-  },
-  {
-    path: '/subscribe',
-    component: ComponentCreator('/subscribe', '6f3'),
+    component: ComponentCreator('/__docusaurus/debug/routes', 'dc9'),
     exact: true
   },
   {
     path: '/courses',
-    component: ComponentCreator('/courses', 'a44'),
+    component: ComponentCreator('/courses', '86e'),
     routes: [
       {
         path: '/courses',
-        component: ComponentCreator('/courses', 'b15'),
+        component: ComponentCreator('/courses', '02f'),
         routes: [
           {
             path: '/courses',
-            component: ComponentCreator('/courses', 'bcb'),
+            component: ComponentCreator('/courses', '4ca'),
             routes: [
               {
-                path: '/courses/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro',
-                component: ComponentCreator('/courses/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro', 'b3a'),
+                path: '/courses/ai-for-engineering/agentic-ai/intro',
+                component: ComponentCreator('/courses/ai-for-engineering/agentic-ai/intro', 'e44'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/ai-research/intro',
-                component: ComponentCreator('/courses/tracks/ai-engineering/ai-research/intro', 'd97'),
+                path: '/courses/ai-for-engineering/ai-research/intro',
+                component: ComponentCreator('/courses/ai-for-engineering/ai-research/intro', '43c'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/attention-is-all-you-need-transformer/intro',
-                component: ComponentCreator('/courses/tracks/ai-engineering/attention-is-all-you-need-transformer/intro', '623'),
+                path: '/courses/ai-for-engineering/attention-is-all-you-need/intro',
+                component: ComponentCreator('/courses/ai-for-engineering/attention-is-all-you-need/intro', 'c31'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/build-and-train-gpt/intro',
-                component: ComponentCreator('/courses/tracks/ai-engineering/build-and-train-gpt/intro', 'd94'),
+                path: '/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/attention-multi-head-attention',
+                component: ComponentCreator('/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/attention-multi-head-attention', '8fe'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns',
-                component: ComponentCreator('/courses/tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns', '43b'),
+                path: '/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/causal-masking',
+                component: ComponentCreator('/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/causal-masking', '551'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings',
-                component: ComponentCreator('/courses/tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings', '569'),
+                path: '/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/decoder-only-transformer',
+                component: ComponentCreator('/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/decoder-only-transformer', 'da8'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings',
-                component: ComponentCreator('/courses/tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings', '57d'),
+                path: '/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/feed-forward-neural-networks',
+                component: ComponentCreator('/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/feed-forward-neural-networks', 'b93'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/build-and-train-gpt/lesson04-attention',
-                component: ComponentCreator('/courses/tracks/ai-engineering/build-and-train-gpt/lesson04-attention', '824'),
+                path: '/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/generation-of-next-tokens',
+                component: ComponentCreator('/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/generation-of-next-tokens', 'd38'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/build-and-train-gpt/lesson05-masking',
-                component: ComponentCreator('/courses/tracks/ai-engineering/build-and-train-gpt/lesson05-masking', 'cf4'),
+                path: '/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/intro',
+                component: ComponentCreator('/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/intro', '8da'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/build-and-train-gpt/lesson06-residual',
-                component: ComponentCreator('/courses/tracks/ai-engineering/build-and-train-gpt/lesson06-residual', 'fe8'),
+                path: '/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/layer-normalization',
+                component: ComponentCreator('/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/layer-normalization', 'a6f'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm',
-                component: ComponentCreator('/courses/tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm', '4a1'),
+                path: '/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/positional-embeddings',
+                component: ComponentCreator('/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/positional-embeddings', '5af'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/build-and-train-gpt/lesson08-ffn',
-                component: ComponentCreator('/courses/tracks/ai-engineering/build-and-train-gpt/lesson08-ffn', '510'),
+                path: '/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms',
+                component: ComponentCreator('/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms', '969'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred',
-                component: ComponentCreator('/courses/tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred', '02b'),
+                path: '/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/residual-connections',
+                component: ComponentCreator('/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/residual-connections', 'd9c'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer',
-                component: ComponentCreator('/courses/tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer', '82f'),
+                path: '/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings',
+                component: ComponentCreator('/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings', '06f'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/deep-computer-vision-cnn/intro',
-                component: ComponentCreator('/courses/tracks/ai-engineering/deep-computer-vision-cnn/intro', '2c0'),
+                path: '/courses/ai-for-engineering/deep-computer-vision-cnn/intro',
+                component: ComponentCreator('/courses/ai-for-engineering/deep-computer-vision-cnn/intro', 'a1c'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/deep-neural-networks/intro',
-                component: ComponentCreator('/courses/tracks/ai-engineering/deep-neural-networks/intro', '662'),
+                path: '/courses/ai-for-engineering/deep-neural-networks/intro',
+                component: ComponentCreator('/courses/ai-for-engineering/deep-neural-networks/intro', 'ec0'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/deep-sequence-modelling-rnn/intro',
-                component: ComponentCreator('/courses/tracks/ai-engineering/deep-sequence-modelling-rnn/intro', '997'),
+                path: '/courses/ai-for-engineering/deep-sequence-modelling-rnn/intro',
+                component: ComponentCreator('/courses/ai-for-engineering/deep-sequence-modelling-rnn/intro', 'de9'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/intro',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/intro', '6c1'),
+                path: '/courses/ai-for-engineering/foundations-of-regression/intro',
+                component: ComponentCreator('/courses/ai-for-engineering/foundations-of-regression/intro', 'c72'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models', '75b'),
+                path: '/courses/ai-for-engineering/tree-based-algorithms-classical-ml/intro',
+                component: ComponentCreator('/courses/ai-for-engineering/tree-based-algorithms-classical-ml/intro', 'e83'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/ai-for-leaders/ai-literacy/intro',
+                component: ComponentCreator('/courses/ai-for-leaders/ai-literacy/intro', '298'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/ai-for-leaders/algorithms-high-level-overview',
+                component: ComponentCreator('/courses/ai-for-leaders/algorithms-high-level-overview', '457'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/ai-for-leaders/classical-ml-in-market',
+                component: ComponentCreator('/courses/ai-for-leaders/classical-ml-in-market', '489'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/ai-for-leaders/classification-regression-supervised-unsupervised',
+                component: ComponentCreator('/courses/ai-for-leaders/classification-regression-supervised-unsupervised', '8d1'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/ai-for-leaders/curriculum-overview',
+                component: ComponentCreator('/courses/ai-for-leaders/curriculum-overview', '83d'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/ai-for-leaders/curriculum-tree',
+                component: ComponentCreator('/courses/ai-for-leaders/curriculum-tree', '80b'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/ai-for-leaders/curriculum-visual-tree',
+                component: ComponentCreator('/courses/ai-for-leaders/curriculum-visual-tree', 'c4b'),
                 exact: true
               },
               {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson02-model-equation-line',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson02-model-equation-line', 'ce7'),
-                exact: true
-              },
-              {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr', '5b3'),
-                exact: true
-              },
-              {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson04-optimizer-gradient-descent',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson04-optimizer-gradient-descent', '663'),
-                exact: true
-              },
-              {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson05-visualization-linear-regression',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson05-visualization-linear-regression', '0f7'),
-                exact: true
-              },
-              {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson06-multivariate-linear-regression',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson06-multivariate-linear-regression', '4b5'),
-                exact: true
-              },
-              {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson07-implement-linear-regression-scratch',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson07-implement-linear-regression-scratch', '5fe'),
-                exact: true
-              },
-              {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson08-shortcomings-linear-regression',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson08-shortcomings-linear-regression', 'ad4'),
-                exact: true
-              },
-              {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification', '7e3'),
-                exact: true
-              },
-              {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson10-intuition-logistic-regression',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson10-intuition-logistic-regression', '9dd'),
-                exact: true
-              },
-              {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic', '30a'),
-                exact: true
-              },
-              {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson12-loss-function-bce',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson12-loss-function-bce', '1f6'),
-                exact: true
-              },
-              {
-                path: '/courses/tracks/ai-engineering/foundations-of-regression/lesson13-gradient-descent-logistic',
-                component: ComponentCreator('/courses/tracks/ai-engineering/foundations-of-regression/lesson13-gradient-descent-logistic', '27d'),
-                exact: true
-              },
-              {
-                path: '/courses/tracks/ai-for-leaders/',
-                component: ComponentCreator('/courses/tracks/ai-for-leaders/', '0b0'),
+                path: '/courses/ai-for-leaders/genai-for-everyone/intro',
+                component: ComponentCreator('/courses/ai-for-leaders/genai-for-everyone/intro', '6b0'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-for-leaders/ai-literacy/intro',
-                component: ComponentCreator('/courses/tracks/ai-for-leaders/ai-literacy/intro', '18f'),
+                path: '/courses/ai-for-leaders/intro',
+                component: ComponentCreator('/courses/ai-for-leaders/intro', '084'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-for-leaders/generative-ai-for-everyone/intro',
-                component: ComponentCreator('/courses/tracks/ai-for-leaders/generative-ai-for-everyone/intro', '198'),
+                path: '/courses/ai-for-leaders/llms-101/intro',
+                component: ComponentCreator('/courses/ai-for-leaders/llms-101/intro', 'c2e'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-for-leaders/llms-101/intro',
-                component: ComponentCreator('/courses/tracks/ai-for-leaders/llms-101/intro', '207'),
+                path: '/courses/ai-for-leaders/machine-learning-fundamentals',
+                component: ComponentCreator('/courses/ai-for-leaders/machine-learning-fundamentals', 'c67'),
                 exact: true,
                 sidebar: "docsSidebar"
               },
               {
-                path: '/courses/tracks/ai-for-leaders/prompt-engineering/intro',
-                component: ComponentCreator('/courses/tracks/ai-for-leaders/prompt-engineering/intro', 'd5d'),
+                path: '/courses/ai-for-leaders/prompt-engineering/intro',
+                component: ComponentCreator('/courses/ai-for-leaders/prompt-engineering/intro', 'ec7'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/build-gpt/l0-intro',
+                component: ComponentCreator('/courses/build-gpt/l0-intro', '1b3'),
+                exact: true
+              },
+              {
+                path: '/courses/build-gpt/l1-problems-rnns',
+                component: ComponentCreator('/courses/build-gpt/l1-problems-rnns', '7fe'),
+                exact: true
+              },
+              {
+                path: '/courses/build-gpt/l2-token-embeddings',
+                component: ComponentCreator('/courses/build-gpt/l2-token-embeddings', '051'),
+                exact: true
+              },
+              {
+                path: '/courses/build-gpt/l3-positional-embeddings',
+                component: ComponentCreator('/courses/build-gpt/l3-positional-embeddings', '2f5'),
+                exact: true
+              },
+              {
+                path: '/courses/deep-learning/CNNS',
+                component: ComponentCreator('/courses/deep-learning/CNNS', 'b12'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/deep-learning/intro',
+                component: ComponentCreator('/courses/deep-learning/intro', 'e06'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/deep-learning/perceptron',
+                component: ComponentCreator('/courses/deep-learning/perceptron', '143'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/deep-learning/RNNs',
+                component: ComponentCreator('/courses/deep-learning/RNNs', 'd39'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/AccessingLLMs',
+                component: ComponentCreator('/courses/language-models/AccessingLLMs', 'edf'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/AttentionMechanism',
+                component: ComponentCreator('/courses/language-models/AttentionMechanism', 'c5f'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/BaseModels',
+                component: ComponentCreator('/courses/language-models/BaseModels', 'e25'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/Evaluation',
+                component: ComponentCreator('/courses/language-models/Evaluation', '530'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/EvolutionGpt2',
+                component: ComponentCreator('/courses/language-models/EvolutionGpt2', '9b3'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/Hallucinations',
+                component: ComponentCreator('/courses/language-models/Hallucinations', 'c8f'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/intro',
+                component: ComponentCreator('/courses/language-models/intro', '87b'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/LLMIdentity',
+                component: ComponentCreator('/courses/language-models/LLMIdentity', 'f6f'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/LLMInconsistencies',
+                component: ComponentCreator('/courses/language-models/LLMInconsistencies', 'ea5'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/LLMJudgement',
+                component: ComponentCreator('/courses/language-models/LLMJudgement', '451'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/LoRAFineTuning',
+                component: ComponentCreator('/courses/language-models/LoRAFineTuning', 'ca3'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/Multimodality',
+                component: ComponentCreator('/courses/language-models/Multimodality', '8e6'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/NNInference',
+                component: ComponentCreator('/courses/language-models/NNInference', 'b73'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/NNInternals',
+                component: ComponentCreator('/courses/language-models/NNInternals', 'b4c'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/NNTraining',
+                component: ComponentCreator('/courses/language-models/NNTraining', 'd07'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/PostTraining',
+                component: ComponentCreator('/courses/language-models/PostTraining', '431'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/PostTrainingReinforcementLearning',
+                component: ComponentCreator('/courses/language-models/PostTrainingReinforcementLearning', '337'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/QueryToResponse',
+                component: ComponentCreator('/courses/language-models/QueryToResponse', '016'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/RAGAgents',
+                component: ComponentCreator('/courses/language-models/RAGAgents', 'eb7'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/ReinforcementLearning',
+                component: ComponentCreator('/courses/language-models/ReinforcementLearning', '454'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/ThinkingInTokens',
+                component: ComponentCreator('/courses/language-models/ThinkingInTokens', '44a'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/ThinkingRL',
+                component: ComponentCreator('/courses/language-models/ThinkingRL', 'b2d'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/language-models/Tokenization',
+                component: ComponentCreator('/courses/language-models/Tokenization', '28f'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/machine-learning/intro',
+                component: ComponentCreator('/courses/machine-learning/intro', '476'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/machine-learning/logistic_regression_tutorial',
+                component: ComponentCreator('/courses/machine-learning/logistic_regression_tutorial', 'd42'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/machine-learning/supervised-learning',
+                component: ComponentCreator('/courses/machine-learning/supervised-learning', 'c19'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/resources/intro',
+                component: ComponentCreator('/courses/resources/intro', 'dd2'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/courses/tutorials/logistic-regression',
+                component: ComponentCreator('/courses/tutorials/logistic-regression', 'f06'),
                 exact: true,
                 sidebar: "docsSidebar"
               }
@@ -327,11 +451,6 @@ export default [
         ]
       }
     ]
-  },
-  {
-    path: '/',
-    component: ComponentCreator('/', '4cd'),
-    exact: true
   },
   {
     path: '*',

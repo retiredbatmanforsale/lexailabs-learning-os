@@ -1,329 +1,326 @@
 {
-  "/__docusaurus/debug-6eb": {
+  "/__docusaurus/debug-847": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debugfde-874"
+      "plugin": "plugin---docusaurus-debug-872-c51"
     }
   },
-  "/__docusaurus/debug/config-d54": {
+  "/__docusaurus/debug/config-c84": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debugfde-874"
+      "plugin": "plugin---docusaurus-debug-872-c51"
     }
   },
-  "/__docusaurus/debug/content-ab6": {
+  "/__docusaurus/debug/content-d08": {
     "__comp": "__comp---theme-debug-contentba-8-ce7",
     "__context": {
-      "plugin": "plugin---docusaurus-debugfde-874"
+      "plugin": "plugin---docusaurus-debug-872-c51"
     },
     "allContent": "allContent---docusaurus-debug-content-246-9aa"
   },
-  "/__docusaurus/debug/globalData-753": {
+  "/__docusaurus/debug/globalData-b1f": {
     "__comp": "__comp---theme-debug-global-dataede-0fa",
     "__context": {
-      "plugin": "plugin---docusaurus-debugfde-874"
+      "plugin": "plugin---docusaurus-debug-872-c51"
     }
   },
-  "/__docusaurus/debug/metadata-553": {
+  "/__docusaurus/debug/metadata-d3b": {
     "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
     "__context": {
-      "plugin": "plugin---docusaurus-debugfde-874"
+      "plugin": "plugin---docusaurus-debug-872-c51"
     }
   },
-  "/__docusaurus/debug/registry-570": {
+  "/__docusaurus/debug/registry-f40": {
     "__comp": "__comp---theme-debug-registry-679-501",
     "__context": {
-      "plugin": "plugin---docusaurus-debugfde-874"
+      "plugin": "plugin---docusaurus-debug-872-c51"
     }
   },
-  "/__docusaurus/debug/routes-ca2": {
+  "/__docusaurus/debug/routes-dc9": {
     "__comp": "__comp---theme-debug-routes-946-699",
     "__context": {
-      "plugin": "plugin---docusaurus-debugfde-874"
+      "plugin": "plugin---docusaurus-debug-872-c51"
     }
   },
-  "/accept-invite-81a": {
-    "__comp": "__comp---site-src-pages-accept-invite-tsx-864-e77",
-    "__context": {
-      "plugin": "plugin---accept-inviteeec-29e"
-    },
-    "config": "config---accept-invite-5-e-9-92d"
-  },
-  "/admin-a78": {
-    "__comp": "__comp---site-src-pages-admin-tsx-049-57e",
-    "__context": {
-      "plugin": "plugin---accept-inviteeec-29e"
-    },
-    "config": "config---accept-invite-5-e-9-92d"
-  },
-  "/blog-aae": {
-    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
-    "__context": {
-      "plugin": "plugin---bloga-17-5fc"
-    },
-    "sidebar": "sidebar---blog-814-8ac",
-    "items": [
-      {
-        "content": "content---blogb-60-ae3"
-      }
-    ],
-    "metadata": "metadata---blogb-2-b-df1"
-  },
-  "/blog/2024/04/24/welcome-870": {
-    "__comp": "__comp---theme-blog-post-pageccc-cab",
-    "__context": {
-      "plugin": "plugin---bloga-17-5fc"
-    },
-    "sidebar": "sidebar---blog-814-8ac",
-    "content": "content---blog-2024-04-24-welcomeb-88-62f"
-  },
-  "/blog/archive-2aa": {
-    "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
-    "__context": {
-      "plugin": "plugin---bloga-17-5fc"
-    },
-    "archive": "archive---blog-archiveb-2-f-393"
-  },
-  "/blog/tags-ac0": {
-    "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
-    "__context": {
-      "plugin": "plugin---bloga-17-5fc"
-    },
-    "sidebar": "sidebar---blog-814-8ac",
-    "tags": "tags---blog-tagsa-70-da2"
-  },
-  "/blog/tags/announcement-d6e": {
-    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
-    "__context": {
-      "plugin": "plugin---bloga-17-5fc"
-    },
-    "sidebar": "sidebar---blog-814-8ac",
-    "items": [
-      {
-        "content": "content---blogb-60-ae3"
-      }
-    ],
-    "tag": "tag---blog-tags-announcement-283-be2",
-    "listMetadata": "listMetadata---blog-tags-announcementece-ff0"
-  },
-  "/blog/tags/welcome-f29": {
-    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
-    "__context": {
-      "plugin": "plugin---bloga-17-5fc"
-    },
-    "sidebar": "sidebar---blog-814-8ac",
-    "items": [
-      {
-        "content": "content---blogb-60-ae3"
-      }
-    ],
-    "tag": "tag---blog-tags-welcomef-6-b-36d",
-    "listMetadata": "listMetadata---blog-tags-welcomea-24-f1d"
-  },
-  "/contribute-b1b": {
-    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
-    "__context": {
-      "plugin": "plugin---accept-inviteeec-29e"
-    },
-    "content": "content---contribute-629-08f"
-  },
-  "/fellowship-ca8": {
-    "__comp": "__comp---site-src-pages-fellowship-tsxea-6-aae",
-    "__context": {
-      "plugin": "plugin---accept-inviteeec-29e"
-    },
-    "config": "config---accept-invite-5-e-9-92d"
-  },
-  "/forgot-password-3ba": {
-    "__comp": "__comp---site-src-pages-forgot-password-tsxed-3-6c3",
-    "__context": {
-      "plugin": "plugin---accept-inviteeec-29e"
-    },
-    "config": "config---accept-invite-5-e-9-92d"
-  },
-  "/login-075": {
-    "__comp": "__comp---site-src-pages-login-tsx-34-b-c7d",
-    "__context": {
-      "plugin": "plugin---accept-inviteeec-29e"
-    },
-    "config": "config---accept-invite-5-e-9-92d"
-  },
-  "/reset-password-6ba": {
-    "__comp": "__comp---site-src-pages-reset-password-tsx-831-855",
-    "__context": {
-      "plugin": "plugin---accept-inviteeec-29e"
-    },
-    "config": "config---accept-invite-5-e-9-92d"
-  },
-  "/subscribe-6f3": {
-    "__comp": "__comp---site-src-pages-subscribe-tsx-546-5fc",
-    "__context": {
-      "plugin": "plugin---accept-inviteeec-29e"
-    },
-    "config": "config---accept-invite-5-e-9-92d"
-  },
-  "/courses-a44": {
+  "/courses-86e": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
-      "plugin": "plugin---coursesc-27-a31"
+      "plugin": "plugin---courses-7-f-8-4e5"
     }
   },
-  "/courses-b15": {
+  "/courses-02f": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "version": "version---courses-935-2c1"
   },
-  "/courses-bcb": {
+  "/courses-4ca": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/courses/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro-b3a": {
+  "/courses/ai-for-engineering/agentic-ai/intro-e44": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-agentic-ai-multi-agent-systems-intro-239-84d"
+    "content": "content---courses-ai-for-engineering-agentic-ai-introe-69-900"
   },
-  "/courses/tracks/ai-engineering/ai-research/intro-d97": {
+  "/courses/ai-for-engineering/ai-research/intro-43c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-ai-research-introbde-81e"
+    "content": "content---courses-ai-for-engineering-ai-research-intro-8-c-7-4c2"
   },
-  "/courses/tracks/ai-engineering/attention-is-all-you-need-transformer/intro-623": {
+  "/courses/ai-for-engineering/attention-is-all-you-need/intro-c31": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-attention-is-all-you-need-transformer-intro-7-e-7-46d"
+    "content": "content---courses-ai-for-engineering-attention-is-all-you-need-intro-85-f-bf3"
   },
-  "/courses/tracks/ai-engineering/build-and-train-gpt/intro-d94": {
+  "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/attention-multi-head-attention-8fe": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-build-and-train-gpt-intro-02-a-37b"
+    "content": "content---courses-ai-for-engineering-build-and-train-your-own-gpt-2-model-attention-multi-head-attentionf-20-154"
   },
-  "/courses/tracks/ai-engineering/build-and-train-gpt/lesson01-problems-rnns-43b": {
+  "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/causal-masking-551": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-build-and-train-gpt-lesson-01-problems-rnns-6-d-5-df1"
+    "content": "content---courses-ai-for-engineering-build-and-train-your-own-gpt-2-model-causal-masking-350-acc"
   },
-  "/courses/tracks/ai-engineering/build-and-train-gpt/lesson02-token-embeddings-569": {
+  "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/decoder-only-transformer-da8": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-build-and-train-gpt-lesson-02-token-embeddings-0-c-6-414"
+    "content": "content---courses-ai-for-engineering-build-and-train-your-own-gpt-2-model-decoder-only-transformer-440-00e"
   },
-  "/courses/tracks/ai-engineering/build-and-train-gpt/lesson03-positional-embeddings-57d": {
+  "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/feed-forward-neural-networks-b93": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-build-and-train-gpt-lesson-03-positional-embeddings-640-a58"
+    "content": "content---courses-ai-for-engineering-build-and-train-your-own-gpt-2-model-feed-forward-neural-networks-14-b-83f"
   },
-  "/courses/tracks/ai-engineering/build-and-train-gpt/lesson04-attention-824": {
+  "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/generation-of-next-tokens-d38": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-build-and-train-gpt-lesson-04-attention-6-c-7-cfd"
+    "content": "content---courses-ai-for-engineering-build-and-train-your-own-gpt-2-model-generation-of-next-tokens-865-536"
   },
-  "/courses/tracks/ai-engineering/build-and-train-gpt/lesson05-masking-cf4": {
+  "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/intro-8da": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-build-and-train-gpt-lesson-05-maskingfa-4-f43"
+    "content": "content---courses-ai-for-engineering-build-and-train-your-own-gpt-2-model-introf-70-4e2"
   },
-  "/courses/tracks/ai-engineering/build-and-train-gpt/lesson06-residual-fe8": {
+  "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/layer-normalization-a6f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-build-and-train-gpt-lesson-06-residualaf-9-fcb"
+    "content": "content---courses-ai-for-engineering-build-and-train-your-own-gpt-2-model-layer-normalization-6-d-9-c8d"
   },
-  "/courses/tracks/ai-engineering/build-and-train-gpt/lesson07-layernorm-4a1": {
+  "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/positional-embeddings-5af": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-build-and-train-gpt-lesson-07-layernorm-5-e-5-c7e"
+    "content": "content---courses-ai-for-engineering-build-and-train-your-own-gpt-2-model-positional-embeddings-013-697"
   },
-  "/courses/tracks/ai-engineering/build-and-train-gpt/lesson08-ffn-510": {
+  "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms-969": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-build-and-train-gpt-lesson-08-ffn-68-f-54f"
+    "content": "content---courses-ai-for-engineering-build-and-train-your-own-gpt-2-model-problem-with-rnns-lstms-79-e-11a"
   },
-  "/courses/tracks/ai-engineering/build-and-train-gpt/lesson09-next-token-pred-02b": {
+  "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/residual-connections-d9c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-build-and-train-gpt-lesson-09-next-token-predab-4-fd5"
+    "content": "content---courses-ai-for-engineering-build-and-train-your-own-gpt-2-model-residual-connections-3-f-3-5e2"
   },
-  "/courses/tracks/ai-engineering/build-and-train-gpt/lesson10-decoder-only-transformer-82f": {
+  "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings-06f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-build-and-train-gpt-lesson-10-decoder-only-transformerf-8-d-898"
+    "content": "content---courses-ai-for-engineering-build-and-train-your-own-gpt-2-model-token-embeddings-123-04f"
   },
-  "/courses/tracks/ai-engineering/deep-computer-vision-cnn/intro-2c0": {
+  "/courses/ai-for-engineering/deep-computer-vision-cnn/intro-a1c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-deep-computer-vision-cnn-introdc-9-e42"
+    "content": "content---courses-ai-for-engineering-deep-computer-vision-cnn-intro-8-ad-2af"
   },
-  "/courses/tracks/ai-engineering/deep-neural-networks/intro-662": {
+  "/courses/ai-for-engineering/deep-neural-networks/intro-ec0": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-deep-neural-networks-intro-43-f-87f"
+    "content": "content---courses-ai-for-engineering-deep-neural-networks-intro-85-e-d7a"
   },
-  "/courses/tracks/ai-engineering/deep-sequence-modelling-rnn/intro-997": {
+  "/courses/ai-for-engineering/deep-sequence-modelling-rnn/intro-de9": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-deep-sequence-modelling-rnn-introcd-9-0a7"
+    "content": "content---courses-ai-for-engineering-deep-sequence-modelling-rnn-introa-82-c34"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/intro-6c1": {
+  "/courses/ai-for-engineering/foundations-of-regression/intro-c72": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-introf-95-f3f"
+    "content": "content---courses-ai-for-engineering-foundations-of-regression-intro-2-a-7-bde"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models-75b": {
+  "/courses/ai-for-engineering/tree-based-algorithms-classical-ml/intro-e83": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-01-line-linear-models-637-5c8"
+    "content": "content---courses-ai-for-engineering-tree-based-algorithms-classical-ml-intro-645-945"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson02-model-equation-line-ce7": {
+  "/courses/ai-for-leaders/ai-literacy/intro-298": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-02-model-equation-line-88-b-38d"
+    "content": "content---courses-ai-for-leaders-ai-literacy-intro-777-7d1"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson03-loss-function-ssr-5b3": {
+  "/courses/ai-for-leaders/algorithms-high-level-overview-457": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-03-loss-function-ssr-953-af8"
+    "content": "content---courses-ai-for-leaders-algorithms-high-level-overview-8-d-4-aaf"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson04-optimizer-gradient-descent-663": {
+  "/courses/ai-for-leaders/classical-ml-in-market-489": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-04-optimizer-gradient-descentb-2-b-c24"
+    "content": "content---courses-ai-for-leaders-classical-ml-in-marketc-53-988"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson05-visualization-linear-regression-0f7": {
+  "/courses/ai-for-leaders/classification-regression-supervised-unsupervised-8d1": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-05-visualization-linear-regression-1-cf-f1f"
+    "content": "content---courses-ai-for-leaders-classification-regression-supervised-unsuperviseda-7-d-03a"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson06-multivariate-linear-regression-4b5": {
+  "/courses/ai-for-leaders/curriculum-overview-83d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-06-multivariate-linear-regression-845-7de"
+    "content": "content---courses-ai-for-leaders-curriculum-overview-3-a-8-428"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson07-implement-linear-regression-scratch-5fe": {
+  "/courses/ai-for-leaders/curriculum-tree-80b": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-07-implement-linear-regression-scratch-1-dc-550"
+    "content": "content---courses-ai-for-leaders-curriculum-tree-976-169"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson08-shortcomings-linear-regression-ad4": {
+  "/courses/ai-for-leaders/curriculum-visual-tree-c4b": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-08-shortcomings-linear-regression-176-9a0"
+    "content": "content---courses-ai-for-leaders-curriculum-visual-tree-57-e-7d9"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson09-why-not-for-classification-7e3": {
+  "/courses/ai-for-leaders/genai-for-everyone/intro-6b0": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-09-why-not-for-classification-541-9cf"
+    "content": "content---courses-ai-for-leaders-genai-for-everyone-intro-639-721"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson10-intuition-logistic-regression-9dd": {
+  "/courses/ai-for-leaders/intro-084": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-10-intuition-logistic-regressionb-32-9d7"
+    "content": "content---courses-ai-for-leaders-intro-819-786"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic-30a": {
+  "/courses/ai-for-leaders/llms-101/intro-c2e": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-11-model-equation-logistic-07-b-0be"
+    "content": "content---courses-ai-for-leaders-llms-101-intro-653-6b5"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson12-loss-function-bce-1f6": {
+  "/courses/ai-for-leaders/machine-learning-fundamentals-c67": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-12-loss-function-bcecf-3-bb0"
+    "content": "content---courses-ai-for-leaders-machine-learning-fundamentalsdb-1-6fb"
   },
-  "/courses/tracks/ai-engineering/foundations-of-regression/lesson13-gradient-descent-logistic-27d": {
+  "/courses/ai-for-leaders/prompt-engineering/intro-ec7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-engineering-foundations-of-regression-lesson-13-gradient-descent-logistice-36-7df"
+    "content": "content---courses-ai-for-leaders-prompt-engineering-intro-4-d-7-bc3"
   },
-  "/courses/tracks/ai-for-leaders/-0b0": {
+  "/courses/build-gpt/l0-intro-1b3": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-for-leaders-a-22-aa9"
+    "content": "content---courses-build-gpt-l-0-intro-845-1b1"
   },
-  "/courses/tracks/ai-for-leaders/ai-literacy/intro-18f": {
+  "/courses/build-gpt/l1-problems-rnns-7fe": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-for-leaders-ai-literacy-introe-8-e-c96"
+    "content": "content---courses-build-gpt-l-1-problems-rnns-475-c20"
   },
-  "/courses/tracks/ai-for-leaders/generative-ai-for-everyone/intro-198": {
+  "/courses/build-gpt/l2-token-embeddings-051": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-for-leaders-generative-ai-for-everyone-intro-4-ee-fd1"
+    "content": "content---courses-build-gpt-l-2-token-embeddings-87-d-4d8"
   },
-  "/courses/tracks/ai-for-leaders/llms-101/intro-207": {
+  "/courses/build-gpt/l3-positional-embeddings-2f5": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-for-leaders-llms-101-introdc-4-b8f"
+    "content": "content---courses-build-gpt-l-3-positional-embeddingsde-5-943"
   },
-  "/courses/tracks/ai-for-leaders/prompt-engineering/intro-d5d": {
+  "/courses/deep-learning/CNNS-b12": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---courses-tracks-ai-for-leaders-prompt-engineering-intro-000-cd0"
+    "content": "content---courses-deep-learning-cnns-0-a-7-e37"
   },
-  "/-4cd": {
-    "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
-    "__context": {
-      "plugin": "plugin---accept-inviteeec-29e"
-    },
-    "config": "config---accept-invite-5-e-9-92d"
+  "/courses/deep-learning/intro-e06": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-deep-learning-introe-32-48b"
+  },
+  "/courses/deep-learning/perceptron-143": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-deep-learning-perceptron-641-b98"
+  },
+  "/courses/deep-learning/RNNs-d39": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-deep-learning-rn-ns-015-288"
+  },
+  "/courses/language-models/AccessingLLMs-edf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-accessing-ll-ms-5-d-6-7e5"
+  },
+  "/courses/language-models/AttentionMechanism-c5f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-attention-mechanismb-62-6e9"
+  },
+  "/courses/language-models/BaseModels-e25": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-base-models-527-045"
+  },
+  "/courses/language-models/Evaluation-530": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-evaluationc-72-34f"
+  },
+  "/courses/language-models/EvolutionGpt2-9b3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-evolution-gpt-292-e-134"
+  },
+  "/courses/language-models/Hallucinations-c8f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-hallucinations-625-9c3"
+  },
+  "/courses/language-models/intro-87b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-intro-3-de-b21"
+  },
+  "/courses/language-models/LLMIdentity-f6f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-llm-identity-9-ee-8ab"
+  },
+  "/courses/language-models/LLMInconsistencies-ea5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-llm-inconsistenciesf-8-f-6cc"
+  },
+  "/courses/language-models/LLMJudgement-451": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-llm-judgement-49-c-aac"
+  },
+  "/courses/language-models/LoRAFineTuning-ca3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-lo-ra-fine-tuninge-86-620"
+  },
+  "/courses/language-models/Multimodality-8e6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-multimodality-335-681"
+  },
+  "/courses/language-models/NNInference-b73": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-nn-inference-67-e-84c"
+  },
+  "/courses/language-models/NNInternals-b4c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-nn-internals-567-eb7"
+  },
+  "/courses/language-models/NNTraining-d07": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-nn-traininga-46-5e9"
+  },
+  "/courses/language-models/PostTraining-431": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-post-traininge-87-158"
+  },
+  "/courses/language-models/PostTrainingReinforcementLearning-337": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-post-training-reinforcement-learninge-7-b-02f"
+  },
+  "/courses/language-models/QueryToResponse-016": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-query-to-responsec-7-b-44f"
+  },
+  "/courses/language-models/RAGAgents-eb7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-rag-agents-228-9ad"
+  },
+  "/courses/language-models/ReinforcementLearning-454": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-reinforcement-learning-610-772"
+  },
+  "/courses/language-models/ThinkingInTokens-44a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-thinking-in-tokens-6-b-1-87e"
+  },
+  "/courses/language-models/ThinkingRL-b2d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-thinking-r-lde-3-82f"
+  },
+  "/courses/language-models/Tokenization-28f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-language-models-tokenization-335-26c"
+  },
+  "/courses/machine-learning/intro-476": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-machine-learning-introe-53-41f"
+  },
+  "/courses/machine-learning/logistic_regression_tutorial-d42": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-machine-learning-logistic-regression-tutorial-281-a18"
+  },
+  "/courses/machine-learning/supervised-learning-c19": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-machine-learning-supervised-learning-241-079"
+  },
+  "/courses/resources/intro-dd2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-resources-intro-1-b-2-fad"
+  },
+  "/courses/tutorials/logistic-regression-f06": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---courses-tutorials-logistic-regressiond-31-a5f"
   }
 }
