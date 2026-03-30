@@ -1,0 +1,16 @@
+# Supervised Learning Placeholder Image
+
+This is a placeholder for the supervised learning visualization.
+
+The image should show:
+- Input data (features like customer age, income, purchase history)
+- Output labels (known results like "Churned" or "Retained")
+- Learning process with arrows showing how the model learns from input-output pairs
+- Model making predictions on new data
+
+Visual concept:
+- Input → Model Training → Output Labels
+- Show the "teacher" concept with labeled examples
+- Demonstrate how the model learns patterns from known examples
+
+Replace this file with an actual PNG image (recommended size: 800x600px)

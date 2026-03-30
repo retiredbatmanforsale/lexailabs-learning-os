@@ -1,60 +1,84 @@
+import { readFileSync, existsSync } from 'fs';
+import path from 'path';
 import { NextRequest, NextResponse } from 'next/server';
 
-const DOCUSAURUS_ORIGIN =
-  process.env.DOCUSAURUS_URL || 'https://learn.lexailabs.com';
-
 /**
- * Middleware that proxies /courses/* HTML pages from Docusaurus and injects
- * a custom navbar/footer matching the Next.js landing-page design.
+ * Serves Docusaurus course pages from the local build output.
  *
- * - Hides the Docusaurus navbar and footer via CSS.
- * - Injects a static navbar with the Lex AI logo and links.
- * - Injects a simplified footer.
- * - Forces logo / home-link clicks to do full-page navigation so the user
- *   lands on the Next.js homepage (not the Docusaurus SPA homepage).
+ * - Reads pre-built HTML from docusaurus/build/courses/
+ * - Injects a custom navbar and footer matching the Next.js landing page
+ * - Hides the Docusaurus native navbar and footer via CSS
+ * - Forces full-page navigation (kills Docusaurus SPA behaviour)
  */
-export async function middleware(request: NextRequest) {
-  const { pathname, search } = request.nextUrl;
 
-  // Only intercept /courses/* requests
-  if (!pathname.startsWith('/courses/') && pathname !== '/courses') {
-    return NextResponse.next();
+const DOCUSAURUS_BUILD = path.join(process.cwd(), 'docusaurus', 'build');
+
+function findHtmlFile(slug: string[]): string | null {
+  const coursePath = slug.join('/');
+
+  // Try exact path with index.html (e.g., courses/ai-for-leaders/intro/index.html)
+  const indexPath = path.join(DOCUSAURUS_BUILD, 'courses', coursePath, 'index.html');
+  if (existsSync(indexPath)) return indexPath;
+
+  // Try as a direct .html file (e.g., courses/ai-for-leaders/intro.html)
+  const directPath = path.join(DOCUSAURUS_BUILD, 'courses', `${coursePath}.html`);
+  if (existsSync(directPath)) return directPath;
+
+  return null;
+}
+
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ slug?: string[] }> }
+) {
+  const { slug = [] } = await params;
+
+  // If no slug, redirect to the first course
+  if (slug.length === 0) {
+    return NextResponse.redirect(new URL('/courses/ai-for-leaders/intro', request.url));
   }
 
-  // Let static asset requests fall through to the rewrites
-  if (/\.(js|css|json|png|jpe?g|gif|svg|ico|woff2?|ttf|eot|map)$/i.test(pathname)) {
-    return NextResponse.next();
-  }
-
-  try {
-    const docUrl = `${DOCUSAURUS_ORIGIN}${pathname}${search}`;
-    const res = await fetch(docUrl, {
-      headers: {
-        Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'User-Agent': request.headers.get('user-agent') || '',
-      },
-      redirect: 'follow',
-    });
-
-    const contentType = res.headers.get('content-type') || '';
-
-    // Only modify HTML responses; pass others through
-    if (!contentType.includes('text/html')) {
-      return new NextResponse(res.body, {
-        status: res.status,
-        headers: { 'content-type': contentType },
+  // Static assets within /courses/ path — serve from the build directory
+  const lastSegment = slug[slug.length - 1];
+  if (/\.(js|css|json|png|jpe?g|gif|svg|ico|woff2?|ttf|eot|map)$/i.test(lastSegment)) {
+    const assetPath = path.join(DOCUSAURUS_BUILD, 'courses', slug.join('/'));
+    if (existsSync(assetPath)) {
+      const content = readFileSync(assetPath);
+      const ext = path.extname(lastSegment).toLowerCase();
+      const mimeTypes: Record<string, string> = {
+        '.js': 'application/javascript',
+        '.css': 'text/css',
+        '.json': 'application/json',
+        '.png': 'image/png',
+        '.jpg': 'image/jpeg',
+        '.jpeg': 'image/jpeg',
+        '.gif': 'image/gif',
+        '.svg': 'image/svg+xml',
+        '.ico': 'image/x-icon',
+        '.woff2': 'font/woff2',
+        '.woff': 'font/woff',
+        '.ttf': 'font/ttf',
+      };
+      return new NextResponse(content, {
+        headers: {
+          'content-type': mimeTypes[ext] || 'application/octet-stream',
+          'cache-control': 'public, max-age=31536000, immutable',
+        },
       });
     }
+    return new NextResponse('Not found', { status: 404 });
+  }
 
-    // If Docusaurus returns 404, redirect to our custom "course not found" page
-    if (res.status === 404) {
-      return NextResponse.redirect(new URL('/course-not-found', request.url));
-    }
+  // Find the HTML file
+  const htmlPath = findHtmlFile(slug);
+  if (!htmlPath) {
+    return NextResponse.redirect(new URL('/course-not-found', request.url));
+  }
 
-    let html = await res.text();
+  let html = readFileSync(htmlPath, 'utf-8');
 
-    // ── Inject custom styles ──────────────────────────────────────────
-    const customStyles = `
+  // ── Inject custom styles ──────────────────────────────────────────
+  const customStyles = `
 <style data-lexai>
   /* Hide Docusaurus navbar & footer */
   nav.navbar, .navbar, .navbar-sidebar__backdrop, .navbar-sidebar { display: none !important; }
@@ -209,8 +233,8 @@ export async function middleware(request: NextRequest) {
   .lexai-ft__tagline-highlight { color: #3b82f6; font-weight: 600; }
 </style>`;
 
-    // ── Custom navbar HTML ──────────────────────────────────────────
-    const customNavbar = `
+  // ── Custom navbar HTML ──────────────────────────────────────────
+  const customNavbar = `
 <div class="lexai-nav" data-lexai>
   <div class="lexai-nav__inner">
     <a href="/" class="lexai-nav__logo" data-lexai-nav>
@@ -228,9 +252,9 @@ export async function middleware(request: NextRequest) {
   </div>
 </div>`;
 
-    // ── Custom footer HTML (matches Next.js Footer component) ──────
-    const year = new Date().getFullYear();
-    const customFooter = `
+  // ── Custom footer HTML ──────────────────────────────────────────
+  const year = new Date().getFullYear();
+  const customFooter = `
 <footer class="lexai-ft" data-lexai>
   <div class="lexai-ft__wrap">
     <div class="lexai-ft__grid">
@@ -307,8 +331,8 @@ export async function middleware(request: NextRequest) {
   </div>
 </footer>`;
 
-    // ── Script: theme toggle + force full-page navigation ──
-    const customScript = `
+  // ── Script: theme toggle + force full-page navigation ──
+  const customScript = `
 <script data-lexai>
 (function(){
   // ── Theme toggle ──
@@ -333,7 +357,7 @@ export async function middleware(request: NextRequest) {
     // Skip external, anchor, mailto, tel, and javascript links
     if (/^(https?:|#|javascript:|mailto:|tel:)/.test(href)) return;
 
-    // Every internal link does a full page reload so middleware always runs
+    // Every internal link does a full page reload so the route handler always runs
     e.preventDefault();
     e.stopPropagation();
     window.location.href = href;
@@ -341,24 +365,16 @@ export async function middleware(request: NextRequest) {
 })();
 </script>`;
 
-    // ── Inject into HTML ──────────────────────────────────────────
-    html = html.replace('</head>', customStyles + '\n</head>');
-    html = html.replace(/(<body[^>]*>)/, '$1\n' + customNavbar);
-    html = html.replace('</body>', customFooter + '\n' + customScript + '\n</body>');
+  // ── Inject into HTML ──────────────────────────────────────────
+  html = html.replace('</head>', customStyles + '\n</head>');
+  html = html.replace(/(<body[^>]*>)/, '$1\n' + customNavbar);
+  html = html.replace('</body>', customFooter + '\n' + customScript + '\n</body>');
 
-    return new NextResponse(html, {
-      status: res.status,
-      headers: {
-        'content-type': 'text/html; charset=utf-8',
-        'cache-control': res.headers.get('cache-control') || 'public, s-maxage=60, stale-while-revalidate=300',
-      },
-    });
-  } catch {
-    // If Docusaurus is unreachable, fall through (Next.js will show its 404)
-    return NextResponse.next();
-  }
+  return new NextResponse(html, {
+    status: 200,
+    headers: {
+      'content-type': 'text/html; charset=utf-8',
+      'cache-control': 'public, s-maxage=60, stale-while-revalidate=300',
+    },
+  });
 }
-
-export const config = {
-  matcher: ['/courses/:path*'],
-};
