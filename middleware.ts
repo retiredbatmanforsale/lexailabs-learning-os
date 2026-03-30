@@ -219,7 +219,7 @@ export async function middleware(request: NextRequest) {
     </a>
     <div class="lexai-nav__center">
       <a href="/courses/ai-for-leaders/intro" class="lexai-nav__cat">AI for Leaders</a>
-      <a href="/courses/deep-learning/intro" class="lexai-nav__cat">AI for Engineers</a>
+      <a href="/courses/ai-for-engineering/deep-computer-vision-cnn/intro" class="lexai-nav__cat">AI for Engineering</a>
     </div>
     <button class="lexai-theme-toggle" id="lexaiThemeToggle" aria-label="Toggle theme" title="Toggle dark/light mode">
       <svg class="lexai-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -277,9 +277,7 @@ export async function middleware(request: NextRequest) {
         <h4 class="lexai-ft__heading">Courses</h4>
         <ul class="lexai-ft__links">
           <li><a href="/courses/ai-for-leaders/intro">AI for Leaders</a></li>
-          <li><a href="/courses/machine-learning/intro">Machine Learning</a></li>
-          <li><a href="/courses/deep-learning/intro">Deep Learning</a></li>
-          <li><a href="/courses/language-models/intro">Language Models</a></li>
+          <li><a href="/courses/ai-for-engineering/deep-computer-vision-cnn/intro">AI for Engineering</a></li>
         </ul>
       </div>
 

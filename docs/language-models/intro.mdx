@@ -1,0 +1,80 @@
+---
+sidebar_position: 1
+---
+# Introduction to Large Language Models
+
+## Understanding Large Language Models (LLMs)
+
+
+Large Language Models (LLMs) like ChatGPT have revolutionized the way humans interact with artificial intelligence. These models can generate coherent and contextually relevant text, making them useful for a wide range of applications, from chatbots to creative writing tools. However, understanding how these models work requires us to break down the complex process behind their development and training.  
+In this chapter, we will develop a mental model for understanding LLMs, their strengths and weaknesses, and the intricate processes that make them function. We will also explore some of the cognitive and psychological implications of these tools.
+
+## The Architecture Behind LLMs
+
+At its core, an LLM is a deep learning model trained on vast amounts of text data. The process of building such a model involves multiple stages:
+
+* Pre-Training Stage  
+* Fine-Tuning Stage  
+* Inference and Usage
+
+For this chapter, we will focus on the Pre-Training Stage, which is the foundation of all LLMs.
+
+## **The Pre-Training Stage**
+
+Data Collection: The Foundation of LLMs  
+Before an LLM can generate meaningful text, it needs to be trained on an enormous amount of textual data. This data is typically collected from various sources on the internet, ensuring high-quality and diverse documents to enhance the model’s knowledge base.  
+One widely recognized dataset used for training is [https://pile.eleuther.ai/](https://pile.eleuther.ai/) and [FineWeb by Hugging Face](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1). These datasets are created from public sources such as:
+
+* Wikipedia  
+* Books  
+* Research papers  
+* News articles  
+* Common Crawl (a massive dataset of web pages)
+
+Understanding Common Crawl  
+Common Crawl is an organization that has been systematically scraping the internet since 2008, indexing billions of web pages. The process involves:
+
+* Starting with a few "seed" web pages.  
+* Following all the hyperlinks on those pages.  
+* Continuously expanding the dataset by crawling linked pages.  
+* Storing raw HTML content of these web pages.
+
+However, raw internet data is noisy and requires rigorous filtering.
+
+Filtering the Data  
+To ensure high-quality input data, several pre processing steps are performed:  
+1\. URL Filtering:  
+Some domains are excluded to avoid low-quality data, including:
+
+* Spam websites  
+* Malware sites  
+* Marketing pages  
+* Adult content  
+* Racist and misleading sources
+
+2\. Text Extraction:  
+Since web pages are stored in HTML format, the actual text must be extracted by removing:
+
+* Navigation menus  
+* Advertisement  
+* Code snippets (CSS, JavaScript, etc.)
+
+3\. Language Filtering:
+
+* Since LLMs are often optimized for specific languages, only web pages meeting a language threshold (e.g., 65% English content) are retained.  
+* Multilingual models may retain data in multiple languages.
+
+4\. Deduplication and PII(Personally Identified Information) Removal:
+
+* Duplicate content is removed to prevent overfitting.  
+* Personally Identifiable Information (PII), such as addresses and social security numbers, is detected and removed.
+
+What the Data Looks Like  
+After multiple filtering stages, the final dataset consists of pure textual content. To give an idea of scale:
+
+* The FineWeb dataset is approximately 44 terabytes in size.  
+* This is equivalent to storing thousands of high-definition movies but purely in text form.
+
+This refined data becomes the foundation for training LLMs, providing them with a vast corpus to learn from.
+
+In the next chapter, we will dive deeper into the Training Phase, exploring how these massive datasets are transformed into intelligent models capable of understanding and generating human-like text.  

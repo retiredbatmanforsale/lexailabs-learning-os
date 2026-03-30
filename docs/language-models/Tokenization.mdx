@@ -1,0 +1,68 @@
+---
+sidebar_position: 2
+---
+#### **Tokenization \- Transforming Text for Neural Networks**
+
+##### **Introduction**
+
+Before we can feed text into a neural network, we must first decide how to represent it in a format that the network can process. Neural networks expect input as a one-dimensional sequence of symbols, drawn from a finite set. In this chapter, we will explore how to convert raw text into a structured format using tokenization.
+
+##### **1\. Understanding Text as a One-Dimensional Sequence**
+
+Text, although displayed in a two-dimensional format on screens (with lines and paragraphs), is inherently a one-dimensional sequence of characters. It flows from left to right and top to bottom in most written languages.  
+Computers internally represent text using encoding schemes such as UTF-8, which converts characters into binary sequences. Each character is stored as a sequence of bits (0s and 1s), and these bits form the fundamental building blocks of textual representation.
+
+##### **2\. The Challenge of Efficient Text Representation**
+
+While we could represent text using raw bits (0s and 1s), this would lead to extremely long sequences, making it inefficient for neural networks to process. Instead, we seek a balance between the length of the sequence and the size of the vocabulary by grouping bits into larger units.  
+One common approach is to group 8 bits (1 byte) together, which allows us to represent 256 unique symbols (since 2⁸ \= 256). Instead of dealing with raw bits, we can now think of text as a sequence of bytes, reducing the sequence length while increasing the symbol set size.  
+However, even at the byte level, sequences can still be long. To further optimize representation, we use a more advanced method: Byte Pair Encoding (BPE).
+
+##### **3\. Byte Pair Encoding (BPE)**
+
+BPE is a compression-based tokenization algorithm that reduces sequence length by merging frequently occurring symbol pairs into new symbols. Here’s how it works:
+
+* Identify the most common pair of consecutive symbols (e.g., byte 116 followed by byte 32).  
+* Create a new token (e.g., symbol ID 256\) to represent this pair.  
+* Replace all instances of the pair with the new token.  
+* Repeat the process iteratively, creating new symbols and reducing sequence length.
+
+Through this process, we form a vocabulary of tokens, where each token represents a common substring or word fragment. Modern language models such as GPT-4 use around 100,277 tokens in their vocabulary.
+
+##### **4\. Tokenization in Practice**
+
+The process of converting text into tokens is known as tokenization. It maps raw text to token IDs, which neural networks can process. For example:  
+Input: Hello world  
+Tokenized Output:
+
+* Hello → Token ID: 15339
+
+* world → Token ID: 11917
+
+Notice that spaces also affect tokenization. For instance, Hello world (with two spaces) results in a different tokenization pattern.  
+Case Sensitivity in Tokenization  
+Tokenization is case-sensitive.
+
+* hello world may tokenize differently than Hello World.  
+* Capitalization changes the tokenization pattern, affecting model input.
+
+##### **5\. Exploring Tokenization with Online Tools**
+
+To visualize how tokenization works, you can use interactive tools such as [https://tiktokenizer.vercel.app/](https://tiktokenizer.vercel.app/) . This tool allows you to:
+
+* Input text and see how it gets tokenized.  
+* Observe how different spacing and capitalization affect tokenization.  
+* Understand the mapping between text and token IDs.
+
+To try this, select the CL100A Base tokenizer (used by GPT-4) and input various text samples to explore their tokenized forms.
+
+##### **6\. Why Tokenization Matters**
+
+Tokenization is a crucial step in language models because:
+
+* It reduces sequence length, improving efficiency.  
+* It balances vocabulary size and sequence length for optimal performance.  
+* It enables neural networks to understand text in a structured manner.
+
+Through methods like BPE, state-of-the-art language models can effectively process vast amounts of text while maintaining accuracy and efficiency.
+

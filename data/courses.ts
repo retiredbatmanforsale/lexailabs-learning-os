@@ -12,6 +12,7 @@ import {
   Cpu,
   Microscope,
   Blocks,
+  TreeDeciduous,
 } from 'lucide-react';
 
 export interface Course {
@@ -39,7 +40,7 @@ export const courses: Course[] = [
     description: 'Core AI concepts and terminology for business leaders',
     level: 'Beginner',
     category: 'AI for Leaders',
-    href: '/courses/ai-for-leaders/intro',
+    href: '/courses/ai-for-leaders/ai-literacy/intro',
     thumbnail: 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=600&h=400&fit=crop',
     featured: true,
     outcomes: [
@@ -57,7 +58,7 @@ export const courses: Course[] = [
     description: 'Craft effective prompts to get the best out of any LLM',
     level: 'Beginner',
     category: 'AI for Leaders',
-    href: '/courses/ai-for-leaders/intro',
+    href: '/courses/ai-for-leaders/prompt-engineering/intro',
     thumbnail: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop',
     featured: true,
     outcomes: [
@@ -75,7 +76,7 @@ export const courses: Course[] = [
     description: 'Understand generative AI and its real-world applications',
     level: 'Beginner',
     category: 'AI for Leaders',
-    href: '/courses/ai-for-leaders/intro',
+    href: '/courses/ai-for-leaders/genai-for-everyone/intro',
     thumbnail: 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&h=400&fit=crop',
     featured: false,
     outcomes: [
@@ -93,7 +94,7 @@ export const courses: Course[] = [
     description: 'Large Language Models 101',
     level: 'Intermediate',
     category: 'AI for Leaders',
-    href: '/courses/ai-for-leaders/intro',
+    href: '/courses/ai-for-leaders/llms-101/intro',
     thumbnail: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop',
     featured: false,
     outcomes: [
@@ -114,7 +115,7 @@ export const courses: Course[] = [
     level: 'Intermediate',
     category: 'AI for Engineers',
     subcategory: 'Foundations',
-    href: '/courses/machine-learning/intro',
+    href: '/courses/ai-for-engineering/foundations-of-regression/intro',
     thumbnail: 'https://images.unsplash.com/photo-1635322966219-b75ed372eb01?w=600&h=400&fit=crop',
     featured: true,
     outcomes: [
@@ -127,13 +128,32 @@ export const courses: Course[] = [
     courseCount: 1,
   },
   {
+    id: 'tree-based-algorithms',
+    title: 'Tree-Based Algorithms',
+    description: 'Decision trees, random forests, gradient boosting, and classical ML algorithms',
+    level: 'Intermediate',
+    category: 'AI for Engineers',
+    subcategory: 'Foundations',
+    href: '/courses/ai-for-engineering/tree-based-algorithms-classical-ml/intro',
+    thumbnail: 'https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=600&h=400&fit=crop',
+    featured: false,
+    outcomes: [
+      'Implement decision trees and random forests',
+      'Understand ensemble methods and boosting',
+      'Apply classical ML to real-world problems',
+    ],
+    icon: TreeDeciduous,
+    students: '2.3k',
+    courseCount: 1,
+  },
+  {
     id: 'deep-neural-networks',
     title: 'Deep Neural Networks',
     description: 'Design, train, and optimize deep neural networks. Understand backpropagation and implement DNNs from scratch.',
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Deep Learning',
-    href: '/courses/deep-learning/intro',
+    href: '/courses/ai-for-engineering/deep-neural-networks/intro',
     thumbnail: 'https://images.unsplash.com/photo-1614850523011-8f49ffc73908?w=600&h=400&fit=crop',
     featured: true,
     outcomes: [
@@ -152,7 +172,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Deep Learning',
-    href: '/courses/deep-learning/intro',
+    href: '/courses/ai-for-engineering/deep-computer-vision-cnn/intro',
     thumbnail: 'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=600&h=400&fit=crop',
     featured: false,
     outcomes: [
@@ -171,7 +191,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Deep Learning',
-    href: '/courses/deep-learning/intro',
+    href: '/courses/ai-for-engineering/deep-sequence-modelling-rnn/intro',
     thumbnail: 'https://images.unsplash.com/photo-1614851099511-773084f6911d?w=600&h=400&fit=crop',
     featured: false,
     outcomes: [
@@ -190,7 +210,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Transformers & LLMs',
-    href: '/courses/language-models/intro',
+    href: '/courses/ai-for-engineering/attention-is-all-you-need/intro',
     thumbnail: 'https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=600&h=400&fit=crop',
     featured: true,
     outcomes: [
@@ -209,7 +229,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Transformers & LLMs',
-    href: '/courses/language-models/intro',
+    href: '/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/intro',
     thumbnail: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&h=400&fit=crop',
     featured: true,
     outcomes: [
@@ -228,7 +248,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Applied AI',
-    href: '/courses/resources/intro',
+    href: '/courses/ai-for-engineering/ai-research/intro',
     thumbnail: 'https://images.unsplash.com/photo-1618172193622-ae2d025f4032?w=600&h=400&fit=crop',
     featured: false,
     outcomes: [
@@ -247,7 +267,7 @@ export const courses: Course[] = [
     level: 'Advanced',
     category: 'AI for Engineers',
     subcategory: 'Applied AI',
-    href: '/courses/resources/intro',
+    href: '/courses/ai-for-engineering/agentic-ai/intro',
     thumbnail: 'https://images.unsplash.com/photo-1617957718614-8c23f060c2d0?w=600&h=400&fit=crop',
     featured: false,
     outcomes: [

@@ -1,0 +1,112 @@
+---
+sidebar_position: 2
+---
+
+# Supervised Learning
+
+Supervised learning is a type of machine learning where the model is trained on labeled data. In this approach, the algorithm learns from a training dataset that includes both input features and their corresponding correct outputs.
+
+## What is Supervised Learning?
+
+Supervised learning involves learning a function that maps an input to an output based on example input-output pairs. The goal is to learn a general rule that maps inputs to outputs.
+
+### Key Characteristics
+
+- Uses labeled training data
+- Requires a clear target variable
+- Can be used for both classification and regression tasks
+- Model performance can be evaluated using test data
+
+## Types of Supervised Learning
+
+### Classification
+- Binary Classification (e.g., spam detection)
+- Multi-class Classification (e.g., image recognition)
+- Multi-label Classification (e.g., document tagging)
+
+### Regression
+- Linear Regression
+- Polynomial Regression
+- Logistic Regression (for binary classification)
+
+## Example: Linear Regression
+
+```python
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+import numpy as np
+
+# Generate sample data
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([2, 4, 6, 8, 10])
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+# Create and train the model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Make predictions
+predictions = model.predict(X_test)
+print(f"Predictions: {predictions}")
+```
+
+## Common Algorithms
+
+1. **Linear Models**
+   - Linear Regression
+   - Logistic Regression
+   - Support Vector Machines (SVM)
+
+2. **Tree-based Models**
+   - Decision Trees
+   - Random Forests
+   - Gradient Boosting Machines
+
+3. **Neural Networks**
+   - Feedforward Neural Networks
+   - Convolutional Neural Networks (for image data)
+   - Recurrent Neural Networks (for sequential data)
+
+## Evaluation Metrics
+
+### For Classification
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- ROC-AUC
+
+### For Regression
+- Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE)
+- R-squared
+- Mean Absolute Error (MAE)
+
+## Best Practices
+
+1. **Data Preprocessing**
+   - Handle missing values
+   - Scale features
+   - Encode categorical variables
+   - Remove outliers
+
+2. **Model Selection**
+   - Start with simple models
+   - Consider the nature of your data
+   - Balance between bias and variance
+
+3. **Validation**
+   - Use cross-validation
+   - Split data properly
+   - Monitor for overfitting
+
+## Applications
+
+Supervised learning is used in various domains:
+- Healthcare (disease prediction)
+- Finance (credit scoring)
+- Marketing (customer segmentation)
+- Computer Vision (object detection)
+- Natural Language Processing (text classification) 

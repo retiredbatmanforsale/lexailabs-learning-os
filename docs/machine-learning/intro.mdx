@@ -1,0 +1,182 @@
+---
+sidebar_position: 1
+---
+
+# Introduction to Machine Learning
+
+## What is Machine Learning?
+
+> "Machine Learning is the field of study that gives computers the ability to learn without being explicitly programmed."
+> — *Arthur Samuel*
+
+Imagine you’re building a spam filter. You could write thousands of `if` statements like:
+
+```python
+if "Buy now" in email: spam  
+if "Free money" in email: spam  
+```
+
+But that doesn’t scale.
+Instead, what if we gave the machine examples of spam and non-spam emails, and let it learn the patterns?
+
+That’s Machine Learning (ML) in essence: **learning patterns from data instead of writing explicit rules**.
+
+---
+
+## How Do Machines Learn?
+
+We can simplify the machine learning process into four key steps:
+
+---
+
+### Step 1: Collect Data
+
+Assume you have:
+
+* 10,000 emails
+* Each labeled as **spam (1)** or **not spam (0)**
+* Each email is represented by a **set of features**: words, frequency, length, etc.
+
+This gives us a dataset:
+
+* `X = [x₁, x₂, ..., xₙ]` → input features
+* `y = [1, 0, 0, 1, ...]` → labels (what we want to predict)
+
+#### Why Do We Want Features?
+
+Features **translate raw data** into a form a model can understand:
+
+* **Tabular data:** age, income, history
+* **Text data:** frequency of keywords, embeddings
+* **Image data:** pixel intensities, edges, learned features
+
+#### Why Not Directly Use "Words" or "Images"?
+
+Raw data isn’t suitable directly:
+
+* **Words** are strings → need to be encoded as vectors (e.g., Bag-of-Words, TF-IDF, Word2Vec, BERT)
+* **Images** are pixel grids → need preprocessing or let CNNs learn hierarchical features
+
+---
+
+### Step 2: Choose a Model
+
+An ML model is a function approximating how `X` maps to `y`.
+
+Example: **Linear Regression**
+
+$$
+\hat{y} = mx + c
+$$
+
+Where:
+
+* `x` is the input
+* `m` is the slope
+* `c` is the intercept
+* `ŷ` is the model’s prediction
+
+#### Intuition:
+
+* Linear Relationship → y changes proportionally with x
+* First-degree polynomial → defines a straight line
+
+During training, the model adjusts `m` and `c` to minimize the difference between `ŷ` and the true `y`.
+
+<div style={{ margin: '2rem 0' }}>
+  <iframe
+    width="100%"
+    height="400"
+    src="https://www.youtube.com/embed/CyhRUJVLlTM"
+    title="Introduction to Machine Learning – Lex AI"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  />
+</div>
+
+---
+
+### Step 3: Minimize Error (Loss Function)
+
+Once the model is selected, we need to **measure performance** using a **loss function**.
+
+#### For Linear Regression:
+
+$$
+\text{Loss} = \frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2
+$$
+
+This is called **Mean Squared Error (MSE)**.
+
+#### Examples:
+
+* True label = 10, Prediction = 9.8 → Loss = (10 - 9.8)² = **0.04**
+* True label = 10, Prediction = 4 → Loss = (10 - 4)² = **36**
+
+#### Interpretation:
+
+* **Small loss** → model is doing well
+* **Large loss** → model is making big mistakes
+
+---
+
+### Step 4: Train the Model (Optimization)
+
+Now that we have:
+
+* A model (`ŷ = mx + c`)
+* A loss function (MSE)
+
+We need to **teach the model to improve** — i.e., **reduce the loss**.
+
+#### Enter: Gradient Descent
+
+Imagine standing on a hill. You want to reach the lowest point (loss minimum). You:
+
+* Look for the steepest downward direction
+* Take a small step that way
+* Repeat until you're at the bottom
+
+That's **gradient descent**.
+
+#### Training Loop (Simplified):
+
+1. Initialize `m` and `c` randomly
+2. Predict: `ŷ = model(x)`
+3. Compute error (loss)
+4. Compute gradients:
+
+   * `∂Loss/∂m`, `∂Loss/∂c`
+5. Update parameters:
+
+$$
+m := m - \alpha \cdot \frac{\partial Loss}{\partial m} \\
+c := c - \alpha \cdot \frac{\partial Loss}{\partial c}
+$$
+
+* `α` (alpha) = learning rate
+* Repeat until convergence
+
+#### When to Stop?
+
+* Error change becomes insignificant
+* Reached max iterations
+
+---
+
+## Is Training Just One Math Formula on Full Data?
+
+Not quite.
+
+While the math is elegant, in **practice**:
+
+* We don’t use the whole dataset at once (that’s **batch gradient descent**)
+* We use **mini-batches** → this is called **Stochastic Gradient Descent (SGD)**
+
+Each step:
+
+* Learns from a small chunk of data
+* Eventually leads to convergence
+
+---

@@ -6,9 +6,7 @@ import { COURSES_URL } from '@/lib/utils';
 
 const menuLinks = [
   { label: 'AI for Leaders', href: `${COURSES_URL}/courses/ai-for-leaders/intro` },
-  { label: 'Machine Learning', href: `${COURSES_URL}/courses/machine-learning/intro` },
-  { label: 'Deep Learning', href: `${COURSES_URL}/courses/deep-learning/intro` },
-  { label: 'Language Models', href: `${COURSES_URL}/courses/language-models/intro` },
+  { label: 'AI for Engineering', href: `${COURSES_URL}/courses/ai-for-engineering/deep-computer-vision-cnn/intro` },
 ];
 
 const policyLinks = [
