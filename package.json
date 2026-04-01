@@ -4,14 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run docs:build && bash scripts/copy-docusaurus-assets.sh && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "docs:install": "cd docusaurus && npm install",
-    "docs:build": "cd docusaurus && npm run build",
-    "docs:start": "cd docusaurus && npm run start",
-    "docs:serve": "cd docusaurus && npm run serve",
-    "postinstall": "cd docusaurus && npm install"
+    "lint": "eslint"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",

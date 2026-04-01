@@ -103,15 +103,20 @@ export default function Navigation() {
           <Link href="/" className="flex-shrink-0 flex items-center group">
             <Image
               src="/assets/lexailogo.svg"
-              alt="Lex AI Labs"
+              alt="Prof by Lex AI"
               width={72}
               height={72}
               priority
               className="w-10 h-10 sm:w-12 sm:h-12 p-1 mr-2 sm:p-2"
             />
-            <span className="text-3xl md:text-4xl font-serif italic text-neutral-900 tracking-tight">
-              Lex AI
-            </span>
+            <div className="flex flex-col leading-none">
+              <span className="text-3xl md:text-4xl font-serif italic text-neutral-900 tracking-tight">
+                Prof
+              </span>
+              <span className="text-[10px] md:text-xs text-neutral-400 tracking-wide">
+                by Lex AI
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -388,12 +393,15 @@ export default function Navigation() {
                 >
                   <Image
                     src="/assets/lexailogo.svg"
-                    alt="Lex AI"
+                    alt="Prof by Lex AI"
                     width={72}
                     height={72}
                     className="w-8 h-8"
                   />
-                  <span className="text-2xl font-serif italic text-neutral-900">Lex AI</span>
+                  <div className="flex flex-col leading-none">
+                    <span className="text-2xl font-serif italic text-neutral-900">Prof</span>
+                    <span className="text-[9px] text-neutral-400 tracking-wide">by Lex AI</span>
+                  </div>
                 </Link>
                 <button
                   className="p-2 text-neutral-600 hover:text-neutral-900 rounded-xl hover:bg-neutral-100 transition-colors"

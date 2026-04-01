@@ -168,7 +168,7 @@ export default function Footer() {
 
         <div className="pt-6 mt-10 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-base text-neutral-500">
-            &copy; {new Date().getFullYear()} Lex AI Labs. All rights reserved.
+            &copy; {new Date().getFullYear()} Prof by Lex AI. All rights reserved.
           </p>
           <div className="flex items-center gap-2">
             <p className="text-base text-neutral-600">Build Intelligence. Build India.</p>
