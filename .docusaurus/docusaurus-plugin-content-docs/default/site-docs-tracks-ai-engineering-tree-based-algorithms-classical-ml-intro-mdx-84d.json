@@ -1,0 +1,17 @@
+{
+  "id": "tracks/ai-engineering/tree-based-algorithms-classical-ml/intro",
+  "title": "Tree-Based Algorithms (Classical ML)",
+  "description": "This course will cover decision trees, random forests, and gradient boosting for tabular machine learning.",
+  "source": "@site/docs/tracks/ai-engineering/tree-based-algorithms-classical-ml/intro.mdx",
+  "sourceDirName": "tracks/ai-engineering/tree-based-algorithms-classical-ml",
+  "slug": "/tracks/ai-engineering/tree-based-algorithms-classical-ml/intro",
+  "permalink": "/courses/tracks/ai-engineering/tree-based-algorithms-classical-ml/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/tree-based-algorithms-classical-ml/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Tree-Based Algorithms (Classical ML)"
+  }
+}

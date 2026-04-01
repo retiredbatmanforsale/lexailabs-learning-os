@@ -1,0 +1,26 @@
+{
+  "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/intro",
+  "title": "Build and Train Your Own GPT-2 Model",
+  "description": "This course will walk through building a GPT-2 style transformer and training it end-to-end.",
+  "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/intro.mdx",
+  "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+  "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/intro",
+  "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Build and Train Your Own GPT-2 Model"
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Attention Is All You Need",
+    "permalink": "/courses/ai-for-engineering/attention-is-all-you-need/intro"
+  },
+  "next": {
+    "title": "Problem with RNNs and LSTMs",
+    "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms"
+  }
+}

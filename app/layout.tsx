@@ -4,18 +4,18 @@ import './globals.css';
 import { AuthProviderWrapper } from '@/providers/AuthProviderWrapper';
 
 export const metadata: Metadata = {
-  title: 'Prof by Lex AI - Learn AI from Industry Engineers',
+  title: 'Lex AI - Learn AI from Industry Engineers',
   description:
     'Master Machine Learning, Deep Learning, and LLMs through structured, hands-on courses taught by Google, Amazon, and Oracle engineers.',
     keywords:
-        'Prof, Lex AI, AI community India, AI fellowship, machine learning, AI engineering, AI mentorship, AI training India, AI leaders',
+        'Lex AI, AI community India, AI fellowship, machine learning, AI engineering, AI mentorship, AI training India, AI leaders',
       icons: {
         icon: '/assets/lexailogo.svg',
         shortcut: '/assets/lexailogo.svg',
         apple: '/assets/lexailogo.svg',
       },
       openGraph: {
-        title: 'Prof by Lex AI | Build Intelligence. Build India.',
+        title: 'Lex AI | Build Intelligence. Build India.',
         description:
           "Join India's most ambitious community of engineers, founders & leaders building real AI. Elite training, mentorship, and a network that accelerates your career.",
         type: 'website',

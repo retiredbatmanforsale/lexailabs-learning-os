@@ -1,0 +1,28 @@
+{
+  "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings",
+  "title": "Token Embeddings",
+  "description": "<iframe",
+  "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/02-token-embeddings.mdx",
+  "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+  "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings",
+  "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/02-token-embeddings.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Token Embeddings",
+    "sidebar_position": 2
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Problem with RNNs and LSTMs",
+    "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms"
+  },
+  "next": {
+    "title": "Positional Embeddings / Positional Encodings",
+    "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/positional-embeddings"
+  }
+}

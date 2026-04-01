@@ -1,0 +1,23 @@
+{
+  "id": "tracks/ai-for-leaders/index",
+  "title": "AI for Leaders",
+  "description": "Welcome to AI for Leaders - a comprehensive resource designed specifically for business leaders, executives, and decision-makers who need to understand artificial intelligence without diving into technical complexities.",
+  "source": "@site/docs/tracks/ai-for-leaders/index.mdx",
+  "sourceDirName": "tracks/ai-for-leaders",
+  "slug": "/tracks/ai-for-leaders/",
+  "permalink": "/courses/tracks/ai-for-leaders/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-for-leaders/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "sidebar_position": 0
+  },
+  "sidebar": "docsSidebar",
+  "next": {
+    "title": "AI Literacy",
+    "permalink": "/courses/tracks/ai-for-leaders/ai-literacy/intro"
+  }
+}

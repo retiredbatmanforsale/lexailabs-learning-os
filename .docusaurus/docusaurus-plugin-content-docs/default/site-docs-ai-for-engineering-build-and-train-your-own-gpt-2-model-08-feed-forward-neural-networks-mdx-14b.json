@@ -1,0 +1,28 @@
+{
+  "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/feed-forward-neural-networks",
+  "title": "Feed Forward Neural Networks",
+  "description": "<iframe",
+  "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/08-feed-forward-neural-networks.mdx",
+  "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+  "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/feed-forward-neural-networks",
+  "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/feed-forward-neural-networks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/08-feed-forward-neural-networks.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "title": "Feed Forward Neural Networks",
+    "sidebar_position": 8
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Layer Normalization",
+    "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/layer-normalization"
+  },
+  "next": {
+    "title": "Generation of Next Tokens",
+    "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/generation-of-next-tokens"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models",
+  "title": "Line & Linear Models",
+  "description": "Overview",
+  "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models.mdx",
+  "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
+  "slug": "/tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models",
+  "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson01-line-linear-models.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "lesson01-line-linear-models",
+    "title": "Line & Linear Models",
+    "sidebar_label": "Line & Linear Models"
+  }
+}

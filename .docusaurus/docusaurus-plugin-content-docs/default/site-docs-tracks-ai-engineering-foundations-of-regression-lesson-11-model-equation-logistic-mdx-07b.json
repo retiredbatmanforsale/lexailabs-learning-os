@@ -1,0 +1,19 @@
+{
+  "id": "tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic",
+  "title": "Model Equation for Logistic",
+  "description": "Overview",
+  "source": "@site/docs/tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic.mdx",
+  "sourceDirName": "tracks/ai-engineering/foundations-of-regression",
+  "slug": "/tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic",
+  "permalink": "/courses/tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/foundations-of-regression/lesson11-model-equation-logistic.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "lesson11-model-equation-logistic",
+    "title": "Model Equation for Logistic",
+    "sidebar_label": "Model Equation for Logistic"
+  }
+}

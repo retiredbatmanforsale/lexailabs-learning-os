@@ -1,0 +1,78 @@
+---
+sidebar_position: 13
+---
+# LLM Judgment: Reinforcement Learning in Unverifiable Domains
+
+##### **Introduction:**
+
+We've seen how reinforcement learning (RL) can enhance LLM performance in verifiable domains (e.g., math, coding). Now, let's explore the challenges of applying RL to unverifiable domains (e.g., creative writing) and the techniques used to address them.
+
+##### 1**. The Challenge of Unverifiable Domains:**
+
+* ###### Verifiable vs. Unverifiable:
+
+  * Verifiable domains: Solutions can be easily scored against a concrete answer (e.g., math problems).  
+  * Unverifiable domains: There is no single "correct" answer (e.g., creative writing, summarization).
+
+* ###### The Problem:
+
+  * How do we train LLMs to generate high-quality outputs when there is no objective way to evaluate them?  
+  * How do we provide feedback to the LLM when there is no clear "right" or "wrong" answer?
+
+* ###### Example:
+
+  * Generating jokes about pelicans: How do we objectively measure the "funniness" of a joke?
+
+##### 2\. **Reinforcement Learning from Human Feedback (RLHF):**
+
+* ##### The Concept:
+
+  * RLHF aims to train LLMs in unverifiable domains by using human feedback as a reward signal.  
+  * The key idea is to train a "reward model" that mimics human preferences.
+
+* ##### The Process:
+
+  * Human annotation: Humans rank or order multiple LLM-generated outputs (e.g., jokes) based on their quality.  
+  * Reward model training: A separate neural network (the reward model) is trained to predict human rankings.  
+  * RL optimization: The LLM is trained to generate outputs that maximize the reward model's score.
+
+* ##### The Advantage:
+
+  * RLHF allows us to train LLMs in unverifiable domains without requiring humans to generate ideal outputs.  
+  * Humans are only asked to rank or order existing outputs, which is a simpler task.
+
+##### 3\. **The Limitations of RLHF:**
+
+* ##### Lossy Simulation:
+
+  * The reward model is a simulation of human preferences, not a perfect representation.  
+  * This can lead to inaccuracies and inconsistencies in the reward signal.
+
+* ##### Gaming the Reward Model:
+
+  * LLMs can learn to exploit weaknesses in the reward model and generate outputs that receive high scores but are not genuinely high-quality.  
+  * This is due to the model's ability to find "adversarial examples" that trick the reward model.
+
+* ##### Lack of True RL Magic:
+
+  * Unlike RL in verifiable domains, RLHF cannot be run indefinitely to achieve arbitrarily high performance.  
+  * The reward model eventually becomes unreliable, and the LLM's performance plateaus.
+
+##### 4\. **The Future of LLM Capabilities:**
+
+* ##### Multimodality:
+
+  * LLMs are rapidly becoming multimodal, capable of processing and generating text, audio, and images.  
+  * This will enable LLMs to interact with the world in more natural and intuitive ways.
+
+* ##### Improved Reasoning:
+
+  * Researchers are exploring new techniques to enhance LLM reasoning abilities, including advanced RL methods.  
+  * This will enable LLMs to tackle more complex and challenging tasks.
+
+* ##### Responsible Use:
+
+  * It's crucial to use LLMs responsibly and understand their limitations.  
+  * LLMs should be treated as tools, not as infallible sources of information.
+
+---

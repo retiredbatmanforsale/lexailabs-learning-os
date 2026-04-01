@@ -1,0 +1,26 @@
+{
+  "id": "tracks/ai-engineering/ai-research/intro",
+  "title": "AI Research",
+  "description": "This course will cover how to read papers, reproduce results, and turn research ideas into working experiments.",
+  "source": "@site/docs/tracks/ai-engineering/ai-research/intro.mdx",
+  "sourceDirName": "tracks/ai-engineering/ai-research",
+  "slug": "/tracks/ai-engineering/ai-research/intro",
+  "permalink": "/courses/tracks/ai-engineering/ai-research/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/tracks/ai-engineering/ai-research/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "AI Research"
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Attention Is All You Need",
+    "permalink": "/courses/tracks/ai-engineering/attention-is-all-you-need-transformer/intro"
+  },
+  "next": {
+    "title": "Agentic AI",
+    "permalink": "/courses/tracks/ai-engineering/agentic-ai-multi-agent-systems/intro"
+  }
+}

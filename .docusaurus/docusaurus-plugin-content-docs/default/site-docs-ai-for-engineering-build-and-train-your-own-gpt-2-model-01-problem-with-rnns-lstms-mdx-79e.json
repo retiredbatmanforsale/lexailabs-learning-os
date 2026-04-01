@@ -1,0 +1,28 @@
+{
+  "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms",
+  "title": "Problem with RNNs and LSTMs",
+  "description": "<iframe",
+  "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/01-problem-with-rnns-lstms.mdx",
+  "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+  "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms",
+  "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/problem-with-rnns-lstms",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/01-problem-with-rnns-lstms.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Problem with RNNs and LSTMs",
+    "sidebar_position": 1
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Build and Train Your Own GPT-2 Model",
+    "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/intro"
+  },
+  "next": {
+    "title": "Token Embeddings",
+    "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/token-embeddings"
+  }
+}

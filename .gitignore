@@ -36,6 +36,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# docusaurus
+/docusaurus/node_modules
+/docusaurus/build
+/docusaurus/.docusaurus
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

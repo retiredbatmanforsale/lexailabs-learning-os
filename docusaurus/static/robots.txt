@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /courses/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://learn.lexailabs.com/sitemap.xml

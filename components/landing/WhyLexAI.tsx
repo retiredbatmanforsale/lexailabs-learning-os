@@ -53,7 +53,7 @@ export default function WhyLexAI() {
           className="text-center mb-12 md:mb-16"
         >
           <span className="text-xs font-medium text-neutral-400 uppercase tracking-[0.2em] mb-4 block">
-            Why Prof
+            Why Lex AI
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-900 leading-[1.1]">
             Real outcomes,{' '}

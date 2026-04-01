@@ -1,0 +1,75 @@
+---
+sidebar_position: 5
+---
+
+# Post-Training of Large Language Models
+
+##### **Introduction**
+
+Large Language Models (LLMs) undergo two major training phases: pre-training and post-training. Pre-training is computationally expensive and involves learning from massive internet-scale datasets. Post-training, though computationally lighter, is crucial in transforming a generic language model into a refined assistant that can engage in multi-turn conversations, follow instructions, and refuse inappropriate requests.  
+Understanding Post-Training  
+Post-training involves fine-tuning a pre-trained model on curated datasets consisting of conversations, allowing it to behave like an intelligent assistant rather than merely regurgitating internet text. This phase includes:
+
+* Training on conversation-style data.  
+* Learning to respond in a structured, human-like manner.  
+* Adapting to multi-turn interactions.  
+* Developing the ability to refuse certain types of questions.
+
+1\. How Conversations are Modeled  
+Conversations between a human and an AI assistant are formatted as structured dialogues. For example:  
+User: What is 2 \+ 2?  
+ Assistant: 2 \+ 2 is 4\.  
+ User: What if it was multiplication instead?  
+ Assistant: 2 × 2 is 4\.  
+The assistant must follow context, provide accurate responses, and maintain coherence across turns.  
+2\. Data Sources for Post-Training  
+The training data is derived from human-generated conversations, typically curated by expert label-ers. These labelers:
+
+* Provide question-answer pairs.  
+* Ensure responses align with desired behavior (helpfulness, truthfulness, and harmlessness).  
+* Follow detailed guidelines from the model’s developers.  
+* Correct or refine model-generated responses.
+
+With advancements in AI, synthetic data generation now plays a significant role, with models assisting in response generation, which is later reviewed by humans.  
+3\. Tokenization and Representation of Conversations  
+Since LLMs process data as token sequences, conversations are encoded using special tokens. For instance:
+
+* \<START\> marks the beginning of dialogue.  
+* \<USER\> and \<ASSISTANT\> indicate turns.  
+* Conversations are transformed into token sequences for efficient training.
+
+This structured format allows the model to distinguish between user inputs and its own responses.  
+Training Process in Post-Training  
+Step 1: Discarding Pre-Training Data  
+Pre-training data (internet text) is discarded, and the model is fine-tuned on conversational datasets.  
+Step 2: Learning Through Examples  
+The model is trained to imitate human label-ers by learning from manually curated responses. Over thousands of examples, it develops patterns in response behavior.  
+Step 3: Generating and Refining Responses  
+During inference (real-time interaction), the assistant constructs responses based on:
+
+* Previously learned patterns from post-training.  
+* Context from multi-turn conversations.  
+* Pre-trained general knowledge.
+
+##### **Emergent Behavior in LLMs**
+
+1\.Model Hallucinations  
+Hallucinations occur when models generate false or misleading responses that sound plausible but are factually incorrect. These arise due to:
+
+* Predictive text generation prioritizing coherence over accuracy.  
+* Gaps in training data, causing the model to make educated guesses.  
+* Biases introduced during training.
+
+2\. Adopting a Persona  
+Through extensive post-training, LLMs begin to exhibit a statistical persona aligned with the behavior of the labelers and training data. If trained on helpful, polite responses, the model mirrors these traits.  
+3\. Handling Novel Queries  
+Since training data cannot cover every possible question, the model generalizes from similar conversations, producing reasonable approximations for unseen inputs.  
+Real-World Applications  
+Post-training allows LLMs to:
+
+* Power virtual assistants (ChatGPT, Google Bard).  
+* Assist in customer support.  
+* Generate informative content.  
+* Perform translations, coding assistance, and more.
+
+---

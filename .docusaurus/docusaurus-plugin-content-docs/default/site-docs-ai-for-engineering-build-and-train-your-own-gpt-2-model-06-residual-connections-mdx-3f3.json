@@ -1,0 +1,28 @@
+{
+  "id": "ai-for-engineering/build-and-train-your-own-gpt2-model/residual-connections",
+  "title": "Residual Connections",
+  "description": "<iframe",
+  "source": "@site/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/06-residual-connections.mdx",
+  "sourceDirName": "ai-for-engineering/build-and-train-your-own-gpt2-model",
+  "slug": "/ai-for-engineering/build-and-train-your-own-gpt2-model/residual-connections",
+  "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/residual-connections",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-ml-community/ai-ml-docs/tree/main/docs/ai-for-engineering/build-and-train-your-own-gpt2-model/06-residual-connections.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Residual Connections",
+    "sidebar_position": 6
+  },
+  "sidebar": "docsSidebar",
+  "previous": {
+    "title": "Causal Masking",
+    "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/causal-masking"
+  },
+  "next": {
+    "title": "Layer Normalization",
+    "permalink": "/courses/ai-for-engineering/build-and-train-your-own-gpt2-model/layer-normalization"
+  }
+}
